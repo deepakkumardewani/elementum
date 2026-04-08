@@ -1,5 +1,20 @@
 import type { ElementCategory } from "@/types/element"
 
+/**
+ * Null-safe property display. Returns "—" for null/undefined values.
+ * Rounds to at most `decimals` significant decimal places.
+ */
+export function formatProperty(
+  value: number | string | null | undefined,
+  unit = "",
+  decimals = 3,
+): string {
+  if (value === null || value === undefined) return "—"
+  if (typeof value === "string") return value
+  const rounded = parseFloat(value.toFixed(decimals))
+  return unit ? `${rounded} ${unit}` : `${rounded}`
+}
+
 // Maps category names (with spaces, as in the JSON) to CSS variable keys (with hyphens)
 const CATEGORY_CSS_KEY: Record<ElementCategory, string> = {
   "alkali metal": "alkali-metal",

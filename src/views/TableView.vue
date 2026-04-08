@@ -5,6 +5,7 @@ import { storeToRefs } from "pinia";
 import { useElementStore } from "@/stores/elementStore";
 import PeriodicGrid from "@/components/PeriodicGrid.vue";
 import FilterBar from "@/components/FilterBar.vue";
+import DetailModal from "@/components/detail/DetailModal.vue";
 import { useElementFilter } from "@/composables/useElementFilter";
 
 const rootEl = ref<HTMLElement | null>(null);
@@ -59,6 +60,8 @@ onUnmounted(() => {
       <FilterBar />
       <PeriodicGrid />
     </div>
+    <!-- v-show preserves GSAP state; placed at view root to avoid CLS -->
+    <DetailModal />
   </main>
 </template>
 
