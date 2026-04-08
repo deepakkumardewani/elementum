@@ -51,8 +51,8 @@ export interface Element {
   oxidationStates: string | null
   discoverer: string | null
   yearDiscovered: number | string | null
-  /** Hex color strings for emission spectral lines */
-  spectralLines: string[]
+  /** emission spectral lines with wavelength and color */
+  spectralLines: { wavelength: number; color: string }[]
   funFacts: string[]
   compounds: string[]
   summary: string

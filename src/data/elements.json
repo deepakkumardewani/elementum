@@ -26,9 +26,34 @@
     "oxidationStates": null,
     "discoverer": "Henry Cavendish",
     "yearDiscovered": null,
-    "spectralLines": [],
-    "funFacts": [],
-    "compounds": [],
+    "spectralLines": [
+      {
+        "wavelength": 410.2,
+        "color": "#7d00db"
+      },
+      {
+        "wavelength": 434,
+        "color": "#2800ff"
+      },
+      {
+        "wavelength": 486.1,
+        "color": "#00efff"
+      },
+      {
+        "wavelength": 656.3,
+        "color": "#ff0000"
+      }
+    ],
+    "funFacts": [
+      "Hydrogen is the most abundant element in the universe, making up about 75% of all normal matter by mass.",
+      "A single hydrogen atom is so small that 10 million of them lined up would only be 1 millimeter wide.",
+      "Hydrogen fuel cells convert hydrogen directly into electricity, with pure water as the only byproduct."
+    ],
+    "compounds": [
+      "H₂O (Water)",
+      "H₂SO₄ (Sulfuric Acid)",
+      "NH₃ (Ammonia)"
+    ],
     "summary": "Hydrogen is a chemical element with chemical symbol H and atomic number 1. With an atomic weight of 1.00794 u, hydrogen is the lightest element on the periodic table. Its monatomic form (H) is the most abundant chemical substance in the Universe, constituting roughly 75% of all baryonic mass."
   },
   {
@@ -58,8 +83,41 @@
     "oxidationStates": null,
     "discoverer": "Pierre Janssen",
     "yearDiscovered": null,
-    "spectralLines": [],
-    "funFacts": [],
+    "spectralLines": [
+      {
+        "wavelength": 447.1,
+        "color": "#0036ff"
+      },
+      {
+        "wavelength": 471.3,
+        "color": "#00afff"
+      },
+      {
+        "wavelength": 492.2,
+        "color": "#00ffe8"
+      },
+      {
+        "wavelength": 501.6,
+        "color": "#00ff7f"
+      },
+      {
+        "wavelength": 587.6,
+        "color": "#ffe700"
+      },
+      {
+        "wavelength": 667.8,
+        "color": "#ff0000"
+      },
+      {
+        "wavelength": 706.5,
+        "color": "#f30000"
+      }
+    ],
+    "funFacts": [
+      "Helium was discovered in the Sun before it was found on Earth — its name comes from Helios, the Greek sun god.",
+      "Helium is the only element that cannot be solidified by cooling alone; it requires extreme pressure as well.",
+      "The United States holds the world's largest helium reserve, stored underground in a natural gas field in Texas."
+    ],
     "compounds": [],
     "summary": "Helium is a chemical element with symbol He and atomic number 2. It is a colorless, odorless, tasteless, non-toxic, inert, monatomic gas that heads the noble gas group in the periodic table. Its boiling and melting points are the lowest among all the elements."
   },
@@ -91,9 +149,30 @@
     "oxidationStates": null,
     "discoverer": "Johan August Arfwedson",
     "yearDiscovered": null,
-    "spectralLines": [],
-    "funFacts": [],
-    "compounds": [],
+    "spectralLines": [
+      {
+        "wavelength": 460.3,
+        "color": "#007cff"
+      },
+      {
+        "wavelength": 610.4,
+        "color": "#ff9a00"
+      },
+      {
+        "wavelength": 670.8,
+        "color": "#ff0000"
+      }
+    ],
+    "funFacts": [
+      "Lithium is so light it can float on water — and it's only about half the density of water.",
+      "Lithium carbonate has been used since the 1940s as a mood stabilizer for bipolar disorder.",
+      "The lithium-ion battery in your phone contains only a few grams of lithium but can store enormous amounts of energy."
+    ],
+    "compounds": [
+      "LiOH (Lithium Hydroxide)",
+      "Li₂CO₃ (Lithium Carbonate)",
+      "LiCl (Lithium Chloride)"
+    ],
     "summary": "Lithium (from Greek:λίθος lithos, \"stone\") is a chemical element with the symbol Li and atomic number 3. It is a soft, silver-white metal belonging to the alkali metal group of chemical elements. Under standard conditions it is the lightest metal and the least dense solid element."
   },
   {
@@ -124,9 +203,26 @@
     "oxidationStates": null,
     "discoverer": "Louis Nicolas Vauquelin",
     "yearDiscovered": null,
-    "spectralLines": [],
-    "funFacts": [],
-    "compounds": [],
+    "spectralLines": [
+      {
+        "wavelength": 457,
+        "color": "#006cff"
+      },
+      {
+        "wavelength": 467.3,
+        "color": "#009dff"
+      }
+    ],
+    "funFacts": [
+      "Beryllium is transparent to X-rays, making it the ideal material for X-ray tube windows in medical equipment.",
+      "Emeralds and aquamarines are both beryllium minerals — beryl (Be₃Al₂Si₆O₁₈) gives them their color.",
+      "Beryllium is incredibly stiff — it's six times stiffer than steel at only one-quarter the weight."
+    ],
+    "compounds": [
+      "BeO (Beryllium Oxide)",
+      "BeCl₂ (Beryllium Chloride)",
+      "Be₃Al₂Si₆O₁₈ (Beryl)"
+    ],
     "summary": "Beryllium is a chemical element with symbol Be and atomic number 4. It is created through stellar nucleosynthesis and is a relatively rare element in the universe. It is a divalent element which occurs naturally only in combination with other elements in minerals."
   },
   {
@@ -157,9 +253,30 @@
     "oxidationStates": null,
     "discoverer": "Joseph Louis Gay-Lussac",
     "yearDiscovered": null,
-    "spectralLines": [],
-    "funFacts": [],
-    "compounds": [],
+    "spectralLines": [
+      {
+        "wavelength": 412.2,
+        "color": "#7b00e3"
+      },
+      {
+        "wavelength": 432.6,
+        "color": "#3000ff"
+      },
+      {
+        "wavelength": 518.1,
+        "color": "#2dff00"
+      }
+    ],
+    "funFacts": [
+      "Boron is the only non-metal in Group 13 and behaves more like a semiconductor than a typical element.",
+      "Borax, a boron compound, has been used as a cleaning agent for over 100 years.",
+      "The hardest material after diamond — cubic boron nitride — is used to cut and grind hardened steel."
+    ],
+    "compounds": [
+      "B₂O₃ (Boron Trioxide)",
+      "Na₂B₄O₇ (Borax)",
+      "BN (Boron Nitride)"
+    ],
     "summary": "Boron is a metalloid chemical element with symbol B and atomic number 5. Produced entirely by cosmic ray spallation and supernovae and not by stellar nucleosynthesis, it is a low-abundance element in both the Solar system and the Earth's crust. Boron is concentrated on Earth by the water-solubility of its more common naturally occurring compounds, the borate minerals."
   },
   {
@@ -190,9 +307,34 @@
     "oxidationStates": null,
     "discoverer": "Ancient Egypt",
     "yearDiscovered": null,
-    "spectralLines": [],
-    "funFacts": [],
-    "compounds": [],
+    "spectralLines": [
+      {
+        "wavelength": 426.7,
+        "color": "#4c00ff"
+      },
+      {
+        "wavelength": 477.2,
+        "color": "#00c9ff"
+      },
+      {
+        "wavelength": 505.2,
+        "color": "#00ff51"
+      },
+      {
+        "wavelength": 538,
+        "color": "#7bff00"
+      }
+    ],
+    "funFacts": [
+      "Carbon forms more compounds than all other elements combined — over 10 million known organic compounds.",
+      "Diamond and graphite are both pure carbon, yet diamond is the hardest natural material while graphite is soft enough to write with.",
+      "Carbon-14 radioactive dating can accurately determine the age of organic materials up to about 50,000 years old."
+    ],
+    "compounds": [
+      "CO₂ (Carbon Dioxide)",
+      "CH₄ (Methane)",
+      "C₆H₁₂O₆ (Glucose)"
+    ],
     "summary": "Carbon (from Latin:carbo \"coal\") is a chemical element with symbol C and atomic number 6. On the periodic table, it is the first (row 2) of six elements in column (group) 14, which have in common the composition of their outer electron shell. It is nonmetallic and tetravalent—making four electrons available to form covalent chemical bonds."
   },
   {
@@ -223,9 +365,38 @@
     "oxidationStates": null,
     "discoverer": "Daniel Rutherford",
     "yearDiscovered": null,
-    "spectralLines": [],
-    "funFacts": [],
-    "compounds": [],
+    "spectralLines": [
+      {
+        "wavelength": 399.5,
+        "color": "#8200b3"
+      },
+      {
+        "wavelength": 410.9,
+        "color": "#7c00de"
+      },
+      {
+        "wavelength": 463.1,
+        "color": "#0089ff"
+      },
+      {
+        "wavelength": 567.6,
+        "color": "#daff00"
+      },
+      {
+        "wavelength": 648.2,
+        "color": "#ff0000"
+      }
+    ],
+    "funFacts": [
+      "Nitrogen makes up 78% of Earth's atmosphere — yet most living things cannot use it directly from the air.",
+      "Liquid nitrogen at −196°C is used to freeze and preserve biological samples, food, and even human tissue.",
+      "The nitrogen in your body's DNA and proteins was once 'fixed' from the atmosphere by soil bacteria."
+    ],
+    "compounds": [
+      "NH₃ (Ammonia)",
+      "HNO₃ (Nitric Acid)",
+      "N₂O (Nitrous Oxide)"
+    ],
     "summary": "Nitrogen is a chemical element with symbol N and atomic number 7. It is the lightest pnictogen and at room temperature, it is a transparent, odorless diatomic gas. Nitrogen is a common element in the universe, estimated at about seventh in total abundance in the Milky Way and the Solar System."
   },
   {
@@ -256,9 +427,38 @@
     "oxidationStates": null,
     "discoverer": "Carl Wilhelm Scheele",
     "yearDiscovered": null,
-    "spectralLines": [],
-    "funFacts": [],
-    "compounds": [],
+    "spectralLines": [
+      {
+        "wavelength": 436.8,
+        "color": "#1800ff"
+      },
+      {
+        "wavelength": 533.1,
+        "color": "#69ff00"
+      },
+      {
+        "wavelength": 559.7,
+        "color": "#c2ff00"
+      },
+      {
+        "wavelength": 615.8,
+        "color": "#ff8600"
+      },
+      {
+        "wavelength": 645.4,
+        "color": "#ff0000"
+      }
+    ],
+    "funFacts": [
+      "Oxygen was independently discovered by Carl Wilhelm Scheele and Joseph Priestley in the 1770s, but Antoine Lavoisier named it.",
+      "Almost all of Earth's breathable oxygen was produced by photosynthetic life over billions of years.",
+      "Liquid oxygen is pale blue and strongly magnetic — it will stick to a magnet."
+    ],
+    "compounds": [
+      "H₂O (Water)",
+      "CO₂ (Carbon Dioxide)",
+      "SiO₂ (Silicon Dioxide / Quartz)"
+    ],
     "summary": "Oxygen is a chemical element with symbol O and atomic number 8. It is a member of the chalcogen group on the periodic table and is a highly reactive nonmetal and oxidizing agent that readily forms compounds (notably oxides) with most elements. By mass, oxygen is the third-most abundant element in the universe, after hydrogen and helium."
   },
   {
@@ -289,9 +489,38 @@
     "oxidationStates": null,
     "discoverer": "André-Marie Ampère",
     "yearDiscovered": null,
-    "spectralLines": [],
-    "funFacts": [],
-    "compounds": [],
+    "spectralLines": [
+      {
+        "wavelength": 623.9,
+        "color": "#ff6800"
+      },
+      {
+        "wavelength": 641.4,
+        "color": "#ff1900"
+      },
+      {
+        "wavelength": 685.6,
+        "color": "#ff0000"
+      },
+      {
+        "wavelength": 703.7,
+        "color": "#f80000"
+      },
+      {
+        "wavelength": 712.8,
+        "color": "#e80000"
+      }
+    ],
+    "funFacts": [
+      "Fluorine is the most electronegative and most reactive of all elements — it reacts violently with almost everything.",
+      "Teflon (PTFE), the non-stick coating on cookware, is a carbon-fluorine compound so stable it's nearly inert.",
+      "Fluoride in drinking water and toothpaste has dramatically reduced tooth decay rates worldwide since the 1940s."
+    ],
+    "compounds": [
+      "HF (Hydrofluoric Acid)",
+      "CaF₂ (Calcium Fluoride / Fluorite)",
+      "NaF (Sodium Fluoride)"
+    ],
     "summary": "Fluorine is a chemical element with symbol F and atomic number 9. It is the lightest halogen and exists as a highly toxic pale yellow diatomic gas at standard conditions. As the most electronegative element, it is extremely reactive:almost all other elements, including some noble gases, form compounds with fluorine."
   },
   {
@@ -322,8 +551,81 @@
     "oxidationStates": null,
     "discoverer": "Morris Travers",
     "yearDiscovered": null,
-    "spectralLines": [],
-    "funFacts": [],
+    "spectralLines": [
+      {
+        "wavelength": 540.1,
+        "color": "#82ff00"
+      },
+      {
+        "wavelength": 585.2,
+        "color": "#ffef00"
+      },
+      {
+        "wavelength": 614.3,
+        "color": "#ff8c00"
+      },
+      {
+        "wavelength": 616.4,
+        "color": "#ff8400"
+      },
+      {
+        "wavelength": 621.7,
+        "color": "#ff7000"
+      },
+      {
+        "wavelength": 626.6,
+        "color": "#ff5d00"
+      },
+      {
+        "wavelength": 630.5,
+        "color": "#ff4d00"
+      },
+      {
+        "wavelength": 638.3,
+        "color": "#ff2900"
+      },
+      {
+        "wavelength": 640.2,
+        "color": "#ff2000"
+      },
+      {
+        "wavelength": 650.6,
+        "color": "#ff0000"
+      },
+      {
+        "wavelength": 659.9,
+        "color": "#ff0000"
+      },
+      {
+        "wavelength": 667.8,
+        "color": "#ff0000"
+      },
+      {
+        "wavelength": 671.7,
+        "color": "#ff0000"
+      },
+      {
+        "wavelength": 692.9,
+        "color": "#ff0000"
+      },
+      {
+        "wavelength": 703.2,
+        "color": "#f90000"
+      },
+      {
+        "wavelength": 717.4,
+        "color": "#df0000"
+      },
+      {
+        "wavelength": 724.5,
+        "color": "#d20000"
+      }
+    ],
+    "funFacts": [
+      "Neon signs don't actually use neon for most colors — only red-orange light comes from real neon; other colors use different gases.",
+      "Neon is the fifth most abundant element in the universe but extremely rare on Earth.",
+      "Despite its cosmic abundance, neon was not discovered until 1898 because it is completely inert and colorless."
+    ],
     "compounds": [],
     "summary": "Neon is a chemical element with symbol Ne and atomic number 10. It is in group 18 (noble gases) of the periodic table. Neon is a colorless, odorless, inert monatomic gas under standard conditions, with about two-thirds the density of air."
   },
@@ -356,9 +658,42 @@
     "oxidationStates": null,
     "discoverer": "Humphry Davy",
     "yearDiscovered": null,
-    "spectralLines": [],
-    "funFacts": [],
-    "compounds": [],
+    "spectralLines": [
+      {
+        "wavelength": 498.3,
+        "color": "#00ffa6"
+      },
+      {
+        "wavelength": 568.8,
+        "color": "#deff00"
+      },
+      {
+        "wavelength": 589,
+        "color": "#ffe200"
+      },
+      {
+        "wavelength": 589.6,
+        "color": "#ffe000"
+      },
+      {
+        "wavelength": 615.4,
+        "color": "#ff8800"
+      },
+      {
+        "wavelength": 616.1,
+        "color": "#ff8500"
+      }
+    ],
+    "funFacts": [
+      "Sodium explodes dramatically when dropped in water — it reacts so fast it ignites the hydrogen gas produced.",
+      "Your body contains about 100 grams of sodium, essential for nerve impulses and muscle contractions.",
+      "Table salt (NaCl) is so fundamental to human history that the word 'salary' derives from the Latin word for salt."
+    ],
+    "compounds": [
+      "NaCl (Table Salt)",
+      "NaOH (Sodium Hydroxide / Lye)",
+      "Na₂CO₃ (Washing Soda)"
+    ],
     "summary": "Sodium /ˈsoʊdiəm/ is a chemical element with symbol Na (from Ancient Greek Νάτριο) and atomic number 11. It is a soft, silver-white, highly reactive metal. In the Periodic table it is in column 1 (alkali metals), and shares with the other six elements in that column that it has a single electron in its outer shell, which it readily donates, creating a positively charged atom - a cation."
   },
   {
@@ -390,9 +725,38 @@
     "oxidationStates": null,
     "discoverer": "Joseph Black",
     "yearDiscovered": null,
-    "spectralLines": [],
-    "funFacts": [],
-    "compounds": [],
+    "spectralLines": [
+      {
+        "wavelength": 383.2,
+        "color": "#6b0070"
+      },
+      {
+        "wavelength": 383.8,
+        "color": "#6c0072"
+      },
+      {
+        "wavelength": 516.7,
+        "color": "#27ff00"
+      },
+      {
+        "wavelength": 517.3,
+        "color": "#2aff00"
+      },
+      {
+        "wavelength": 518.4,
+        "color": "#2fff00"
+      }
+    ],
+    "funFacts": [
+      "Magnesium burns with such an intense white flame that it was used in early photography as flash powder.",
+      "Chlorophyll — the molecule that makes plants green and drives photosynthesis — has magnesium at its center.",
+      "Magnesium alloys are used in aircraft and racing cars because they are the lightest structural metal."
+    ],
+    "compounds": [
+      "MgO (Magnesia)",
+      "Mg(OH)₂ (Milk of Magnesia)",
+      "MgSO₄ (Epsom Salt)"
+    ],
     "summary": "Magnesium is a chemical element with symbol Mg and atomic number 12. It is a shiny gray solid which bears a close physical resemblance to the other five elements in the second column (Group 2, or alkaline earth metals) of the periodic table:they each have the same electron configuration in their outer electron shell producing a similar crystal structure. Magnesium is the ninth most abundant element in the universe."
   },
   {
@@ -424,9 +788,26 @@
     "oxidationStates": null,
     "discoverer": null,
     "yearDiscovered": null,
-    "spectralLines": [],
-    "funFacts": [],
-    "compounds": [],
+    "spectralLines": [
+      {
+        "wavelength": 394.4,
+        "color": "#7f009f"
+      },
+      {
+        "wavelength": 396.2,
+        "color": "#8100a6"
+      }
+    ],
+    "funFacts": [
+      "Aluminum was once more valuable than gold — Napoleon III reserved aluminum cutlery for honored guests, giving lesser guests gold ones.",
+      "Aluminum is the most abundant metal in Earth's crust, making up about 8% of it by mass.",
+      "Recycling one aluminum can saves enough energy to power a TV for 3 hours."
+    ],
+    "compounds": [
+      "Al₂O₃ (Alumina / Corundum)",
+      "AlCl₃ (Aluminum Chloride)",
+      "Al(OH)₃ (Aluminum Hydroxide)"
+    ],
     "summary": "Aluminium (or aluminum; see different endings) is a chemical element in the boron group with symbol Al and atomic number 13. It is a silvery-white, soft, nonmagnetic, ductile metal. Aluminium is the third most abundant element (after oxygen and silicon), and the most abundant metal, in the Earth's crust."
   },
   {
@@ -458,9 +839,30 @@
     "oxidationStates": null,
     "discoverer": "Jöns Jacob Berzelius",
     "yearDiscovered": null,
-    "spectralLines": [],
-    "funFacts": [],
-    "compounds": [],
+    "spectralLines": [
+      {
+        "wavelength": 390.6,
+        "color": "#7a008f"
+      },
+      {
+        "wavelength": 412.8,
+        "color": "#7a00e5"
+      },
+      {
+        "wavelength": 505.6,
+        "color": "#00ff4c"
+      }
+    ],
+    "funFacts": [
+      "Silicon is the foundation of modern computing — every microchip and transistor is built from silicon.",
+      "Silicon is the second most abundant element in Earth's crust, after oxygen.",
+      "Sand and glass are both largely made of silicon dioxide (SiO₂) — we literally build computers from sand."
+    ],
+    "compounds": [
+      "SiO₂ (Silicon Dioxide / Quartz)",
+      "SiC (Silicon Carbide)",
+      "Si₃N₄ (Silicon Nitride)"
+    ],
     "summary": "Silicon is a chemical element with symbol Si and atomic number 14. It is a tetravalent metalloid, more reactive than germanium, the metalloid directly below it in the table. Controversy about silicon's character dates to its discovery."
   },
   {
@@ -492,9 +894,30 @@
     "oxidationStates": null,
     "discoverer": "Hennig Brand",
     "yearDiscovered": null,
-    "spectralLines": [],
-    "funFacts": [],
-    "compounds": [],
+    "spectralLines": [
+      {
+        "wavelength": 542.6,
+        "color": "#8aff00"
+      },
+      {
+        "wavelength": 553.5,
+        "color": "#aeff00"
+      },
+      {
+        "wavelength": 560,
+        "color": "#c3ff00"
+      }
+    ],
+    "funFacts": [
+      "White phosphorus glows in the dark when exposed to oxygen — the word 'phosphorus' means 'light-bringer' in Greek.",
+      "Phosphorus is essential for DNA and ATP — without it, no life on Earth could store or transfer energy.",
+      "The first element ever isolated by a chemist was phosphorus, accidentally discovered by Hennig Brand in 1669 from urine."
+    ],
+    "compounds": [
+      "H₃PO₄ (Phosphoric Acid)",
+      "Ca₃(PO₄)₂ (Calcium Phosphate)",
+      "P₄O₁₀ (Phosphorus Pentoxide)"
+    ],
     "summary": "Phosphorus is a chemical element with symbol P and atomic number 15. As an element, phosphorus exists in two major forms—white phosphorus and red phosphorus—but due to its high reactivity, phosphorus is never found as a free element on Earth. Instead phosphorus-containing minerals are almost always present in their maximally oxidised state, as inorganic phosphate rocks."
   },
   {
@@ -526,9 +949,34 @@
     "oxidationStates": null,
     "discoverer": "Ancient china",
     "yearDiscovered": null,
-    "spectralLines": [],
-    "funFacts": [],
-    "compounds": [],
+    "spectralLines": [
+      {
+        "wavelength": 421.5,
+        "color": "#6300ff"
+      },
+      {
+        "wavelength": 469.5,
+        "color": "#00a7ff"
+      },
+      {
+        "wavelength": 545.4,
+        "color": "#94ff00"
+      },
+      {
+        "wavelength": 564,
+        "color": "#cfff00"
+      }
+    ],
+    "funFacts": [
+      "Sulfur is mentioned in the Bible as 'brimstone' and has been known since ancient times — it was used to fumigate homes.",
+      "The smell of rotten eggs comes from hydrogen sulfide (H₂S), which sulfur-reducing bacteria produce.",
+      "Sulfuric acid is the most widely produced industrial chemical in the world, used in fertilizers, batteries, and refining."
+    ],
+    "compounds": [
+      "H₂SO₄ (Sulfuric Acid)",
+      "SO₂ (Sulfur Dioxide)",
+      "FeS₂ (Iron Pyrite / Fool's Gold)"
+    ],
     "summary": "Sulfur or sulphur (see spelling differences) is a chemical element with symbol S and atomic number 16. It is an abundant, multivalent non-metal. Under normal conditions, sulfur atoms form cyclic octatomic molecules with chemical formula S8."
   },
   {
@@ -560,9 +1008,38 @@
     "oxidationStates": null,
     "discoverer": "Carl Wilhelm Scheele",
     "yearDiscovered": null,
-    "spectralLines": [],
-    "funFacts": [],
-    "compounds": [],
+    "spectralLines": [
+      {
+        "wavelength": 407.7,
+        "color": "#8000d2"
+      },
+      {
+        "wavelength": 414.2,
+        "color": "#7700ea"
+      },
+      {
+        "wavelength": 479.5,
+        "color": "#00d3ff"
+      },
+      {
+        "wavelength": 481,
+        "color": "#00daff"
+      },
+      {
+        "wavelength": 725.7,
+        "color": "#d00000"
+      }
+    ],
+    "funFacts": [
+      "Chlorine was used as a chemical weapon in World War I — it was the first large-scale use of a chemical agent in warfare.",
+      "Chlorine in swimming pools doesn't just kill bacteria — it reacts with urine and sweat to produce the irritating 'pool smell.'",
+      "PVC (polyvinyl chloride) plastic, used in pipes, flooring, and clothing, is made from chlorine and ethylene."
+    ],
+    "compounds": [
+      "NaCl (Table Salt)",
+      "HCl (Hydrochloric Acid)",
+      "NaClO (Bleach)"
+    ],
     "summary": "Chlorine is a chemical element with symbol Cl and atomic number 17. It also has a relative atomic mass of 35.5. Chlorine is in the halogen group (17) and is the second lightest halogen following fluorine."
   },
   {
@@ -594,8 +1071,69 @@
     "oxidationStates": null,
     "discoverer": "Lord Rayleigh",
     "yearDiscovered": null,
-    "spectralLines": [],
-    "funFacts": [],
+    "spectralLines": [
+      {
+        "wavelength": 415.9,
+        "color": "#7400f0"
+      },
+      {
+        "wavelength": 419.8,
+        "color": "#6a00fe"
+      },
+      {
+        "wavelength": 425.9,
+        "color": "#5000ff"
+      },
+      {
+        "wavelength": 427.2,
+        "color": "#4a00ff"
+      },
+      {
+        "wavelength": 430,
+        "color": "#3d00ff"
+      },
+      {
+        "wavelength": 433.4,
+        "color": "#2c00ff"
+      },
+      {
+        "wavelength": 667.7,
+        "color": "#ff0000"
+      },
+      {
+        "wavelength": 696.5,
+        "color": "#ff0000"
+      },
+      {
+        "wavelength": 706.7,
+        "color": "#f30000"
+      },
+      {
+        "wavelength": 714.7,
+        "color": "#e40000"
+      },
+      {
+        "wavelength": 727.3,
+        "color": "#cd0000"
+      },
+      {
+        "wavelength": 738.4,
+        "color": "#b80000"
+      },
+      {
+        "wavelength": 750.4,
+        "color": "#a00000"
+      },
+      {
+        "wavelength": 763.5,
+        "color": "#850000"
+      }
+    ],
+    "funFacts": [
+      "Argon makes up about 1% of Earth's atmosphere, making it the third most abundant atmospheric gas.",
+      "Argon is used to fill the space between double-pane windows because it is a poor conductor of heat.",
+      "The name 'argon' comes from the Greek word for 'lazy' or 'inactive' — reflecting its complete chemical inertness."
+    ],
     "compounds": [],
     "summary": "Argon is a chemical element with symbol Ar and atomic number 18. It is in group 18 of the periodic table and is a noble gas. Argon is the third most common gas in the Earth's atmosphere, at 0.934% (9,340 ppmv), making it over twice as abundant as the next most common atmospheric gas, water vapor (which averages about 4000 ppmv, but varies greatly), and 23 times as abundant as the next most common non-condensing atmospheric gas, carbon dioxide (400 ppmv), and more than 500 times as abundant as the next most common noble gas, neon (18 ppmv)."
   },
@@ -629,9 +1167,42 @@
     "oxidationStates": null,
     "discoverer": "Humphry Davy",
     "yearDiscovered": null,
-    "spectralLines": [],
-    "funFacts": [],
-    "compounds": [],
+    "spectralLines": [
+      {
+        "wavelength": 404.4,
+        "color": "#8200c6"
+      },
+      {
+        "wavelength": 404.7,
+        "color": "#8200c7"
+      },
+      {
+        "wavelength": 693.9,
+        "color": "#ff0000"
+      },
+      {
+        "wavelength": 696.4,
+        "color": "#ff0000"
+      },
+      {
+        "wavelength": 766.5,
+        "color": "#7f0000"
+      },
+      {
+        "wavelength": 769.9,
+        "color": "#780000"
+      }
+    ],
+    "funFacts": [
+      "Potassium's symbol K comes from 'kalium,' its Latin name, because it was first isolated from potash (wood ash).",
+      "Bananas are famously high in potassium, but you'd need to eat about 10 million of them to get a lethal dose.",
+      "Potassium-40 is naturally radioactive — your own body contains enough to be slightly radioactive."
+    ],
+    "compounds": [
+      "KCl (Potassium Chloride)",
+      "KOH (Potassium Hydroxide)",
+      "KNO₃ (Potassium Nitrate / Saltpeter)"
+    ],
     "summary": "Potassium is a chemical element with symbol K (derived from Neo-Latin, kalium) and atomic number 19. It was first isolated from potash, the ashes of plants, from which its name is derived. In the Periodic table, potassium is one of seven elements in column (group) 1 (alkali metals):they all have a single valence electron in their outer electron shell, which they readily give up to create an atom with a positive charge - a cation, and combine with anions to form salts."
   },
   {
@@ -664,9 +1235,50 @@
     "oxidationStates": null,
     "discoverer": "Humphry Davy",
     "yearDiscovered": null,
-    "spectralLines": [],
-    "funFacts": [],
-    "compounds": [],
+    "spectralLines": [
+      {
+        "wavelength": 393.4,
+        "color": "#7e009a"
+      },
+      {
+        "wavelength": 396.8,
+        "color": "#8100a8"
+      },
+      {
+        "wavelength": 422.7,
+        "color": "#5e00ff"
+      },
+      {
+        "wavelength": 430.3,
+        "color": "#3b00ff"
+      },
+      {
+        "wavelength": 442.5,
+        "color": "#0017ff"
+      },
+      {
+        "wavelength": 445.5,
+        "color": "#002cff"
+      },
+      {
+        "wavelength": 526.2,
+        "color": "#4fff00"
+      },
+      {
+        "wavelength": 558.2,
+        "color": "#bdff00"
+      }
+    ],
+    "funFacts": [
+      "Calcium is the fifth most abundant element in Earth's crust and the most abundant metal in the human body.",
+      "Your bones and teeth are mostly made of calcium phosphate — an adult skeleton contains about 1 kg of calcium.",
+      "Chalk, limestone, marble, and pearls are all different forms of calcium carbonate (CaCO₃)."
+    ],
+    "compounds": [
+      "CaCO₃ (Calcium Carbonate / Limestone)",
+      "CaSO₄ (Gypsum)",
+      "Ca(OH)₂ (Slaked Lime)"
+    ],
     "summary": "Calcium is a chemical element with symbol Ca and atomic number 20. Calcium is a soft gray alkaline earth metal, fifth-most-abundant element by mass in the Earth's crust. The ion Ca2+ is also the fifth-most-abundant dissolved ion in seawater by both molarity and mass, after sodium, chloride, magnesium, and sulfate."
   },
   {
@@ -699,9 +1311,30 @@
     "oxidationStates": null,
     "discoverer": "Lars Fredrik Nilson",
     "yearDiscovered": null,
-    "spectralLines": [],
-    "funFacts": [],
-    "compounds": [],
+    "spectralLines": [
+      {
+        "wavelength": 391.2,
+        "color": "#7b0092"
+      },
+      {
+        "wavelength": 402,
+        "color": "#8300bc"
+      },
+      {
+        "wavelength": 408.2,
+        "color": "#8000d4"
+      }
+    ],
+    "funFacts": [
+      "Scandium is so rare that until recently, the entire global supply was only a few kilograms per year.",
+      "Adding a small amount of scandium to aluminum alloys dramatically increases their strength — used in Russian MiG fighter jets.",
+      "Scandium was the first element predicted by Mendeleev that was later discovered exactly as he described."
+    ],
+    "compounds": [
+      "Sc₂O₃ (Scandium Oxide)",
+      "ScCl₃ (Scandium Chloride)",
+      "Sc(NO₃)₃ (Scandium Nitrate)"
+    ],
     "summary": "Scandium is a chemical element with symbol Sc and atomic number 21. A silvery-white metallic d-block element, it has historically been sometimes classified as a rare earth element, together with yttrium and the lanthanoids. It was discovered in 1879 by spectral analysis of the minerals euxenite and gadolinite from Scandinavia."
   },
   {
@@ -734,9 +1367,34 @@
     "oxidationStates": null,
     "discoverer": "William Gregor",
     "yearDiscovered": null,
-    "spectralLines": [],
-    "funFacts": [],
-    "compounds": [],
+    "spectralLines": [
+      {
+        "wavelength": 395.6,
+        "color": "#8000a3"
+      },
+      {
+        "wavelength": 399,
+        "color": "#8200b1"
+      },
+      {
+        "wavelength": 453.5,
+        "color": "#0059ff"
+      },
+      {
+        "wavelength": 465,
+        "color": "#0092ff"
+      }
+    ],
+    "funFacts": [
+      "Titanium is as strong as steel but 45% lighter, making it ideal for aircraft, spacecraft, and medical implants.",
+      "Titanium is completely biocompatible — the human body does not reject it, so it's used in hip replacements and dental implants.",
+      "Titanium dioxide (TiO₂) is the white pigment in most white paints, sunscreens, and white food coloring."
+    ],
+    "compounds": [
+      "TiO₂ (Titanium Dioxide)",
+      "TiCl₄ (Titanium Tetrachloride)",
+      "TiN (Titanium Nitride)"
+    ],
     "summary": "Titanium is a chemical element with symbol Ti and atomic number 22. It is a lustrous transition metal with a silver color, low density and high strength. It is highly resistant to corrosion in sea water, aqua regia and chlorine."
   },
   {
@@ -769,9 +1427,26 @@
     "oxidationStates": null,
     "discoverer": "Andrés Manuel del Río",
     "yearDiscovered": null,
-    "spectralLines": [],
-    "funFacts": [],
-    "compounds": [],
+    "spectralLines": [
+      {
+        "wavelength": 411.2,
+        "color": "#7c00df"
+      },
+      {
+        "wavelength": 437.9,
+        "color": "#1100ff"
+      }
+    ],
+    "funFacts": [
+      "Vanadium steel, with just a small percentage of vanadium, is used in car chassis and tools for its extreme toughness.",
+      "Sea cucumbers and certain marine worms use vanadium instead of iron in their blood.",
+      "Vanadium flow batteries are a promising technology for large-scale grid energy storage."
+    ],
+    "compounds": [
+      "V₂O₅ (Vanadium Pentoxide)",
+      "VOCl₃ (Vanadyl Trichloride)",
+      "VOSO₄ (Vanadyl Sulfate)"
+    ],
     "summary": "Vanadium is a chemical element with symbol V and atomic number 23. It is a hard, silvery grey, ductile and malleable transition metal. The element is found only in chemically combined form in nature, but once isolated artificially, the formation of an oxide layer stabilizes the free metal somewhat against further oxidation."
   },
   {
@@ -804,9 +1479,38 @@
     "oxidationStates": null,
     "discoverer": "Louis Nicolas Vauquelin",
     "yearDiscovered": null,
-    "spectralLines": [],
-    "funFacts": [],
-    "compounds": [],
+    "spectralLines": [
+      {
+        "wavelength": 427.5,
+        "color": "#4900ff"
+      },
+      {
+        "wavelength": 428.9,
+        "color": "#4200ff"
+      },
+      {
+        "wavelength": 520.4,
+        "color": "#37ff00"
+      },
+      {
+        "wavelength": 520.6,
+        "color": "#38ff00"
+      },
+      {
+        "wavelength": 520.8,
+        "color": "#39ff00"
+      }
+    ],
+    "funFacts": [
+      "Chromium gives rubies their red color and emeralds their green — the same element produces opposite colors in different minerals.",
+      "Stainless steel is iron with at least 10.5% chromium — the chromium forms an invisible oxide layer that prevents rust.",
+      "Chrome plating uses electroplating to deposit a thin, shiny layer of chromium for both appearance and corrosion resistance."
+    ],
+    "compounds": [
+      "Cr₂O₃ (Chromium Oxide)",
+      "K₂Cr₂O₇ (Potassium Dichromate)",
+      "CrO₃ (Chromium Trioxide)"
+    ],
     "summary": "Chromium is a chemical element with symbol Cr and atomic number 24. It is the first element in Group 6. It is a steely-gray, lustrous, hard and brittle metal which takes a high polish, resists tarnishing, and has a high melting point."
   },
   {
@@ -839,9 +1543,34 @@
     "oxidationStates": null,
     "discoverer": "Torbern Olof Bergman",
     "yearDiscovered": null,
-    "spectralLines": [],
-    "funFacts": [],
-    "compounds": [],
+    "spectralLines": [
+      {
+        "wavelength": 403.1,
+        "color": "#8300c1"
+      },
+      {
+        "wavelength": 403.3,
+        "color": "#8300c1"
+      },
+      {
+        "wavelength": 403.4,
+        "color": "#8200c2"
+      },
+      {
+        "wavelength": 476.2,
+        "color": "#00c5ff"
+      }
+    ],
+    "funFacts": [
+      "Manganese nodules on the ocean floor contain vast amounts of manganese, iron, nickel, and cobalt — a future mining target.",
+      "Steel without manganese would be so brittle it would shatter rather than bend — manganese is essential in steelmaking.",
+      "The purple color of amethyst crystals comes from traces of manganese and iron impurities."
+    ],
+    "compounds": [
+      "MnO₂ (Manganese Dioxide)",
+      "KMnO₄ (Potassium Permanganate)",
+      "MnSO₄ (Manganese Sulfate)"
+    ],
     "summary": "Manganese is a chemical element with symbol Mn and atomic number 25. It is not found as a free element in nature; it is often found in combination with iron, and in many minerals. Manganese is a metal with important industrial metal alloy uses, particularly in stainless steels."
   },
   {
@@ -874,9 +1603,30 @@
     "oxidationStates": null,
     "discoverer": "5000 BC",
     "yearDiscovered": null,
-    "spectralLines": [],
-    "funFacts": [],
-    "compounds": [],
+    "spectralLines": [
+      {
+        "wavelength": 385.6,
+        "color": "#71007a"
+      },
+      {
+        "wavelength": 404.6,
+        "color": "#8200c6"
+      },
+      {
+        "wavelength": 438.4,
+        "color": "#0e00ff"
+      }
+    ],
+    "funFacts": [
+      "Iron is the most abundant element on Earth by mass — Earth's core is mostly iron and nickel.",
+      "The red color of Mars comes from iron oxide (rust) covering its surface.",
+      "Iron is the heaviest element that can be formed by nuclear fusion in stars — heavier elements require supernova explosions."
+    ],
+    "compounds": [
+      "Fe₂O₃ (Iron Oxide / Rust)",
+      "FeSO₄ (Iron Sulfate)",
+      "Fe₃O₄ (Magnetite)"
+    ],
     "summary": "Iron is a chemical element with symbol Fe (from Latin:ferrum) and atomic number 26. It is a metal in the first transition series. It is by mass the most common element on Earth, forming much of Earth's outer and inner core."
   },
   {
@@ -909,9 +1659,22 @@
     "oxidationStates": null,
     "discoverer": "Georg Brandt",
     "yearDiscovered": null,
-    "spectralLines": [],
-    "funFacts": [],
-    "compounds": [],
+    "spectralLines": [
+      {
+        "wavelength": 387.3,
+        "color": "#750081"
+      }
+    ],
+    "funFacts": [
+      "Cobalt-60 is used in cancer radiation therapy to destroy tumors with gamma rays.",
+      "The brilliant blue in medieval stained glass windows comes from cobalt compounds — it's been used as a pigment for millennia.",
+      "Vitamin B12, essential for human health, is the only vitamin that contains a metal — cobalt at its center."
+    ],
+    "compounds": [
+      "CoO (Cobalt Oxide)",
+      "CoCl₂ (Cobalt Chloride)",
+      "Co₂O₃ (Cobalt Trioxide)"
+    ],
     "summary": "Cobalt is a chemical element with symbol Co and atomic number 27. Like nickel, cobalt in the Earth's crust is found only in chemically combined form, save for small deposits found in alloys of natural meteoric iron. The free element, produced by reductive smelting, is a hard, lustrous, silver-gray metal."
   },
   {
@@ -945,8 +1708,16 @@
     "discoverer": "Axel Fredrik Cronstedt",
     "yearDiscovered": null,
     "spectralLines": [],
-    "funFacts": [],
-    "compounds": [],
+    "funFacts": [
+      "The nickel coin in the US is actually 75% copper and only 25% nickel — despite being named after the metal.",
+      "Nickel is used in rechargeable NiMH batteries found in hybrid cars and many consumer electronics.",
+      "Stainless steel cutlery typically contains about 8–10% nickel, which adds corrosion resistance and shine."
+    ],
+    "compounds": [
+      "NiO (Nickel Oxide)",
+      "NiSO₄ (Nickel Sulfate)",
+      "Ni(CO)₄ (Nickel Carbonyl)"
+    ],
     "summary": "Nickel is a chemical element with symbol Ni and atomic number 28. It is a silvery-white lustrous metal with a slight golden tinge. Nickel belongs to the transition metals and is hard and ductile."
   },
   {
@@ -979,9 +1750,38 @@
     "oxidationStates": null,
     "discoverer": "Middle East",
     "yearDiscovered": null,
-    "spectralLines": [],
-    "funFacts": [],
-    "compounds": [],
+    "spectralLines": [
+      {
+        "wavelength": 510.6,
+        "color": "#06ff00"
+      },
+      {
+        "wavelength": 515.3,
+        "color": "#20ff00"
+      },
+      {
+        "wavelength": 521.8,
+        "color": "#3dff00"
+      },
+      {
+        "wavelength": 570,
+        "color": "#e1ff00"
+      },
+      {
+        "wavelength": 578.2,
+        "color": "#faff00"
+      }
+    ],
+    "funFacts": [
+      "Copper was the first metal to be worked by humans, over 10,000 years ago — the Copper Age preceded the Bronze Age.",
+      "Copper has natural antimicrobial properties — bacteria die when they touch copper surfaces, which is why hospitals are using it more.",
+      "The Statue of Liberty is made of copper and gets its green color (patina) from weathering — it was originally shiny orange-brown."
+    ],
+    "compounds": [
+      "CuSO₄ (Copper Sulfate)",
+      "Cu₂O (Cuprous Oxide)",
+      "CuCl₂ (Copper Chloride)"
+    ],
     "summary": "Copper is a chemical element with symbol Cu (from Latin:cuprum) and atomic number 29. It is a soft, malleable and ductile metal with very high thermal and electrical conductivity. A freshly exposed surface of pure copper has a reddish-orange color."
   },
   {
@@ -1014,9 +1814,30 @@
     "oxidationStates": null,
     "discoverer": "India",
     "yearDiscovered": null,
-    "spectralLines": [],
-    "funFacts": [],
-    "compounds": [],
+    "spectralLines": [
+      {
+        "wavelength": 472.2,
+        "color": "#00b3ff"
+      },
+      {
+        "wavelength": 481.1,
+        "color": "#00daff"
+      },
+      {
+        "wavelength": 636.2,
+        "color": "#ff3300"
+      }
+    ],
+    "funFacts": [
+      "Zinc is essential for immune function — a zinc deficiency is one of the most common nutritional deficiencies worldwide.",
+      "Galvanizing steel with a thin layer of zinc prevents rust and is why lamp posts, fences, and guardrails last for decades.",
+      "Pennies minted after 1982 in the US are 97.5% zinc with just a thin copper coating."
+    ],
+    "compounds": [
+      "ZnO (Zinc Oxide)",
+      "ZnSO₄ (Zinc Sulfate)",
+      "ZnCl₂ (Zinc Chloride)"
+    ],
     "summary": "Zinc, in commerce also spelter, is a chemical element with symbol Zn and atomic number 30. It is the first element of group 12 of the periodic table. In some respects zinc is chemically similar to magnesium:its ion is of similar size and its only common oxidation state is +2."
   },
   {
@@ -1049,9 +1870,26 @@
     "oxidationStates": null,
     "discoverer": "Lecoq de Boisbaudran",
     "yearDiscovered": null,
-    "spectralLines": [],
-    "funFacts": [],
-    "compounds": [],
+    "spectralLines": [
+      {
+        "wavelength": 403.3,
+        "color": "#8300c1"
+      },
+      {
+        "wavelength": 417.2,
+        "color": "#7100f5"
+      }
+    ],
+    "funFacts": [
+      "Gallium melts at just 29.8°C (85.6°F) — it will melt in the palm of your hand.",
+      "Gallium arsenide (GaAs) is used in solar cells for satellites and spacecraft because it's more efficient than silicon.",
+      "LEDs and laser diodes in Blu-ray players rely on gallium nitride semiconductors."
+    ],
+    "compounds": [
+      "Ga₂O₃ (Gallium Oxide)",
+      "GaAs (Gallium Arsenide)",
+      "GaN (Gallium Nitride)"
+    ],
     "summary": "Gallium is a chemical element with symbol Ga and atomic number 31. Elemental gallium does not occur in free form in nature, but as the gallium(III) compounds that are in trace amounts in zinc ores and in bauxite. Gallium is a soft, silvery metal, and elemental gallium is a brittle solid at low temperatures, and melts at 29.76 °C (85.57 °F) (slightly above room temperature)."
   },
   {
@@ -1084,9 +1922,26 @@
     "oxidationStates": null,
     "discoverer": "Clemens Winkler",
     "yearDiscovered": null,
-    "spectralLines": [],
-    "funFacts": [],
-    "compounds": [],
+    "spectralLines": [
+      {
+        "wavelength": 422.7,
+        "color": "#5e00ff"
+      },
+      {
+        "wavelength": 427.9,
+        "color": "#4700ff"
+      }
+    ],
+    "funFacts": [
+      "Germanium was predicted by Mendeleev as 'eka-silicon' in 1871 before it was discovered in 1886.",
+      "The first working transistors were made from germanium before silicon took over in the 1960s.",
+      "Germanium lenses are used in infrared cameras and night-vision equipment because it's transparent to infrared light."
+    ],
+    "compounds": [
+      "GeO₂ (Germanium Dioxide)",
+      "GeCl₄ (Germanium Tetrachloride)",
+      "GeH₄ (Germane)"
+    ],
     "summary": "Germanium is a chemical element with symbol Ge and atomic number 32. It is a lustrous, hard, grayish-white metalloid in the carbon group, chemically similar to its group neighbors tin and silicon. Purified germanium is a semiconductor, with an appearance most similar to elemental silicon."
   },
   {
@@ -1120,8 +1975,16 @@
     "discoverer": "Bronze Age",
     "yearDiscovered": null,
     "spectralLines": [],
-    "funFacts": [],
-    "compounds": [],
+    "funFacts": [
+      "Arsenic was the poison of choice for murderers throughout history — it was called 'inheritance powder' in the Middle Ages.",
+      "Arsenic compounds were once used as green dyes in Victorian wallpaper, causing mysterious illnesses in damp homes.",
+      "Arsenic-based drugs were the first chemotherapy agents — Paul Ehrlich used arsenic compounds to treat syphilis in 1910."
+    ],
+    "compounds": [
+      "As₂O₃ (Arsenic Trioxide)",
+      "AsH₃ (Arsine)",
+      "As₂S₃ (Arsenic Trisulfide)"
+    ],
     "summary": "Arsenic is a chemical element with symbol As and atomic number 33. Arsenic occurs in many minerals, usually in conjunction with sulfur and metals, and also as a pure elemental crystal. Arsenic is a metalloid."
   },
   {
@@ -1154,9 +2017,26 @@
     "oxidationStates": null,
     "discoverer": "Jöns Jakob Berzelius",
     "yearDiscovered": null,
-    "spectralLines": [],
-    "funFacts": [],
-    "compounds": [],
+    "spectralLines": [
+      {
+        "wavelength": 473.1,
+        "color": "#00b7ff"
+      },
+      {
+        "wavelength": 488.7,
+        "color": "#00faff"
+      }
+    ],
+    "funFacts": [
+      "Selenium is essential for human health in tiny amounts but toxic at higher doses — the difference is very small.",
+      "The first photocopiers (Xerox machines) used selenium drums to transfer toner to paper through static electricity.",
+      "Brazil nuts are the richest food source of selenium — eating too many can cause selenium toxicity."
+    ],
+    "compounds": [
+      "SeO₂ (Selenium Dioxide)",
+      "H₂Se (Hydrogen Selenide)",
+      "Na₂SeO₃ (Sodium Selenite)"
+    ],
     "summary": "Selenium is a chemical element with symbol Se and atomic number 34. It is a nonmetal with properties that are intermediate between those of its periodic table column-adjacent chalcogen elements sulfur and tellurium. It rarely occurs in its elemental state in nature, or as pure ore compounds."
   },
   {
@@ -1189,9 +2069,30 @@
     "oxidationStates": null,
     "discoverer": "Antoine Jérôme Balard",
     "yearDiscovered": null,
-    "spectralLines": [],
-    "funFacts": [],
-    "compounds": [],
+    "spectralLines": [
+      {
+        "wavelength": 470.5,
+        "color": "#00acff"
+      },
+      {
+        "wavelength": 481.7,
+        "color": "#00ddff"
+      },
+      {
+        "wavelength": 565,
+        "color": "#d2ff00"
+      }
+    ],
+    "funFacts": [
+      "Bromine is one of only two elements that are liquid at room temperature (the other is mercury).",
+      "Ancient Phoenicians extracted a purple dye called Tyrian purple from sea snails — it contains a bromine compound.",
+      "Bromide compounds were used as sedatives and anticonvulsants in the 19th century — 'bromide' still means a boring platitude."
+    ],
+    "compounds": [
+      "HBr (Hydrobromic Acid)",
+      "NaBr (Sodium Bromide)",
+      "AgBr (Silver Bromide)"
+    ],
     "summary": "Bromine (from Ancient Greek:βρῶμος, brómos, meaning \"stench\") is a chemical element with symbol Br, and atomic number 35. It is a halogen. The element was isolated independently by two chemists, Carl Jacob Löwig and Antoine Jerome Balard, in 1825–1826."
   },
   {
@@ -1224,9 +2125,44 @@
     "oxidationStates": null,
     "discoverer": "William Ramsay",
     "yearDiscovered": null,
-    "spectralLines": [],
-    "funFacts": [],
-    "compounds": [],
+    "spectralLines": [
+      {
+        "wavelength": 431.9,
+        "color": "#3300ff"
+      },
+      {
+        "wavelength": 437.6,
+        "color": "#1300ff"
+      },
+      {
+        "wavelength": 445.4,
+        "color": "#002bff"
+      },
+      {
+        "wavelength": 557,
+        "color": "#b9ff00"
+      },
+      {
+        "wavelength": 587.1,
+        "color": "#ffe800"
+      },
+      {
+        "wavelength": 758.7,
+        "color": "#8f0000"
+      },
+      {
+        "wavelength": 769.5,
+        "color": "#790000"
+      }
+    ],
+    "funFacts": [
+      "Krypton is used to calibrate scientific instruments — the krypton-86 spectral line was once the official definition of the meter.",
+      "Krypton fluoride lasers are used in semiconductor manufacturing to create the tiny circuits in microchips.",
+      "Despite its fictional association with Superman's weakness, real krypton is completely harmless and inert."
+    ],
+    "compounds": [
+      "KrF₂ (Krypton Difluoride)"
+    ],
     "summary": "Krypton (from Greek:κρυπτός kryptos \"the hidden one\") is a chemical element with symbol Kr and atomic number 36. It is a member of group 18 (noble gases) elements. A colorless, odorless, tasteless noble gas, krypton occurs in trace amounts in the atmosphere, is isolated by fractionally distilling liquefied air, and is often used with other rare gases in fluorescent lamps."
   },
   {
@@ -1260,9 +2196,30 @@
     "oxidationStates": null,
     "discoverer": "Robert Bunsen",
     "yearDiscovered": null,
-    "spectralLines": [],
-    "funFacts": [],
-    "compounds": [],
+    "spectralLines": [
+      {
+        "wavelength": 420.2,
+        "color": "#6900ff"
+      },
+      {
+        "wavelength": 421.6,
+        "color": "#6300ff"
+      },
+      {
+        "wavelength": 780,
+        "color": "#610000"
+      }
+    ],
+    "funFacts": [
+      "Rubidium atomic clocks are the most common type of atomic clock, found in GPS satellites and cell towers.",
+      "Rubidium is so reactive that it must be stored in dry mineral oil or a sealed inert atmosphere.",
+      "A rubidium Bose-Einstein condensate — matter at near absolute zero — was one of the first ever created in 1995."
+    ],
+    "compounds": [
+      "RbCl (Rubidium Chloride)",
+      "Rb₂CO₃ (Rubidium Carbonate)",
+      "RbOH (Rubidium Hydroxide)"
+    ],
     "summary": "Rubidium is a chemical element with symbol Rb and atomic number 37. Rubidium is a soft, silvery-white metallic element of the alkali metal group, with an atomic mass of 85.4678. Elemental rubidium is highly reactive, with properties similar to those of other alkali metals, such as very rapid oxidation in air."
   },
   {
@@ -1296,9 +2253,30 @@
     "oxidationStates": null,
     "discoverer": "William Cruickshank (chemist)",
     "yearDiscovered": null,
-    "spectralLines": [],
-    "funFacts": [],
-    "compounds": [],
+    "spectralLines": [
+      {
+        "wavelength": 407.8,
+        "color": "#8000d2"
+      },
+      {
+        "wavelength": 421.6,
+        "color": "#6300ff"
+      },
+      {
+        "wavelength": 460.7,
+        "color": "#007eff"
+      }
+    ],
+    "funFacts": [
+      "Strontium compounds give fireworks their brilliant red color — strontium salts burn with an intense crimson flame.",
+      "Strontium-90, a radioactive isotope from nuclear fallout, is dangerous because the body mistakes it for calcium in bones.",
+      "Strontium ranelate was used as a medication to treat osteoporosis by stimulating bone formation."
+    ],
+    "compounds": [
+      "SrO (Strontium Oxide)",
+      "SrCO₃ (Strontianite)",
+      "Sr(NO₃)₂ (Strontium Nitrate)"
+    ],
     "summary": "Strontium is a chemical element with symbol Sr and atomic number 38. An alkaline earth metal, strontium is a soft silver-white or yellowish metallic element that is highly reactive chemically. The metal turns yellow when it is exposed to air."
   },
   {
@@ -1333,8 +2311,16 @@
     "discoverer": "Johan Gadolin",
     "yearDiscovered": null,
     "spectralLines": [],
-    "funFacts": [],
-    "compounds": [],
+    "funFacts": [
+      "Yttrium is used in the red phosphor of old CRT television screens and monitors.",
+      "Yttrium-aluminum garnet (YAG) crystals are used in the most common type of solid-state laser.",
+      "Yttrium, ytterbium, terbium, and erbium are all named after the village of Ytterby, Sweden — where they were discovered."
+    ],
+    "compounds": [
+      "Y₂O₃ (Yttrium Oxide)",
+      "YBa₂Cu₃O₇ (YBCO Superconductor)",
+      "YAG (Yttrium Aluminum Garnet)"
+    ],
     "summary": "Yttrium is a chemical element with symbol Y and atomic number 39. It is a silvery-metallic transition metal chemically similar to the lanthanides and it has often been classified as a \"rare earth element\". Yttrium is almost always found combined with the lanthanides in rare earth minerals and is never found in nature as a free element."
   },
   {
@@ -1368,9 +2354,22 @@
     "oxidationStates": null,
     "discoverer": "Martin Heinrich Klaproth",
     "yearDiscovered": null,
-    "spectralLines": [],
-    "funFacts": [],
-    "compounds": [],
+    "spectralLines": [
+      {
+        "wavelength": 468.8,
+        "color": "#00a4ff"
+      }
+    ],
+    "funFacts": [
+      "Zirconium is highly resistant to corrosion and is used in nuclear reactor fuel rods because neutrons barely affect it.",
+      "Cubic zirconia (ZrO₂), a synthetic gemstone, is the most popular diamond simulant — it's optically flawless and cheap.",
+      "Zirconium silicate crystals have been found that are 4.4 billion years old — the oldest known material on Earth."
+    ],
+    "compounds": [
+      "ZrO₂ (Zirconia)",
+      "ZrCl₄ (Zirconium Tetrachloride)",
+      "ZrSiO₄ (Zircon)"
+    ],
     "summary": "Zirconium is a chemical element with symbol Zr and atomic number 40. The name of zirconium is taken from the name of the mineral zircon, the most important source of zirconium. The word zircon comes from the Persian word zargun زرگون, meaning \"gold-colored\"."
   },
   {
@@ -1404,9 +2403,30 @@
     "oxidationStates": null,
     "discoverer": "Charles Hatchett",
     "yearDiscovered": null,
-    "spectralLines": [],
-    "funFacts": [],
-    "compounds": [],
+    "spectralLines": [
+      {
+        "wavelength": 405.9,
+        "color": "#8100cb"
+      },
+      {
+        "wavelength": 408,
+        "color": "#8000d3"
+      },
+      {
+        "wavelength": 412.4,
+        "color": "#7a00e3"
+      }
+    ],
+    "funFacts": [
+      "Niobium is added to steel in tiny amounts to dramatically increase its strength — most modern high-strength steel contains it.",
+      "Niobium becomes a superconductor at -264°C and is used in MRI machine magnets.",
+      "Brazil holds about 98% of the world's known niobium reserves, making it strategically critical."
+    ],
+    "compounds": [
+      "Nb₂O₅ (Niobium Pentoxide)",
+      "NbCl₅ (Niobium Pentachloride)",
+      "NbC (Niobium Carbide)"
+    ],
     "summary": "Niobium, formerly columbium, is a chemical element with symbol Nb (formerly Cb) and atomic number 41. It is a soft, grey, ductile transition metal, which is often found in the pyrochlore mineral, the main commercial source for niobium, and columbite. The name comes from Greek mythology:Niobe, daughter of Tantalus since it is so similar to tantalum."
   },
   {
@@ -1440,9 +2460,26 @@
     "oxidationStates": null,
     "discoverer": "Carl Wilhelm Scheele",
     "yearDiscovered": null,
-    "spectralLines": [],
-    "funFacts": [],
-    "compounds": [],
+    "spectralLines": [
+      {
+        "wavelength": 386.4,
+        "color": "#73007d"
+      },
+      {
+        "wavelength": 390.3,
+        "color": "#7a008e"
+      }
+    ],
+    "funFacts": [
+      "Molybdenum has the sixth highest melting point of any element — it doesn't melt until 2,623°C.",
+      "Molybdenum is essential for nitrogen fixation in plants — the enzyme nitrogenase needs it to convert atmospheric nitrogen.",
+      "Molybdenum disulfide is a dry lubricant used in extreme conditions where oil would burn away."
+    ],
+    "compounds": [
+      "MoO₃ (Molybdenum Trioxide)",
+      "MoS₂ (Molybdenite)",
+      "Na₂MoO₄ (Sodium Molybdate)"
+    ],
     "summary": "Molybdenum is a chemical element with symbol Mo and atomic number 42. The name is from Neo-Latin molybdaenum, from Ancient Greek Μόλυβδος molybdos, meaning lead, since its ores were confused with lead ores. Molybdenum minerals have been known throughout history, but the element was discovered (in the sense of differentiating it as a new entity from the mineral salts of other metals) in 1778 by Carl Wilhelm Scheele."
   },
   {
@@ -1476,9 +2513,25 @@
     "oxidationStates": null,
     "discoverer": "Emilio Segrè",
     "yearDiscovered": null,
-    "spectralLines": [],
-    "funFacts": [],
-    "compounds": [],
+    "spectralLines": [
+      {
+        "wavelength": 403.2,
+        "color": "#8300c1"
+      },
+      {
+        "wavelength": 426.2,
+        "color": "#4f00ff"
+      }
+    ],
+    "funFacts": [
+      "Technetium was the first element to be artificially produced — it doesn't exist naturally on Earth in significant amounts.",
+      "Technetium-99m is the most widely used radioisotope in nuclear medicine, used in over 40 million medical scans per year.",
+      "Despite being radioactive, technetium-99m has a half-life of only 6 hours, so it clears from the body quickly."
+    ],
+    "compounds": [
+      "TcO₄⁻ (Pertechnetate Ion)",
+      "Tc₂O₇ (Technetium Heptoxide)"
+    ],
     "summary": "Technetium (/tɛkˈniːʃiəm/) is a chemical element with symbol Tc and atomic number 43. It is the element with the lowest atomic number in the periodic table that has no stable isotopes:every form of it is radioactive. Nearly all technetium is produced synthetically, and only minute amounts are found in nature."
   },
   {
@@ -1513,8 +2566,16 @@
     "discoverer": "Karl Ernst Claus",
     "yearDiscovered": null,
     "spectralLines": [],
-    "funFacts": [],
-    "compounds": [],
+    "funFacts": [
+      "Ruthenium is one of the rarest elements on Earth but adds extreme hardness to platinum alloys used in pen nibs.",
+      "Ruthenium-based catalysts are crucial for ammonia synthesis in the Haber process, which feeds half the world.",
+      "Ruthenium red, a biological stain, is used in electron microscopy to highlight cell membranes."
+    ],
+    "compounds": [
+      "RuO₄ (Ruthenium Tetroxide)",
+      "RuO₂ (Ruthenium Dioxide)",
+      "RuCl₃ (Ruthenium Trichloride)"
+    ],
     "summary": "Ruthenium is a chemical element with symbol Ru and atomic number 44. It is a rare transition metal belonging to the platinum group of the periodic table. Like the other metals of the platinum group, ruthenium is inert to most other chemicals."
   },
   {
@@ -1549,8 +2610,16 @@
     "discoverer": "William Hyde Wollaston",
     "yearDiscovered": null,
     "spectralLines": [],
-    "funFacts": [],
-    "compounds": [],
+    "funFacts": [
+      "Rhodium is the most expensive precious metal — it has been worth over 10 times the price of gold.",
+      "The catalytic converter in your car uses rhodium, platinum, and palladium to convert toxic exhaust gases into harmless ones.",
+      "Rhodium's extreme reflectivity makes it ideal for reflective coatings on mirrors, searchlights, and jewelry."
+    ],
+    "compounds": [
+      "Rh₂O₃ (Rhodium Trioxide)",
+      "RhCl₃ (Rhodium Trichloride)",
+      "Rh(CO)Cl(PPh₃)₂ (Wilkinson's Catalyst)"
+    ],
     "summary": "Rhodium is a chemical element with symbol Rh and atomic number 45. It is a rare, silvery-white, hard, and chemically inert transition metal. It is a member of the platinum group."
   },
   {
@@ -1584,8 +2653,16 @@
     "discoverer": "William Hyde Wollaston",
     "yearDiscovered": null,
     "spectralLines": [],
-    "funFacts": [],
-    "compounds": [],
+    "funFacts": [
+      "Palladium can absorb up to 900 times its own volume of hydrogen gas, making it useful for hydrogen storage.",
+      "Palladium was discovered in 1803 by William Hyde Wollaston, who secretly sold it for two years before announcing it.",
+      "White gold jewelry is often gold alloyed with palladium — it's cheaper and lighter than platinum white gold."
+    ],
+    "compounds": [
+      "PdCl₂ (Palladium Chloride)",
+      "PdO (Palladium Oxide)",
+      "Pd(PPh₃)₄ (Tetrakis Catalyst)"
+    ],
     "summary": "Palladium is a chemical element with symbol Pd and atomic number 46. It is a rare and lustrous silvery-white metal discovered in 1803 by William Hyde Wollaston. He named it after the asteroid Pallas, which was itself named after the epithet of the Greek goddess Athena, acquired by her when she slew Pallas."
   },
   {
@@ -1619,9 +2696,26 @@
     "oxidationStates": null,
     "discoverer": "unknown, before 5000 BC",
     "yearDiscovered": null,
-    "spectralLines": [],
-    "funFacts": [],
-    "compounds": [],
+    "spectralLines": [
+      {
+        "wavelength": 520.9,
+        "color": "#3aff00"
+      },
+      {
+        "wavelength": 546.6,
+        "color": "#98ff00"
+      }
+    ],
+    "funFacts": [
+      "Silver has the highest electrical conductivity of any element — even higher than copper.",
+      "Silver nanoparticles are used in antibacterial coatings on medical devices, bandages, and even socks.",
+      "The expression 'born with a silver spoon' comes from the fact that silver tableware actually has antimicrobial benefits."
+    ],
+    "compounds": [
+      "AgNO₃ (Silver Nitrate)",
+      "AgCl (Silver Chloride)",
+      "Ag₂S (Silver Sulfide / Tarnish)"
+    ],
     "summary": "Silver is a chemical element with symbol Ag (Greek:άργυρος árguros, Latin:argentum, both from the Indo-European root *h₂erǵ- for \"grey\" or \"shining\") and atomic number 47. A soft, white, lustrous transition metal, it possesses the highest electrical conductivity, thermal conductivity and reflectivity of any metal. The metal occurs naturally in its pure, free form (native silver), as an alloy with gold and other metals, and in minerals such as argentite and chlorargyrite."
   },
   {
@@ -1655,9 +2749,34 @@
     "oxidationStates": null,
     "discoverer": "Karl Samuel Leberecht Hermann",
     "yearDiscovered": null,
-    "spectralLines": [],
-    "funFacts": [],
-    "compounds": [],
+    "spectralLines": [
+      {
+        "wavelength": 467.8,
+        "color": "#009fff"
+      },
+      {
+        "wavelength": 480,
+        "color": "#00d5ff"
+      },
+      {
+        "wavelength": 508.6,
+        "color": "#00ff1e"
+      },
+      {
+        "wavelength": 643.8,
+        "color": "#ff0a00"
+      }
+    ],
+    "funFacts": [
+      "Cadmium is highly toxic and accumulates in the kidneys — 'Itai-itai disease' in Japan was caused by cadmium-contaminated rice.",
+      "NiCd rechargeable batteries, once common in electronics, use cadmium but are being phased out due to toxicity.",
+      "Cadmium sulfide is a brilliant yellow pigment used by artists — it was a favorite of Henri Matisse."
+    ],
+    "compounds": [
+      "CdS (Cadmium Sulfide)",
+      "CdO (Cadmium Oxide)",
+      "CdTe (Cadmium Telluride)"
+    ],
     "summary": "Cadmium is a chemical element with symbol Cd and atomic number 48. This soft, bluish-white metal is chemically similar to the two other stable metals in group 12, zinc and mercury. Like zinc, it prefers oxidation state +2 in most of its compounds and like mercury it shows a low melting point compared to transition metals."
   },
   {
@@ -1691,9 +2810,26 @@
     "oxidationStates": null,
     "discoverer": "Ferdinand Reich",
     "yearDiscovered": null,
-    "spectralLines": [],
-    "funFacts": [],
-    "compounds": [],
+    "spectralLines": [
+      {
+        "wavelength": 410.2,
+        "color": "#7d00db"
+      },
+      {
+        "wavelength": 451.1,
+        "color": "#004cff"
+      }
+    ],
+    "funFacts": [
+      "Indium tin oxide (ITO) is the transparent conductor used on every touchscreen and LCD display in the world.",
+      "Indium is so soft it can be scratched with a fingernail and squeaks when bent — a phenomenon called 'tin cry.'",
+      "Indium is primarily obtained as a byproduct of zinc smelting — without zinc production, there would be very little indium."
+    ],
+    "compounds": [
+      "In₂O₃ (Indium Oxide)",
+      "InP (Indium Phosphide)",
+      "In₂S₃ (Indium Sulfide)"
+    ],
     "summary": "Indium is a chemical element with symbol In and atomic number 49. It is a post-transition metallic element that is rare in Earth's crust. The metal is very soft, malleable and easily fusible, with a melting point higher than sodium, but lower than lithium or tin."
   },
   {
@@ -1727,9 +2863,26 @@
     "oxidationStates": null,
     "discoverer": "unknown, before 3500 BC",
     "yearDiscovered": null,
-    "spectralLines": [],
-    "funFacts": [],
-    "compounds": [],
+    "spectralLines": [
+      {
+        "wavelength": 380.1,
+        "color": "#620062"
+      },
+      {
+        "wavelength": 452.5,
+        "color": "#0054ff"
+      }
+    ],
+    "funFacts": [
+      "Tin whiskers — tiny metallic filaments that spontaneously grow on tin surfaces — have caused failures in spacecraft and pacemakers.",
+      "Bronze, the alloy that defined the Bronze Age, is 88% copper and 12% tin — it was harder than either metal alone.",
+      "Tin cans are actually made mostly of steel with only a thin coating of tin to prevent corrosion."
+    ],
+    "compounds": [
+      "SnO₂ (Tin Oxide / Cassiterite)",
+      "SnCl₂ (Tin Chloride)",
+      "SnCl₄ (Tin Tetrachloride)"
+    ],
     "summary": "Tin is a chemical element with the symbol Sn (for Latin:stannum) and atomic number 50. It is a main group metal in group 14 of the periodic table. Tin shows a chemical similarity to both neighboring group-14 elements, germanium and lead, and has two possible oxidation states, +2 and the slightly more stable +4."
   },
   {
@@ -1764,8 +2917,16 @@
     "discoverer": "unknown, before 3000 BC",
     "yearDiscovered": null,
     "spectralLines": [],
-    "funFacts": [],
-    "compounds": [],
+    "funFacts": [
+      "Antimony sulfide (kohl) was used as eye makeup by ancient Egyptians — it also had antimicrobial properties.",
+      "Ancient Roman goblets made of antimony were used as 'purgative cups' — wine stored in them became an emetic.",
+      "Antimony trioxide is one of the most widely used flame retardants, added to plastics, textiles, and electronics."
+    ],
+    "compounds": [
+      "Sb₂O₃ (Antimony Trioxide)",
+      "SbCl₃ (Antimony Trichloride)",
+      "Sb₂S₃ (Stibnite)"
+    ],
     "summary": "Antimony is a chemical element with symbol Sb (from Latin:stibium) and atomic number 51. A lustrous gray metalloid, it is found in nature mainly as the sulfide mineral stibnite (Sb2S3). Antimony compounds have been known since ancient times and were used for cosmetics; metallic antimony was also known, but it was erroneously identified as lead upon its discovery."
   },
   {
@@ -1799,9 +2960,26 @@
     "oxidationStates": null,
     "discoverer": "Franz-Joseph Müller von Reichenstein",
     "yearDiscovered": null,
-    "spectralLines": [],
-    "funFacts": [],
-    "compounds": [],
+    "spectralLines": [
+      {
+        "wavelength": 522.2,
+        "color": "#3fff00"
+      },
+      {
+        "wavelength": 537.3,
+        "color": "#78ff00"
+      }
+    ],
+    "funFacts": [
+      "Tellurium gives garlic its distinctive smell when ingested — even tiny amounts make breath smell of garlic for days.",
+      "Cadmium telluride (CdTe) solar panels are the second most common type in the world, after silicon.",
+      "Tellurium is one of the rarest stable elements on Earth — it's actually more rare than platinum."
+    ],
+    "compounds": [
+      "TeO₂ (Tellurium Dioxide)",
+      "H₂Te (Hydrogen Telluride)",
+      "CdTe (Cadmium Telluride)"
+    ],
     "summary": "Tellurium is a chemical element with symbol Te and atomic number 52. It is a brittle, mildly toxic, rare, silver-white metalloid. Tellurium is chemically related to selenium and sulfur."
   },
   {
@@ -1835,9 +3013,30 @@
     "oxidationStates": null,
     "discoverer": "Bernard Courtois",
     "yearDiscovered": null,
-    "spectralLines": [],
-    "funFacts": [],
-    "compounds": [],
+    "spectralLines": [
+      {
+        "wavelength": 516.1,
+        "color": "#24ff00"
+      },
+      {
+        "wavelength": 529,
+        "color": "#5aff00"
+      },
+      {
+        "wavelength": 545,
+        "color": "#92ff00"
+      }
+    ],
+    "funFacts": [
+      "Iodine deficiency is the leading preventable cause of intellectual disability worldwide — that's why table salt is iodized.",
+      "Iodine vapor is a brilliant purple color — its name comes from the Greek word 'ioeides' meaning violet-colored.",
+      "Povidone-iodine (Betadine), the brown antiseptic, kills bacteria, viruses, and fungi on contact."
+    ],
+    "compounds": [
+      "KI (Potassium Iodide)",
+      "NaI (Sodium Iodide)",
+      "I₂O₅ (Iodine Pentoxide)"
+    ],
     "summary": "Iodine is a chemical element with symbol I and atomic number 53. The name is from Greek ἰοειδής ioeidēs, meaning violet or purple, due to the color of iodine vapor. Iodine and its compounds are primarily used in nutrition, and industrially in the production of acetic acid and certain polymers."
   },
   {
@@ -1871,9 +3070,46 @@
     "oxidationStates": null,
     "discoverer": "William Ramsay",
     "yearDiscovered": null,
-    "spectralLines": [],
-    "funFacts": [],
-    "compounds": [],
+    "spectralLines": [
+      {
+        "wavelength": 450.1,
+        "color": "#0047ff"
+      },
+      {
+        "wavelength": 467.1,
+        "color": "#009cff"
+      },
+      {
+        "wavelength": 473.4,
+        "color": "#00b9ff"
+      },
+      {
+        "wavelength": 480.7,
+        "color": "#00d8ff"
+      },
+      {
+        "wavelength": 492.3,
+        "color": "#00ffe7"
+      },
+      {
+        "wavelength": 541.9,
+        "color": "#88ff00"
+      },
+      {
+        "wavelength": 597.6,
+        "color": "#ffc600"
+      }
+    ],
+    "funFacts": [
+      "Xenon anesthesia was used in surgery — patients wake up faster and with fewer side effects than other anesthetics.",
+      "Xenon ion thrusters power many deep-space spacecraft — ionized xenon atoms are accelerated to provide thrust.",
+      "Xenon was the first noble gas found to form chemical compounds, discovered by Neil Bartlett in 1962 — shocking chemists worldwide."
+    ],
+    "compounds": [
+      "XeF₂ (Xenon Difluoride)",
+      "XeF₄ (Xenon Tetrafluoride)",
+      "XeO₃ (Xenon Trioxide)"
+    ],
     "summary": "Xenon is a chemical element with symbol Xe and atomic number 54. It is a colorless, dense, odorless noble gas, that occurs in the Earth's atmosphere in trace amounts. Although generally unreactive, xenon can undergo a few chemical reactions such as the formation of xenon hexafluoroplatinate, the first noble gas compound to be synthesized."
   },
   {
@@ -1908,9 +3144,26 @@
     "oxidationStates": null,
     "discoverer": "Robert Bunsen",
     "yearDiscovered": null,
-    "spectralLines": [],
-    "funFacts": [],
-    "compounds": [],
+    "spectralLines": [
+      {
+        "wavelength": 455.5,
+        "color": "#0064ff"
+      },
+      {
+        "wavelength": 459.3,
+        "color": "#0077ff"
+      }
+    ],
+    "funFacts": [
+      "Cesium atomic clocks are so accurate that they would only lose one second in 300 million years — they define the second.",
+      "Cesium is the most electropositive stable element and reacts explosively even with ice.",
+      "GPS satellites rely on cesium atomic clocks to maintain the precise timing needed for location accuracy."
+    ],
+    "compounds": [
+      "CsCl (Cesium Chloride)",
+      "Cs₂CO₃ (Cesium Carbonate)",
+      "CsOH (Cesium Hydroxide)"
+    ],
     "summary": "Caesium or cesium is a chemical element with symbol Cs and atomic number 55. It is a soft, silvery-gold alkali metal with a melting point of 28 °C (82 °F), which makes it one of only five elemental metals that are liquid at or near room temperature. Caesium is an alkali metal and has physical and chemical properties similar to those of rubidium and potassium."
   },
   {
@@ -1945,9 +3198,34 @@
     "oxidationStates": null,
     "discoverer": "Carl Wilhelm Scheele",
     "yearDiscovered": null,
-    "spectralLines": [],
-    "funFacts": [],
-    "compounds": [],
+    "spectralLines": [
+      {
+        "wavelength": 413.1,
+        "color": "#7900e6"
+      },
+      {
+        "wavelength": 455.4,
+        "color": "#0063ff"
+      },
+      {
+        "wavelength": 493.4,
+        "color": "#00ffdc"
+      },
+      {
+        "wavelength": 553.6,
+        "color": "#afff00"
+      }
+    ],
+    "funFacts": [
+      "Barium sulfate is completely insoluble and non-toxic — patients drink it as a 'barium meal' to make their digestive tract visible in X-rays.",
+      "Barium compounds create the green color in fireworks.",
+      "Despite the name, barite (barium sulfate) is used in oil drilling as a weighting agent in drilling fluid."
+    ],
+    "compounds": [
+      "BaSO₄ (Barium Sulfate)",
+      "BaCO₃ (Barium Carbonate)",
+      "BaO (Barium Oxide)"
+    ],
     "summary": "Barium is a chemical element with symbol Ba and atomic number 56. It is the fifth element in Group 2, a soft silvery metallic alkaline earth metal. Because of its high chemical reactivity barium is never found in nature as a free element."
   },
   {
@@ -1982,9 +3260,26 @@
     "oxidationStates": null,
     "discoverer": "Carl Gustaf Mosander",
     "yearDiscovered": null,
-    "spectralLines": [],
-    "funFacts": [],
-    "compounds": [],
+    "spectralLines": [
+      {
+        "wavelength": 394.9,
+        "color": "#8000a1"
+      },
+      {
+        "wavelength": 408.7,
+        "color": "#7f00d6"
+      }
+    ],
+    "funFacts": [
+      "Lanthanum is used in high-end camera and telescope lenses to reduce chromatic aberration.",
+      "Nickel-metal hydride batteries in hybrid cars use a lanthanum-rich alloy to store hydrogen.",
+      "Lanthanum gives certain types of studio lighting glass a distinctive yellow-green tint."
+    ],
+    "compounds": [
+      "La₂O₃ (Lanthanum Oxide)",
+      "LaCl₃ (Lanthanum Chloride)",
+      "La(NO₃)₃ (Lanthanum Nitrate)"
+    ],
     "summary": "Lanthanum is a soft, ductile, silvery-white metallic chemical element with symbol La and atomic number 57. It tarnishes rapidly when exposed to air and is soft enough to be cut with a knife. It gave its name to the lanthanide series, a group of 15 similar elements between lanthanum and lutetium in the periodic table:it is also sometimes considered the first element of the 6th-period transition metals."
   },
   {
@@ -2019,9 +3314,26 @@
     "oxidationStates": null,
     "discoverer": "Martin Heinrich Klaproth",
     "yearDiscovered": null,
-    "spectralLines": [],
-    "funFacts": [],
-    "compounds": [],
+    "spectralLines": [
+      {
+        "wavelength": 413.8,
+        "color": "#7800e9"
+      },
+      {
+        "wavelength": 418.7,
+        "color": "#6d00fa"
+      }
+    ],
+    "funFacts": [
+      "Cerium is the most abundant rare earth element — despite being called 'rare,' it's more common than copper.",
+      "Cerium oxide is used to polish glass and as a catalytic converter coating that removes toxic emissions.",
+      "Flint lighters contain a 'misch metal' alloy rich in cerium — it produces sparks when struck."
+    ],
+    "compounds": [
+      "CeO₂ (Ceria)",
+      "Ce₂O₃ (Cerium Sesquioxide)",
+      "CeCl₃ (Cerium Chloride)"
+    ],
     "summary": "Cerium is a chemical element with symbol Ce and atomic number 58. It is a soft, silvery, ductile metal which easily oxidizes in air. Cerium was named after the dwarf planet Ceres (itself named after the Roman goddess of agriculture)."
   },
   {
@@ -2056,9 +3368,26 @@
     "oxidationStates": null,
     "discoverer": "Carl Auer von Welsbach",
     "yearDiscovered": null,
-    "spectralLines": [],
-    "funFacts": [],
-    "compounds": [],
+    "spectralLines": [
+      {
+        "wavelength": 422.3,
+        "color": "#6000ff"
+      },
+      {
+        "wavelength": 495.1,
+        "color": "#00ffc9"
+      }
+    ],
+    "funFacts": [
+      "Praseodymium gives the glass in welder's goggles its yellow-green tint, protecting eyes from bright glare.",
+      "Neodymium magnets are actually an alloy of neodymium, iron, and boron — and praseodymium is often substituted for neodymium.",
+      "Its name comes from the Greek for 'green twin' because it and neodymium were originally thought to be one element."
+    ],
+    "compounds": [
+      "Pr₂O₃ (Praseodymium Oxide)",
+      "PrCl₃ (Praseodymium Chloride)",
+      "Pr(NO₃)₃ (Praseodymium Nitrate)"
+    ],
     "summary": "Praseodymium is a chemical element with symbol Pr and atomic number 59. Praseodymium is a soft, silvery, malleable and ductile metal in the lanthanide group. It is valued for its magnetic, electrical, chemical, and optical properties."
   },
   {
@@ -2093,9 +3422,26 @@
     "oxidationStates": null,
     "discoverer": "Carl Auer von Welsbach",
     "yearDiscovered": null,
-    "spectralLines": [],
-    "funFacts": [],
-    "compounds": [],
+    "spectralLines": [
+      {
+        "wavelength": 430.4,
+        "color": "#3b00ff"
+      },
+      {
+        "wavelength": 463.4,
+        "color": "#008bff"
+      }
+    ],
+    "funFacts": [
+      "Neodymium magnets are the strongest type of permanent magnet and are found in every electric motor, hard drive, and headphone.",
+      "Neodymium glass lasers are used in inertial confinement fusion experiments — among the most powerful lasers ever built.",
+      "Neodymium gives special didymium glass its color, used in glassblowing to filter out the harsh yellow sodium flame."
+    ],
+    "compounds": [
+      "Nd₂O₃ (Neodymium Oxide)",
+      "NdFeB (Neodymium Magnet Alloy)",
+      "NdCl₃ (Neodymium Chloride)"
+    ],
     "summary": "Neodymium is a chemical element with symbol Nd and atomic number 60. It is a soft silvery metal that tarnishes in air. Neodymium was discovered in 1885 by the Austrian chemist Carl Auer von Welsbach."
   },
   {
@@ -2130,9 +3476,25 @@
     "oxidationStates": null,
     "discoverer": "Chien Shiung Wu",
     "yearDiscovered": null,
-    "spectralLines": [],
-    "funFacts": [],
-    "compounds": [],
+    "spectralLines": [
+      {
+        "wavelength": 398,
+        "color": "#8200ad"
+      },
+      {
+        "wavelength": 415.6,
+        "color": "#7400ef"
+      }
+    ],
+    "funFacts": [
+      "Promethium is the only lanthanide with no stable isotopes — all of it on Earth is artificially produced.",
+      "Promethium was used in early nuclear-powered pacemakers and luminous watch dials before better alternatives emerged.",
+      "It was named after Prometheus, the Titan who stole fire from the gods — because it was created in nuclear reactors."
+    ],
+    "compounds": [
+      "PmCl₃ (Promethium Chloride)",
+      "Pm₂O₃ (Promethium Oxide)"
+    ],
     "summary": "Promethium, originally prometheum, is a chemical element with the symbol Pm and atomic number 61. All of its isotopes are radioactive; it is one of only two such elements that are followed in the periodic table by elements with stable forms, a distinction shared with technetium. Chemically, promethium is a lanthanide, which forms salts when combined with other elements."
   },
   {
@@ -2167,9 +3529,26 @@
     "oxidationStates": null,
     "discoverer": "Lecoq de Boisbaudran",
     "yearDiscovered": null,
-    "spectralLines": [],
-    "funFacts": [],
-    "compounds": [],
+    "spectralLines": [
+      {
+        "wavelength": 428.1,
+        "color": "#4600ff"
+      },
+      {
+        "wavelength": 476,
+        "color": "#00c4ff"
+      }
+    ],
+    "funFacts": [
+      "Samarium-cobalt magnets were the first rare earth magnets, used in applications requiring magnetism at high temperatures.",
+      "Samarium-153 is used in cancer pain treatment — it targets bone metastases and delivers localized radiation therapy.",
+      "Samarium was discovered in the mineral samarskite, which was named after a Russian mining official — Vasili Samarsky."
+    ],
+    "compounds": [
+      "Sm₂O₃ (Samarium Oxide)",
+      "SmCo₅ (Samarium Cobalt Magnet)",
+      "SmCl₃ (Samarium Chloride)"
+    ],
     "summary": "Samarium is a chemical element with symbol Sm and atomic number 62. It is a moderately hard silvery metal that readily oxidizes in air. Being a typical member of the lanthanide series, samarium usually assumes the oxidation state +3."
   },
   {
@@ -2204,9 +3583,26 @@
     "oxidationStates": null,
     "discoverer": "Eugène-Anatole Demarçay",
     "yearDiscovered": null,
-    "spectralLines": [],
-    "funFacts": [],
-    "compounds": [],
+    "spectralLines": [
+      {
+        "wavelength": 459.4,
+        "color": "#0078ff"
+      },
+      {
+        "wavelength": 581.4,
+        "color": "#fffb00"
+      }
+    ],
+    "funFacts": [
+      "Europium makes the red and blue phosphors in old CRT televisions — without it, color TV wouldn't look right.",
+      "Euro banknotes use europium-based fluorescent ink as an anti-counterfeiting measure.",
+      "Europium is the most reactive rare earth element and oxidizes rapidly in air."
+    ],
+    "compounds": [
+      "Eu₂O₃ (Europium Oxide)",
+      "EuCl₃ (Europium Chloride)",
+      "EuF₃ (Europium Fluoride)"
+    ],
     "summary": "Europium is a chemical element with symbol Eu and atomic number 63. It was isolated in 1901 and is named after the continent of Europe. It is a moderately hard, silvery metal which readily oxidizes in air and water."
   },
   {
@@ -2241,9 +3637,26 @@
     "oxidationStates": null,
     "discoverer": "Jean Charles Galissard de Marignac",
     "yearDiscovered": null,
-    "spectralLines": [],
-    "funFacts": [],
-    "compounds": [],
+    "spectralLines": [
+      {
+        "wavelength": 407.9,
+        "color": "#8000d3"
+      },
+      {
+        "wavelength": 419.1,
+        "color": "#6c00fc"
+      }
+    ],
+    "funFacts": [
+      "Gadolinium-based contrast agents are injected before MRI scans — gadolinium's magnetic properties enhance image quality.",
+      "Gadolinium has the highest neutron absorption cross-section of any stable element, used in nuclear reactor control rods.",
+      "Gadolinium gallium garnet is used as a substrate for magnetic bubble memory and as a gemstone simulant."
+    ],
+    "compounds": [
+      "Gd₂O₃ (Gadolinium Oxide)",
+      "GdCl₃ (Gadolinium Chloride)",
+      "Gd-DTPA (MRI Contrast Agent)"
+    ],
     "summary": "Gadolinium is a chemical element with symbol Gd and atomic number 64. It is a silvery-white, malleable and ductile rare-earth metal. It is found in nature only in combined (salt) form."
   },
   {
@@ -2278,9 +3691,26 @@
     "oxidationStates": null,
     "discoverer": "Carl Gustaf Mosander",
     "yearDiscovered": null,
-    "spectralLines": [],
-    "funFacts": [],
-    "compounds": [],
+    "spectralLines": [
+      {
+        "wavelength": 432.6,
+        "color": "#3000ff"
+      },
+      {
+        "wavelength": 487,
+        "color": "#00f3ff"
+      }
+    ],
+    "funFacts": [
+      "Terbium is used in green phosphors for LED lights and the green component of compact fluorescent bulbs.",
+      "Terfenol-D, a terbium alloy, changes shape in a magnetic field — used in sonar transducers and precision actuators.",
+      "Terbium and three other elements (ytterbium, erbium, yttrium) are all named after the same Swedish village, Ytterby."
+    ],
+    "compounds": [
+      "Tb₄O₇ (Terbium Oxide)",
+      "TbCl₃ (Terbium Chloride)",
+      "TbF₃ (Terbium Fluoride)"
+    ],
     "summary": "Terbium is a chemical element with symbol Tb and atomic number 65. It is a silvery-white rare earth metal that is malleable, ductile and soft enough to be cut with a knife. Terbium is never found in nature as a free element, but it is contained in many minerals, including cerite, gadolinite, monazite, xenotime and euxenite."
   },
   {
@@ -2315,9 +3745,26 @@
     "oxidationStates": null,
     "discoverer": "Lecoq de Boisbaudran",
     "yearDiscovered": null,
-    "spectralLines": [],
-    "funFacts": [],
-    "compounds": [],
+    "spectralLines": [
+      {
+        "wavelength": 421.2,
+        "color": "#6500ff"
+      },
+      {
+        "wavelength": 457.4,
+        "color": "#006eff"
+      }
+    ],
+    "funFacts": [
+      "Dysprosium is critical for making neodymium magnets work at high temperatures — adding it allows motors in electric cars to handle engine heat.",
+      "Dysprosium has the highest magnetic moment of any element, making it extremely useful in magnetic refrigeration research.",
+      "Its name means 'hard to get' in Greek — it took many separation attempts before pure dysprosium was isolated."
+    ],
+    "compounds": [
+      "Dy₂O₃ (Dysprosium Oxide)",
+      "DyCl₃ (Dysprosium Chloride)",
+      "DyF₃ (Dysprosium Fluoride)"
+    ],
     "summary": "Dysprosium is a chemical element with the symbol Dy and atomic number 66. It is a rare earth element with a metallic silver luster. Dysprosium is never found in nature as a free element, though it is found in various minerals, such as xenotime."
   },
   {
@@ -2352,9 +3799,26 @@
     "oxidationStates": null,
     "discoverer": "Marc Delafontaine",
     "yearDiscovered": null,
-    "spectralLines": [],
-    "funFacts": [],
-    "compounds": [],
+    "spectralLines": [
+      {
+        "wavelength": 405.4,
+        "color": "#8200c9"
+      },
+      {
+        "wavelength": 410.4,
+        "color": "#7d00dc"
+      }
+    ],
+    "funFacts": [
+      "Holmium has the highest magnetic moment of any naturally occurring element.",
+      "Holmium lasers (Ho:YAG) are used in urology to break up kidney stones without damaging surrounding tissue.",
+      "Holmium oxide gives a distinctive yellow color to glass and is used to calibrate spectrophotometers."
+    ],
+    "compounds": [
+      "Ho₂O₃ (Holmium Oxide)",
+      "HoCl₃ (Holmium Chloride)",
+      "HoF₃ (Holmium Fluoride)"
+    ],
     "summary": "Holmium is a chemical element with symbol Ho and atomic number 67. Part of the lanthanide series, holmium is a rare earth element. Holmium was discovered by Swedish chemist Per Theodor Cleve."
   },
   {
@@ -2389,9 +3853,26 @@
     "oxidationStates": null,
     "discoverer": "Carl Gustaf Mosander",
     "yearDiscovered": null,
-    "spectralLines": [],
-    "funFacts": [],
-    "compounds": [],
+    "spectralLines": [
+      {
+        "wavelength": 389.3,
+        "color": "#78008a"
+      },
+      {
+        "wavelength": 415.1,
+        "color": "#7500ed"
+      }
+    ],
+    "funFacts": [
+      "Erbium-doped fiber amplifiers (EDFAs) are the technology behind long-distance internet cables — they boost optical signals without converting to electricity.",
+      "Erbium lasers are used in dermatology for skin resurfacing because water absorbs their wavelength extremely well.",
+      "Erbium oxide gives glass and porcelain a distinctive pink color, used in decorative applications."
+    ],
+    "compounds": [
+      "Er₂O₃ (Erbium Oxide)",
+      "ErCl₃ (Erbium Chloride)",
+      "ErF₃ (Erbium Fluoride)"
+    ],
     "summary": "Erbium is a chemical element in the lanthanide series, with symbol Er and atomic number 68. A silvery-white solid metal when artificially isolated, natural erbium is always found in chemical combination with other elements on Earth. As such, it is a rare earth element which is associated with several other rare elements in the mineral gadolinite from Ytterby in Sweden, where yttrium, ytterbium, and terbium were discovered."
   },
   {
@@ -2426,9 +3907,26 @@
     "oxidationStates": null,
     "discoverer": "Per Teodor Cleve",
     "yearDiscovered": null,
-    "spectralLines": [],
-    "funFacts": [],
-    "compounds": [],
+    "spectralLines": [
+      {
+        "wavelength": 409.4,
+        "color": "#7e00d8"
+      },
+      {
+        "wavelength": 418.8,
+        "color": "#6d00fb"
+      }
+    ],
+    "funFacts": [
+      "Thulium is one of the rarest and least-known lanthanides — global production is only a few hundred kilograms per year.",
+      "Thulium-170 is used in portable X-ray devices for medical and industrial use in remote locations without power.",
+      "Thulium lasers have potential applications in ophthalmology for eye surgery."
+    ],
+    "compounds": [
+      "Tm₂O₃ (Thulium Oxide)",
+      "TmCl₃ (Thulium Chloride)",
+      "TmF₃ (Thulium Fluoride)"
+    ],
     "summary": "Thulium is a chemical element with symbol Tm and atomic number 69. It is the thirteenth and antepenultimate (third-last) element in the lanthanide series. Like the other lanthanides, the most common oxidation state is +3, seen in its oxide, halides and other compounds."
   },
   {
@@ -2463,9 +3961,26 @@
     "oxidationStates": null,
     "discoverer": "Jean Charles Galissard de Marignac",
     "yearDiscovered": null,
-    "spectralLines": [],
-    "funFacts": [],
-    "compounds": [],
+    "spectralLines": [
+      {
+        "wavelength": 398.8,
+        "color": "#8200b0"
+      },
+      {
+        "wavelength": 467.5,
+        "color": "#009eff"
+      }
+    ],
+    "funFacts": [
+      "Ytterbium atomic clocks are the most accurate timekeepers ever made — they can measure time to within 1.4 × 10⁻¹⁸ seconds.",
+      "Ytterbium lasers are used in materials processing, eye surgery, and as efficient pump sources for other lasers.",
+      "Ytterbium was discovered in the mineral gadolinite from Ytterby, Sweden — the fourth element named after that village."
+    ],
+    "compounds": [
+      "Yb₂O₃ (Ytterbium Oxide)",
+      "YbCl₃ (Ytterbium Chloride)",
+      "YbF₃ (Ytterbium Fluoride)"
+    ],
     "summary": "Ytterbium is a chemical element with symbol Yb and atomic number 70. It is the fourteenth and penultimate element in the lanthanide series, which is the basis of the relative stability of its +2 oxidation state. However, like the other lanthanides, its most common oxidation state is +3, seen in its oxide, halides and other compounds."
   },
   {
@@ -2500,9 +4015,22 @@
     "oxidationStates": null,
     "discoverer": "Georges Urbain",
     "yearDiscovered": null,
-    "spectralLines": [],
-    "funFacts": [],
-    "compounds": [],
+    "spectralLines": [
+      {
+        "wavelength": 451.9,
+        "color": "#0051ff"
+      }
+    ],
+    "funFacts": [
+      "Lutetium is the densest and hardest of all lanthanides.",
+      "Lutetium oxyorthosilicate (LSO) scintillator crystals are used in PET scanners for cancer detection.",
+      "Lutetium-177 is a promising radiopharmaceutical for treating neuroendocrine tumors and prostate cancer."
+    ],
+    "compounds": [
+      "Lu₂O₃ (Lutetium Oxide)",
+      "LuCl₃ (Lutetium Chloride)",
+      "LuAG (Lutetium Aluminum Garnet)"
+    ],
     "summary": "Lutetium is a chemical element with symbol Lu and atomic number 71. It is a silvery white metal, which resists corrosion in dry, but not in moist air. It is considered the first element of the 6th-period transition metals and the last element in the lanthanide series, and is traditionally counted among the rare earths."
   },
   {
@@ -2538,8 +4066,16 @@
     "discoverer": "Dirk Coster",
     "yearDiscovered": null,
     "spectralLines": [],
-    "funFacts": [],
-    "compounds": [],
+    "funFacts": [
+      "Hafnium is always found alongside zirconium in nature and is chemically so similar that separating them is extremely difficult.",
+      "Hafnium is used in nuclear reactor control rods because it absorbs neutrons exceptionally well.",
+      "Intel uses hafnium oxide in modern transistor gate insulators — it was key to continuing Moore's Law after silicon limits."
+    ],
+    "compounds": [
+      "HfO₂ (Hafnium Oxide)",
+      "HfCl₄ (Hafnium Tetrachloride)",
+      "HfC (Hafnium Carbide)"
+    ],
     "summary": "Hafnium is a chemical element with symbol Hf and atomic number 72. A lustrous, silvery gray, tetravalent transition metal, hafnium chemically resembles zirconium and is found in zirconium minerals. Its existence was predicted by Dmitri Mendeleev in 1869, though it was not identified until 1923, making it the penultimate stable element to be discovered (rhenium was identified two years later)."
   },
   {
@@ -2575,8 +4111,16 @@
     "discoverer": "Anders Gustaf Ekeberg",
     "yearDiscovered": null,
     "spectralLines": [],
-    "funFacts": [],
-    "compounds": [],
+    "funFacts": [
+      "Tantalum capacitors are in virtually every smartphone, laptop, and portable electronic device.",
+      "Tantalum is biologically inert and used in surgical implants, pacemaker components, and bone repair.",
+      "Conflict over coltan (columbite-tantalite) mines in the Democratic Republic of Congo has fueled armed conflict."
+    ],
+    "compounds": [
+      "Ta₂O₅ (Tantalum Pentoxide)",
+      "TaCl₅ (Tantalum Pentachloride)",
+      "TaC (Tantalum Carbide)"
+    ],
     "summary": "Tantalum is a chemical element with symbol Ta and atomic number 73. Previously known as tantalium, its name comes from Tantalus, an antihero from Greek mythology. Tantalum is a rare, hard, blue-gray, lustrous transition metal that is highly corrosion-resistant."
   },
   {
@@ -2611,9 +4155,30 @@
     "oxidationStates": null,
     "discoverer": "Carl Wilhelm Scheele",
     "yearDiscovered": null,
-    "spectralLines": [],
-    "funFacts": [],
-    "compounds": [],
+    "spectralLines": [
+      {
+        "wavelength": 400.9,
+        "color": "#8300b8"
+      },
+      {
+        "wavelength": 407.4,
+        "color": "#8000d1"
+      },
+      {
+        "wavelength": 430.2,
+        "color": "#3c00ff"
+      }
+    ],
+    "funFacts": [
+      "Tungsten has the highest melting point of any element — it doesn't melt until 3,422°C (6,192°F).",
+      "Incandescent light bulb filaments were made of tungsten for over 100 years because of its extreme heat resistance.",
+      "Tungsten carbide is second only to diamond in hardness — used in cutting tools, drill bits, and armor-piercing ammunition."
+    ],
+    "compounds": [
+      "WO₃ (Tungsten Trioxide)",
+      "WC (Tungsten Carbide)",
+      "Na₂WO₄ (Sodium Tungstate)"
+    ],
     "summary": "Tungsten, also known as wolfram, is a chemical element with symbol W and atomic number 74. The word tungsten comes from the Swedish language tung sten, which directly translates to heavy stone. Its name in Swedish is volfram, however, in order to distinguish it from scheelite, which in Swedish is alternatively named tungsten."
   },
   {
@@ -2648,9 +4213,22 @@
     "oxidationStates": null,
     "discoverer": "Masataka Ogawa",
     "yearDiscovered": null,
-    "spectralLines": [],
-    "funFacts": [],
-    "compounds": [],
+    "spectralLines": [
+      {
+        "wavelength": 488.9,
+        "color": "#00fbff"
+      }
+    ],
+    "funFacts": [
+      "Rhenium has the second highest melting point of any element and is one of the rarest elements in Earth's crust.",
+      "Rhenium is added to nickel superalloys in jet engine turbine blades to allow operation at extreme temperatures.",
+      "Rhenium was the last naturally occurring stable element to be discovered, in 1925."
+    ],
+    "compounds": [
+      "Re₂O₇ (Rhenium Heptoxide)",
+      "ReCl₅ (Rhenium Pentachloride)",
+      "ReO₃ (Rhenium Trioxide)"
+    ],
     "summary": "Rhenium is a chemical element with symbol Re and atomic number 75. It is a silvery-white, heavy, third-row transition metal in group 7 of the periodic table. With an estimated average concentration of 1 part per billion (ppb), rhenium is one of the rarest elements in the Earth's crust."
   },
   {
@@ -2685,9 +4263,22 @@
     "oxidationStates": null,
     "discoverer": "Smithson Tennant",
     "yearDiscovered": null,
-    "spectralLines": [],
-    "funFacts": [],
-    "compounds": [],
+    "spectralLines": [
+      {
+        "wavelength": 442,
+        "color": "#0013ff"
+      }
+    ],
+    "funFacts": [
+      "Osmium is the densest naturally occurring element — a golf ball-sized chunk would weigh over 1.4 kg.",
+      "Osmium tetroxide has a distinctive smell — the element's name comes from the Greek word 'osme' meaning odor.",
+      "Osmium-iridium alloys are the hardest metal alloys known and were used in fountain pen nibs and compass bearings."
+    ],
+    "compounds": [
+      "OsO₄ (Osmium Tetroxide)",
+      "OsO₂ (Osmium Dioxide)",
+      "OsCl₃ (Osmium Trichloride)"
+    ],
     "summary": "Osmium (from Greek osme (ὀσμή) meaning \"smell\") is a chemical element with symbol Os and atomic number 76. It is a hard, brittle, bluish-white transition metal in the platinum group that is found as a trace element in alloys, mostly in platinum ores. Osmium is the densest naturally occurring element, with a density of 22.59 g/cm3."
   },
   {
@@ -2723,8 +4314,16 @@
     "discoverer": "Smithson Tennant",
     "yearDiscovered": null,
     "spectralLines": [],
-    "funFacts": [],
-    "compounds": [],
+    "funFacts": [
+      "The Cretaceous–Paleogene boundary (the layer marking the dinosaur extinction) has elevated iridium levels — from the asteroid impact.",
+      "Iridium is the most corrosion-resistant element — nothing dissolves it except certain molten salts at extreme temperatures.",
+      "The standard kilogram prototype used to be made of a platinum-iridium alloy to resist corrosion and wear."
+    ],
+    "compounds": [
+      "IrO₂ (Iridium Dioxide)",
+      "IrCl₃ (Iridium Trichloride)",
+      "Ir₂O₃ (Iridium Sesquioxide)"
+    ],
     "summary": "Iridium is a chemical element with symbol Ir and atomic number 77. A very hard, brittle, silvery-white transition metal of the platinum group, iridium is generally credited with being the second densest element (after osmium) based on measured density, although calculations involving the space lattices of the elements show that iridium is denser. It is also the most corrosion-resistant metal, even at temperatures as high as 2000 °C. Although only certain molten salts and halogens are corrosive to solid iridium, finely divided iridium dust is much more reactive and can be flammable."
   },
   {
@@ -2760,8 +4359,16 @@
     "discoverer": "Antonio de Ulloa",
     "yearDiscovered": null,
     "spectralLines": [],
-    "funFacts": [],
-    "compounds": [],
+    "funFacts": [
+      "About 40% of all manufactured goods either contain platinum or use platinum in their production process.",
+      "Cisplatin, a platinum compound, is one of the most widely used chemotherapy drugs for treating cancer.",
+      "Platinum catalysts in catalytic converters have prevented billions of tons of toxic gases from entering the atmosphere."
+    ],
+    "compounds": [
+      "PtCl₂ (Platinum Dichloride)",
+      "PtO₂ (Platinum Dioxide)",
+      "Cisplatin (cis-[PtCl₂(NH₃)₂])"
+    ],
     "summary": "Platinum is a chemical element with symbol Pt and atomic number 78. It is a dense, malleable, ductile, highly unreactive, precious, gray-white transition metal. Its name is derived from the Spanish term platina, which is literally translated into \"little silver\"."
   },
   {
@@ -2797,8 +4404,16 @@
     "discoverer": "Middle East",
     "yearDiscovered": null,
     "spectralLines": [],
-    "funFacts": [],
-    "compounds": [],
+    "funFacts": [
+      "All the gold ever mined in human history would fit in about 3.5 Olympic swimming pools.",
+      "Gold is so chemically inert that the gold in Egyptian pharaohs' tombs is still shiny after 3,000 years.",
+      "Gold nanoparticles appear red or purple, not gold-colored — at the nanoscale, the optical properties completely change."
+    ],
+    "compounds": [
+      "AuCl₃ (Gold Trichloride)",
+      "AuCl (Gold Monochloride)",
+      "HAuCl₄ (Chloroauric Acid)"
+    ],
     "summary": "Gold is a chemical element with symbol Au (from Latin:aurum) and atomic number 79. In its purest form, it is a bright, slightly reddish yellow, dense, soft, malleable and ductile metal. Chemically, gold is a transition metal and a group 11 element."
   },
   {
@@ -2833,9 +4448,38 @@
     "oxidationStates": null,
     "discoverer": "unknown, before 2000 BCE",
     "yearDiscovered": null,
-    "spectralLines": [],
-    "funFacts": [],
-    "compounds": [],
+    "spectralLines": [
+      {
+        "wavelength": 404.7,
+        "color": "#8200c7"
+      },
+      {
+        "wavelength": 435.8,
+        "color": "#1e00ff"
+      },
+      {
+        "wavelength": 546.1,
+        "color": "#96ff00"
+      },
+      {
+        "wavelength": 577,
+        "color": "#f6ff00"
+      },
+      {
+        "wavelength": 579.1,
+        "color": "#fcff00"
+      }
+    ],
+    "funFacts": [
+      "Mercury is the only metal that is liquid at room temperature — its freezing point is -38.8°C.",
+      "Ancient Romans used mercury to extract gold and silver from ore — mercury amalgam mining poisoned countless workers.",
+      "The phrase 'mad as a hatter' comes from hat-makers who used mercury in felt processing and suffered neurological damage."
+    ],
+    "compounds": [
+      "HgO (Mercury Oxide)",
+      "HgS (Cinnabar)",
+      "HgCl₂ (Mercury Chloride)"
+    ],
     "summary": "Mercury is a chemical element with symbol Hg and atomic number 80. It is commonly known as quicksilver and was formerly named hydrargyrum (/haɪˈdrɑːrdʒərəm/). A heavy, silvery d-block element, mercury is the only metallic element that is liquid at standard conditions for temperature and pressure; the only other element that is liquid under these conditions is bromine, though metals such as caesium, gallium, and rubidium melt just above room temperature."
   },
   {
@@ -2870,9 +4514,22 @@
     "oxidationStates": null,
     "discoverer": "William Crookes",
     "yearDiscovered": null,
-    "spectralLines": [],
-    "funFacts": [],
-    "compounds": [],
+    "spectralLines": [
+      {
+        "wavelength": 535,
+        "color": "#70ff00"
+      }
+    ],
+    "funFacts": [
+      "Thallium poisoning was the preferred method of the fictional detective Agatha Christie's murderers — it causes hair loss before death.",
+      "Thallium was once used as a rat poison and depilatory (hair remover) before its extreme toxicity was fully understood.",
+      "Thallium-201 is used in nuclear medicine to evaluate blood flow to the heart muscle."
+    ],
+    "compounds": [
+      "Tl₂O₃ (Thallium Trioxide)",
+      "TlCl (Thallium Chloride)",
+      "Tl₂SO₄ (Thallium Sulfate)"
+    ],
     "summary": "Thallium is a chemical element with symbol Tl and atomic number 81. This soft gray post-transition metal is not found free in nature. When isolated, it resembles tin, but discolors when exposed to air."
   },
   {
@@ -2907,9 +4564,22 @@
     "oxidationStates": null,
     "discoverer": "Middle East",
     "yearDiscovered": null,
-    "spectralLines": [],
-    "funFacts": [],
-    "compounds": [],
+    "spectralLines": [
+      {
+        "wavelength": 405.8,
+        "color": "#8100cb"
+      }
+    ],
+    "funFacts": [
+      "Lead poisoning from water pipes (plumbum in Latin) contributed to the decline of the Roman Empire — our word 'plumbing' comes from lead.",
+      "Leaded gasoline, used worldwide for decades, spread billions of tons of lead into the environment — its removal dramatically reduced crime rates.",
+      "Lead is so dense that only 2.5 cm of lead can stop most X-rays — that's why radiologists use lead aprons."
+    ],
+    "compounds": [
+      "PbO (Lead Oxide / Litharge)",
+      "PbSO₄ (Lead Sulfate)",
+      "Pb(NO₃)₂ (Lead Nitrate)"
+    ],
     "summary": "Lead (/lɛd/) is a chemical element in the carbon group with symbol Pb (from Latin:plumbum) and atomic number 82. Lead is a soft, malleable and heavy post-transition metal. Metallic lead has a bluish-white color after being freshly cut, but it soon tarnishes to a dull grayish color when exposed to air."
   },
   {
@@ -2944,9 +4614,22 @@
     "oxidationStates": null,
     "discoverer": "Claude François Geoffroy",
     "yearDiscovered": null,
-    "spectralLines": [],
-    "funFacts": [],
-    "compounds": [],
+    "spectralLines": [
+      {
+        "wavelength": 472.3,
+        "color": "#00b4ff"
+      }
+    ],
+    "funFacts": [
+      "Bismuth crystals grow in beautiful, rainbow-colored, staircase-shaped formations due to thin oxide layers.",
+      "Bismuth subsalicylate is the active ingredient in Pepto-Bismol — bismuth has mild antimicrobial properties.",
+      "Bismuth is the heaviest stable element — all heavier elements are radioactive."
+    ],
+    "compounds": [
+      "Bi₂O₃ (Bismuth Trioxide)",
+      "BiCl₃ (Bismuth Trichloride)",
+      "BiOCl (Bismuth Oxychloride)"
+    ],
     "summary": "Bismuth is a chemical element with symbol Bi and atomic number 83. Bismuth, a pentavalent post-transition metal, chemically resembles arsenic and antimony. Elemental bismuth may occur naturally, although its sulfide and oxide form important commercial ores."
   },
   {
@@ -2981,9 +4664,22 @@
     "oxidationStates": null,
     "discoverer": "Pierre Curie",
     "yearDiscovered": null,
-    "spectralLines": [],
-    "funFacts": [],
-    "compounds": [],
+    "spectralLines": [
+      {
+        "wavelength": 418,
+        "color": "#6f00f8"
+      }
+    ],
+    "funFacts": [
+      "Polonium was discovered by Marie Curie and named after her homeland, Poland.",
+      "Polonium-210 is one of the most toxic substances known — a microgram can kill a person.",
+      "Alexander Litvinenko, a former Russian spy, was assassinated in 2006 with polonium-210-laced tea."
+    ],
+    "compounds": [
+      "PoO₂ (Polonium Dioxide)",
+      "PoCl₂ (Polonium Dichloride)",
+      "PoH₂ (Polonium Hydride)"
+    ],
     "summary": "Polonium is a chemical element with symbol Po and atomic number 84, discovered in 1898 by Marie Curie and Pierre Curie. A rare and highly radioactive element with no stable isotopes, polonium is chemically similar to bismuth and tellurium, and it occurs in uranium ores. Applications of polonium are few."
   },
   {
@@ -3019,8 +4715,16 @@
     "discoverer": "Dale R. Corson",
     "yearDiscovered": null,
     "spectralLines": [],
-    "funFacts": [],
-    "compounds": [],
+    "funFacts": [
+      "Astatine is the rarest naturally occurring element on Earth — at any given time, less than 1 gram exists in the entire crust.",
+      "Astatine-211 is being researched for targeted alpha therapy — a precision cancer treatment.",
+      "Its name means 'unstable' in Greek, fitting for an element with no stable isotopes and a longest half-life of just 8.1 hours."
+    ],
+    "compounds": [
+      "AtI (Astatine Iodide)",
+      "AtBr (Astatine Bromide)",
+      "AtCl (Astatine Chloride)"
+    ],
     "summary": "Astatine is a very rare radioactive chemical element with the chemical symbol At and atomic number 85. It occurs on Earth as the decay product of various heavier elements. All its isotopes are short-lived; the most stable is astatine-210, with a half-life of 8.1 hours."
   },
   {
@@ -3056,8 +4760,14 @@
     "discoverer": "Friedrich Ernst Dorn",
     "yearDiscovered": null,
     "spectralLines": [],
-    "funFacts": [],
-    "compounds": [],
+    "funFacts": [
+      "Radon is the leading cause of lung cancer among non-smokers and seeps into homes through foundations from natural uranium decay.",
+      "Radon gas, being the heaviest noble gas, accumulates in the lowest levels of buildings.",
+      "Short-lived radon daughters that cling to dust particles are what actually cause lung damage, not radon itself."
+    ],
+    "compounds": [
+      "RnF₂ (Radon Difluoride)"
+    ],
     "summary": "Radon is a chemical element with symbol Rn and atomic number 86. It is a radioactive, colorless, odorless, tasteless noble gas, occurring naturally as a decay product of radium. Its most stable isotope, 222Rn, has a half-life of 3.8 days."
   },
   {
@@ -3094,8 +4804,15 @@
     "discoverer": "Marguerite Perey",
     "yearDiscovered": null,
     "spectralLines": [],
-    "funFacts": [],
-    "compounds": [],
+    "funFacts": [
+      "Francium is the most unstable naturally occurring element — its longest-lived isotope has a half-life of only 22 minutes.",
+      "At any given time, there is estimated to be less than 1 ounce of francium in the entire Earth's crust.",
+      "Francium is so radioactive that if you could gather a visible sample, it would instantly vaporize from its own heat."
+    ],
+    "compounds": [
+      "FrCl (Francium Chloride)",
+      "FrOH (Francium Hydroxide)"
+    ],
     "summary": "Francium is a chemical element with symbol Fr and atomic number 87. It used to be known as eka-caesium and actinium K. It is the second-least electronegative element, behind only caesium. Francium is a highly radioactive metal that decays into astatine, radium, and radon."
   },
   {
@@ -3131,9 +4848,26 @@
     "oxidationStates": null,
     "discoverer": "Pierre Curie",
     "yearDiscovered": null,
-    "spectralLines": [],
-    "funFacts": [],
-    "compounds": [],
+    "spectralLines": [
+      {
+        "wavelength": 434,
+        "color": "#2800ff"
+      },
+      {
+        "wavelength": 482.6,
+        "color": "#00e0ff"
+      }
+    ],
+    "funFacts": [
+      "Marie Curie, who discovered radium, died of aplastic anemia caused by decades of radiation exposure from her research.",
+      "Radium was once added to watch dials, toothpaste, and health tonics — before the devastating health effects were understood.",
+      "Radium glows faintly blue-green in the dark due to ionization of surrounding air."
+    ],
+    "compounds": [
+      "RaCl₂ (Radium Chloride)",
+      "RaSO₄ (Radium Sulfate)",
+      "RaBr₂ (Radium Bromide)"
+    ],
     "summary": "Radium is a chemical element with symbol Ra and atomic number 88. It is the sixth element in group 2 of the periodic table, also known as the alkaline earth metals. Pure radium is almost colorless, but it readily combines with nitrogen (rather than oxygen) on exposure to air, forming a black surface layer of radium nitride (Ra3N2)."
   },
   {
@@ -3169,9 +4903,21 @@
     "oxidationStates": null,
     "discoverer": "Friedrich Oskar Giesel",
     "yearDiscovered": null,
-    "spectralLines": [],
-    "funFacts": [],
-    "compounds": [],
+    "spectralLines": [
+      {
+        "wavelength": 428,
+        "color": "#4600ff"
+      }
+    ],
+    "funFacts": [
+      "Actinium is so radioactive it glows blue in the dark from ionizing the surrounding air.",
+      "Actinium-225 is being studied as a cancer treatment — it can be targeted to tumor cells to deliver alpha radiation.",
+      "Actinium gave its name to the actinide series of elements, all of which are radioactive."
+    ],
+    "compounds": [
+      "AcCl₃ (Actinium Chloride)",
+      "Ac₂O₃ (Actinium Oxide)"
+    ],
     "summary": "Actinium is a radioactive chemical element with symbol Ac (not to be confused with the abbreviation for an acetyl group) and atomic number 89, which was discovered in 1899. It was the first non-primordial radioactive element to be isolated. Polonium, radium and radon were observed before actinium, but they were not isolated until 1902."
   },
   {
@@ -3207,9 +4953,22 @@
     "oxidationStates": null,
     "discoverer": "Jöns Jakob Berzelius",
     "yearDiscovered": null,
-    "spectralLines": [],
-    "funFacts": [],
-    "compounds": [],
+    "spectralLines": [
+      {
+        "wavelength": 401.9,
+        "color": "#8300bc"
+      }
+    ],
+    "funFacts": [
+      "Thorium is 3–4 times more abundant than uranium in Earth's crust and could theoretically fuel reactors with less waste.",
+      "Old gas lantern mantles contained thorium oxide — they glowed brilliantly because thorium is a fine incandescent material.",
+      "Thorium reactors were tested in the 1960s and are now being revived as a potentially safer nuclear energy technology."
+    ],
+    "compounds": [
+      "ThO₂ (Thorium Dioxide)",
+      "ThCl₄ (Thorium Chloride)",
+      "Th(NO₃)₄ (Thorium Nitrate)"
+    ],
     "summary": "Thorium is a chemical element with symbol Th and atomic number 90. A radioactive actinide metal, thorium is one of only two significantly radioactive elements that still occur naturally in large quantities as a primordial element (the other being uranium). It was discovered in 1828 by the Norwegian Reverend and amateur mineralogist Morten Thrane Esmark and identified by the Swedish chemist Jöns Jakob Berzelius, who named it after Thor, the Norse god of thunder."
   },
   {
@@ -3245,9 +5004,21 @@
     "oxidationStates": null,
     "discoverer": "William Crookes",
     "yearDiscovered": null,
-    "spectralLines": [],
-    "funFacts": [],
-    "compounds": [],
+    "spectralLines": [
+      {
+        "wavelength": 413.3,
+        "color": "#7900e7"
+      }
+    ],
+    "funFacts": [
+      "Protactinium is one of the rarest and most expensive naturally occurring elements to isolate.",
+      "Its most stable isotope, Pa-231, has a half-life of 32,760 years and is a decay product of uranium-235.",
+      "Protactinium was independently discovered by three different research groups between 1913 and 1918."
+    ],
+    "compounds": [
+      "Pa₂O₅ (Protactinium Pentoxide)",
+      "PaCl₅ (Protactinium Pentachloride)"
+    ],
     "summary": "Protactinium is a chemical element with symbol Pa and atomic number 91. It is a dense, silvery-gray metal which readily reacts with oxygen, water vapor and inorganic acids. It forms various chemical compounds where protactinium is usually present in the oxidation state +5, but can also assume +4 and even +2 or +3 states."
   },
   {
@@ -3283,9 +5054,26 @@
     "oxidationStates": null,
     "discoverer": "Martin Heinrich Klaproth",
     "yearDiscovered": null,
-    "spectralLines": [],
-    "funFacts": [],
-    "compounds": [],
+    "spectralLines": [
+      {
+        "wavelength": 385.5,
+        "color": "#71007a"
+      },
+      {
+        "wavelength": 424.4,
+        "color": "#5700ff"
+      }
+    ],
+    "funFacts": [
+      "Uranium was used as a yellow-orange ceramic glaze for pottery — Fiesta Ware — before nuclear fears ended the practice.",
+      "Natural uranium is weakly radioactive — a typical rock contains more radioactivity per kilogram than uranium ore.",
+      "The energy in 1 kg of enriched uranium equals burning about 3,000 tons of coal."
+    ],
+    "compounds": [
+      "UO₂ (Uranium Dioxide)",
+      "UF₆ (Uranium Hexafluoride)",
+      "U₃O₈ (Yellowcake)"
+    ],
     "summary": "Uranium is a chemical element with symbol U and atomic number 92. It is a silvery-white metal in the actinide series of the periodic table. A uranium atom has 92 protons and 92 electrons, of which 6 are valence electrons."
   },
   {
@@ -3321,9 +5109,21 @@
     "oxidationStates": null,
     "discoverer": "Edwin McMillan",
     "yearDiscovered": null,
-    "spectralLines": [],
-    "funFacts": [],
-    "compounds": [],
+    "spectralLines": [
+      {
+        "wavelength": 395.5,
+        "color": "#8000a3"
+      }
+    ],
+    "funFacts": [
+      "Neptunium was the first transuranium element to be synthesized, in 1940 at Berkeley.",
+      "Neptunium-237 has a half-life of 2.14 million years and is a significant component of nuclear waste.",
+      "It was named after Neptune, the planet beyond Uranus — just as neptunium is beyond uranium in the periodic table."
+    ],
+    "compounds": [
+      "NpO₂ (Neptunium Dioxide)",
+      "NpF₄ (Neptunium Tetrafluoride)"
+    ],
     "summary": "Neptunium is a chemical element with symbol Np and atomic number 93. A radioactive actinide metal, neptunium is the first transuranic element. Its position in the periodic table just after uranium, named after the planet Uranus, led to it being named after Neptune, the next planet beyond Uranus."
   },
   {
@@ -3359,9 +5159,22 @@
     "oxidationStates": null,
     "discoverer": "Glenn T. Seaborg",
     "yearDiscovered": null,
-    "spectralLines": [],
-    "funFacts": [],
-    "compounds": [],
+    "spectralLines": [
+      {
+        "wavelength": 410.5,
+        "color": "#7d00dc"
+      }
+    ],
+    "funFacts": [
+      "The plutonium bomb dropped on Nagasaki required only 6.2 kg of plutonium — less than the size of a softball.",
+      "Plutonium-238 is used in radioisotope thermoelectric generators (RTGs) to power spacecraft like Voyager and Cassini.",
+      "Plutonium is pyrophoric — small pieces can spontaneously ignite in air at room temperature."
+    ],
+    "compounds": [
+      "PuO₂ (Plutonium Dioxide)",
+      "PuF₄ (Plutonium Tetrafluoride)",
+      "PuCl₃ (Plutonium Trichloride)"
+    ],
     "summary": "Plutonium is a transuranic radioactive chemical element with symbol Pu and atomic number 94. It is an actinide metal of silvery-gray appearance that tarnishes when exposed to air, and forms a dull coating when oxidized. The element normally exhibits six allotropes and four oxidation states."
   },
   {
@@ -3397,9 +5210,21 @@
     "oxidationStates": null,
     "discoverer": "Glenn T. Seaborg",
     "yearDiscovered": null,
-    "spectralLines": [],
-    "funFacts": [],
-    "compounds": [],
+    "spectralLines": [
+      {
+        "wavelength": 408.6,
+        "color": "#7f00d5"
+      }
+    ],
+    "funFacts": [
+      "Americium-241 is found in virtually every smoke detector — ionizing radiation from americium detects smoke particles.",
+      "Americium is the only synthetic element found in most people's homes.",
+      "Americium was first produced in 1944 as part of the Manhattan Project."
+    ],
+    "compounds": [
+      "AmO₂ (Americium Dioxide)",
+      "AmCl₃ (Americium Trichloride)"
+    ],
     "summary": "Americium is a radioactive transuranic chemical element with symbol Am and atomic number 95. This member of the actinide series is located in the periodic table under the lanthanide element europium, and thus by analogy was named after the Americas. Americium was first produced in 1944 by the group of Glenn T.Seaborg from Berkeley, California, at the metallurgical laboratory of University of Chicago."
   },
   {
@@ -3436,8 +5261,15 @@
     "discoverer": "Glenn T. Seaborg",
     "yearDiscovered": null,
     "spectralLines": [],
-    "funFacts": [],
-    "compounds": [],
+    "funFacts": [
+      "Curium was named in honor of Marie and Pierre Curie, recognizing their pioneering work on radioactivity.",
+      "Curium is intensely radioactive — it glows red-hot spontaneously from its own radioactive decay.",
+      "Curium-244 was used as an alpha-particle source in X-ray spectrometers sent to Mars."
+    ],
+    "compounds": [
+      "CmO₂ (Curium Dioxide)",
+      "CmF₃ (Curium Trifluoride)"
+    ],
     "summary": "Curium is a transuranic radioactive chemical element with symbol Cm and atomic number 96. This element of the actinide series was named after Marie and Pierre Curie – both were known for their research on radioactivity. Curium was first intentionally produced and identified in July 1944 by the group of Glenn T. Seaborg at the University of California, Berkeley."
   },
   {
@@ -3474,8 +5306,15 @@
     "discoverer": "Lawrence Berkeley National Laboratory",
     "yearDiscovered": null,
     "spectralLines": [],
-    "funFacts": [],
-    "compounds": [],
+    "funFacts": [
+      "Berkelium is named after Berkeley, California, where it was synthesized at the University of California.",
+      "Only microgram quantities of berkelium have ever been produced — it's incredibly difficult and expensive to make.",
+      "Berkelium-249 is used as a target material to create even heavier elements like tennessine."
+    ],
+    "compounds": [
+      "BkO₂ (Berkelium Dioxide)",
+      "BkCl₃ (Berkelium Chloride)"
+    ],
     "summary": "Berkelium is a transuranic radioactive chemical element with symbol Bk and atomic number 97. It is a member of the actinide and transuranium element series. It is named after the city of Berkeley, California, the location of the University of California Radiation Laboratory where it was discovered in December 1949."
   },
   {
@@ -3512,8 +5351,15 @@
     "discoverer": "Lawrence Berkeley National Laboratory",
     "yearDiscovered": null,
     "spectralLines": [],
-    "funFacts": [],
-    "compounds": [],
+    "funFacts": [
+      "Californium-252 is one of the few portable neutron sources — it's used to start nuclear reactors and detect landmines.",
+      "Californium is so rare that 1 microgram costs about $27, making it one of the most expensive materials on Earth.",
+      "Californium's neutron emission is used in cancer treatment through a technique called neutron capture therapy."
+    ],
+    "compounds": [
+      "CfO₂ (Californium Dioxide)",
+      "CfCl₃ (Californium Chloride)"
+    ],
     "summary": "Californium is a radioactive metallic chemical element with symbol Cf and atomic number 98. The element was first made in 1950 at the University of California Radiation Laboratory in Berkeley, by bombarding curium with alpha particles (helium-4 ions). It is an actinide element, the sixth transuranium element to be synthesized, and has the second-highest atomic mass of all the elements that have been produced in amounts large enough to see with the unaided eye (after einsteinium)."
   },
   {
@@ -3550,8 +5396,14 @@
     "discoverer": "Lawrence Berkeley National Laboratory",
     "yearDiscovered": null,
     "spectralLines": [],
-    "funFacts": [],
-    "compounds": [],
+    "funFacts": [
+      "Einsteinium was discovered in the fallout from the first hydrogen bomb test (Ivy Mike) in 1952.",
+      "Einsteinium was secretly studied for years before its existence was publicly announced.",
+      "Only nanogram quantities of einsteinium have ever been produced — studying its chemistry requires extraordinary sensitivity."
+    ],
+    "compounds": [
+      "EsCl₃ (Einsteinium Chloride)"
+    ],
     "summary": "Einsteinium is a synthetic element with symbol Es and atomic number 99. It is the seventh transuranic element, and an actinide. Einsteinium was discovered as a component of the debris of the first hydrogen bomb explosion in 1952, and named after Albert Einstein."
   },
   {
@@ -3588,7 +5440,11 @@
     "discoverer": "Lawrence Berkeley National Laboratory",
     "yearDiscovered": null,
     "spectralLines": [],
-    "funFacts": [],
+    "funFacts": [
+      "Fermium was also discovered in hydrogen bomb fallout in 1952, named after Enrico Fermi.",
+      "No weighable amount of fermium has ever been produced — it exists only atom by atom.",
+      "Fermium-257 has a half-life of about 100 days — one of the longest among fermium isotopes."
+    ],
     "compounds": [],
     "summary": "Fermium is a synthetic element with symbol Fm and atomic number 100. It is a member of the actinide series. It is the heaviest element that can be formed by neutron bombardment of lighter elements, and hence the last element that can be prepared in macroscopic quantities, although pure fermium metal has not yet been prepared."
   },
@@ -3626,7 +5482,11 @@
     "discoverer": "Lawrence Berkeley National Laboratory",
     "yearDiscovered": null,
     "spectralLines": [],
-    "funFacts": [],
+    "funFacts": [
+      "Mendelevium was the first element to be produced one atom at a time — scientists confirmed its existence by detecting single atoms.",
+      "It was named after Dmitri Mendeleev, creator of the periodic table.",
+      "Mendelevium was synthesized by bombarding einsteinium with alpha particles — itself an incredibly rare element."
+    ],
     "compounds": [],
     "summary": "Mendelevium is a synthetic element with chemical symbol Md (formerly Mv) and atomic number 101. A metallic radioactive transuranic element in the actinide series, it is the first element that currently cannot be produced in macroscopic quantities through neutron bombardment of lighter elements. It is the antepenultimate actinide and the ninth transuranic element."
   },
@@ -3664,7 +5524,11 @@
     "discoverer": "Joint Institute for Nuclear Research",
     "yearDiscovered": null,
     "spectralLines": [],
-    "funFacts": [],
+    "funFacts": [
+      "Nobelium was named after Alfred Nobel, the inventor of dynamite and founder of the Nobel Prizes.",
+      "There was significant controversy over nobelium's discovery — the Soviet Union and Sweden disputed credit for years.",
+      "Nobelium-259 has the longest known half-life for nobelium isotopes — about 58 minutes."
+    ],
     "compounds": [],
     "summary": "Nobelium is a synthetic chemical element with symbol No and atomic number 102. It is named in honor of Alfred Nobel, the inventor of dynamite and benefactor of science. A radioactive metal, it is the tenth transuranic element and is the penultimate member of the actinide series."
   },
@@ -3702,7 +5566,11 @@
     "discoverer": "Lawrence Berkeley National Laboratory",
     "yearDiscovered": null,
     "spectralLines": [],
-    "funFacts": [],
+    "funFacts": [
+      "Lawrencium is named after Ernest Lawrence, the inventor of the cyclotron — the machine used to create many transuranium elements.",
+      "Lawrencium is the last member of the actinide series.",
+      "Lawrencium was first produced in 1961 by bombarding californium with boron ions."
+    ],
     "compounds": [],
     "summary": "Lawrencium is a synthetic chemical element with chemical symbol Lr (formerly Lw) and atomic number 103. It is named in honor of Ernest Lawrence, inventor of the cyclotron, a device that was used to discover many artificial radioactive elements. A radioactive metal, lawrencium is the eleventh transuranic element and is also the final member of the actinide series."
   },
@@ -3740,8 +5608,14 @@
     "discoverer": "Joint Institute for Nuclear Research",
     "yearDiscovered": null,
     "spectralLines": [],
-    "funFacts": [],
-    "compounds": [],
+    "funFacts": [
+      "Rutherfordium is named after Ernest Rutherford, who discovered the atomic nucleus.",
+      "Rutherfordium was the first transactinide element and the subject of a naming dispute between the US and Soviet Union for decades.",
+      "Its chemistry has been studied only a few atoms at a time — it behaves similarly to hafnium in Group 4."
+    ],
+    "compounds": [
+      "RfCl₄ (Rutherfordium Tetrachloride)"
+    ],
     "summary": "Rutherfordium is a chemical element with symbol Rf and atomic number 104, named in honor of physicist Ernest Rutherford. It is a synthetic element (an element that can be created in a laboratory but is not found in nature) and radioactive; the most stable known isotope, 267Rf, has a half-life of approximately 1.3 hours. In the periodic table of the elements, it is a d - block element and the second of the fourth - row transition elements."
   },
   {
@@ -3778,7 +5652,11 @@
     "discoverer": "Joint Institute for Nuclear Research",
     "yearDiscovered": null,
     "spectralLines": [],
-    "funFacts": [],
+    "funFacts": [
+      "Dubnium was named after Dubna, Russia, home of the Joint Institute for Nuclear Research where it was synthesized.",
+      "The name 'hahnium' was used by American scientists and 'nielsbohrium' by others — IUPAC settled on dubnium in 1997.",
+      "Dubnium's most stable isotope has a half-life of only 28 hours."
+    ],
     "compounds": [],
     "summary": "Dubnium is a chemical element with symbol Db and atomic number 105. It is named after the town of Dubna in Russia (north of Moscow), where it was first produced. It is a synthetic element (an element that can be created in a laboratory but is not found in nature) and radioactive; the most stable known isotope, dubnium-268, has a half-life of approximately 28 hours."
   },
@@ -3816,7 +5694,11 @@
     "discoverer": "Lawrence Berkeley National Laboratory",
     "yearDiscovered": null,
     "spectralLines": [],
-    "funFacts": [],
+    "funFacts": [
+      "Seaborgium is one of the few elements named after a living person — Glenn Seaborg was alive when it was officially named.",
+      "Glenn Seaborg joked that he was the only person who could write his address in periodic table symbols: Sg, Lr, Bk, Cf, Am.",
+      "Seaborgium has been shown to behave chemically like tungsten, consistent with its position in Group 6."
+    ],
     "compounds": [],
     "summary": "Seaborgium is a synthetic element with symbol Sg and atomic number 106. Its most stable isotope 271Sg has a half-life of 1.9 minutes. A more recently discovered isotope 269Sg has a potentially slightly longer half-life (ca."
   },
@@ -3854,7 +5736,11 @@
     "discoverer": "Gesellschaft für Schwerionenforschung",
     "yearDiscovered": null,
     "spectralLines": [],
-    "funFacts": [],
+    "funFacts": [
+      "Bohrium is named after Niels Bohr, the Danish physicist who developed the Bohr model of the atom.",
+      "Bohrium-270 has a half-life of about 61 seconds — relatively long for superheavy elements.",
+      "Only a handful of atoms of bohrium have ever been produced."
+    ],
     "compounds": [],
     "summary": "Bohrium is a chemical element with symbol Bh and atomic number 107. It is named after Danish physicist Niels Bohr. It is a synthetic element (an element that can be created in a laboratory but is not found in nature) and radioactive; the most stable known isotope, 270Bh, has a half-life of approximately 61 seconds."
   },
@@ -3892,8 +5778,14 @@
     "discoverer": "Gesellschaft für Schwerionenforschung",
     "yearDiscovered": null,
     "spectralLines": [],
-    "funFacts": [],
-    "compounds": [],
+    "funFacts": [
+      "Hassium is named after the German state of Hesse, where the GSI Helmholtz Centre discovered it.",
+      "Hassium oxide (HsO₄) was studied and found to behave similarly to osmium tetroxide, confirming periodic trends.",
+      "Hassium was synthesized by bombarding lead with iron ions in 1984."
+    ],
+    "compounds": [
+      "HsO₄ (Hassium Tetroxide)"
+    ],
     "summary": "Hassium is a chemical element with symbol Hs and atomic number 108, named after the German state of Hesse. It is a synthetic element (an element that can be created in a laboratory but is not found in nature) and radioactive; the most stable known isotope, 269Hs, has a half-life of approximately 9.7 seconds, although an unconfirmed metastable state, 277mHs, may have a longer half-life of about 130 seconds. More than 100 atoms of hassium have been synthesized to date."
   },
   {
@@ -3930,7 +5822,11 @@
     "discoverer": "Gesellschaft für Schwerionenforschung",
     "yearDiscovered": null,
     "spectralLines": [],
-    "funFacts": [],
+    "funFacts": [
+      "Meitnerium is named after Lise Meitner, who co-discovered nuclear fission — making her one of the few women honored with an element name.",
+      "Lise Meitner was controversially overlooked for the Nobel Prize that was awarded to her collaborator Otto Hahn alone.",
+      "No chemical properties of meitnerium have been observed — it exists for less than a second."
+    ],
     "compounds": [],
     "summary": "Meitnerium is a chemical element with symbol Mt and atomic number 109. It is an extremely radioactive synthetic element (an element not found in nature that can be created in a laboratory). The most stable known isotope, meitnerium-278, has a half-life of 7.6 seconds."
   },
@@ -3968,7 +5864,11 @@
     "discoverer": "Gesellschaft für Schwerionenforschung",
     "yearDiscovered": null,
     "spectralLines": [],
-    "funFacts": [],
+    "funFacts": [
+      "Darmstadtium is named after Darmstadt, Germany, where the GSI particle accelerator facility is located.",
+      "Its most stable isotope, Ds-281, has a half-life of about 12.7 seconds.",
+      "Darmstadtium was synthesized in 1994 using a nickel beam fired at lead targets."
+    ],
     "compounds": [],
     "summary": "Darmstadtium is a chemical element with symbol Ds and atomic number 110. It is an extremely radioactive synthetic element. The most stable known isotope, darmstadtium-281, has a half-life of approximately 10 seconds."
   },
@@ -4006,7 +5906,11 @@
     "discoverer": "Gesellschaft für Schwerionenforschung",
     "yearDiscovered": null,
     "spectralLines": [],
-    "funFacts": [],
+    "funFacts": [
+      "Roentgenium is named after Wilhelm Röntgen, who discovered X-rays in 1895.",
+      "Only a few atoms of roentgenium have been produced — each one decaying within seconds.",
+      "Roentgenium is predicted to be a solid metal with unusual chemical properties due to relativistic effects."
+    ],
     "compounds": [],
     "summary": "Roentgenium is a chemical element with symbol Rg and atomic number 111. It is an extremely radioactive synthetic element (an element that can be created in a laboratory but is not found in nature); the most stable known isotope, roentgenium-282, has a half-life of 2.1 minutes. Roentgenium was first created in 1994 by the GSI Helmholtz Centre for Heavy Ion Research near Darmstadt, Germany."
   },
@@ -4044,7 +5948,11 @@
     "discoverer": "Gesellschaft für Schwerionenforschung",
     "yearDiscovered": null,
     "spectralLines": [],
-    "funFacts": [],
+    "funFacts": [
+      "Copernicium is named after astronomer Nicolaus Copernicus, who first proposed a heliocentric solar system.",
+      "Copernicium is predicted to be a gas at room temperature — the only metal element expected to behave as a noble gas.",
+      "Relativistic effects in copernicium are so extreme that its electrons move at close to the speed of light."
+    ],
     "compounds": [],
     "summary": "Copernicium is a chemical element with symbol Cn and atomic number 112. It is an extremely radioactive synthetic element that can only be created in a laboratory. The most stable known isotope, copernicium-285, has a half-life of approximately 29 seconds, but it is possible that this copernicium isotope may have a nuclear isomer with a longer half-life, 8.9 min."
   },
@@ -4082,7 +5990,11 @@
     "discoverer": "RIKEN",
     "yearDiscovered": null,
     "spectralLines": [],
-    "funFacts": [],
+    "funFacts": [
+      "Nihonium is the first element discovered in Asia — its name comes from 'Nihon,' the Japanese word for Japan.",
+      "Japanese scientists at RIKEN worked for nearly a decade, from 2004 to 2012, to synthesize and confirm nihonium.",
+      "Nihonium's most stable isotope has a half-life of about 10 seconds."
+    ],
     "compounds": [],
     "summary": "Nihonium is a chemical element with atomic number 113. It has a symbol Nh. It is a synthetic element (an element that can be created in a laboratory but is not found in nature) and is extremely radioactive; its most stable known isotope, nihonium-286, has a half-life of 20 seconds."
   },
@@ -4120,7 +6032,11 @@
     "discoverer": "Joint Institute for Nuclear Research",
     "yearDiscovered": null,
     "spectralLines": [],
-    "funFacts": [],
+    "funFacts": [
+      "Flerovium is named after the Flerov Laboratory of Nuclear Reactions in Dubna, Russia.",
+      "Flerovium is predicted to be a volatile metal or even a noble gas at room temperature due to relativistic effects.",
+      "Only a few atoms of flerovium have ever been created — each lasting less than a second."
+    ],
     "compounds": [],
     "summary": "Flerovium is a superheavy artificial chemical element with symbol Fl and atomic number 114. It is an extremely radioactive synthetic element. The element is named after the Flerov Laboratory of Nuclear Reactions of the Joint Institute for Nuclear Research in Dubna, Russia, where the element was discovered in 1998."
   },
@@ -4158,7 +6074,11 @@
     "discoverer": "Joint Institute for Nuclear Research",
     "yearDiscovered": null,
     "spectralLines": [],
-    "funFacts": [],
+    "funFacts": [
+      "Moscovium is named after Moscow Oblast, where the Joint Institute for Nuclear Research in Dubna is located.",
+      "Moscovium was discovered in 2003 by a Russian-American collaboration.",
+      "Its most stable isotope decays in about 220 milliseconds."
+    ],
     "compounds": [],
     "summary": "Moscovium is the name of a synthetic superheavy element in the periodic table that has the symbol Mc and has the atomic number 115. It is an extremely radioactive element; its most stable known isotope, moscovium-289, has a half-life of only 220 milliseconds. It is also known as eka-bismuth or simply element 115."
   },
@@ -4196,7 +6116,11 @@
     "discoverer": "Joint Institute for Nuclear Research",
     "yearDiscovered": null,
     "spectralLines": [],
-    "funFacts": [],
+    "funFacts": [
+      "Livermorium is named after the Lawrence Livermore National Laboratory in California.",
+      "Livermorium was synthesized by the same Russian-American collaboration that discovered moscovium.",
+      "Livermorium atoms exist for only tens of milliseconds before decaying."
+    ],
     "compounds": [],
     "summary": "Livermorium is a synthetic superheavy element with symbol Lv and atomic number 116. It is an extremely radioactive element that has only been created in the laboratory and has not been observed in nature. The element is named after the Lawrence Livermore National Laboratory in the United States, which collaborated with the Joint Institute for Nuclear Research in Dubna, Russia to discover livermorium in 2000."
   },
@@ -4234,7 +6158,11 @@
     "discoverer": "Joint Institute for Nuclear Research",
     "yearDiscovered": null,
     "spectralLines": [],
-    "funFacts": [],
+    "funFacts": [
+      "Tennessine is named after Tennessee, recognizing the contributions of Oak Ridge National Laboratory, Vanderbilt University, and the University of Tennessee.",
+      "Tennessine was first synthesized in 2010 by a Russian-American team.",
+      "With an atomic number of 117, tennessine filled the last remaining gap in the seventh period of the periodic table."
+    ],
     "compounds": [],
     "summary": "Tennessine is a superheavy artificial chemical element with an atomic number of 117 and a symbol of Ts. Also known as eka-astatine or element 117, it is the second-heaviest known element and penultimate element of the 7th period of the periodic table. As of 2016, fifteen tennessine atoms have been observed: six when it was first synthesized in 2010, seven in 2012, and two in 2014."
   },
@@ -4272,7 +6200,11 @@
     "discoverer": "Joint Institute for Nuclear Research",
     "yearDiscovered": null,
     "spectralLines": [],
-    "funFacts": [],
+    "funFacts": [
+      "Oganesson is named after Yuri Oganessian, a living nuclear physicist — one of the few elements named after a living person.",
+      "Oganesson completes the seventh row of the periodic table — it should be a noble gas, but relativistic effects may make it reactive.",
+      "Only 5 atoms of oganesson have ever been confirmed, each lasting less than a millisecond."
+    ],
     "compounds": [],
     "summary": "Oganesson is IUPAC's name for the transactinide element with the atomic number 118 and element symbol Og. It is also known as eka-radon or element 118, and on the periodic table of the elements it is a p-block element and the last one of the 7th period. Oganesson is currently the only synthetic member of group 18."
   }
