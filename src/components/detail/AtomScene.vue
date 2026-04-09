@@ -15,7 +15,11 @@ interface Shell {
   tiltZ: number
 }
 
-const props = defineProps<{ shells: Shell[] }>()
+const props = defineProps<{
+  shells: Shell[]
+  /** When true (user is dragging), auto-rotation pauses for a cleaner feel */
+  isInteracting?: boolean
+}>()
 
 const shellGroupRefs = ref<(THREE.Group | null)[]>([])
 
@@ -33,6 +37,8 @@ function electronPositions(
 const { onBeforeRender, stop } = useLoop()
 
 onBeforeRender(({ delta }) => {
+  // Pause auto-rotation while the user is dragging so the view stays still
+  if (props.isInteracting) return
   shellGroupRefs.value.forEach((group, i) => {
     if (!group) return
     const s = props.shells[i]
@@ -67,7 +73,7 @@ onUnmounted(() => stop())
     <!-- Orbit ring (torus) -->
     <TresMesh>
       <TresTorusGeometry :args="[shell.radius, 0.012, 8, 80]" />
-      <TresMeshStandardMaterial color="#1f2d45" :opacity="0.6" :transparent="true" />
+      <TresMeshStandardMaterial color="#22d3ee" :emissive="'#0891b2'" :emissive-intensity="0.3" :opacity="0.25" :transparent="true" />
     </TresMesh>
 
     <!-- Electrons on this shell -->
