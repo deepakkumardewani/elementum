@@ -62,6 +62,10 @@ const cards = computed((): PropertyCard[] => {
       value: el.discoverer ?? "—",
     },
     {
+      label: "Named By",
+      value: el.namedBy ?? "—",
+    },
+    {
       label: "Year Discovered",
       value: el.yearDiscovered != null ? String(el.yearDiscovered) : "—",
     },
@@ -69,6 +73,15 @@ const cards = computed((): PropertyCard[] => {
       label: "Atomic Mass",
       value: formatProperty(el.atomicMass, ""),
       unit: "u",
+    },
+    {
+      label: "Appearance",
+      value: el.appearance ?? "—",
+    },
+    {
+      label: "Molar Heat",
+      value: formatProperty(el.molarHeat ?? null, ""),
+      unit: "J/mol·K",
     },
   ]
 })
