@@ -7,6 +7,7 @@ import { useEventListener } from "@vueuse/core"
 import { X, ChevronLeft, ChevronRight } from "lucide-vue-next"
 import { useElementStore } from "@/stores/elementStore"
 import ElementHeader from "@/components/detail/ElementHeader.vue"
+import ElementPhoto from "@/components/detail/ElementPhoto.vue"
 import PropertiesGrid from "@/components/detail/PropertiesGrid.vue"
 import ElectronConfigVisualizer from "@/components/detail/ElectronConfigVisualizer.vue"
 import SpectralLines from "@/components/detail/SpectralLines.vue"
@@ -27,9 +28,13 @@ const panelEl = ref<HTMLElement | null>(null)
 // panel close animation runs before focus-trap tears down.
 // clickOutsideDeactivates:false prevents focus-trap from deactivating on
 // backdrop click (we handle that ourselves via @click on the backdrop).
+// allowOutsideClick:true is required so focus-trap does NOT call
+// stopImmediatePropagation on clicks outside the panel — without it, any
+// Teleported child (e.g. ElementPhoto lightbox) cannot receive click events.
 const { activate: trapActivate, deactivate: trapDeactivate } = useFocusTrap(panelEl, {
   escapeDeactivates: false,
   clickOutsideDeactivates: false,
+  allowOutsideClick: true,
 })
 
 // Track the element tile that triggered open so we can return focus on close
@@ -187,6 +192,7 @@ onUnmounted(() => {
         <ElementHeader :element="selectedElement" />
 
         <div class="detail-sections">
+          <ElementPhoto :element="selectedElement" />
           <SpectralLines :lines="selectedElement.spectralLines" />
           <PropertiesGrid :element="selectedElement" />
           <ElectronConfigVisualizer :element="selectedElement" />
@@ -194,7 +200,13 @@ onUnmounted(() => {
           <div class="detail-3d-section">
             <h3 class="detail-section-title">3D Atom Model</h3>
             <div v-if="atomModelFailed" class="atom-model-loading">
-              3D model unavailable (WebGL not supported).
+              <img
+                v-if="selectedElement.bohrModelImage"
+                :src="selectedElement.bohrModelImage"
+                :alt="`Bohr model of ${selectedElement.name}`"
+                class="atom-model-fallback-img"
+              />
+              <span v-else>3D model unavailable (WebGL not supported).</span>
             </div>
             <Suspense v-else>
               <AtomModel3D :element="selectedElement" />
@@ -357,5 +369,12 @@ onUnmounted(() => {
   border: 1px solid var(--bg-border);
   border-radius: 8px;
   background-color: var(--bg-elevated);
+  overflow: hidden;
+}
+
+.atom-model-fallback-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 </style>

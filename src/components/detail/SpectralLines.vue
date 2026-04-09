@@ -18,7 +18,8 @@ defineProps<{ lines: { wavelength: number; color: string }[] }>()
         class="spectral-line"
         :style="{
           backgroundColor: line.color,
-          left: `${((line.wavelength - 380) / 400) * 100}%`
+          boxShadow: `0 0 6px 3px ${line.color}`,
+          left: `${((line.wavelength - 380) / 400) * 100}%`,
         }"
         :title="`${line.wavelength} nm`"
       />
@@ -58,9 +59,8 @@ defineProps<{ lines: { wavelength: number; color: string }[] }>()
   bottom: 0;
   width: 2px;
   transform: translateX(-50%);
-  /* Soft glow on each line to feel like real emission light */
-  filter: blur(0.5px) brightness(1.4);
-  box-shadow: 0 0 4px 1px currentColor;
+  /* Glow is applied inline per-line using the actual line color */
+  filter: blur(0.5px) brightness(1.3);
 }
 
 .spectral-empty {
