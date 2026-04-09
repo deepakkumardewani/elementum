@@ -24,6 +24,12 @@ export type TrendProperty =
   | "meltingPoint"
   | "boilingPoint"
 
+export interface ElementImage {
+  title: string
+  url: string
+  attribution: string
+}
+
 export interface Element {
   name: string
   symbol: string
@@ -34,6 +40,10 @@ export interface Element {
   xpos: number
   /** CSS grid row (1–10, including lanthanide/actinide rows) */
   ypos: number
+  /** Wide periodic table column */
+  wxpos?: number
+  /** Wide periodic table row */
+  wypos?: number
   period: number
   group: number | null
   block: ElementBlock
@@ -43,14 +53,30 @@ export interface Element {
   electronShells: number[]
   electronegativity: number | null
   atomicRadius: number | null
+  /** First ionization energy (kJ/mol); use ionizationEnergies for full list */
   ionizationEnergy: number | null
+  /** All ionization energies in order (kJ/mol) */
+  ionizationEnergies?: number[]
   electronAffinity: number | null
   density: number | null
   meltingPoint: number | null
   boilingPoint: number | null
+  molarHeat?: number | null
   oxidationStates: string | null
+  appearance?: string | null
   discoverer: string | null
+  namedBy?: string | null
   yearDiscovered: number | string | null
+  /** CPK color hex (without #) */
+  cpkHex?: string | null
+  /** Wikipedia or authoritative source URL */
+  source?: string | null
+  /** URL to spectral image on Wikipedia */
+  spectralImg?: string | null
+  /** URL to static Bohr model image — used as WebGL fallback */
+  bohrModelImage?: string | null
+  /** Actual photograph of the element */
+  image?: ElementImage | null
   /** emission spectral lines with wavelength and color */
   spectralLines: { wavelength: number; color: string }[]
   funFacts: string[]
