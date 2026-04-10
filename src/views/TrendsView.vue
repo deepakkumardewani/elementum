@@ -73,8 +73,8 @@ const { activeTrendProperty } = storeToRefs(uiStore)
   width: 100%;
   margin: 0 auto;
 
-  /* Intentional rhythm — not uniform gap everywhere */
-  gap: 0;
+  /* Consistent rhythm via gap */
+  gap: 1.75rem;
 }
 
 /* ── Header ─────────────────────────────────────────────────── */
@@ -82,21 +82,20 @@ const { activeTrendProperty } = storeToRefs(uiStore)
   display: flex;
   flex-direction: column;
   gap: 0.25rem;
-  margin-bottom: 2rem;
 }
 
 .trends-eyebrow {
-  font-size: 0.6875rem;
+  font-size: var(--text-xs);
   font-weight: 600;
   letter-spacing: 0.12em;
   color: var(--accent-cyan);
   text-transform: uppercase;
-  font-family: ui-monospace, "Cascadia Code", monospace;
+  font-family: var(--font-mono);
   opacity: 0.8;
 }
 
 .trends-title {
-  font-size: 1.625rem;
+  font-size: var(--text-2xl);
   font-weight: 700;
   color: var(--text-primary);
   letter-spacing: -0.025em;
@@ -104,7 +103,7 @@ const { activeTrendProperty } = storeToRefs(uiStore)
 }
 
 .trends-subtitle {
-  font-size: 0.8125rem;
+  font-size: var(--text-sm);
   color: var(--text-secondary);
   margin-top: 0.125rem;
 }
@@ -114,8 +113,6 @@ const { activeTrendProperty } = storeToRefs(uiStore)
 
 /* ── Description — close below selector ─────────────────────── */
 .property-description {
-  margin-top: 0.625rem;
-  margin-bottom: 1.75rem;
   font-size: 0.8125rem;
   color: var(--text-secondary);
   line-height: 1.65;

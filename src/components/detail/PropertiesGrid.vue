@@ -110,7 +110,7 @@ const cards = computed((): PropertyCard[] => {
 
 <style scoped>
 .properties-title {
-  font-size: 0.6875rem;
+  font-size: var(--text-xs);
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -141,7 +141,7 @@ const cards = computed((): PropertyCard[] => {
 }
 
 .property-label {
-  font-size: 0.6875rem;
+  font-size: var(--text-xs);
   font-weight: 500;
   color: var(--text-muted);
   text-transform: uppercase;
@@ -158,14 +158,14 @@ const cards = computed((): PropertyCard[] => {
 }
 
 .property-number {
-  font-size: 1rem;
+  font-size: var(--text-base);
   font-weight: 600;
   color: var(--text-primary);
   line-height: 1.2;
 }
 
 .property-unit {
-  font-size: 0.6875rem;
+  font-size: var(--text-xs);
   color: var(--text-muted);
   font-weight: 400;
 }

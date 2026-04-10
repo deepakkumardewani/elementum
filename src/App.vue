@@ -2,6 +2,7 @@
 import { onMounted } from "vue"
 import { useElementStore } from "@/stores/elementStore"
 import SearchBar from "@/components/SearchBar.vue"
+import { Z } from "@/constants/zIndex"
 
 const elementStore = useElementStore()
 
@@ -13,6 +14,7 @@ onMounted(() => {
 <template>
   <div class="app-shell">
     <header class="app-header">
+      <a href="#main-content" class="skip-link">Skip to content</a>
       <nav class="nav-links" aria-label="Main navigation">
         <RouterLink to="/">Table</RouterLink>
         <RouterLink to="/compare">Compare</RouterLink>
@@ -20,7 +22,9 @@ onMounted(() => {
       </nav>
       <SearchBar />
     </header>
-    <RouterView />
+    <main id="main-content">
+      <RouterView />
+    </main>
   </div>
 </template>
 
@@ -40,7 +44,26 @@ onMounted(() => {
   padding: 0.75rem 1.5rem;
   position: sticky;
   top: 0;
-  z-index: 20;
+  z-index: v-bind("Z.sticky");
+}
+
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 1.5rem;
+  background: var(--accent-cyan);
+  color: var(--bg-base);
+  padding: 0.5rem 1rem;
+  font-size: var(--text-sm);
+  font-weight: 600;
+  border-radius: 4px;
+  z-index: v-bind("Z.toast");
+  transition: top 0.2s ease;
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  top: 0.75rem;
 }
 
 .nav-links {
@@ -51,7 +74,7 @@ onMounted(() => {
 .nav-links a {
   color: var(--text-secondary);
   text-decoration: none;
-  font-size: 0.875rem;
+  font-size: var(--text-sm);
   font-weight: 500;
   transition: color 150ms ease;
 }

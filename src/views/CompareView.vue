@@ -2,6 +2,7 @@
 import { ref, computed, watch, nextTick, onUnmounted } from "vue"
 import { storeToRefs } from "pinia"
 import { gsap } from "gsap"
+import { ChevronsUp } from "lucide-vue-next"
 import { useElementStore } from "@/stores/elementStore"
 import ElementSelector from "@/components/compare/ElementSelector.vue"
 import CompareTable from "@/components/compare/CompareTable.vue"
@@ -88,8 +89,11 @@ onUnmounted(() => {
       class="empty-state"
       aria-live="polite"
     >
-      <div class="empty-icon" aria-hidden="true">⚗</div>
+      <div class="empty-icon-wrap">
+        <ChevronsUp :size="32" class="empty-icon" />
+      </div>
       <p class="empty-text">{{ emptyMessage }}</p>
+      <p class="empty-hint">Use the selectors above to search elements or use the mini-grids</p>
     </div>
   </main>
 </template>
@@ -114,14 +118,14 @@ onUnmounted(() => {
 }
 
 .view-title {
-  font-size: 1.5rem;
+  font-size: var(--text-2xl);
   font-weight: 700;
   color: var(--text-primary);
   letter-spacing: -0.02em;
 }
 
 .view-subtitle {
-  font-size: 0.875rem;
+  font-size: var(--text-sm);
   color: var(--text-muted);
 }
 
@@ -171,21 +175,40 @@ onUnmounted(() => {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 12px;
-  padding: 48px 24px;
+  gap: 16px;
+  padding: 64px 24px;
   border: 1px dashed var(--bg-border);
-  border-radius: 10px;
+  border-radius: 12px;
   text-align: center;
+  background: color-mix(in srgb, var(--bg-surface) 30%, transparent);
+}
+
+.empty-icon-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: var(--bg-elevated);
+  border: 1px solid var(--bg-border);
+  color: var(--accent-cyan);
+  margin-bottom: 8px;
 }
 
 .empty-icon {
-  font-size: 2rem;
-  opacity: 0.4;
+  opacity: 0.8;
 }
 
 .empty-text {
-  font-size: 0.875rem;
+  font-size: var(--text-base);
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.empty-hint {
+  font-size: var(--text-sm);
   color: var(--text-muted);
-  font-style: italic;
+  max-width: 320px;
 }
 </style>

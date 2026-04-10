@@ -111,7 +111,7 @@ function clearSelection() {
 }
 
 .selector-label {
-  font-size: 0.6875rem;
+  font-size: var(--text-xs);
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -125,7 +125,7 @@ function clearSelection() {
   border-radius: 6px;
   padding: 8px 12px;
   color: var(--text-primary);
-  font-size: 0.8125rem;
+  font-size: var(--text-sm);
   outline: none;
   transition: border-color 150ms ease;
 }
@@ -209,7 +209,7 @@ function clearSelection() {
   border: 1px dashed var(--bg-border);
   border-radius: 8px;
   color: var(--text-muted);
-  font-size: 0.8125rem;
+  font-size: var(--text-sm);
   font-style: italic;
   min-height: 60px;
 }

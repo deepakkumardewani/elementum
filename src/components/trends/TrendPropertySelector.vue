@@ -66,7 +66,7 @@ function select(prop: TrendProperty) {
   border: 1px solid var(--bg-border);
   background-color: var(--bg-surface);
   color: var(--text-secondary);
-  font-size: 0.8125rem;
+  font-size: var(--text-sm);
   font-weight: 500;
   white-space: nowrap;
   cursor: pointer;

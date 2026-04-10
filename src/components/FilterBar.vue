@@ -1,13 +1,20 @@
 <script setup lang="ts">
-import { computed } from "vue"
+import { computed, onMounted, ref } from "vue"
 import { storeToRefs } from "pinia"
+import { gsap } from "gsap"
 import { useElementStore } from "@/stores/elementStore"
 import { ALL_CATEGORIES, CATEGORY_LABELS, categoryColor } from "@/utils/elementUtils"
 import type { ElementBlock, ElementCategory } from "@/types/element"
 
 const elementStore = useElementStore()
-const { activeCategory, activePeriod, activeGroup, activeBlock, hasActiveFilter } =
-  storeToRefs(elementStore)
+const {
+  activeCategory,
+  activePeriod,
+  activeGroup,
+  activeBlock,
+  hasActiveFilter,
+  highlightedElements,
+} = storeToRefs(elementStore)
 
 const PERIODS = [1, 2, 3, 4, 5, 6, 7] as const
 const GROUPS = Array.from({ length: 18 }, (_, i) => i + 1)
@@ -30,6 +37,20 @@ function toggleGroup(group: number) {
 function toggleBlock(block: ElementBlock) {
   elementStore.setActiveBlock(activeBlock.value === block ? null : block)
 }
+
+const categoryStripRef = ref<HTMLElement | null>(null)
+
+onMounted(() => {
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return
+  if (categoryStripRef.value) {
+    const chips = categoryStripRef.value.querySelectorAll('.filter-chip--category')
+    gsap.fromTo(
+      chips,
+      { opacity: 0, y: 4 },
+      { opacity: 1, y: 0, duration: 0.3, stagger: 0.03, ease: 'power2.out' }
+    )
+  }
+})
 </script>
 
 <template>
@@ -37,7 +58,7 @@ function toggleBlock(block: ElementBlock) {
     <!-- Row 1: Category chips (full width) -->
     <div class="filter-row filter-row--category">
       <span class="filter-label">Category</span>
-      <div class="chip-strip">
+      <div class="chip-strip" ref="categoryStripRef">
         <button
           v-for="cat in ALL_CATEGORIES"
           :key="cat"
@@ -122,6 +143,20 @@ function toggleBlock(block: ElementBlock) {
         </div>
       </div>
     </div>
+
+    <!-- Empty state feedback -->
+    <div
+      v-if="hasAnyFilter && highlightedElements.size === 0"
+      class="results-feedback"
+    >
+      <span class="feedback-text">No elements match these filters.</span>
+      <button
+        class="feedback-clear"
+        @click="elementStore.clearAllFilters()"
+      >
+        Clear all
+      </button>
+    </div>
   </div>
 </template>
 
@@ -149,12 +184,12 @@ function toggleBlock(block: ElementBlock) {
 
 /* Secondary row: each group manages its own internal spacing via padding */
 .filter-row--secondary {
-  gap: 0;
+  gap: 16px;
 }
 
 /* ── Label ─────────────────────────────────────────────────────── */
 .filter-label {
-  font-size: 0.58rem;
+  font-size: var(--text-2xs);
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.12em;
@@ -170,16 +205,7 @@ function toggleBlock(block: ElementBlock) {
   display: flex;
   align-items: center;
   gap: 8px;
-  /* Generous left-right padding creates clear separation between groups
-     without relying solely on the divider line */
-  padding: 0 14px;
   min-width: 0;
-}
-
-/* Period group is first — no left divider precedes it, so remove left
-   padding to align its label flush with the category row's label */
-.filter-group--period {
-  padding-left: 0;
 }
 
 .filter-group--grow {
@@ -213,6 +239,8 @@ function toggleBlock(block: ElementBlock) {
   flex-wrap: nowrap;
   overflow-x: auto;
   scrollbar-width: none;
+  mask-image: linear-gradient(to right, black 85%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, black 85%, transparent 100%);
 }
 
 .chip-strip--scroll::-webkit-scrollbar {
@@ -230,7 +258,7 @@ function toggleBlock(block: ElementBlock) {
   border-radius: 99px;
   cursor: pointer;
   font-family: inherit;
-  font-size: 0.7rem;
+  font-size: var(--text-xs);
   font-weight: 500;
   color: var(--text-secondary);
   white-space: nowrap;
@@ -262,7 +290,7 @@ function toggleBlock(block: ElementBlock) {
   padding: 3px 6px;
   min-width: 28px;
   justify-content: center;
-  font-size: 0.68rem;
+  font-size: var(--text-xs);
 }
 
 /* Category chips keep colored dot */
@@ -283,7 +311,7 @@ function toggleBlock(block: ElementBlock) {
   border-radius: 99px;
   cursor: pointer;
   font-family: inherit;
-  font-size: 0.68rem;
+  font-size: var(--text-xs);
   font-weight: 500;
   color: var(--text-muted);
   white-space: nowrap;
@@ -301,5 +329,42 @@ function toggleBlock(block: ElementBlock) {
 .clear-btn:focus-visible {
   outline: 2px solid var(--accent-cyan);
   outline-offset: 2px;
+}
+
+/* ── Results feedback ─────────────────────────────────────────── */
+.results-feedback {
+  margin-top: 8px;
+  padding: 10px 16px;
+  background: color-mix(in srgb, var(--bg-elevated) 40%, transparent);
+  border: 1px dashed var(--bg-border);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  animation: fadeInUp 0.3s ease-out;
+}
+
+.feedback-text {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+}
+
+.feedback-clear {
+  background: none;
+  border: none;
+  padding: 0;
+  color: var(--accent-cyan);
+  font-family: inherit;
+  font-size: var(--text-sm);
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 150ms ease;
+}
+
+.feedback-clear:hover {
+  color: var(--text-primary);
 }
 </style>

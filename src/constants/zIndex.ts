@@ -1,9 +1,11 @@
 export const Z = {
   base: 0,
-  dropdown: 10,
-  sticky: 20,
-  modalBackdrop: 30,
-  modal: 40,
-  toast: 50,
-  tooltip: 60,
+  elevated: 10,
+  dropdown: 20,
+  sticky: 30,
+  modalBackdrop: 40,
+  modal: 50,
+  toast: 60,
+  tooltip: 70,
+  lightbox: 100,
 } as const

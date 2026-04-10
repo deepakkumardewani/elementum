@@ -5,6 +5,7 @@ import { useElementStore } from "@/stores/elementStore"
 import type { Element } from "@/types/element"
 import { categoryColor } from "@/utils/elementUtils"
 import { useTooltip } from "@/composables/useTooltip"
+import { Z } from "@/constants/zIndex"
 
 const props = defineProps<{ element: Element }>()
 const emit = defineEmits<{ click: [element: Element] }>()
@@ -81,6 +82,7 @@ function handleMouseleave() {
   /* 3px left accent is bolder and reads as identity, not decoration */
   border-left: 3px solid var(--category-color);
   border-radius: 2px;
+  box-shadow: 0 0 0 0 transparent;
   cursor: pointer;
   text-align: left;
   color: var(--text-primary);
@@ -98,14 +100,14 @@ function handleMouseleave() {
   transform: scale(1.05);
   box-shadow: 0 0 12px 2px var(--category-color);
   border-color: var(--category-color);
-  z-index: 10;
+  z-index: v-bind("Z.elevated");
   background-color: var(--bg-elevated);
 }
 
 .element-tile:focus-visible {
   outline: 2px solid var(--accent-cyan);
   outline-offset: 2px;
-  z-index: 10;
+  z-index: v-bind("Z.elevated");
 }
 
 .element-tile.is-dimmed {
@@ -117,7 +119,7 @@ function handleMouseleave() {
 .element-tile.is-selected {
   animation: pulseGlow 2s ease-in-out infinite;
   border-color: var(--category-color);
-  z-index: 10;
+  z-index: v-bind("Z.elevated");
 }
 
 /* ── Inner layout ───────────────────────────────────────────── */
@@ -126,7 +128,7 @@ function handleMouseleave() {
   grid-column: 1;
   grid-row: 1;
   /* Bumped from 0.5rem — more readable without disturbing the hierarchy */
-  font-size: 0.55rem;
+  font-size: var(--text-tile-number);
   font-weight: 600;
   color: var(--text-secondary);
   line-height: 1;
@@ -135,7 +137,7 @@ function handleMouseleave() {
 .tile-symbol {
   grid-column: 1;
   grid-row: 2;
-  font-size: clamp(0.75rem, 1.1vw, 1.15rem);
+  font-size: var(--text-tile-symbol);
   font-weight: 700;
   color: var(--text-primary);
   line-height: 1;
@@ -147,7 +149,7 @@ function handleMouseleave() {
   grid-column: 1;
   grid-row: 3;
   /* Bumped from 0.4rem — 0.45rem is the minimum for readability */
-  font-size: 0.45rem;
+  font-size: var(--text-tile-name);
   color: var(--text-secondary);
   white-space: nowrap;
   overflow: hidden;
@@ -160,7 +162,7 @@ function handleMouseleave() {
   grid-column: 1;
   grid-row: 4;
   /* Own row: no longer competing with the name for horizontal space */
-  font-size: 0.43rem;
+  font-size: var(--text-tile-mass);
   color: var(--text-muted);
   line-height: 1.2;
   align-self: end;

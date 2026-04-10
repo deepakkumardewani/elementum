@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { computed } from "vue"
+import { computed, ref, watch } from "vue"
+import { gsap } from "gsap"
 import { ArrowUp, ArrowDown } from "lucide-vue-next"
 import { formatProperty, categoryColor, CATEGORY_LABELS } from "@/utils/elementUtils"
 import GlowBadge from "@/components/detail/GlowBadge.vue"
@@ -91,6 +92,25 @@ const rows = computed((): ComputedRow[] =>
     }
   }),
 )
+
+const tableRowsRef = ref<HTMLElement | null>(null)
+
+function animateRows() {
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return
+  if (!tableRowsRef.value) return
+  const rowElements = tableRowsRef.value.querySelectorAll('.compare-row')
+  if (rowElements.length > 0) {
+    gsap.fromTo(
+      rowElements,
+      { opacity: 0, y: 6 },
+      { opacity: 1, y: 0, duration: 0.3, stagger: 0.02, ease: "power2.out" }
+    )
+  }
+}
+
+watch([() => props.elementA, () => props.elementB], () => {
+  animateRows()
+}, { immediate: true })
 </script>
 
 <template>
@@ -121,62 +141,72 @@ const rows = computed((): ComputedRow[] =>
     </div>
 
     <!-- Properties table -->
-    <table
+    <div
       class="compare-table"
+      role="table"
       aria-label="Element property comparison"
     >
-      <thead class="sr-only">
-        <tr>
-          <th scope="col">{{ elementA.name }}</th>
-          <th scope="col">Property</th>
-          <th scope="col">{{ elementB.name }}</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr
+      <div class="sr-only" role="rowgroup">
+        <div role="row">
+          <div role="columnheader">{{ elementA.name }}</div>
+          <div role="columnheader">Property</div>
+          <div role="columnheader">{{ elementB.name }}</div>
+        </div>
+      </div>
+      <div class="compare-rows" role="rowgroup" ref="tableRowsRef">
+        <div
           v-for="row in rows"
           :key="row.label"
           class="compare-row"
+          role="row"
         >
           <!-- Element A value -->
-          <td class="value-cell value-cell--a">
+          <div class="value-cell value-cell--a" role="cell">
             <span class="value-text">{{ row.valueA }}</span>
-            <ArrowUp
+            <span
               v-if="row.diffA === 'higher'"
-              :size="11"
-              class="diff-icon diff-up"
-              aria-label="higher"
-            />
-            <ArrowDown
+              role="img"
+              :aria-label="`higher than ${elementB.symbol}`"
+              class="diff-indicator diff-up"
+            >
+              <ArrowUp :size="11" class="diff-icon" />
+            </span>
+            <span
               v-if="row.diffA === 'lower'"
-              :size="11"
-              class="diff-icon diff-down"
-              aria-label="lower"
-            />
-          </td>
+              role="img"
+              :aria-label="`lower than ${elementB.symbol}`"
+              class="diff-indicator diff-down"
+            >
+              <ArrowDown :size="11" class="diff-icon" />
+            </span>
+          </div>
 
           <!-- Property label -->
-          <td class="property-label">{{ row.label }}</td>
+          <div class="property-label" role="cell">{{ row.label }}</div>
 
           <!-- Element B value -->
-          <td class="value-cell value-cell--b">
-            <ArrowUp
+          <div class="value-cell value-cell--b" role="cell">
+            <span
               v-if="row.diffB === 'higher'"
-              :size="11"
-              class="diff-icon diff-up"
-              aria-label="higher"
-            />
-            <ArrowDown
+              role="img"
+              :aria-label="`higher than ${elementA.symbol}`"
+              class="diff-indicator diff-up"
+            >
+              <ArrowUp :size="11" class="diff-icon" />
+            </span>
+            <span
               v-if="row.diffB === 'lower'"
-              :size="11"
-              class="diff-icon diff-down"
-              aria-label="lower"
-            />
+              role="img"
+              :aria-label="`lower than ${elementA.symbol}`"
+              class="diff-indicator diff-down"
+            >
+              <ArrowDown :size="11" class="diff-icon" />
+            </span>
             <span class="value-text">{{ row.valueB }}</span>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -239,7 +269,6 @@ const rows = computed((): ComputedRow[] =>
 /* Property table */
 .compare-table {
   width: 100%;
-  border-collapse: collapse;
 }
 
 .compare-row {
@@ -263,7 +292,7 @@ const rows = computed((): ComputedRow[] =>
 
 .property-label {
   padding: 10px 16px;
-  font-size: 0.6875rem;
+  font-size: var(--text-xs);
   font-weight: 600;
   letter-spacing: 0.06em;
   text-transform: uppercase;
@@ -292,7 +321,7 @@ const rows = computed((): ComputedRow[] =>
 }
 
 .value-text {
-  font-size: 0.9375rem;
+  font-size: var(--text-base);
   font-weight: 500;
   color: var(--text-primary);
   white-space: nowrap;
@@ -301,16 +330,22 @@ const rows = computed((): ComputedRow[] =>
   max-width: 200px;
 }
 
+.diff-indicator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .diff-icon {
   flex-shrink: 0;
 }
 
 .diff-up {
-  color: #22c55e;
+  color: var(--color-positive);
 }
 
 .diff-down {
-  color: #ef4444;
+  color: var(--color-negative);
 }
 
 /* Visually hidden but available to screen readers */

@@ -118,7 +118,7 @@ const atomicMassDisplay = computed(() =>
   display: flex;
   align-items: center;
   gap: 0.3rem;
-  font-size: 0.6875rem;
+  font-size: var(--text-xs);
   font-weight: 500;
   color: var(--text-muted);
   text-transform: uppercase;
@@ -136,7 +136,7 @@ const atomicMassDisplay = computed(() =>
 }
 
 .element-header-name {
-  font-size: 1.25rem;
+  font-size: var(--text-xl);
   font-weight: 500;
   color: var(--text-primary);
   letter-spacing: 0.01em;
@@ -154,7 +154,7 @@ const atomicMassDisplay = computed(() =>
   align-items: center;
   padding: 0.25rem 0.625rem;
   border-radius: 4px;
-  font-size: 0.6875rem;
+  font-size: var(--text-xs);
   font-weight: 600;
   letter-spacing: 0.06em;
   text-transform: uppercase;

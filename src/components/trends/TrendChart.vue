@@ -1,29 +1,30 @@
 <script setup lang="ts">
-import { computed, defineAsyncComponent } from "vue"
-import { storeToRefs } from "pinia"
-import { useElementStore } from "@/stores/elementStore"
-import { useUiStore } from "@/stores/uiStore"
-import { getTrendSeries, TREND_PROPERTY_META } from "@/utils/trendData"
+import { computed, defineAsyncComponent } from "vue";
+import { storeToRefs } from "pinia";
+import { useElementStore } from "@/stores/elementStore";
+import { useUiStore } from "@/stores/uiStore";
+import { getTrendSeries, TREND_PROPERTY_META } from "@/utils/trendData";
 
 // Lazy-load ApexCharts — it's a large library and must not land in the initial bundle.
-const VueApexCharts = defineAsyncComponent(() => import("vue3-apexcharts"))
+const VueApexCharts = defineAsyncComponent(() => import("vue3-apexcharts"));
 
-// ApexCharts config values cannot resolve CSS variables — keep these in sync with style.css.
+// Note: TOKEN object bypasses CSS vars — this is an ApexCharts limitation (it cannot read CSS custom properties).
+// If the palette changes, TOKEN values must be updated manually.
 const TOKEN = {
   textSecondary: "#94a3b8",
   bgBorder: "#1f2d45",
-} as const
+} as const;
 
-const elementStore = useElementStore()
-const uiStore = useUiStore()
+const elementStore = useElementStore();
+const uiStore = useUiStore();
 
-const { elements } = storeToRefs(elementStore)
-const { activeTrendProperty } = storeToRefs(uiStore)
+const { elements } = storeToRefs(elementStore);
+const { activeTrendProperty } = storeToRefs(uiStore);
 
 // ── Derived series data ────────────────────────────────────────────────────
 const trendData = computed(() =>
   getTrendSeries(activeTrendProperty.value, elements.value),
-)
+);
 
 // ── Chart series ───────────────────────────────────────────────────────────
 const series = computed(() => [
@@ -36,49 +37,66 @@ const series = computed(() => [
       goals: [],
     })),
   },
-])
+]);
+
+// ── Static chart options ─────────────────────────────────────────────────────
+const baseChartOptions = {
+  chart: {
+    type: "bar" as const,
+    background: "transparent",
+    toolbar: { show: false },
+    animations: {
+      enabled: true,
+      easing: "easeinout",
+      speed: 600,
+      animateGradually: {
+        enabled: true,
+        delay: 0,
+      },
+      dynamicAnimation: {
+        enabled: true,
+        speed: 400,
+      },
+    },
+    fontFamily: "ui-sans-serif, system-ui, sans-serif",
+  },
+  plotOptions: {
+    bar: {
+      distributed: true,
+      columnWidth: "80%",
+      borderRadius: 2,
+    },
+  },
+  dataLabels: {
+    enabled: false,
+  },
+  legend: {
+    show: false,
+  },
+  grid: {
+    borderColor: TOKEN.bgBorder,
+    strokeDashArray: 3,
+    xaxis: {
+      lines: { show: false },
+    },
+    yaxis: {
+      lines: { show: true },
+    },
+  },
+  states: {
+    hover: {
+      filter: { type: "lighten", value: 0.2 },
+    },
+  },
+};
 
 // ── Chart options ──────────────────────────────────────────────────────────
 const chartOptions = computed(() => {
-  const meta = TREND_PROPERTY_META[activeTrendProperty.value]
-  const colors = trendData.value.map((point) => point.color)
-  const names = trendData.value.map((point) => point.name)
-  const values = trendData.value.map((point) => point.value)
+  const meta = TREND_PROPERTY_META[activeTrendProperty.value];
+  const colors = trendData.value.map((point) => point.color);
 
   return {
-    chart: {
-      type: "bar" as const,
-      background: "transparent",
-      toolbar: { show: false },
-      animations: {
-        enabled: true,
-        easing: "easeinout",
-        speed: 600,
-        animateGradually: {
-          enabled: true,
-          delay: 0,
-        },
-        dynamicAnimation: {
-          enabled: true,
-          speed: 400,
-        },
-      },
-      fontFamily: "ui-sans-serif, system-ui, sans-serif",
-    },
-    plotOptions: {
-      bar: {
-        // distributed: true enables individual bar coloring from the colors array
-        distributed: true,
-        columnWidth: "80%",
-        borderRadius: 2,
-      },
-    },
-    dataLabels: {
-      enabled: false,
-    },
-    legend: {
-      show: false,
-    },
+    ...baseChartOptions,
     colors,
     xaxis: {
       categories: trendData.value.map((p) => p.symbol),
@@ -117,9 +135,9 @@ const chartOptions = computed(() => {
           fontSize: "11px",
         },
         formatter: (val: number) => {
-          if (val === null || val === undefined) return "—"
+          if (val === null || val === undefined) return "—";
           // Keep numbers readable: round to 2 decimal places max
-          return val % 1 === 0 ? String(val) : val.toFixed(2)
+          return val % 1 === 0 ? String(val) : val.toFixed(2);
         },
       },
     },
@@ -138,17 +156,21 @@ const chartOptions = computed(() => {
       custom: ({
         dataPointIndex,
       }: {
-        seriesIndex: number
-        dataPointIndex: number
+        seriesIndex: number;
+        dataPointIndex: number;
       }) => {
-        const name = names[dataPointIndex] ?? "—"
-        const symbol = trendData.value[dataPointIndex]?.symbol ?? "—"
-        const raw = values[dataPointIndex]
+        const point = trendData.value[dataPointIndex];
+        const currentMeta = TREND_PROPERTY_META[activeTrendProperty.value];
+        const rawName = point?.name ?? "—";
+        const rawSymbol = point?.symbol ?? "—";
+        const name = rawName.replace(/</g, "&lt;").replace(/>/g, "&gt;");
+        const symbol = rawSymbol.replace(/</g, "&lt;").replace(/>/g, "&gt;");
+        const raw = point?.value;
         const formatted =
           raw === null || raw === undefined
             ? "—"
-            : `${raw.toFixed(2)}${meta.unit ? ` ${meta.unit}` : ""}`
-        const color = colors[dataPointIndex] ?? TOKEN.textSecondary
+            : `${raw.toFixed(2)}${currentMeta.unit ? ` ${currentMeta.unit}` : ""}`;
+        const color = point?.color ?? TOKEN.textSecondary;
 
         return `
           <div style="
@@ -168,19 +190,14 @@ const chartOptions = computed(() => {
               <strong style="font-size:14px">${symbol}</strong>
               <span style="color:var(--text-secondary)">${name}</span>
             </div>
-            <div style="color:var(--text-secondary);font-size:11px;">${meta.label}</div>
+            <div style="color:var(--text-secondary);font-size:11px;">${currentMeta.label}</div>
             <div style="font-size:16px;font-weight:600;color:var(--text-primary);">${formatted}</div>
           </div>
-        `
+        `;
       },
     },
-    states: {
-      hover: {
-        filter: { type: "lighten", value: 0.2 },
-      },
-    },
-  }
-})
+  };
+});
 </script>
 
 <template>
@@ -192,7 +209,6 @@ const chartOptions = computed(() => {
   >
     <Suspense>
       <VueApexCharts
-        :key="activeTrendProperty"
         type="bar"
         height="100%"
         width="100%"

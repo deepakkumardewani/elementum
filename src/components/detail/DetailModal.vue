@@ -12,6 +12,7 @@ import PropertiesGrid from "@/components/detail/PropertiesGrid.vue"
 import ElectronConfigVisualizer from "@/components/detail/ElectronConfigVisualizer.vue"
 import SpectralLines from "@/components/detail/SpectralLines.vue"
 import ElementFunFacts from "@/components/detail/ElementFunFacts.vue"
+import { Z } from "@/constants/zIndex"
 
 const AtomModel3D = defineAsyncComponent(
   () => import("@/components/detail/AtomModel3D.vue"),
@@ -52,7 +53,7 @@ function openPanel() {
   // Kill any in-progress close tween before starting open
   gsap.killTweensOf([backdropEl.value!, panelEl.value!])
 
-  const dur = getMotionDuration(0.3)
+  const dur = getMotionDuration(0.25)
   gsap.fromTo(backdropEl.value!, { opacity: 0 }, { opacity: 1, duration: dur, ease: "power2.out" })
   gsap.fromTo(panelEl.value!, { x: "100%" }, { x: "0%", duration: dur, ease: "expo.out" })
 
@@ -68,7 +69,7 @@ function closePanel() {
   // Kill any in-progress open tween before starting close
   gsap.killTweensOf([backdropEl.value!, panelEl.value!])
 
-  const dur = getMotionDuration(0.22)
+  const dur = getMotionDuration(0.25)
   gsap.to(panelEl.value!, { x: "100%", duration: dur, ease: "expo.in" })
   gsap.to(backdropEl.value!, {
     opacity: 0,
@@ -200,10 +201,10 @@ onUnmounted(() => {
         <ElementHeader :element="selectedElement" />
 
         <div class="detail-sections">
-          <ElementPhoto :element="selectedElement" />
-          <SpectralLines :lines="selectedElement.spectralLines" />
           <PropertiesGrid :element="selectedElement" />
           <ElectronConfigVisualizer :element="selectedElement" />
+          <ElementPhoto :element="selectedElement" />
+          <SpectralLines :lines="selectedElement.spectralLines" />
 
           <div class="detail-3d-section">
             <h3 class="detail-section-title">3D Atom Model</h3>
@@ -237,9 +238,10 @@ onUnmounted(() => {
 .detail-modal-root {
   position: fixed;
   inset: 0;
-  z-index: 30; /* modalBackdrop level — panel inside is z:40 */
+  z-index: v-bind("Z.modalBackdrop");
   pointer-events: none;
 }
+
 
 .detail-backdrop {
   position: absolute;
@@ -259,10 +261,11 @@ onUnmounted(() => {
   border-left: 1px solid var(--bg-border);
   display: flex;
   flex-direction: column;
-  z-index: 40; /* modal */
+  z-index: v-bind("Z.modal");
   pointer-events: auto;
   box-shadow: -8px 0 40px rgb(0 0 0 / 0.5);
   transform: translateX(100%); /* GSAP initial state */
+  padding-inline: env(safe-area-inset-right); /* Respect mobile safe areas */
 }
 
 .detail-panel-toolbar {
@@ -281,7 +284,7 @@ onUnmounted(() => {
 }
 
 .detail-nav-label {
-  font-size: 0.75rem;
+  font-size: var(--text-xs);
   color: var(--text-muted);
   min-width: 3.5rem;
   text-align: center;
@@ -355,7 +358,7 @@ onUnmounted(() => {
 }
 
 .detail-section-title {
-  font-size: 0.6875rem;
+  font-size: var(--text-xs);
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;

@@ -61,7 +61,12 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <main ref="rootEl" class="table-view">
+  <main
+    ref="rootEl"
+    class="table-view"
+    role="region"
+    aria-label="Periodic table, scrollable"
+  >
     <div class="table-view-inner">
       <FilterBar />
       <PeriodicGrid />
@@ -78,6 +83,8 @@ onUnmounted(() => {
   flex: 1;
   overflow-x: auto;
   padding: 16px 20px 32px;
+  mask-image: linear-gradient(to right, black 96%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, black 96%, transparent 100%);
 }
 
 .table-view-inner {

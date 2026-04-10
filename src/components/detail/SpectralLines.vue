@@ -1,12 +1,33 @@
 <script setup lang="ts">
-defineProps<{ lines: { wavelength: number; color: string }[] }>()
+import { ref, watch, onMounted } from "vue"
+import { gsap } from "gsap"
+
+const props = defineProps<{ lines: { wavelength: number; color: string }[] }>()
+
+const barRef = ref<HTMLElement | null>(null)
+
+function animateLines() {
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return
+  if (!barRef.value) return
+  const lineEls = barRef.value.querySelectorAll('.spectral-line')
+  if (lineEls.length > 0) {
+    gsap.fromTo(
+      lineEls,
+      { opacity: 0, scaleY: 0 },
+      { opacity: 1, scaleY: 1, duration: 0.4, stagger: 0.01, ease: 'power2.out', transformOrigin: "bottom" }
+    )
+  }
+}
+
+onMounted(animateLines)
+watch(() => props.lines, animateLines, { deep: true })
 </script>
 
 <template>
   <div class="spectral-section" aria-label="Emission spectrum">
     <h3 class="spectral-title">Emission Spectrum</h3>
 
-    <div v-if="lines.length > 0" class="spectral-bar" role="img" :aria-label="`${lines.length} spectral emission lines`">
+    <div v-if="lines.length > 0" ref="barRef" class="spectral-bar" role="img" :aria-label="`${lines.length} spectral emission lines`">
       <!-- Dark reference band (background of the spectrum) -->
       <div class="spectral-bg" />
 
@@ -31,7 +52,7 @@ defineProps<{ lines: { wavelength: number; color: string }[] }>()
 
 <style scoped>
 .spectral-title {
-  font-size: 0.6875rem;
+  font-size: var(--text-xs);
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;

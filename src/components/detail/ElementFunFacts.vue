@@ -1,11 +1,27 @@
 <script setup lang="ts">
+import { ref, onMounted, watch } from "vue"
+import { gsap } from "gsap"
 import type { Element } from "@/types/element"
 
-defineProps<{ element: Element }>()
+const props = defineProps<{ element: Element }>()
 
-// Uses `uses` from element data — the ARCHITECTURE field is named `uses` but our
-// type schema doesn't include `uses` separately; funFacts and compounds are in type.
-// We'll display: summary paragraph + fun facts + compounds.
+const factsListRef = ref<HTMLElement | null>(null)
+
+function animateFacts() {
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return
+  if (!factsListRef.value) return
+  const items = factsListRef.value.querySelectorAll('.facts-item')
+  if (items.length > 0) {
+    gsap.fromTo(
+      items,
+      { opacity: 0, x: -10 },
+      { opacity: 1, x: 0, duration: 0.4, stagger: 0.05, ease: 'power2.out' }
+    )
+  }
+}
+
+onMounted(animateFacts)
+watch(() => props.element, animateFacts, { deep: true })
 </script>
 
 <template>
@@ -19,8 +35,12 @@ defineProps<{ element: Element }>()
     <!-- Fun Facts -->
     <div v-if="element.funFacts && element.funFacts.length > 0" class="facts-card">
       <h3 class="facts-title">Fun Facts</h3>
-      <ul class="facts-list">
-        <li v-for="(fact, i) in element.funFacts" :key="i" class="facts-item">
+      <ul ref="factsListRef" class="facts-list">
+        <li
+          v-for="(fact, i) in element.funFacts"
+          :key="`${element.atomicNumber}-fact-${i}`"
+          class="facts-item"
+        >
           <span class="facts-bullet" aria-hidden="true">—</span>
           {{ fact }}
         </li>
@@ -37,7 +57,7 @@ defineProps<{ element: Element }>()
       <div class="compounds-grid">
         <span
           v-for="(compound, i) in element.compounds"
-          :key="i"
+          :key="`${element.atomicNumber}-compound-${i}`"
           class="compound-chip"
         >
           {{ compound }}
@@ -66,7 +86,7 @@ defineProps<{ element: Element }>()
 }
 
 .facts-title {
-  font-size: 0.6875rem;
+  font-size: var(--text-xs);
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -75,7 +95,7 @@ defineProps<{ element: Element }>()
 }
 
 .facts-summary {
-  font-size: 0.875rem;
+  font-size: var(--text-sm);
   color: var(--text-secondary);
   line-height: 1.65;
 }
@@ -90,7 +110,7 @@ defineProps<{ element: Element }>()
 .facts-item {
   display: flex;
   gap: 0.5rem;
-  font-size: 0.875rem;
+  font-size: var(--text-sm);
   color: var(--text-secondary);
   line-height: 1.55;
 }

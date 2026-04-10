@@ -2,6 +2,7 @@
 import { computed } from "vue"
 import { categoryColor } from "@/utils/elementUtils"
 import type { Element } from "@/types/element"
+import { Z } from "@/constants/zIndex"
 
 const props = defineProps<{
   elements: Element[]
@@ -154,14 +155,14 @@ function handleClick(el: Element) {
   background: var(--bg-elevated);
   color: var(--text-primary);
   position: relative;
-  z-index: 10;
+  z-index: v-bind("Z.elevated");
 }
 
 .mini-tile:focus-visible {
   outline: 2px solid var(--accent-cyan);
   outline-offset: 1px;
   position: relative;
-  z-index: 10;
+  z-index: v-bind("Z.elevated");
 }
 
 .mini-tile.is-selected {

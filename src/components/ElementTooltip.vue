@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { computed } from "vue";
 import { useTooltip } from "@/composables/useTooltip";
+import { Z } from "@/constants/zIndex";
 
 const { visible, state } = useTooltip();
 
@@ -61,7 +62,7 @@ const phaseIcon: Record<string, string> = {
 <style scoped>
 .element-tooltip {
   position: fixed;
-  z-index: 60; /* tooltip level per Z scale */
+  z-index: v-bind("Z.tooltip");
   pointer-events: none;
   background-color: var(--bg-elevated);
   border: 1px solid var(--bg-border);

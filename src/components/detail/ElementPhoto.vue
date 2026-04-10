@@ -2,6 +2,7 @@
 import { ref } from "vue"
 import { useEventListener } from "@vueuse/core"
 import type { Element } from "@/types/element"
+import { Z } from "@/constants/zIndex"
 
 const props = defineProps<{ element: Element }>()
 
@@ -159,6 +160,12 @@ useEventListener(document, "keydown", (e: KeyboardEvent) => {
   animation: shimmer 1.6s infinite;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .photo-skeleton {
+    animation: none;
+  }
+}
+
 @keyframes shimmer {
   from { background-position: 200% 0; }
   to   { background-position: -200% 0; }
@@ -237,7 +244,7 @@ useEventListener(document, "keydown", (e: KeyboardEvent) => {
 .lightbox-backdrop {
   position: fixed;
   inset: 0;
-  z-index: 100;
+  z-index: v-bind("Z.lightbox");
   background: rgb(0 0 0 / 0.88);
   display: flex;
   align-items: center;

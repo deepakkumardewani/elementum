@@ -10,7 +10,8 @@
 
   /* Accent */
   --accent-cyan: #22d3ee;
-  --accent-cyan2: #06b6d4;
+  --color-positive: #22c55e;
+  --color-negative: #ef4444;
 
   /* Text */
   --text-primary: #f1f5f9;
@@ -29,6 +30,34 @@
   --cat-lanthanide: #f472b6;
   --cat-actinide: #fb923c;
   --cat-unknown: #64748b;
+
+  /* ─── Type scale ──────────────────────────────────────────────
+     7-stop rem scale (base 1rem = 16px browser default).
+     Tile sizes are listed separately — constrained by the fixed
+     18-column periodic grid; they cannot follow the general scale.
+  ─────────────────────────────────────────────────────────────── */
+  --text-2xs: 0.5625rem; /* 9px  — tile metadata, sub-labels      */
+  --text-xs: 0.6875rem; /* 11px — chips, badges, section titles   */
+  --text-sm: 0.875rem; /* 14px — secondary body, captions        */
+  --text-base: 1rem; /* 16px — primary body                    */
+  --text-lg: 1.125rem; /* 18px — emphasized body                 */
+  --text-xl: 1.375rem; /* 22px — subheadings                     */
+  --text-2xl: 1.75rem; /* 28px — page / view titles              */
+
+  /* Tile-specific typography (constrained by ~56px grid cell size) */
+  --text-tile-symbol: clamp(0.75rem, 1.1vw, 1.15rem);
+  --text-tile-number: 0.5625rem; /* matches --text-2xs              */
+  --text-tile-name: 0.5rem; /* 8px — min readable in cell      */
+  --text-tile-mass: 0.4375rem; /* 7px — de-emphasised vs name     */
+
+  /* Motion timing tokens */
+  --duration-fast: 150ms;
+  --duration-normal: 300ms;
+  --duration-slow: 500ms;
+
+  /* ─── Font families ────────────────────────────────────────── */
+  --font-sans: ui-sans-serif, system-ui, sans-serif;
+  --font-mono: ui-monospace, "Cascadia Code", monospace;
 }
 
 /* ─── Base reset ──────────────────────────────────────────────── */
