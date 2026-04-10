@@ -10,6 +10,8 @@ export const useElementStore = defineStore("element", () => {
   const searchQuery = ref("")
   const highlightedElements = ref<Set<number>>(new Set())
 
+  const compareElements = ref<[Element | null, Element | null]>([null, null])
+
   const activeCategory = ref<ElementCategory | null>(null)
   const activePeriod = ref<number | null>(null)
   const activeGroup = ref<number | null>(null)
@@ -116,6 +118,19 @@ export const useElementStore = defineStore("element", () => {
     highlightedElements.value = new Set()
   }
 
+  function setCompareElement(slotIndex: 0 | 1, element: Element | null) {
+    const next: [Element | null, Element | null] = [
+      compareElements.value[0],
+      compareElements.value[1],
+    ]
+    next[slotIndex] = element
+    compareElements.value = next
+  }
+
+  function clearCompare() {
+    compareElements.value = [null, null]
+  }
+
   return {
     // state
     elements,
@@ -123,6 +138,7 @@ export const useElementStore = defineStore("element", () => {
     detailPanelOpen,
     searchQuery,
     highlightedElements,
+    compareElements,
     activeCategory,
     activePeriod,
     activeGroup,
@@ -142,5 +158,7 @@ export const useElementStore = defineStore("element", () => {
     setActiveGroup,
     setActiveBlock,
     clearAllFilters,
+    setCompareElement,
+    clearCompare,
   }
 })
