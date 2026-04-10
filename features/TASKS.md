@@ -215,7 +215,7 @@ Organized as Epics → Tasks → Subtasks. Each task is self-contained and can b
 - `getTrendSeries(property, elements)` → returns `{ name, value, category }[]` sorted by atomic number
 - Handle unit formatting per property
 
----
+## **Task 6.5 - detailed verification list**
 
 ## Epic 7 — Polish & Animations
 
@@ -256,7 +256,7 @@ Organized as Epics → Tasks → Subtasks. Each task is self-contained and can b
 - Spot-check spectral lines, fun facts, compounds for well-known elements (H, C, O, Fe, Au, U)
 - Null values for unknown elements are acceptable — verify they render as `"—"` not crashing
 
----
+## **Task 7.7 - detailed verification list**
 
 ## Epic 8 — Performance & Accessibility Audit (Lighthouse ≥ 90)
 
