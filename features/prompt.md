@@ -6,8 +6,7 @@ The following planning documents are in the features/ folder. Read them in this 
 
 1. `AGENT_INSTRUCTIONS.md` — coding conventions, architecture rules, animation guidelines, layout rules, performance rules, accessibility rules, component checklist, do-nots. **These are non-negotiable constraints. Every rule applies to every file you touch.**
 2. `ARCHITECTURE.md` — tech stack, component tree, data schema, animation specs, styling tokens.
-3. `FOLDER_STRUCTURE.md` — where every file lives and why.
-4. `TASKS.md` — the full epic/task/subtask breakdown. Read & Implement only the epic specified below.
+   3 `TASKS.md` — the full epic/task/subtask breakdown. Read & Implement only the epic specified below.
 
 ## This session: Epic 2 — Periodic Table Grid
 
