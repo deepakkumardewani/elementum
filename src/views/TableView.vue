@@ -6,7 +6,8 @@ import { useElementStore } from "@/stores/elementStore";
 import PeriodicGrid from "@/components/PeriodicGrid.vue";
 import FilterBar from "@/components/FilterBar.vue";
 import DetailModal from "@/components/detail/DetailModal.vue";
-import { useElementFilter } from "@/composables/useElementFilter";
+import { useElementFilter } from "@/composables/useElementFilter"
+import ElementTooltip from "@/components/ElementTooltip.vue";
 
 const rootEl = ref<HTMLElement | null>(null);
 let ctx: gsap.Context;
@@ -62,6 +63,8 @@ onUnmounted(() => {
     </div>
     <!-- v-show preserves GSAP state; placed at view root to avoid CLS -->
     <DetailModal />
+    <!-- Single tooltip instance — Teleports to body, shown on tile hover -->
+    <ElementTooltip />
   </main>
 </template>
 

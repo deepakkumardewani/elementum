@@ -1,15 +1,16 @@
 <script setup lang="ts">
-import { computed } from "vue"
+import { computed, ref } from "vue"
 import { storeToRefs } from "pinia"
 import { useElementStore } from "@/stores/elementStore"
 import type { Element } from "@/types/element"
 import { categoryColor } from "@/utils/elementUtils"
+import { useTooltip } from "@/composables/useTooltip"
 
 const props = defineProps<{ element: Element }>()
 const emit = defineEmits<{ click: [element: Element] }>()
 
 const elementStore = useElementStore()
-const { hasActiveFilter, highlightedElements } = storeToRefs(elementStore)
+const { hasActiveFilter, highlightedElements, selectedElement } = storeToRefs(elementStore)
 
 // Derived highlight/dim state — used in v-memo key to control re-render
 const isHighlighted = computed(
@@ -18,24 +19,43 @@ const isHighlighted = computed(
 const isDimmed = computed(
   () => hasActiveFilter.value && !highlightedElements.value.has(props.element.atomicNumber),
 )
+// Active selected state drives the pulse glow animation
+const isSelected = computed(
+  () => selectedElement.value?.atomicNumber === props.element.atomicNumber,
+)
 
 const color = computed(() => categoryColor(props.element.category))
+
+const { showTooltip, hideTooltip } = useTooltip()
+const tileEl = ref<HTMLElement | null>(null)
 
 function handleClick() {
   elementStore.selectElement(props.element)
   emit("click", props.element)
 }
+
+function handleMouseenter() {
+  if (!tileEl.value) return
+  showTooltip(props.element, tileEl.value.getBoundingClientRect())
+}
+
+function handleMouseleave() {
+  hideTooltip()
+}
 </script>
 
 <template>
   <button
-    v-memo="[element.atomicNumber, isHighlighted, isDimmed]"
+    ref="tileEl"
+    v-memo="[element.atomicNumber, isHighlighted, isDimmed, isSelected]"
     class="element-tile"
-    :class="{ 'is-dimmed': isDimmed }"
+    :class="{ 'is-dimmed': isDimmed, 'is-selected': isSelected }"
     :style="{ '--category-color': color }"
     :data-atomic-number="element.atomicNumber"
     :aria-label="`${element.name}, atomic number ${element.atomicNumber}, ${element.category}`"
     @click="handleClick"
+    @mouseenter="handleMouseenter"
+    @mouseleave="handleMouseleave"
   >
     <span class="tile-number">{{ element.atomicNumber }}</span>
     <span class="tile-symbol">{{ element.symbol }}</span>
@@ -91,6 +111,13 @@ function handleClick() {
 .element-tile.is-dimmed {
   opacity: 0.15;
   pointer-events: none;
+}
+
+/* Pulse glow on the currently selected tile — keyframe defined in style.css */
+.element-tile.is-selected {
+  animation: pulseGlow 2s ease-in-out infinite;
+  border-color: var(--category-color);
+  z-index: 10;
 }
 
 /* ── Inner layout ───────────────────────────────────────────── */
