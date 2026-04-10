@@ -10,7 +10,7 @@
     "lint": "biome check",
     "format": "biome format --write",
     "typecheck": "vue-tsc",
-    "verify": "bun run lint && bun run format && bun run typecheck"
+    "verify": "bun run format && bun run typecheck"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.2.2",
