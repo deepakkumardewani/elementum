@@ -16,6 +16,12 @@ export function useElementFilter() {
   watch(
     [hasActiveFilter, highlightedElements],
     () => {
+      // When reduced motion is preferred, skip GSAP tweens entirely.
+      // The CSS .is-dimmed class (opacity: 0.15) and v-memo-driven re-render
+      // handle the visual state without any animation.
+      const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches
+      if (prefersReducedMotion) return
+
       const allTiles = document.querySelectorAll<HTMLElement>(".element-tile")
 
       if (!hasActiveFilter.value) {

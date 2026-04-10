@@ -30,7 +30,7 @@ function fBlockStyle(xpos: number, ypos: number) {
 </script>
 
 <template>
-  <div class="periodic-grid-wrapper" role="region" aria-label="Periodic table of elements">
+  <div id="periodic-grid" class="periodic-grid-wrapper" role="region" aria-label="Periodic table of elements">
     <!-- ── Main table (periods 1–7) ──────────────────────────────── -->
     <div class="main-grid" aria-label="Main periodic table">
       <!-- Real element tiles -->

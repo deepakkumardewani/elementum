@@ -13,7 +13,7 @@ onMounted(() => {
 <template>
   <div class="app-shell">
     <header class="app-header">
-      <nav class="nav-links">
+      <nav class="nav-links" aria-label="Main navigation">
         <RouterLink to="/">Table</RouterLink>
         <RouterLink to="/compare">Compare</RouterLink>
         <RouterLink to="/trends">Trends</RouterLink>
@@ -59,5 +59,11 @@ onMounted(() => {
 .nav-links a:hover,
 .nav-links a.router-link-active {
   color: var(--accent-cyan);
+}
+
+.nav-links a:focus-visible {
+  outline: 2px solid var(--accent-cyan);
+  outline-offset: 3px;
+  border-radius: 2px;
 }
 </style>

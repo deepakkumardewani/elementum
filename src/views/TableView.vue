@@ -35,6 +35,11 @@ const stopWatch = watch(
     // after the animation — without it, inline opacity:1 blocks filter dimming.
     await nextTick();
     const tiles = rootEl.value!.querySelectorAll<HTMLElement>(".element-tile");
+    // Respect prefers-reduced-motion — CSS handles transitions but GSAP runs in JS.
+    // When reduced motion is preferred, skip the stagger entirely so tiles are
+    // immediately visible without any animation delay.
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (prefersReducedMotion) return;
     ctx = gsap.context(() => {
       gsap.from(tiles, {
         opacity: 0,

@@ -40,14 +40,21 @@ const { activate: trapActivate, deactivate: trapDeactivate } = useFocusTrap(pane
 // Track the element tile that triggered open so we can return focus on close
 let triggerEl: HTMLElement | null = null
 
+// When reduced motion is preferred, GSAP tweens run at duration 0 (instant)
+// so final values are still applied correctly without any animation.
+function getMotionDuration(normalMs: number): number {
+  return window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : normalMs
+}
+
 function openPanel() {
   triggerEl = document.activeElement as HTMLElement | null
 
   // Kill any in-progress close tween before starting open
   gsap.killTweensOf([backdropEl.value!, panelEl.value!])
 
-  gsap.fromTo(backdropEl.value!, { opacity: 0 }, { opacity: 1, duration: 0.3, ease: "power2.out" })
-  gsap.fromTo(panelEl.value!, { x: "100%" }, { x: "0%", duration: 0.3, ease: "expo.out" })
+  const dur = getMotionDuration(0.3)
+  gsap.fromTo(backdropEl.value!, { opacity: 0 }, { opacity: 1, duration: dur, ease: "power2.out" })
+  gsap.fromTo(panelEl.value!, { x: "100%" }, { x: "0%", duration: dur, ease: "expo.out" })
 
   // Wait for paint then trap focus
   requestAnimationFrame(() => {
@@ -61,10 +68,11 @@ function closePanel() {
   // Kill any in-progress open tween before starting close
   gsap.killTweensOf([backdropEl.value!, panelEl.value!])
 
-  gsap.to(panelEl.value!, { x: "100%", duration: 0.22, ease: "expo.in" })
+  const dur = getMotionDuration(0.22)
+  gsap.to(panelEl.value!, { x: "100%", duration: dur, ease: "expo.in" })
   gsap.to(backdropEl.value!, {
     opacity: 0,
-    duration: 0.22,
+    duration: dur,
     ease: "power2.in",
     onComplete: () => {
       elementStore.closeDetailPanel()
