@@ -139,7 +139,6 @@ function clearSelection() {
 
 .search-input::placeholder {
   color: var(--text-muted);
-  opacity: 0.6;
 }
 
 /* Selected display */
@@ -227,6 +226,5 @@ function clearSelection() {
   font-family: var(--font-mono);
   font-size: var(--text-xs);
   min-height: 60px;
-  opacity: 0.6;
 }
 </style>
