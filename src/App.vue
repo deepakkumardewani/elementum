@@ -3,6 +3,7 @@ import { onMounted, ref, computed } from "vue"
 import { useRoute } from "vue-router"
 import { useElementStore } from "@/stores/elementStore"
 import SearchBar from "@/components/SearchBar.vue"
+import ThemeToggle from "@/components/ThemeToggle.vue"
 import { Z } from "@/constants/zIndex"
 
 const elementStore = useElementStore()
@@ -53,6 +54,7 @@ const NAV_ITEMS = [
       </div>
 
       <SearchBar v-if="isTablePage" />
+      <ThemeToggle />
     </header>
     <main id="main-content">
       <RouterView />
