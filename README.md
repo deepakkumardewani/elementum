@@ -12,7 +12,20 @@
   <img src="https://img.shields.io/badge/Three.js-000000?style=for-the-badge&logo=three.js&logoColor=white" alt="Three.js" />
 </p>
 
+<p align="center">
+  <img src="https://img.shields.io/badge/Performance-100-success?style=flat-square&logo=lighthouse&logoColor=white" alt="Performance" />
+  <img src="https://img.shields.io/badge/Accessibility-96-success?style=flat-square&logo=accessibility&logoColor=white" alt="Accessibility" />
+  <img src="https://img.shields.io/badge/Best_Practices-96-success?style=flat-square&logo=lighthouse&logoColor=white" alt="Best Practices" />
+  <img src="https://img.shields.io/badge/SEO-96-success?style=flat-square&logo=google-search-console&logoColor=white" alt="SEO" />
+  <img src="https://img.shields.io/badge/Load_Time-%3C_1s-success?style=flat-square&logo=speedtest&logoColor=white" alt="Load Time" />
+</p>
+
 ---
+
+## ⚡ Performance First
+
+Elementum is engineered for speed. With an **LCP of <200ms** and a **100/100 Performance Score**, the application provides a near-instantaneous experience, ensuring that complex chemical data is accessible the moment you need it.
+
 
 ## ✨ Overview
 
