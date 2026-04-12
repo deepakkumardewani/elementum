@@ -3,7 +3,7 @@
   "configVersion": 1,
   "workspaces": {
     "": {
-      "name": "periodic-table-explorer",
+      "name": "elementum",
       "dependencies": {
         "@tailwindcss/vite": "^4.2.2",
         "@tresjs/cientos": "^5.7.0",

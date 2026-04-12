@@ -1,4 +1,4 @@
-# AGENT_INSTRUCTIONS.md — Periodic Table Explorer
+# AGENT_INSTRUCTIONS.md — Elementum
 
 ---
 

@@ -1,4 +1,4 @@
-# ARCHITECTURE.md — Periodic Table Explorer
+# ARCHITECTURE.md — Elementum
 
 ---
 

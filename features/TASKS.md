@@ -1,4 +1,4 @@
-# TASKS.md — Periodic Table Explorer
+# TASKS.md — Elementum
 
 ---
 
@@ -12,7 +12,7 @@ Organized as Epics → Tasks → Subtasks. Each task is self-contained and can b
 
 **Task 1.1 — Scaffold Vue 3 + Vite project**
 
-- Init project: `bun create vite@latest periodic-table-explorer -- --template vue-ts` - this is already done by me
+- Init project: `bun create vite@latest elementum -- --template vue-ts` - this is already done by me
 - Install dependencies: `bun add tailwindcss pinia vue-router gsap @tresjs/core @tresjs/cientos vue3-apexcharts apexcharts vueuse lucide-vue-next`
 - Configure Tailwind with custom design tokens (bg, accent, category colors)
 - Set up global CSS: base reset, root variables, animation keyframes

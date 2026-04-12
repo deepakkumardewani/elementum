@@ -1,4 +1,4 @@
-# UI Improvement Tasks — Periodic Table Explorer
+# UI Improvement Tasks — Elementum
 
 > Tasks derived from `/critique`, `/audit`, `/typeset` skill runs + design critique review.
 > Ordered by phase: diagnose → quality → enhancement.

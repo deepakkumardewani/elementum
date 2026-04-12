@@ -1,4 +1,4 @@
-# PRD.md — Periodic Table Explorer
+# PRD.md — Elementum
 
 ---
 
