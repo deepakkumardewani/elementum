@@ -69,7 +69,7 @@ const phaseIcon: Record<string, string> = {
   border-radius: 6px;
   padding: 8px 10px;
   min-width: 130px;
-  box-shadow: 0 4px 16px rgb(0 0 0 / 0.4);
+  box-shadow: 0 4px 16px color-mix(in srgb, black 25%, transparent);
 }
 
 .tooltip-name {

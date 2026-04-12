@@ -199,7 +199,7 @@ useEventListener(document, "keydown", (e: KeyboardEvent) => {
   font-weight: 500;
   letter-spacing: 0.06em;
   color: #fff;
-  background: rgb(0 0 0 / 0.55);
+  background: color-mix(in srgb, black 55%, transparent);
   opacity: 0;
   transition: opacity 180ms ease;
   pointer-events: none;
@@ -245,7 +245,7 @@ useEventListener(document, "keydown", (e: KeyboardEvent) => {
   position: fixed;
   inset: 0;
   z-index: v-bind("Z.lightbox");
-  background: rgb(0 0 0 / 0.88);
+  background: color-mix(in srgb, black 88%, transparent);
   display: flex;
   align-items: center;
   justify-content: center;

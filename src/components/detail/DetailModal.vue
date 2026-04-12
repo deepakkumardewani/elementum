@@ -219,7 +219,7 @@ onUnmounted(() => {
 .detail-backdrop {
   position: fixed;
   inset: 0;
-  background-color: rgb(0 0 0 / 0.8);
+  background-color: color-mix(in srgb, var(--bg-base) 75%, black 25%);
   pointer-events: auto;
   opacity: 0;
 }
@@ -236,7 +236,7 @@ onUnmounted(() => {
   flex-direction: column;
   z-index: v-bind("Z.modal");
   pointer-events: auto;
-  box-shadow: 0 24px 64px rgb(0 0 0 / 0.5), 0 4px 16px rgb(0 0 0 / 0.3);
+  box-shadow: 0 24px 64px color-mix(in srgb, black 35%, transparent), 0 4px 16px color-mix(in srgb, black 18%, transparent);
   opacity: 0; /* GSAP initial state */
   overflow: hidden;
 }

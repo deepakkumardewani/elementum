@@ -240,7 +240,7 @@ const cardStyle = computed(() => {
   border-radius: 10px;
   padding: 12px 14px 10px;
   box-shadow:
-    0 8px 32px rgb(0 0 0 / 0.5),
+    0 8px 32px color-mix(in srgb, var(--bg-base) 60%, transparent),
     0 0 0 1px color-mix(in srgb, var(--cat) 12%, transparent) inset;
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
@@ -309,7 +309,7 @@ const cardStyle = computed(() => {
 
 .orbit-ring {
   fill: none;
-  stroke: rgba(255, 255, 255, 0.2);
+  stroke: var(--bg-border);
   stroke-width: 0.8;
   stroke-dasharray: 3 3;
 }

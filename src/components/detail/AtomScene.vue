@@ -8,8 +8,10 @@
  *   FLAT_DURATION → +TILT_DURATION : shells smoothly tilt to their orbital angles
  *   after that          : normal tilted orbital rotation
  */
-import { ref, onUnmounted } from "vue"
+import { ref, computed, onUnmounted } from "vue"
 import { useLoop } from "@tresjs/core"
+import { storeToRefs } from "pinia"
+import { useUiStore } from "@/stores/uiStore"
 import * as THREE from "three"
 
 interface Shell {
@@ -24,6 +26,11 @@ const props = defineProps<{
   shells: Shell[]
   isInteracting?: boolean
 }>()
+
+const uiStore = useUiStore()
+const { isDark } = storeToRefs(uiStore)
+
+const ringsColor = computed(() => (isDark.value ? "#ffffff" : "#0891b2"))
 
 // Seconds to stay flat before tilting
 const FLAT_DURATION = 3
@@ -123,8 +130,8 @@ onUnmounted(() => stop())
     <TresMesh :rotation="[Math.PI / 2, 0, 0]">
       <TresTorusGeometry :args="[shell.radius, 0.012, 8, 100]" />
       <TresMeshStandardMaterial
-        color="#ffffff"
-        :emissive="'#ffffff'"
+        :color="ringsColor"
+        :emissive="ringsColor"
         :emissive-intensity="0.1"
         :opacity="0.55"
         :transparent="true"
