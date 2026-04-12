@@ -1,18 +1,89 @@
-# Vue 3 + TypeScript + Vite
+# <p align="center">⚛️ Elementum</p>
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+<p align="center">
+  <strong>A premium, high-performance interactive periodic table explorer.</strong><br />
+  Explore the building blocks of the universe with precision data and immersive visualizations.
+</p>
 
-## Recommended IDE Setup
+<p align="center">
+  <img src="https://img.shields.io/badge/Vue%203-4FC08D?style=for-the-badge&logo=vue.js&logoColor=white" alt="Vue 3" />
+  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
+  <img src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white" alt="Vite" />
+  <img src="https://img.shields.io/badge/Three.js-000000?style=for-the-badge&logo=three.js&logoColor=white" alt="Three.js" />
+</p>
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+---
 
-## Type Support For `.vue` Imports in TS
+## ✨ Overview
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
+**Elementum** is a modern scientific application designed for researchers, students, and enthusiasts. Unlike traditional periodic tables, Elementum treats chemical data as a dynamic experience, offering advanced visualization tools and comparative analytics in a stunning "scientific lab terminal" aesthetic.
 
-If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
+## 🚀 Key Features
 
-1. Disable the built-in TypeScript Extension
-   1. Run `Extensions: Show Built-in Extensions` from VSCode's command palette
-   2. Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
-2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
+### 🔍 Interactive Grid Search
+Traditional search results can be disjointed. Elementum's search engine **updates the periodic grid in real-time**, dimming unrelated elements while highlighting matches. This allows you to maintain the spatial context of every element even while filtering by name, symbol, or atomic number.
+
+### 📊 Trend Visualizer
+Analyze periodicity like never before.
+- **Dynamic Heatmaps**: Instantly visualize properties across the entire table via high-contrast color gradients.
+- **Analytical Charts**: Powered by ApexCharts, view property distributions (atomic radius, electronegativity, etc.) with precise interactive data points.
+
+### ⚖️ Side-by-Side Comparison
+The dedicated **Compare View** allows you to select any two elements and view their physical, chemical, and atomic properties in a high-density comparison matrix. It includes a mini-periodic grid for lightning-fast element switching.
+
+### ⚛️ Immersive Details
+Each element is a world of its own:
+- **3D Atom Models**: Real-time 3D orbit visualizations powered by Three.js.
+- **Spectral Lines**: High-fidelity visualization of elemental emission spectra.
+- **Electron Configurations**: Visualized shell mappings.
+
+### 🌓 Premium Dual Themes
+Whether you prefer the "Deep Space" laboratory aesthetic of **Dark Mode** or the "Medical Lab" precision of **Light Mode**, Elementum provides a cohesive, high-contrast experience with smooth theme-aware transitions.
+
+---
+
+## 🛠 Tech Stack
+
+- **Framework**: [Vue 3](https://vuejs.org/) (Composition API)
+- **State Management**: [Pinia](https://pinia.vuejs.org/)
+- **Build Tool**: [Vite](https://vitejs.dev/)
+- **3D Rendering**: [Three.js](https://threejs.org/)
+- **Data Visualization**: [ApexCharts](https://apexcharts.com/)
+- **Icons**: [Lucide Vue](https://lucide.dev/)
+- **Styling**: Vanilla CSS with custom design tokens
+
+---
+
+## 📦 Getting Started
+
+### Prerequisites
+- [Node.js](https://nodejs.org/) (v16+)
+- [Bun](https://bun.sh/) or NPM
+
+### Installation
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/deepakkumardewani/elementum.git
+   ```
+2. Install dependencies:
+   ```bash
+   bun install
+   ```
+3. Run the development server:
+   ```bash
+   bun run dev
+   ```
+
+---
+
+## 🌐 Deployment
+
+Elementum is optimized for [Vercel](https://vercel.com/).
+- **Routing**: Configured via `vercel.json` for seamless SPA navigation.
+- **SEO**: Fully optimized with `sitemap.xml`, `robots.txt`, and rich metadata for search discovery.
+
+---
+
+<p align="center">
+  Built with ❤️ for the scientific community.
+</p>
