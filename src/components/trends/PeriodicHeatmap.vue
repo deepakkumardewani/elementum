@@ -88,8 +88,13 @@ function fBlockStyle(xpos: number, ypos: number) {
 function cellStyle(el: Element) {
   const v = getValue(el, activeTrendProperty.value)
   const bg = valueToColor(v)
+  // Colored cells (v !== null): always use white — HSL range 38–52% lightness
+  // is dark enough for white text. Null cells have transparent background
+  // which appears white in light mode, so they need a themed text color.
+  const textColor = v !== null ? "#ffffff" : "var(--text-muted)"
   return {
     "--cell-bg": bg,
+    "--cell-text": textColor,
     "--cell-alpha": v !== null ? "1" : "0.4",
   }
 }
@@ -252,15 +257,16 @@ function cellStyle(el: Element) {
   font-family: var(--font-mono);
   font-size: clamp(0.45rem, 0.85vw, 0.75rem);
   font-weight: 700;
-  color: white;
+  color: var(--cell-text, white);
   line-height: 1;
-  text-shadow: 0 1px 2px rgb(0 0 0 / 0.4);
+  text-shadow: 0 1px 3px rgb(0 0 0 / 0.25);
 }
 
 .cell-value {
   font-family: var(--font-mono);
   font-size: clamp(0.3rem, 0.55vw, 0.5rem);
-  color: rgb(255 255 255 / 0.75);
+  color: var(--cell-text, white);
+  opacity: 0.8;
   line-height: 1;
   text-align: center;
   overflow: hidden;

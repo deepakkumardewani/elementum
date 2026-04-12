@@ -8,18 +8,30 @@ import { getTrendSeries, TREND_PROPERTY_META } from "@/utils/trendData";
 // Lazy-load ApexCharts — it's a large library and must not land in the initial bundle.
 const VueApexCharts = defineAsyncComponent(() => import("vue3-apexcharts"));
 
-// Note: TOKEN object bypasses CSS vars — this is an ApexCharts limitation (it cannot read CSS custom properties).
-// If the palette changes, TOKEN values must be updated manually.
-const TOKEN = {
-  textSecondary: "#94a3b8",
-  bgBorder: "#1f2d45",
-} as const;
-
 const elementStore = useElementStore();
 const uiStore = useUiStore();
 
 const { elements } = storeToRefs(elementStore);
-const { activeTrendProperty } = storeToRefs(uiStore);
+const { activeTrendProperty, isDark } = storeToRefs(uiStore);
+
+/**
+ * ApexCharts cannot read CSS variables directly.
+ * We must map our light/dark tokens to static strings.
+ */
+const themeTokens = computed(() => {
+  if (isDark.value) {
+    return {
+      text: "#94a3b8", // --text-secondary
+      grid: "#1f2d45", // --bg-border
+      tooltipTheme: "dark" as const,
+    };
+  }
+  return {
+    text: "#475569", // --text-secondary in light mode
+    grid: "#d1d9e6", // --bg-border in light mode
+    tooltipTheme: "light" as const,
+  };
+});
 
 // ── Derived series data ────────────────────────────────────────────────────
 const trendData = computed(() =>
@@ -39,70 +51,47 @@ const series = computed(() => [
   },
 ]);
 
-// ── Static chart options ─────────────────────────────────────────────────────
-const baseChartOptions = {
-  chart: {
-    type: "bar" as const,
-    background: "transparent",
-    toolbar: { show: false },
-    animations: {
-      enabled: true,
-      easing: "easeinout",
-      speed: 600,
-      animateGradually: {
-        enabled: true,
-        delay: 0,
-      },
-      dynamicAnimation: {
-        enabled: true,
-        speed: 400,
-      },
-    },
-    fontFamily: "ui-sans-serif, system-ui, sans-serif",
-  },
-  plotOptions: {
-    bar: {
-      distributed: true,
-      columnWidth: "80%",
-      borderRadius: 2,
-    },
-  },
-  dataLabels: {
-    enabled: false,
-  },
-  legend: {
-    show: false,
-  },
-  grid: {
-    borderColor: TOKEN.bgBorder,
-    strokeDashArray: 3,
-    xaxis: {
-      lines: { show: false },
-    },
-    yaxis: {
-      lines: { show: true },
-    },
-  },
-  states: {
-    hover: {
-      filter: { type: "lighten", value: 0.2 },
-    },
-  },
-};
-
 // ── Chart options ──────────────────────────────────────────────────────────
 const chartOptions = computed(() => {
   const meta = TREND_PROPERTY_META[activeTrendProperty.value];
   const colors = trendData.value.map((point) => point.color);
+  const { text, grid, tooltipTheme } = themeTokens.value;
 
   return {
-    ...baseChartOptions,
+    chart: {
+      type: "bar" as const,
+      background: "transparent",
+      toolbar: { show: false },
+      animations: {
+        enabled: true,
+        easing: "easeinout",
+        speed: 600,
+        animateGradually: { enabled: true, delay: 0 },
+        dynamicAnimation: { enabled: true, speed: 400 },
+      },
+      fontFamily: "ui-sans-serif, system-ui, sans-serif",
+    },
+    plotOptions: {
+      bar: {
+        distributed: true,
+        columnWidth: "80%",
+        borderRadius: 2,
+      },
+    },
+    dataLabels: { enabled: false },
+    legend: { show: false },
+    grid: {
+      borderColor: grid,
+      strokeDashArray: 3,
+      xaxis: { lines: { show: false } },
+      yaxis: { lines: { show: true } },
+    },
     colors,
     xaxis: {
       categories: trendData.value.map((p) => p.symbol),
       labels: {
         style: {
-          colors: TOKEN.textSecondary,
+          colors: text,
           fontSize: "9px",
         },
         rotate: -60,
@@ -110,55 +99,33 @@ const chartOptions = computed(() => {
         hideOverlappingLabels: false,
         maxHeight: 60,
       },
-      axisBorder: {
-        color: TOKEN.bgBorder,
-      },
-      axisTicks: {
-        color: TOKEN.bgBorder,
-      },
-      tooltip: {
-        enabled: false,
-      },
+      axisBorder: { color: grid },
+      axisTicks: { color: grid },
+      tooltip: { enabled: false },
     },
     yaxis: {
       title: {
         text: meta.unit || undefined,
         style: {
-          color: TOKEN.textSecondary,
+          color: text,
           fontSize: "12px",
           fontWeight: 400,
         },
       },
       labels: {
         style: {
-          colors: TOKEN.textSecondary,
+          colors: text,
           fontSize: "11px",
         },
         formatter: (val: number) => {
           if (val === null || val === undefined) return "—";
-          // Keep numbers readable: round to 2 decimal places max
           return val % 1 === 0 ? String(val) : val.toFixed(2);
         },
       },
     },
-    grid: {
-      borderColor: TOKEN.bgBorder,
-      strokeDashArray: 3,
-      xaxis: {
-        lines: { show: false },
-      },
-      yaxis: {
-        lines: { show: true },
-      },
-    },
     tooltip: {
-      theme: "dark",
-      custom: ({
-        dataPointIndex,
-      }: {
-        seriesIndex: number;
-        dataPointIndex: number;
-      }) => {
+      theme: tooltipTheme,
+      custom: ({ dataPointIndex }: { dataPointIndex: number }) => {
         const point = trendData.value[dataPointIndex];
         const currentMeta = TREND_PROPERTY_META[activeTrendProperty.value];
         const rawName = point?.name ?? "—";
@@ -170,7 +137,7 @@ const chartOptions = computed(() => {
           raw === null || raw === undefined
             ? "—"
             : `${raw.toFixed(2)}${currentMeta.unit ? ` ${currentMeta.unit}` : ""}`;
-        const color = point?.color ?? TOKEN.textSecondary;
+        const color = point?.color ?? text;
 
         return `
           <div style="
@@ -181,6 +148,7 @@ const chartOptions = computed(() => {
             font-size: 13px;
             color: var(--text-primary);
             line-height: 1.6;
+            box-shadow: 0 4px 12px color-mix(in srgb, black 15%, transparent);
           ">
             <div style="display:flex;align-items:center;gap:6px;margin-bottom:4px;">
               <span style="
@@ -194,6 +162,11 @@ const chartOptions = computed(() => {
             <div style="font-size:16px;font-weight:600;color:var(--text-primary);">${formatted}</div>
           </div>
         `;
+      },
+    },
+    states: {
+      hover: {
+        filter: { type: "lighten", value: 0.2 },
       },
     },
   };
