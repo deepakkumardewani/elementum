@@ -228,7 +228,7 @@ onMounted(() => {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.12em;
-  color: var(--text-muted);
+  color: var(--text-secondary);
   white-space: nowrap;
   flex-shrink: 0;
   min-width: 44px;
@@ -288,7 +288,7 @@ onMounted(() => {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.04em;
-  color: var(--text-muted);
+  color: var(--text-secondary);
   line-height: 1;
   white-space: nowrap;
   overflow: hidden;
@@ -298,7 +298,6 @@ onMounted(() => {
 
 .cat-tile.is-active .cat-tile-short {
   color: var(--cat-color);
-  opacity: 0.8;
 }
 
 /* Abbreviation — centered, element-symbol style */
@@ -337,7 +336,7 @@ onMounted(() => {
   font-family: var(--font-mono);
   font-size: var(--text-2xs);
   font-weight: 500;
-  color: var(--text-muted);
+  color: var(--text-secondary);
   white-space: nowrap;
   transition: border-color 150ms ease, color 150ms ease;
 }
@@ -367,7 +366,7 @@ onMounted(() => {
   font-family: var(--font-mono);
   font-size: var(--text-2xs);
   font-weight: 500;
-  color: var(--text-muted);
+  color: var(--text-secondary);
   white-space: nowrap;
   transition: border-color 150ms ease, color 150ms ease;
 }

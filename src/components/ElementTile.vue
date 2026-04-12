@@ -163,7 +163,7 @@ function handleMouseleave() {
   grid-row: 4;
   /* Own row: no longer competing with the name for horizontal space */
   font-size: var(--text-tile-mass);
-  color: var(--text-muted);
+  color: var(--text-secondary);
   line-height: 1.2;
   align-self: end;
   white-space: nowrap;
