@@ -83,7 +83,3 @@ Elementum is optimized for [Vercel](https://vercel.com/).
 - **SEO**: Fully optimized with `sitemap.xml`, `robots.txt`, and rich metadata for search discovery.
 
 ---
-
-<p align="center">
-  Built with ❤️ for the scientific community.
-</p>
