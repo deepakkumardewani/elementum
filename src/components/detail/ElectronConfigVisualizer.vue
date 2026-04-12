@@ -9,8 +9,8 @@ const SHELL_NAMES = ["K", "L", "M", "N", "O", "P", "Q"] as const
 
 // SVG layout constants
 const NUCLEUS_R = 18
-const SHELL_SPACING = 24  // px between each orbit ring
-const ELECTRON_R = 4
+const SHELL_SPACING = 28  // px between each orbit ring
+const ELECTRON_R = 5
 
 interface ShellData {
   name: string
@@ -154,17 +154,20 @@ function electronPositions(
 
 .electron-layout {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   gap: 1.5rem;
-  align-items: flex-start;
-  flex-wrap: wrap;
 }
 
 .electron-svg-wrap {
-  flex-shrink: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .electron-svg {
-  max-width: 220px;
+  /* Let SVG fill available width up to its natural size */
+  max-width: min(100%, 420px);
   width: 100%;
   height: auto;
 }
@@ -218,8 +221,7 @@ function electronPositions(
 
 /* ── Shell legend ── */
 .electron-info {
-  flex: 1;
-  min-width: 160px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 1rem;

@@ -2,6 +2,7 @@
 import { computed, onMounted, ref } from "vue"
 import { storeToRefs } from "pinia"
 import { gsap } from "gsap"
+import { ChevronDown } from "lucide-vue-next"
 import { useElementStore } from "@/stores/elementStore"
 import { ALL_CATEGORIES, CATEGORY_LABELS, categoryColor } from "@/utils/elementUtils"
 import type { ElementBlock, ElementCategory } from "@/types/element"
@@ -20,7 +21,23 @@ const PERIODS = [1, 2, 3, 4, 5, 6, 7] as const
 const GROUPS = Array.from({ length: 18 }, (_, i) => i + 1)
 const BLOCKS: ElementBlock[] = ["s", "p", "d", "f"]
 
+// Mini tile metadata: abbreviation (2-letter element-symbol style) + short label
+const CATEGORY_TILE: Record<ElementCategory, { abbr: string; short: string }> = {
+  "alkali metal":           { abbr: "Ak", short: "Alkali" },
+  "alkaline earth metal":   { abbr: "Ae", short: "Alk.E." },
+  "transition metal":       { abbr: "Tm", short: "Trans." },
+  "post-transition metal":  { abbr: "Pt", short: "Post-T" },
+  metalloid:                { abbr: "Me", short: "Metall" },
+  nonmetal:                 { abbr: "Nm", short: "Nonmet" },
+  halogen:                  { abbr: "Hl", short: "Halogen" },
+  "noble gas":              { abbr: "Ng", short: "Noble" },
+  lanthanide:               { abbr: "La", short: "Lanthn" },
+  actinide:                 { abbr: "Ac", short: "Actind" },
+  unknown:                  { abbr: "?",  short: "Unknwn" },
+}
+
 const hasAnyFilter = computed(() => hasActiveFilter.value)
+const secondaryOpen = ref(false)
 
 function toggleCategory(cat: ElementCategory) {
   elementStore.setActiveCategory(activeCategory.value === cat ? null : cat)
@@ -38,16 +55,24 @@ function toggleBlock(block: ElementBlock) {
   elementStore.setActiveBlock(activeBlock.value === block ? null : block)
 }
 
-const categoryStripRef = ref<HTMLElement | null>(null)
+function toggleSecondary() {
+  secondaryOpen.value = !secondaryOpen.value
+}
+
+const hasSecondaryFilter = computed(
+  () => activePeriod.value !== null || activeGroup.value !== null || activeBlock.value !== null
+)
+
+const tilesRef = ref<HTMLElement | null>(null)
 
 onMounted(() => {
   if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return
-  if (categoryStripRef.value) {
-    const chips = categoryStripRef.value.querySelectorAll('.filter-chip--category')
+  if (tilesRef.value) {
+    const tiles = tilesRef.value.querySelectorAll(".cat-tile")
     gsap.fromTo(
-      chips,
-      { opacity: 0, y: 4 },
-      { opacity: 1, y: 0, duration: 0.3, stagger: 0.03, ease: 'power2.out' }
+      tiles,
+      { opacity: 0, y: 6 },
+      { opacity: 1, y: 0, duration: 0.35, stagger: 0.025, ease: "power2.out" }
     )
   }
 })
@@ -55,105 +80,116 @@ onMounted(() => {
 
 <template>
   <div class="filter-bar" aria-label="Filter elements">
-    <!-- Row 1: Category chips (full width) -->
-    <div class="filter-row filter-row--category">
+    <!-- Category micro-tiles row -->
+    <div class="filter-row">
       <span class="filter-label">Category</span>
-      <div class="chip-strip" ref="categoryStripRef">
+      <div class="cat-strip" ref="tilesRef" role="group" aria-label="Filter by category">
         <button
           v-for="cat in ALL_CATEGORIES"
           :key="cat"
-          class="filter-chip filter-chip--category"
+          class="cat-tile"
           :class="{ 'is-active': activeCategory === cat }"
-          :style="{ '--chip-color': categoryColor(cat) }"
+          :style="{ '--cat-color': categoryColor(cat) }"
           :aria-pressed="activeCategory === cat"
           :aria-label="`Filter by ${CATEGORY_LABELS[cat]}`"
           @click="toggleCategory(cat)"
         >
-          <span class="chip-dot" aria-hidden="true" />
-          {{ CATEGORY_LABELS[cat] }}
+          <span class="cat-tile-short">{{ CATEGORY_TILE[cat].short }}</span>
+          <span class="cat-tile-abbr">{{ CATEGORY_TILE[cat].abbr }}</span>
         </button>
       </div>
-      <button
-        v-if="hasAnyFilter"
-        class="clear-btn"
-        aria-label="Clear all filters"
-        @click="elementStore.clearAllFilters()"
+
+      <!-- Secondary toggle + clear -->
+      <div class="filter-row-actions">
+        <button
+          class="secondary-toggle"
+          :class="{ 'is-open': secondaryOpen, 'has-active': hasSecondaryFilter }"
+          :aria-expanded="secondaryOpen"
+          aria-controls="secondary-filters"
+          @click="toggleSecondary"
+        >
+          <span>Period · Block · Group</span>
+          <ChevronDown :size="13" class="toggle-icon" />
+        </button>
+        <button
+          v-if="hasAnyFilter"
+          class="clear-btn"
+          aria-label="Clear all filters"
+          @click="elementStore.clearAllFilters()"
+        >
+          Clear
+        </button>
+      </div>
+    </div>
+
+    <!-- Collapsible secondary filters -->
+    <Transition name="secondary">
+      <div
+        v-if="secondaryOpen"
+        id="secondary-filters"
+        class="filter-row filter-row--secondary"
       >
-        Clear all
-      </button>
-    </div>
+        <!-- Period -->
+        <div class="filter-group">
+          <span class="filter-label">Period</span>
+          <div class="compact-strip">
+            <button
+              v-for="p in PERIODS"
+              :key="p"
+              class="compact-chip"
+              :class="{ 'is-active': activePeriod === p }"
+              :aria-pressed="activePeriod === p"
+              :aria-label="`Period ${p}`"
+              @click="togglePeriod(p)"
+            >{{ p }}</button>
+          </div>
+        </div>
 
-    <!-- Row 2: Period, Block, Group -->
-    <div class="filter-row filter-row--secondary">
-      <!-- Period -->
-      <div class="filter-group filter-group--period">
-        <span class="filter-label">Period</span>
-        <div class="chip-strip chip-strip--fixed">
-          <button
-            v-for="p in PERIODS"
-            :key="p"
-            class="filter-chip filter-chip--compact"
-            :class="{ 'is-active': activePeriod === p }"
-            :aria-pressed="activePeriod === p"
-            :aria-label="`Filter by period ${p}`"
-            @click="togglePeriod(p)"
-          >
-            {{ p }}
-          </button>
+        <div class="filter-divider" aria-hidden="true" />
+
+        <!-- Block -->
+        <div class="filter-group">
+          <span class="filter-label">Block</span>
+          <div class="compact-strip">
+            <button
+              v-for="b in BLOCKS"
+              :key="b"
+              class="compact-chip"
+              :class="{ 'is-active': activeBlock === b }"
+              :aria-pressed="activeBlock === b"
+              :aria-label="`${b}-block`"
+              @click="toggleBlock(b)"
+            >{{ b }}</button>
+          </div>
+        </div>
+
+        <div class="filter-divider" aria-hidden="true" />
+
+        <!-- Group — scrollable -->
+        <div class="filter-group filter-group--grow">
+          <span class="filter-label">Group</span>
+          <div class="compact-strip compact-strip--scroll">
+            <button
+              v-for="g in GROUPS"
+              :key="g"
+              class="compact-chip"
+              :class="{ 'is-active': activeGroup === g }"
+              :aria-pressed="activeGroup === g"
+              :aria-label="`Group ${g}`"
+              @click="toggleGroup(g)"
+            >{{ g }}</button>
+          </div>
         </div>
       </div>
+    </Transition>
 
-      <div class="filter-divider" aria-hidden="true" />
-
-      <!-- Block -->
-      <div class="filter-group">
-        <span class="filter-label">Block</span>
-        <div class="chip-strip chip-strip--fixed">
-          <button
-            v-for="b in BLOCKS"
-            :key="b"
-            class="filter-chip filter-chip--compact"
-            :class="{ 'is-active': activeBlock === b }"
-            :aria-pressed="activeBlock === b"
-            :aria-label="`Filter by ${b}-block`"
-            @click="toggleBlock(b)"
-          >
-            {{ b }}
-          </button>
-        </div>
-      </div>
-
-      <div class="filter-divider" aria-hidden="true" />
-
-      <!-- Group — scrollable since 18 items -->
-      <div class="filter-group filter-group--grow">
-        <span class="filter-label">Group</span>
-        <div class="chip-strip chip-strip--scroll">
-          <button
-            v-for="g in GROUPS"
-            :key="g"
-            class="filter-chip filter-chip--compact"
-            :class="{ 'is-active': activeGroup === g }"
-            :aria-pressed="activeGroup === g"
-            :aria-label="`Filter by group ${g}`"
-            @click="toggleGroup(g)"
-          >
-            {{ g }}
-          </button>
-        </div>
-      </div>
-    </div>
-
-    <!-- Empty state feedback -->
+    <!-- No-results feedback -->
     <div
       v-if="hasAnyFilter && highlightedElements.size === 0"
       class="results-feedback"
     >
       <span class="feedback-text">No elements match these filters.</span>
-      <button
-        class="feedback-clear"
-        @click="elementStore.clearAllFilters()"
-      >
+      <button class="feedback-clear" @click="elementStore.clearAllFilters()">
         Clear all
       </button>
     </div>
@@ -161,33 +197,32 @@ onMounted(() => {
 </template>
 
 <style scoped>
-/* ── Container ─────────────────────────────────────────────────── */
+/* ── Container ──────────────────────────────────────────────────── */
 .filter-bar {
   display: flex;
   flex-direction: column;
-  /* 4px between rows — tight, intentional; rows are related content */
-  gap: 4px;
+  gap: 6px;
   padding: 10px 12px;
   background-color: var(--bg-surface);
   border: 1px solid var(--bg-border);
-  border-radius: 8px;
+  border-radius: 4px;
 }
 
-/* ── Rows ──────────────────────────────────────────────────────── */
+/* ── Rows ───────────────────────────────────────────────────────── */
 .filter-row {
   display: flex;
   align-items: center;
-  /* 10px label→chips gap: close enough to show they belong together */
   gap: 10px;
   min-width: 0;
 }
 
-/* Secondary row: each group manages its own internal spacing via padding */
 .filter-row--secondary {
-  gap: 16px;
+  gap: 14px;
+  padding-top: 4px;
+  border-top: 1px solid var(--bg-border);
 }
 
-/* ── Label ─────────────────────────────────────────────────────── */
+/* ── Label ──────────────────────────────────────────────────────── */
 .filter-label {
   font-size: var(--text-2xs);
   font-weight: 700;
@@ -196,129 +231,145 @@ onMounted(() => {
   color: var(--text-muted);
   white-space: nowrap;
   flex-shrink: 0;
-  /* Fixed width aligns all labels in secondary row; enough for "Period" */
   min-width: 44px;
+  font-family: var(--font-mono);
 }
 
-/* ── Groups ────────────────────────────────────────────────────── */
-.filter-group {
+/* ── Category micro-tiles strip ─────────────────────────────────── */
+.cat-strip {
   display: flex;
-  align-items: center;
-  gap: 8px;
-  min-width: 0;
-}
-
-.filter-group--grow {
+  gap: 4px;
+  flex-wrap: wrap;
   flex: 1;
   min-width: 0;
 }
 
-/* ── Dividers between filter groups ────────────────────────────── */
-.filter-divider {
-  width: 1px;
-  /* Taller divider spans the full row height rather than floating mid-row */
-  height: 24px;
-  background-color: var(--bg-border);
-  flex-shrink: 0;
-}
-
-/* ── Chip strips ───────────────────────────────────────────────── */
-.chip-strip {
+/* Mini element tile: left border + symbol + short label */
+.cat-tile {
   display: flex;
-  gap: 5px;
-  flex-wrap: wrap;
-}
-
-/* Fixed (no scroll) — for Period and Block */
-.chip-strip--fixed {
-  flex-wrap: nowrap;
-}
-
-/* Scrollable — for Group (18 items) */
-.chip-strip--scroll {
-  flex-wrap: nowrap;
-  overflow-x: auto;
-  scrollbar-width: none;
-  mask-image: linear-gradient(to right, black 85%, transparent 100%);
-  -webkit-mask-image: linear-gradient(to right, black 85%, transparent 100%);
-}
-
-.chip-strip--scroll::-webkit-scrollbar {
-  display: none;
-}
-
-/* ── Base chip ─────────────────────────────────────────────────── */
-.filter-chip {
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
-  padding: 3px 9px;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 56px;
+  height: 44px;
+  padding: 4px 5px 4px 7px;
   background-color: var(--bg-elevated);
   border: 1px solid var(--bg-border);
-  border-radius: 99px;
+  border-left: 3px solid var(--cat-color);
+  border-radius: 2px;
   cursor: pointer;
   font-family: inherit;
-  font-size: var(--text-xs);
-  font-weight: 500;
-  color: var(--text-secondary);
-  white-space: nowrap;
   flex-shrink: 0;
   transition:
+    background-color 150ms ease,
     border-color 150ms ease,
-    color 150ms ease,
-    background-color 150ms ease;
+    box-shadow 150ms ease;
 }
 
-.filter-chip:hover {
-  border-color: var(--chip-color, var(--accent-cyan));
-  color: var(--text-primary);
+.cat-tile:hover {
+  background-color: color-mix(in srgb, var(--cat-color) 8%, var(--bg-elevated));
+  border-color: color-mix(in srgb, var(--cat-color) 40%, var(--bg-border));
 }
 
-.filter-chip:focus-visible {
+.cat-tile.is-active {
+  background-color: color-mix(in srgb, var(--cat-color) 12%, var(--bg-surface));
+  border-color: color-mix(in srgb, var(--cat-color) 60%, var(--bg-border));
+  box-shadow: 0 0 8px 1px color-mix(in srgb, var(--cat-color) 25%, transparent);
+}
+
+.cat-tile:focus-visible {
   outline: 2px solid var(--accent-cyan);
   outline-offset: 2px;
 }
 
-.filter-chip.is-active {
-  border-color: var(--chip-color, var(--accent-cyan));
-  background-color: color-mix(in srgb, var(--chip-color, var(--accent-cyan)) 15%, var(--bg-surface));
-  color: var(--text-primary);
+/* Short label — sits at top like atomic number */
+.cat-tile-short {
+  font-size: 0.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-muted);
+  line-height: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: clip;
+  max-width: 100%;
 }
 
-/* Compact (square-ish) chips for Period / Group / Block */
-.filter-chip--compact {
-  padding: 3px 6px;
-  min-width: 28px;
-  justify-content: center;
-  font-size: var(--text-xs);
+.cat-tile.is-active .cat-tile-short {
+  color: var(--cat-color);
+  opacity: 0.8;
 }
 
-/* Category chips keep colored dot */
-.chip-dot {
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background-color: var(--chip-color, var(--accent-cyan));
+/* Abbreviation — centered, element-symbol style */
+.cat-tile-abbr {
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  line-height: 1;
+  align-self: center;
+  margin-top: auto;
+}
+
+.cat-tile.is-active .cat-tile-abbr {
+  color: var(--cat-color);
+}
+
+/* ── Secondary filters row actions ──────────────────────────────── */
+.filter-row-actions {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-left: auto;
   flex-shrink: 0;
 }
 
-/* ── Clear all ─────────────────────────────────────────────────── */
-.clear-btn {
-  margin-left: auto;
-  padding: 3px 10px;
+.secondary-toggle {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 8px;
   background: none;
   border: 1px solid var(--bg-border);
-  border-radius: 99px;
+  border-radius: 2px;
   cursor: pointer;
-  font-family: inherit;
-  font-size: var(--text-xs);
+  font-family: var(--font-mono);
+  font-size: var(--text-2xs);
   font-weight: 500;
   color: var(--text-muted);
   white-space: nowrap;
-  flex-shrink: 0;
-  transition:
-    border-color 150ms ease,
-    color 150ms ease;
+  transition: border-color 150ms ease, color 150ms ease;
+}
+
+.secondary-toggle:hover,
+.secondary-toggle.is-open,
+.secondary-toggle.has-active {
+  border-color: var(--accent-cyan);
+  color: var(--accent-cyan);
+}
+
+.toggle-icon {
+  transition: transform 200ms ease;
+}
+
+.secondary-toggle.is-open .toggle-icon {
+  transform: rotate(180deg);
+}
+
+/* ── Clear button ───────────────────────────────────────────────── */
+.clear-btn {
+  padding: 3px 8px;
+  background: none;
+  border: 1px solid var(--bg-border);
+  border-radius: 2px;
+  cursor: pointer;
+  font-family: var(--font-mono);
+  font-size: var(--text-2xs);
+  font-weight: 500;
+  color: var(--text-muted);
+  white-space: nowrap;
+  transition: border-color 150ms ease, color 150ms ease;
 }
 
 .clear-btn:hover {
@@ -331,23 +382,109 @@ onMounted(() => {
   outline-offset: 2px;
 }
 
-/* ── Results feedback ─────────────────────────────────────────── */
-.results-feedback {
-  margin-top: 8px;
-  padding: 10px 16px;
-  background: color-mix(in srgb, var(--bg-elevated) 40%, transparent);
-  border: 1px dashed var(--bg-border);
-  border-radius: 6px;
+/* ── Secondary filters (Period / Block / Group) ──────────────────── */
+.filter-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+}
+
+.filter-group--grow {
+  flex: 1;
+  min-width: 0;
+}
+
+.filter-divider {
+  width: 1px;
+  height: 20px;
+  background-color: var(--bg-border);
+  flex-shrink: 0;
+}
+
+.compact-strip {
+  display: flex;
+  gap: 3px;
+  flex-wrap: nowrap;
+}
+
+.compact-strip--scroll {
+  overflow-x: auto;
+  scrollbar-width: none;
+  mask-image: linear-gradient(to right, black 85%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, black 85%, transparent 100%);
+}
+
+.compact-strip--scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.compact-chip {
   display: flex;
   align-items: center;
   justify-content: center;
+  min-width: 26px;
+  height: 26px;
+  padding: 0 4px;
+  background-color: var(--bg-elevated);
+  border: 1px solid var(--bg-border);
+  border-radius: 2px;
+  cursor: pointer;
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  color: var(--text-secondary);
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition:
+    border-color 150ms ease,
+    color 150ms ease,
+    background-color 150ms ease;
+}
+
+.compact-chip:hover {
+  border-color: var(--accent-cyan);
+  color: var(--text-primary);
+}
+
+.compact-chip.is-active {
+  border-color: var(--accent-cyan);
+  background-color: color-mix(in srgb, var(--accent-cyan) 12%, var(--bg-surface));
+  color: var(--accent-cyan);
+}
+
+.compact-chip:focus-visible {
+  outline: 2px solid var(--accent-cyan);
+  outline-offset: 2px;
+}
+
+/* ── Transition for secondary panel ─────────────────────────────── */
+.secondary-enter-active,
+.secondary-leave-active {
+  transition: opacity 200ms ease, transform 200ms ease;
+  overflow: hidden;
+}
+
+.secondary-enter-from,
+.secondary-leave-to {
+  opacity: 0;
+  transform: translateY(-4px);
+}
+
+/* ── Results feedback ───────────────────────────────────────────── */
+.results-feedback {
+  padding: 8px 14px;
+  border-top: 1px solid var(--bg-border);
+  display: flex;
+  align-items: center;
   gap: 12px;
-  animation: fadeInUp 0.3s ease-out;
 }
 
 .feedback-text {
   font-size: var(--text-sm);
   color: var(--text-secondary);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
 }
 
 .feedback-clear {
@@ -355,8 +492,8 @@ onMounted(() => {
   border: none;
   padding: 0;
   color: var(--accent-cyan);
-  font-family: inherit;
-  font-size: var(--text-sm);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
   font-weight: 600;
   cursor: pointer;
   text-decoration: underline;

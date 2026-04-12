@@ -3,8 +3,7 @@ import { ref, computed } from "vue"
 import { storeToRefs } from "pinia"
 import { X } from "lucide-vue-next"
 import { useElementStore } from "@/stores/elementStore"
-import { categoryColor } from "@/utils/elementUtils"
-import GlowBadge from "@/components/detail/GlowBadge.vue"
+import { categoryColor, CATEGORY_LABELS } from "@/utils/elementUtils"
 import MiniPeriodicGrid from "@/components/compare/MiniPeriodicGrid.vue"
 import type { Element } from "@/types/element"
 
@@ -73,7 +72,9 @@ function clearSelection() {
       <span class="selected-symbol">{{ selected.symbol }}</span>
       <div class="selected-info">
         <span class="selected-name">{{ selected.name }}</span>
-        <GlowBadge :category="selected.category" />
+        <span class="selected-category" :style="{ color: categoryColor(selected.category) }">
+          {{ CATEGORY_LABELS[selected.category] }}
+        </span>
       </div>
       <button
         class="clear-btn"
@@ -120,22 +121,25 @@ function clearSelection() {
 
 .search-input {
   width: 100%;
-  background: var(--bg-elevated);
+  background: transparent;
   border: 1px solid var(--bg-border);
-  border-radius: 6px;
-  padding: 8px 12px;
+  border-radius: 2px;
+  padding: 7px 10px;
   color: var(--text-primary);
-  font-size: var(--text-sm);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
   outline: none;
-  transition: border-color 150ms ease;
+  transition: border-color 150ms ease, background-color 150ms ease;
 }
 
 .search-input:focus {
   border-color: var(--accent-cyan);
+  background: var(--bg-elevated);
 }
 
 .search-input::placeholder {
   color: var(--text-muted);
+  opacity: 0.6;
 }
 
 /* Selected display */
@@ -144,9 +148,12 @@ function clearSelection() {
   align-items: center;
   gap: 12px;
   padding: 10px 14px;
-  background: color-mix(in srgb, var(--sel-color) 8%, var(--bg-elevated));
-  border: 1px solid color-mix(in srgb, var(--sel-color) 30%, var(--bg-border));
-  border-radius: 8px;
+  background: color-mix(in srgb, var(--sel-color) 6%, var(--bg-surface));
+  border-left: 3px solid var(--sel-color);
+  border-top: 1px solid color-mix(in srgb, var(--sel-color) 20%, var(--bg-border));
+  border-right: 1px solid color-mix(in srgb, var(--sel-color) 20%, var(--bg-border));
+  border-bottom: 1px solid color-mix(in srgb, var(--sel-color) 20%, var(--bg-border));
+  border-radius: 2px;
   min-height: 60px;
 }
 
@@ -176,6 +183,14 @@ function clearSelection() {
   text-overflow: ellipsis;
 }
 
+.selected-category {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  opacity: 0.8;
+}
+
 .clear-btn {
   display: flex;
   align-items: center;
@@ -184,7 +199,7 @@ function clearSelection() {
   height: 28px;
   background: transparent;
   border: 1px solid var(--bg-border);
-  border-radius: 4px;
+  border-radius: 2px;
   color: var(--text-secondary);
   cursor: pointer;
   flex-shrink: 0;
@@ -205,12 +220,13 @@ function clearSelection() {
   display: flex;
   align-items: center;
   padding: 10px 14px;
-  background: var(--bg-elevated);
+  background: transparent;
   border: 1px dashed var(--bg-border);
-  border-radius: 8px;
+  border-radius: 2px;
   color: var(--text-muted);
-  font-size: var(--text-sm);
-  font-style: italic;
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
   min-height: 60px;
+  opacity: 0.6;
 }
 </style>

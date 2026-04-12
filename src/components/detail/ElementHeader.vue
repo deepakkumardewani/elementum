@@ -1,25 +1,12 @@
 <script setup lang="ts">
 import { computed } from "vue"
-import { Thermometer, Wind, Droplets, HelpCircle } from "lucide-vue-next"
 import { categoryColor } from "@/utils/elementUtils"
-import GlowBadge from "@/components/detail/GlowBadge.vue"
-import type { Element, ElementPhase } from "@/types/element"
+import { CATEGORY_LABELS } from "@/utils/elementUtils"
+import type { Element } from "@/types/element"
 
 const props = defineProps<{ element: Element }>()
 
 const color = computed(() => categoryColor(props.element.category))
-
-const phaseIcon = computed(() => {
-  const map: Record<ElementPhase, typeof Thermometer> = {
-    Solid: Thermometer,
-    Liquid: Droplets,
-    Gas: Wind,
-    Unknown: HelpCircle,
-  }
-  return map[props.element.phase] ?? HelpCircle
-})
-
-const phaseLabel = computed(() => props.element.phase)
 
 const atomicMassDisplay = computed(() =>
   props.element.atomicMass != null
@@ -30,147 +17,178 @@ const atomicMassDisplay = computed(() =>
 
 <template>
   <div
-    class="element-header"
-    :style="{ '--cat-color': color }"
+    class="specimen-col"
+    :style="{ '--cat-color': color, '--symbol': `'${element.symbol}'` }"
+    aria-hidden="true"
   >
-    <!-- Left accent stripe -->
-    <div class="element-header-stripe" aria-hidden="true" />
+    <!-- Vertical atomic number running down the left edge -->
+    <span class="atomic-number-vert">{{ element.atomicNumber }}</span>
 
-    <div class="element-header-body">
-      <!-- Top row: atomic number + phase -->
-      <div class="element-header-meta">
-        <span class="meta-atomic-number">
-          {{ element.atomicNumber }}
-        </span>
-        <span class="meta-phase">
-          <component :is="phaseIcon" :size="13" aria-hidden="true" />
-          {{ phaseLabel }}
-        </span>
-      </div>
-
-      <!-- Symbol (hero) -->
-      <div class="element-header-symbol" :id="`element-heading-${element.atomicNumber}`">
+    <!-- Main identity block -->
+    <div class="specimen-body">
+      <!-- Symbol — architectural, fills most of the column -->
+      <div
+        class="specimen-symbol"
+        :id="`element-heading-${element.atomicNumber}`"
+        aria-label="`${element.name}, symbol ${element.symbol}`"
+      >
         {{ element.symbol }}
       </div>
 
-      <!-- Name -->
-      <div class="element-header-name">{{ element.name }}</div>
-
-      <!-- Badges row -->
-      <div class="element-header-badges">
-        <GlowBadge :category="element.category" />
-        <span class="badge-block">Block {{ element.block.toUpperCase() }}</span>
-      </div>
-
-      <!-- Atomic mass -->
-      <div class="element-header-mass">
-        Atomic mass: <strong>{{ atomicMassDisplay }} u</strong>
+      <div class="specimen-meta">
+        <span class="specimen-name">{{ element.name }}</span>
+        <span class="specimen-category">{{ CATEGORY_LABELS[element.category] }}</span>
+        <span class="specimen-mass">{{ atomicMassDisplay }} u</span>
       </div>
     </div>
+
+    <!-- Block badge at bottom -->
+    <div class="specimen-block">
+      <span class="block-label">{{ element.block.toUpperCase() }}-block</span>
+      <span class="block-phase">{{ element.phase }}</span>
+    </div>
+
+    <!-- Category color accent bar at right edge (separator) -->
+    <div class="cat-accent" aria-hidden="true" />
   </div>
 </template>
 
 <style scoped>
-.element-header {
+/* ── Specimen column ────────────────────────────────────────────── */
+.specimen-col {
   position: relative;
   display: flex;
-  background: linear-gradient(
-    135deg,
-    color-mix(in srgb, var(--cat-color) 8%, var(--bg-surface)) 0%,
-    var(--bg-surface) 60%
-  );
-  padding: 2rem 1.5rem 1.5rem 2rem;
-  border-bottom: 1px solid var(--bg-border);
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: color-mix(in srgb, var(--cat-color) 7%, var(--bg-surface));
+  border-left: 3px solid var(--cat-color);
+  padding: 1.25rem 1rem 1.25rem 1.25rem;
+  min-height: 0;
   overflow: hidden;
+  /* A subtle watermark: the symbol ghosted behind everything */
 }
 
-.element-header-stripe {
+/* Ghosted watermark symbol behind content */
+.specimen-col::before {
+  content: var(--symbol);
   position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  width: 4px;
-  background: var(--cat-color);
-  box-shadow: 0 0 16px 2px color-mix(in srgb, var(--cat-color) 50%, transparent);
+  bottom: -0.5rem;
+  right: -0.75rem;
+  font-size: 9rem;
+  font-weight: 900;
+  color: var(--cat-color);
+  opacity: 0.04;
+  line-height: 1;
+  pointer-events: none;
+  user-select: none;
 }
 
-.element-header-body {
+/* Vertical atomic number — monospace, running down left */
+.atomic-number-vert {
+  position: absolute;
+  top: 1.25rem;
+  right: 1rem;
+  font-family: var(--font-mono);
+  font-size: var(--text-2xs);
+  font-weight: 700;
+  color: var(--text-muted);
+  letter-spacing: 0.1em;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  opacity: 0.6;
+  user-select: none;
+}
+
+/* Main body: symbol + meta */
+.specimen-body {
   display: flex;
   flex-direction: column;
-  gap: 0.375rem;
-  padding-left: 0.5rem;
+  gap: 0.75rem;
+  flex: 1;
+  justify-content: center;
 }
 
-.element-header-meta {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-
-.meta-atomic-number {
-  font-size: 0.75rem;
-  font-weight: 600;
-  color: var(--text-muted);
-  letter-spacing: 0.05em;
-}
-
-.meta-phase {
-  display: flex;
-  align-items: center;
-  gap: 0.3rem;
-  font-size: var(--text-xs);
-  font-weight: 500;
-  color: var(--text-muted);
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-}
-
-.element-header-symbol {
-  font-size: clamp(3.5rem, 8vw, 5.5rem);
-  font-weight: 700;
+/* Architectural symbol — the hero */
+.specimen-symbol {
+  font-size: clamp(3rem, 6vw, 4.5rem);
+  font-weight: 900;
   line-height: 1;
   color: var(--cat-color);
-  letter-spacing: -0.02em;
-  /* Subtle glow on the symbol */
-  text-shadow: 0 0 24px color-mix(in srgb, var(--cat-color) 40%, transparent);
+  letter-spacing: -0.03em;
+  /* No glow — the color does enough work */
 }
 
-.element-header-name {
-  font-size: var(--text-xl);
-  font-weight: 500;
-  color: var(--text-primary);
-  letter-spacing: 0.01em;
-}
-
-.element-header-badges {
+/* Meta: name + category */
+.specimen-meta {
   display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  margin-top: 0.25rem;
+  flex-direction: column;
+  gap: 0.2rem;
 }
 
-.badge-block {
-  display: inline-flex;
-  align-items: center;
-  padding: 0.25rem 0.625rem;
-  border-radius: 4px;
-  font-size: var(--text-xs);
+.specimen-name {
+  font-size: var(--text-sm);
   font-weight: 600;
-  letter-spacing: 0.06em;
+  color: var(--text-primary);
+  line-height: 1.2;
+}
+
+.specimen-category {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
   text-transform: uppercase;
-  color: var(--text-muted);
-  background-color: var(--bg-elevated);
-  border: 1px solid var(--bg-border);
+  letter-spacing: 0.08em;
+  color: var(--cat-color);
+  opacity: 0.8;
+  line-height: 1.3;
 }
 
-.element-header-mass {
-  font-size: 0.8125rem;
+.specimen-mass {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
   color: var(--text-muted);
-  margin-top: 0.5rem;
+  margin-top: 0.1rem;
 }
 
-.element-header-mass strong {
+/* Bottom: block + phase */
+.specimen-block {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid color-mix(in srgb, var(--cat-color) 20%, var(--bg-border));
+}
+
+.block-label {
+  font-family: var(--font-mono);
+  font-size: var(--text-2xs);
+  font-weight: 700;
   color: var(--text-secondary);
-  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.block-phase {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+/* Right-edge accent: thin line to reinforce the column separator */
+.cat-accent {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 1px;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    color-mix(in srgb, var(--cat-color) 30%, transparent) 30%,
+    color-mix(in srgb, var(--cat-color) 30%, transparent) 70%,
+    transparent
+  );
+  pointer-events: none;
 }
 </style>

@@ -1,14 +1,9 @@
 <script setup lang="ts">
-import { defineAsyncComponent } from "vue"
 import { storeToRefs } from "pinia"
 import { useUiStore } from "@/stores/uiStore"
 import { TREND_PROPERTY_META } from "@/utils/trendData"
 import TrendPropertySelector from "@/components/trends/TrendPropertySelector.vue"
-
-// Lazy-load TrendChart — ApexCharts is large and must not land in the initial bundle.
-const TrendChart = defineAsyncComponent(
-  () => import("@/components/trends/TrendChart.vue"),
-)
+import PeriodicHeatmap from "@/components/trends/PeriodicHeatmap.vue"
 
 const uiStore = useUiStore()
 const { activeTrendProperty } = storeToRefs(uiStore)
@@ -18,46 +13,28 @@ const { activeTrendProperty } = storeToRefs(uiStore)
   <main class="trends-view">
     <!-- Page header -->
     <header class="trends-header">
-      <span class="trends-eyebrow">// TREND ANALYSIS</span>
       <h1 class="trends-title">Periodic Trends</h1>
       <p class="trends-subtitle">
-        Explore how element properties vary across all 118 elements.
+        {{ TREND_PROPERTY_META[activeTrendProperty].description }}
       </p>
     </header>
 
-    <!-- Property selector -->
-    <TrendPropertySelector />
+    <!-- Property selector + active property label -->
+    <div class="selector-row">
+      <TrendPropertySelector />
+    </div>
 
-    <!-- Property description -->
-    <p class="property-description">
-      {{ TREND_PROPERTY_META[activeTrendProperty].description }}
-    </p>
-
-    <!-- Chart panel -->
-    <section class="chart-panel">
-      <!-- Data terminal header bar -->
-      <div class="chart-panel-header">
-        <span class="chart-panel-label">
-          {{ TREND_PROPERTY_META[activeTrendProperty].label }}
-        </span>
-        <span
-          v-if="TREND_PROPERTY_META[activeTrendProperty].unit"
-          class="chart-panel-unit"
-        >
+    <!-- Heatmap panel -->
+    <section class="heatmap-panel">
+      <div class="panel-header">
+        <span class="panel-label">{{ TREND_PROPERTY_META[activeTrendProperty].label }}</span>
+        <span v-if="TREND_PROPERTY_META[activeTrendProperty].unit" class="panel-unit">
           {{ TREND_PROPERTY_META[activeTrendProperty].unit }}
         </span>
+        <span class="panel-hint">hover for values</span>
       </div>
-
-      <!-- Chart body -->
-      <div class="chart-body">
-        <Suspense>
-          <TrendChart />
-          <template #fallback>
-            <div class="chart-fallback" aria-busy="true">
-              Loading chart data…
-            </div>
-          </template>
-        </Suspense>
+      <div class="panel-body">
+        <PeriodicHeatmap />
       </div>
     </section>
   </main>
@@ -69,29 +46,17 @@ const { activeTrendProperty } = storeToRefs(uiStore)
   display: flex;
   flex-direction: column;
   padding: 2rem 2.5rem 3rem;
-  max-width: 1600px;
+  max-width: 1400px;
   width: 100%;
   margin: 0 auto;
-
-  /* Consistent rhythm via gap */
-  gap: 1.75rem;
+  gap: 1.5rem;
 }
 
-/* ── Header ─────────────────────────────────────────────────── */
+/* ── Header ──────────────────────────────────────────────────────── */
 .trends-header {
   display: flex;
   flex-direction: column;
-  gap: 0.25rem;
-}
-
-.trends-eyebrow {
-  font-size: var(--text-xs);
-  font-weight: 600;
-  letter-spacing: 0.12em;
-  color: var(--accent-cyan);
-  text-transform: uppercase;
-  font-family: var(--font-mono);
-  opacity: 0.8;
+  gap: 0.375rem;
 }
 
 .trends-title {
@@ -105,76 +70,66 @@ const { activeTrendProperty } = storeToRefs(uiStore)
 .trends-subtitle {
   font-size: var(--text-sm);
   color: var(--text-secondary);
-  margin-top: 0.125rem;
+  max-width: 72ch;
+  line-height: 1.6;
+  border-left: 2px solid var(--bg-border);
+  padding-left: 0.75rem;
 }
 
-/* ── Selector — tight below header ──────────────────────────── */
-/* TrendPropertySelector sits here with its own internal spacing */
-
-/* ── Description — close below selector ─────────────────────── */
-.property-description {
-  font-size: 0.8125rem;
-  color: var(--text-secondary);
-  line-height: 1.65;
-  max-width: 76ch;
-  border-left: 2px solid var(--accent-cyan);
-  padding-left: 0.875rem;
-  opacity: 0.85;
+/* ── Selector row ────────────────────────────────────────────────── */
+.selector-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
-/* ── Chart panel ─────────────────────────────────────────────── */
-.chart-panel {
+/* ── Heatmap panel ───────────────────────────────────────────────── */
+.heatmap-panel {
   flex: 1;
   display: flex;
   flex-direction: column;
   background-color: var(--bg-surface);
   border: 1px solid var(--bg-border);
-  border-radius: 0.5rem;
+  border-radius: 4px;
   overflow: hidden;
-  /* Minimum height prevents layout collapse before chart loads */
-  min-height: 420px;
 }
 
-/* Terminal-style data header */
-.chart-panel-header {
+.panel-header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  gap: 0.75rem;
   padding: 0.625rem 1.25rem;
   border-bottom: 1px solid var(--bg-border);
-  background-color: color-mix(in srgb, var(--bg-elevated) 60%, transparent);
+  flex-shrink: 0;
 }
 
-.chart-panel-label {
-  font-size: 0.6875rem;
-  font-weight: 600;
+.panel-label {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  font-weight: 700;
   letter-spacing: 0.1em;
   color: var(--accent-cyan);
   text-transform: uppercase;
-  font-family: ui-monospace, "Cascadia Code", monospace;
 }
 
-.chart-panel-unit {
-  font-size: 0.6875rem;
+.panel-unit {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
   color: var(--text-muted);
-  font-family: ui-monospace, "Cascadia Code", monospace;
   letter-spacing: 0.05em;
 }
 
-/* Chart content area */
-.chart-body {
-  flex: 1;
-  padding: 1rem 0.5rem 0.5rem;
-  display: flex;
-  flex-direction: column;
+.panel-hint {
+  font-family: var(--font-mono);
+  font-size: var(--text-2xs);
+  color: var(--text-muted);
+  margin-left: auto;
+  opacity: 0.6;
 }
 
-.chart-fallback {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.panel-body {
   flex: 1;
-  color: var(--text-muted);
-  font-size: 0.8125rem;
+  padding: 1.25rem;
+  overflow: auto;
 }
 </style>

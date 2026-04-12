@@ -46,8 +46,9 @@ const shells = computed(() =>
   >
     <TresCanvas alpha :clear-color="'transparent'" class="atom-canvas">
       <TresPerspectiveCamera :position="CAMERA_POSITION" :look-at="CAMERA_LOOK_AT" :fov="45" />
-      <TresAmbientLight :intensity="0.6" />
-      <TresDirectionalLight :position="[5, 5, 5]" :intensity="1.2" :color="'#22d3ee'" />
+      <TresAmbientLight :intensity="0.8" />
+      <TresDirectionalLight :position="[5, 8, 5]" :intensity="1.4" :color="'#ffffff'" />
+      <TresPointLight :position="[-4, -4, -4]" :intensity="0.6" :color="'#3b82f6'" />
       <OrbitControls
         enable-damping
         :damping-factor="0.08"

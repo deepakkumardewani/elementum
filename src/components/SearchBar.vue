@@ -40,17 +40,23 @@ const { localQuery, onInput, clearSearch } = useElementSearch(inputRef)
   display: flex;
   align-items: center;
   gap: 6px;
-  background-color: var(--bg-elevated);
+  background-color: transparent;
   border: 1px solid var(--bg-border);
-  border-radius: 6px;
+  border-radius: 2px;
   padding: 0 8px;
-  width: 220px;
-  transition: border-color 150ms ease;
+  width: 200px;
+  transition: border-color 150ms ease, width 250ms ease, background-color 150ms ease;
+}
+
+.search-bar:focus-within {
+  width: 260px;
+  background-color: var(--bg-elevated);
 }
 
 .search-bar:focus-within {
   border-color: var(--accent-cyan);
 }
+
 
 .search-icon {
   color: var(--text-muted);
@@ -63,8 +69,8 @@ const { localQuery, onInput, clearSearch } = useElementSearch(inputRef)
   border: none;
   outline: none;
   color: var(--text-primary);
-  font-family: inherit;
-  font-size: 0.8125rem;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
   padding: 6px 0;
   /* Hide browser's native clear button on type="search" */
   -webkit-appearance: none;

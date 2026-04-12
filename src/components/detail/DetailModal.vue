@@ -21,43 +21,33 @@ const AtomModel3D = defineAsyncComponent(
 const elementStore = useElementStore()
 const { selectedElement, detailPanelOpen, elements } = storeToRefs(elementStore)
 
-// DOM refs
 const backdropEl = ref<HTMLElement | null>(null)
 const panelEl = ref<HTMLElement | null>(null)
-// Focus trap — only active when panel is open.
-// escapeDeactivates:false lets our own keydown handler manage Escape so the
-// panel close animation runs before focus-trap tears down.
-// clickOutsideDeactivates:false prevents focus-trap from deactivating on
-// backdrop click (we handle that ourselves via @click on the backdrop).
-// allowOutsideClick:true is required so focus-trap does NOT call
-// stopImmediatePropagation on clicks outside the panel — without it, any
-// Teleported child (e.g. ElementPhoto lightbox) cannot receive click events.
+
 const { activate: trapActivate, deactivate: trapDeactivate } = useFocusTrap(panelEl, {
   escapeDeactivates: false,
   clickOutsideDeactivates: false,
   allowOutsideClick: true,
 })
 
-// Track the element tile that triggered open so we can return focus on close
 let triggerEl: HTMLElement | null = null
 
-// When reduced motion is preferred, GSAP tweens run at duration 0 (instant)
-// so final values are still applied correctly without any animation.
 function getMotionDuration(normalMs: number): number {
   return window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : normalMs
 }
 
 function openPanel() {
   triggerEl = document.activeElement as HTMLElement | null
-
-  // Kill any in-progress close tween before starting open
   gsap.killTweensOf([backdropEl.value!, panelEl.value!])
 
-  const dur = getMotionDuration(0.25)
+  const dur = getMotionDuration(0.22)
   gsap.fromTo(backdropEl.value!, { opacity: 0 }, { opacity: 1, duration: dur, ease: "power2.out" })
-  gsap.fromTo(panelEl.value!, { x: "100%" }, { x: "0%", duration: dur, ease: "expo.out" })
+  gsap.fromTo(
+    panelEl.value!,
+    { opacity: 0, scale: 0.97, y: 8 },
+    { opacity: 1, scale: 1, y: 0, duration: dur, ease: "power2.out" }
+  )
 
-  // Wait for paint then trap focus
   requestAnimationFrame(() => {
     trapActivate()
   })
@@ -65,12 +55,10 @@ function openPanel() {
 
 function closePanel() {
   trapDeactivate()
-
-  // Kill any in-progress open tween before starting close
   gsap.killTweensOf([backdropEl.value!, panelEl.value!])
 
-  const dur = getMotionDuration(0.25)
-  gsap.to(panelEl.value!, { x: "100%", duration: dur, ease: "expo.in" })
+  const dur = getMotionDuration(0.18)
+  gsap.to(panelEl.value!, { opacity: 0, scale: 0.97, y: 8, duration: dur, ease: "power2.in" })
   gsap.to(backdropEl.value!, {
     opacity: 0,
     duration: dur,
@@ -84,39 +72,19 @@ function closePanel() {
 }
 
 watch(detailPanelOpen, (isOpen) => {
-  if (isOpen) {
-    openPanel()
-  }
+  if (isOpen) openPanel()
 })
 
-// Keyboard: ESC closes, left/right arrows navigate between elements
 useEventListener(document, "keydown", (e: KeyboardEvent) => {
   if (!detailPanelOpen.value) return
-
-  if (e.key === "Escape") {
-    e.preventDefault()
-    closePanel()
-    return
-  }
-
-  if (e.key === "ArrowRight") {
-    e.preventDefault()
-    navigateElement(1)
-    return
-  }
-
-  if (e.key === "ArrowLeft") {
-    e.preventDefault()
-    navigateElement(-1)
-    return
-  }
+  if (e.key === "Escape") { e.preventDefault(); closePanel(); return }
+  if (e.key === "ArrowRight") { e.preventDefault(); navigateElement(1); return }
+  if (e.key === "ArrowLeft") { e.preventDefault(); navigateElement(-1); return }
 })
 
 const currentIndex = computed(() => {
   if (!selectedElement.value) return -1
-  return elements.value.findIndex(
-    (el) => el.atomicNumber === selectedElement.value!.atomicNumber,
-  )
+  return elements.value.findIndex((el) => el.atomicNumber === selectedElement.value!.atomicNumber)
 })
 
 const hasPrev = computed(() => currentIndex.value > 0)
@@ -129,12 +97,11 @@ function navigateElement(delta: 1 | -1) {
   if (next) elementStore.selectElement(next)
 }
 
-// Error boundary: catch WebGL / TresJS failures and show 2D fallback
 const atomModelFailed = ref(false)
 onErrorCaptured((err) => {
   if (String(err).toLowerCase().includes("webgl") || String(err).toLowerCase().includes("tres")) {
     atomModelFailed.value = true
-    return false // suppress propagation
+    return false
   }
 })
 
@@ -144,7 +111,6 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <!-- v-show preserves GSAP state and prevents CLS (per performance rules) -->
   <div
     v-show="detailPanelOpen"
     class="detail-modal-root"
@@ -160,74 +126,77 @@ onUnmounted(() => {
       @click="closePanel"
     />
 
-    <!-- Panel -->
+    <!-- Centered dossier panel -->
     <div ref="panelEl" class="detail-panel">
-      <!-- Close button -->
-      <div class="detail-panel-toolbar">
-        <!-- Element navigator -->
-        <div class="detail-nav">
-          <button
-            class="detail-nav-btn"
-            :disabled="!hasPrev"
-            aria-label="Previous element"
-            @click="navigateElement(-1)"
-          >
-            <ChevronLeft :size="18" />
-          </button>
-          <span class="detail-nav-label">
-            {{ currentIndex + 1 }} / {{ elements.length }}
-          </span>
-          <button
-            class="detail-nav-btn"
-            :disabled="!hasNext"
-            aria-label="Next element"
-            @click="navigateElement(1)"
-          >
-            <ChevronRight :size="18" />
-          </button>
-        </div>
+      <div v-if="selectedElement" class="dossier-layout">
 
-        <button
-          class="detail-close-btn"
-          aria-label="Close element detail panel"
-          @click="closePanel"
-        >
-          <X :size="20" />
-        </button>
-      </div>
-
-      <!-- Scrollable content -->
-      <div v-if="selectedElement" class="detail-content">
+        <!-- LEFT: Specimen identity column -->
         <ElementHeader :element="selectedElement" />
 
-        <div class="detail-sections">
-          <PropertiesGrid :element="selectedElement" />
-          <ElectronConfigVisualizer :element="selectedElement" />
-          <ElementPhoto :element="selectedElement" />
-          <SpectralLines :lines="selectedElement.spectralLines" />
-
-          <div class="detail-3d-section">
-            <h3 class="detail-section-title">3D Atom Model</h3>
-            <div v-if="atomModelFailed" class="atom-model-loading">
-              <img
-                v-if="selectedElement.bohrModelImage"
-                :src="selectedElement.bohrModelImage"
-                :alt="`Bohr model of ${selectedElement.name}`"
-                class="atom-model-fallback-img"
-              />
-              <span v-else>3D model unavailable (WebGL not supported).</span>
+        <!-- RIGHT: Data column -->
+        <div class="data-col">
+          <!-- Toolbar: nav + close -->
+          <div class="detail-toolbar">
+            <div class="detail-nav">
+              <button
+                class="detail-nav-btn"
+                :disabled="!hasPrev"
+                aria-label="Previous element"
+                @click="navigateElement(-1)"
+              >
+                <ChevronLeft :size="15" />
+              </button>
+              <span class="detail-nav-label">
+                {{ currentIndex + 1 }}<span class="nav-sep">/</span>{{ elements.length }}
+              </span>
+              <button
+                class="detail-nav-btn"
+                :disabled="!hasNext"
+                aria-label="Next element"
+                @click="navigateElement(1)"
+              >
+                <ChevronRight :size="15" />
+              </button>
             </div>
-            <Suspense v-else>
-              <AtomModel3D :element="selectedElement" />
-              <template #fallback>
-                <div class="atom-model-loading" aria-busy="true">
-                  Loading 3D model…
-                </div>
-              </template>
-            </Suspense>
+            <button
+              class="detail-close-btn"
+              aria-label="Close element detail"
+              @click="closePanel"
+            >
+              <X :size="15" />
+            </button>
           </div>
 
-          <ElementFunFacts :element="selectedElement" />
+          <!-- Scrollable sections -->
+          <div class="detail-content">
+            <div class="detail-sections">
+              <PropertiesGrid :element="selectedElement" />
+              <ElectronConfigVisualizer :element="selectedElement" />
+              <ElementPhoto :element="selectedElement" />
+              <SpectralLines :lines="selectedElement.spectralLines" />
+
+              <div class="detail-section">
+                <h3 class="section-title">3D Atom Model</h3>
+                <div v-if="atomModelFailed" class="atom-model-loading">
+                  <img
+                    v-if="selectedElement.bohrModelImage"
+                    :src="selectedElement.bohrModelImage"
+                    :alt="`Bohr model of ${selectedElement.name}`"
+                    class="atom-model-fallback-img"
+                  />
+                  <span v-else>3D model unavailable (WebGL not supported).</span>
+                </div>
+                <Suspense v-else>
+                  <AtomModel3D :element="selectedElement" />
+                  <template #fallback>
+                    <div class="atom-model-loading" aria-busy="true">Loading 3D model…</div>
+                  </template>
+                </Suspense>
+              </div>
+
+              <ElementFunFacts :element="selectedElement" />
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -235,44 +204,65 @@ onUnmounted(() => {
 </template>
 
 <style scoped>
+/* ── Root: center the panel ────────────────────────────────────── */
 .detail-modal-root {
   position: fixed;
   inset: 0;
   z-index: v-bind("Z.modalBackdrop");
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
   pointer-events: none;
 }
 
-
 .detail-backdrop {
-  position: absolute;
+  position: fixed;
   inset: 0;
-  background-color: rgb(0 0 0 / 0.75);
+  background-color: rgb(0 0 0 / 0.8);
   pointer-events: auto;
-  opacity: 0; /* GSAP will tween this */
+  opacity: 0;
 }
 
+/* ── Panel: centered dossier card ─────────────────────────────── */
 .detail-panel {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: min(680px, 100vw);
+  position: relative;
+  width: min(920px, 100%);
+  max-height: min(88vh, 760px);
   background-color: var(--bg-surface);
-  border-left: 1px solid var(--bg-border);
+  border: 1px solid var(--bg-border);
+  border-radius: 4px;
   display: flex;
   flex-direction: column;
   z-index: v-bind("Z.modal");
   pointer-events: auto;
-  box-shadow: -8px 0 40px rgb(0 0 0 / 0.5);
-  transform: translateX(100%); /* GSAP initial state */
-  padding-inline: env(safe-area-inset-right); /* Respect mobile safe areas */
+  box-shadow: 0 24px 64px rgb(0 0 0 / 0.5), 0 4px 16px rgb(0 0 0 / 0.3);
+  opacity: 0; /* GSAP initial state */
+  overflow: hidden;
 }
 
-.detail-panel-toolbar {
+/* ── Two-column dossier layout ────────────────────────────────── */
+.dossier-layout {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  height: 100%;
+  min-height: 0;
+}
+
+/* ── Right data column ─────────────────────────────────────────── */
+.data-col {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  border-left: 1px solid var(--bg-border);
+}
+
+/* ── Toolbar ───────────────────────────────────────────────────── */
+.detail-toolbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.75rem 1.5rem;
+  padding: 0.625rem 1rem;
   border-bottom: 1px solid var(--bg-border);
   flex-shrink: 0;
 }
@@ -280,37 +270,43 @@ onUnmounted(() => {
 .detail-nav {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.375rem;
 }
 
 .detail-nav-label {
+  font-family: var(--font-mono);
   font-size: var(--text-xs);
   color: var(--text-muted);
-  min-width: 3.5rem;
+  min-width: 3rem;
   text-align: center;
+}
+
+.nav-sep {
+  margin: 0 2px;
+  opacity: 0.4;
 }
 
 .detail-nav-btn {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 2rem;
-  height: 2rem;
-  border-radius: 6px;
+  width: 26px;
+  height: 26px;
+  border-radius: 2px;
   background: transparent;
   border: 1px solid var(--bg-border);
   color: var(--text-secondary);
   cursor: pointer;
-  transition: background-color 150ms ease, color 150ms ease;
+  transition: background-color 150ms ease, color 150ms ease, border-color 150ms ease;
 }
 
 .detail-nav-btn:hover:not(:disabled) {
-  background-color: var(--bg-elevated);
-  color: var(--text-primary);
+  border-color: var(--accent-cyan);
+  color: var(--accent-cyan);
 }
 
 .detail-nav-btn:disabled {
-  opacity: 0.3;
+  opacity: 0.25;
   cursor: not-allowed;
 }
 
@@ -323,18 +319,18 @@ onUnmounted(() => {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 2.25rem;
-  height: 2.25rem;
-  border-radius: 6px;
+  width: 26px;
+  height: 26px;
+  border-radius: 2px;
   background: transparent;
-  border: 1px solid var(--bg-border);
-  color: var(--text-secondary);
+  border: 1px solid transparent;
+  color: var(--text-muted);
   cursor: pointer;
-  transition: background-color 150ms ease, color 150ms ease;
+  transition: border-color 150ms ease, color 150ms ease;
 }
 
 .detail-close-btn:hover {
-  background-color: var(--bg-elevated);
+  border-color: var(--bg-border);
   color: var(--text-primary);
 }
 
@@ -343,42 +339,43 @@ onUnmounted(() => {
   outline-offset: 2px;
 }
 
+/* ── Scrollable content ────────────────────────────────────────── */
 .detail-content {
   flex: 1;
   overflow-y: auto;
   overscroll-behavior: contain;
-  padding: 0 0 2rem;
 }
 
 .detail-sections {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  padding: 1.5rem;
+  padding: 1.25rem 1.5rem 2rem;
 }
 
-.detail-section-title {
-  font-size: var(--text-xs);
-  font-weight: 600;
-  letter-spacing: 0.1em;
+.detail-section {
+  /* intentionally minimal */
+}
+
+.section-title {
+  font-family: var(--font-mono);
+  font-size: var(--text-2xs);
+  font-weight: 700;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--text-muted);
   margin-bottom: 0.75rem;
 }
 
-.detail-3d-section {
-  /* intentionally no extra wrapper style — title + content only */
-}
-
 .atom-model-loading {
-  height: 280px;
+  height: 260px;
   display: flex;
   align-items: center;
   justify-content: center;
   color: var(--text-muted);
-  font-size: 0.875rem;
+  font-size: var(--text-sm);
   border: 1px solid var(--bg-border);
-  border-radius: 8px;
+  border-radius: 2px;
   background-color: var(--bg-elevated);
   overflow: hidden;
 }
@@ -387,5 +384,29 @@ onUnmounted(() => {
   width: 100%;
   height: 100%;
   object-fit: contain;
+}
+
+/* ── Responsive: stack on narrow screens ────────────────────────── */
+@media (max-width: 600px) {
+  .detail-modal-root {
+    padding: 0;
+    align-items: flex-end;
+  }
+
+  .detail-panel {
+    width: 100%;
+    max-height: 92vh;
+    border-radius: 4px 4px 0 0;
+  }
+
+  .dossier-layout {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+  }
+
+  .data-col {
+    border-left: none;
+    border-top: 1px solid var(--bg-border);
+  }
 }
 </style>

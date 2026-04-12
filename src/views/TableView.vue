@@ -7,7 +7,7 @@ import PeriodicGrid from "@/components/PeriodicGrid.vue";
 import FilterBar from "@/components/FilterBar.vue";
 import DetailModal from "@/components/detail/DetailModal.vue";
 import { useElementFilter } from "@/composables/useElementFilter"
-import ElementTooltip from "@/components/ElementTooltip.vue";
+import ElementHoverCard from "@/components/ElementHoverCard.vue";
 
 const rootEl = ref<HTMLElement | null>(null);
 let ctx: gsap.Context;
@@ -73,8 +73,8 @@ onUnmounted(() => {
     </div>
     <!-- v-show preserves GSAP state; placed at view root to avoid CLS -->
     <DetailModal />
-    <!-- Single tooltip instance — Teleports to body, shown on tile hover -->
-    <ElementTooltip />
+    <!-- Rich hover card — Teleports to body, shown on tile hover -->
+    <ElementHoverCard />
   </main>
 </template>
 

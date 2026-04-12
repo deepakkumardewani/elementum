@@ -2,7 +2,6 @@
 import { ref, computed, watch, nextTick, onUnmounted } from "vue"
 import { storeToRefs } from "pinia"
 import { gsap } from "gsap"
-import { ChevronsUp } from "lucide-vue-next"
 import { useElementStore } from "@/stores/elementStore"
 import ElementSelector from "@/components/compare/ElementSelector.vue"
 import CompareTable from "@/components/compare/CompareTable.vue"
@@ -89,11 +88,12 @@ onUnmounted(() => {
       class="empty-state"
       aria-live="polite"
     >
-      <div class="empty-icon-wrap">
-        <ChevronsUp :size="32" class="empty-icon" />
+      <div class="empty-tiles" aria-hidden="true">
+        <div class="empty-tile empty-tile--a">?</div>
+        <span class="empty-vs">VS</span>
+        <div class="empty-tile empty-tile--b">?</div>
       </div>
       <p class="empty-text">{{ emptyMessage }}</p>
-      <p class="empty-hint">Use the selectors above to search elements or use the mini-grids</p>
     </div>
   </main>
 </template>
@@ -103,8 +103,8 @@ onUnmounted(() => {
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 32px;
-  padding: 32px 24px 48px;
+  gap: 1.5rem;
+  padding: 2rem 2.5rem 3rem;
   max-width: 1400px;
   margin: 0 auto;
   width: 100%;
@@ -121,12 +121,17 @@ onUnmounted(() => {
   font-size: var(--text-2xl);
   font-weight: 700;
   color: var(--text-primary);
-  letter-spacing: -0.02em;
+  letter-spacing: -0.025em;
+  line-height: 1.1;
 }
 
 .view-subtitle {
   font-size: var(--text-sm);
-  color: var(--text-muted);
+  color: var(--text-secondary);
+  border-left: 2px solid var(--bg-border);
+  padding-left: 0.75rem;
+  max-width: 60ch;
+  line-height: 1.6;
 }
 
 /* Selectors layout */
@@ -175,40 +180,55 @@ onUnmounted(() => {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 16px;
-  padding: 64px 24px;
-  border: 1px dashed var(--bg-border);
-  border-radius: 12px;
+  gap: 1.25rem;
+  padding: 3rem 1.5rem;
   text-align: center;
-  background: color-mix(in srgb, var(--bg-surface) 30%, transparent);
 }
 
-.empty-icon-wrap {
+.empty-tiles {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.empty-tile {
+  width: 56px;
+  height: 56px;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 64px;
-  height: 64px;
-  border-radius: 50%;
-  background: var(--bg-elevated);
-  border: 1px solid var(--bg-border);
-  color: var(--accent-cyan);
-  margin-bottom: 8px;
+  font-family: var(--font-mono);
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: var(--text-muted);
+  border: 1px dashed var(--bg-border);
+  border-radius: 2px;
+  opacity: 0.4;
+  animation: pulse-tile 2.4s ease-in-out infinite;
 }
 
-.empty-icon {
-  opacity: 0.8;
+.empty-tile--b {
+  animation-delay: 0.6s;
+}
+
+@keyframes pulse-tile {
+  0%, 100% { opacity: 0.25; }
+  50%       { opacity: 0.5; }
+}
+
+.empty-vs {
+  font-family: var(--font-mono);
+  font-size: var(--text-2xs);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+  opacity: 0.4;
 }
 
 .empty-text {
-  font-size: var(--text-base);
-  font-weight: 500;
-  color: var(--text-primary);
-}
-
-.empty-hint {
-  font-size: var(--text-sm);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
   color: var(--text-muted);
-  max-width: 320px;
+  opacity: 0.7;
 }
 </style>
