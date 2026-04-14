@@ -1,34 +1,47 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="/favicon.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Elementum | Interactive Periodic Table Explorer & Chemical Data</title>
-    <meta name="description" content="Explore the chemical elements like never before with Elementum. An interactive periodic table featuring 3D atom models, detailed property comparisons, and advanced trend visualization." />
-    <meta name="keywords" content="periodic table, chemical elements, chemistry tool, interactive periodic table, 3D atom models, atomic data, element comparison, element trends, science education" />
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://elementum-periodic-table.vercel.app/" />
-    <meta property="og:title" content="Elementum | Interactive Periodic Table Explorer" />
-    <meta property="og:description" content="A modern, high-performance periodic table explorer with 3D visualizations and scientific data analysis tools." />
-    <meta property="og:image" content="https://elementum-periodic-table.vercel.app/og-image.png" />
 
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://elementum-periodic-table.vercel.app/" />
-    <meta property="twitter:title" content="Elementum | Interactive Periodic Table Explorer" />
-    <meta property="twitter:description" content="A modern, high-performance periodic table explorer with 3D visualizations and scientific data analysis tools." />
-    <meta property="twitter:image" content="https://elementum-periodic-table.vercel.app/og-image.png" />
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Elementum | Interactive Periodic Table Explorer & Chemical Data</title>
+  <meta name="description"
+    content="Explore the chemical elements like never before with Elementum. An interactive periodic table featuring 3D atom models, detailed property comparisons, and advanced trend visualization." />
+  <meta name="keywords"
+    content="periodic table, chemical elements, chemistry tool, interactive periodic table, 3D atom models, atomic data, element comparison, element trends, science education" />
 
-  </head>
-  <body>
-    <noscript>
-      <strong>Elementum requires JavaScript to function.</strong>
-      <p>Explore the chemical elements with our interactive periodic table featuring 3D atom models, detailed property comparisons, and advanced trend visualization.</p>
-    </noscript>
-    <div id="app"></div>
-    <script type="module" src="/src/main.ts"></script>
-  </body>
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://elementum-periodic-table.vercel.app/" />
+  <meta property="og:title" content="Elementum | Interactive Periodic Table Explorer" />
+  <meta property="og:description"
+    content="A modern, high-performance periodic table explorer with 3D visualizations and scientific data analysis tools." />
+  <meta property="og:image" content="https://elementum-periodic-table.vercel.app/og-image.png" />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://elementum-periodic-table.vercel.app/" />
+  <meta property="twitter:title" content="Elementum | Interactive Periodic Table Explorer" />
+  <meta property="twitter:description"
+    content="A modern, high-performance periodic table explorer with 3D visualizations and scientific data analysis tools." />
+  <meta property="twitter:image" content="https://elementum-periodic-table.vercel.app/og-image.png" />
+
+</head>
+
+<body>
+  <noscript>
+    <strong>Elementum requires JavaScript to function.</strong>
+    <p>Explore the chemical elements with our interactive periodic table featuring 3D atom models, detailed property
+      comparisons, and advanced trend visualization.</p>
+  </noscript>
+  <div id="app"></div>
+  <script type="module" src="/src/main.ts"></script>
+  <script async src="https://rum.cronitor.io/script.js"></script>
+  <script>
+    window.cronitor = window.cronitor || function () { (window.cronitor.q = window.cronitor.q || []).push(arguments); };
+    cronitor('config', { clientKey: '6d897116f87e10c0b47bfea771254eb4' });
+  </script>
+</body>
+
 </html>
