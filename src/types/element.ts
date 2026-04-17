@@ -30,6 +30,15 @@ export interface ElementImage {
   attribution: string
 }
 
+export interface Abundance {
+  universe: number | null
+  sun: number | null
+  oceans: number | null
+  humanBody: number | null
+  earthCrust: number | null
+  meteorites: number | null
+}
+
 export interface Element {
   name: string
   symbol: string
@@ -82,4 +91,16 @@ export interface Element {
   funFacts: string[]
   compounds: string[]
   summary: string
+  // Enriched via Wikidata
+  latinName?: string | null
+  casNumber?: string | null
+  valenceElectrons?: number | null
+  vanDerWaalsRadius?: number | null
+  electricalType?: string | null
+  magneticType?: string | null
+  crystalStructure?: string | null
+  colour?: string | null
+  mohsHardness?: number | null
+  thermalConductivity?: number | null
+  abundance?: Abundance | null
 }
