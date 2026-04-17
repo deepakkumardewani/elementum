@@ -75,20 +75,24 @@ watch(() => props.element, animateFacts, { deep: true })
 .facts-section {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 0;
 }
 
 .facts-card {
-  background-color: var(--bg-elevated);
-  border: 1px solid var(--bg-border);
-  border-radius: 8px;
-  padding: 1rem;
+  border-top: 1px solid var(--bg-border);
+  padding: 0.875rem 0 0.875rem;
+}
+
+.facts-card:first-child {
+  border-top: none;
+  padding-top: 0;
 }
 
 .facts-title {
-  font-size: var(--text-xs);
-  font-weight: 600;
-  letter-spacing: 0.1em;
+  font-family: var(--font-mono);
+  font-size: var(--text-2xs);
+  font-weight: 700;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--text-muted);
   margin-bottom: 0.625rem;

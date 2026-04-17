@@ -91,11 +91,11 @@ const atomicMassDisplay = computed(() =>
   font-family: var(--font-mono);
   font-size: var(--text-2xs);
   font-weight: 700;
-  color: var(--text-muted);
+  color: var(--text-secondary);
   letter-spacing: 0.1em;
   writing-mode: vertical-rl;
   text-orientation: mixed;
-  opacity: 0.6;
+  opacity: 0.8;
   user-select: none;
 }
 
@@ -145,7 +145,7 @@ const atomicMassDisplay = computed(() =>
 .specimen-mass {
   font-family: var(--font-mono);
   font-size: 0.65rem;
-  color: var(--text-muted);
+  color: var(--text-secondary);
   margin-top: 0.1rem;
 }
 
@@ -170,7 +170,7 @@ const atomicMassDisplay = computed(() =>
 .block-phase {
   font-family: var(--font-mono);
   font-size: 0.6rem;
-  color: var(--text-muted);
+  color: var(--text-secondary);
   text-transform: uppercase;
   letter-spacing: 0.08em;
 }

@@ -235,15 +235,13 @@ const cardStyle = computed(() => {
   z-index: v-bind("Z.tooltip");
   pointer-events: none;
   width: 300px;
-  background: color-mix(in srgb, var(--bg-elevated) 97%, transparent);
-  border: 1px solid color-mix(in srgb, var(--cat) 40%, var(--bg-border));
+  background-color: var(--bg-elevated);
+  border: 1px solid color-mix(in srgb, var(--cat) 35%, var(--bg-border));
   border-radius: 10px;
   padding: 12px 14px 10px;
   box-shadow:
-    0 8px 32px color-mix(in srgb, var(--bg-base) 60%, transparent),
-    0 0 0 1px color-mix(in srgb, var(--cat) 12%, transparent) inset;
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+    0 8px 32px color-mix(in srgb, black 30%, transparent),
+    0 0 0 1px color-mix(in srgb, var(--cat) 10%, transparent) inset;
 }
 
 /* ─── ① Header ──────────────────────────────────────────── */
