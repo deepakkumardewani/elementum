@@ -8,10 +8,16 @@
  * scroll to zoom. Pan is disabled to keep the atom centred.
  */
 import { computed, ref } from "vue"
+import { storeToRefs } from "pinia"
 import { TresCanvas } from "@tresjs/core"
 import { OrbitControls } from "@tresjs/cientos"
 import type { Element } from "@/types/element"
 import AtomScene from "@/components/detail/AtomScene.vue"
+import { useUiStore } from "@/stores/uiStore"
+
+// Drive clear-color from the store's isDark flag — same source of truth as CSS tokens
+const { isDark } = storeToRefs(useUiStore())
+const clearColor = computed(() => isDark.value ? "#1a2236" : "#eef1f7")
 
 // Module-level constants so `:position` / `:look-at` bindings always receive
 // the SAME reference across re-renders. Without this, every render creates a
@@ -44,7 +50,7 @@ const shells = computed(() =>
     role="img"
     @wheel.stop.prevent
   >
-    <TresCanvas alpha :clear-color="'transparent'" class="atom-canvas">
+    <TresCanvas :clear-color="clearColor" class="atom-canvas">
       <TresPerspectiveCamera :position="CAMERA_POSITION" :look-at="CAMERA_LOOK_AT" :fov="45" />
       <TresAmbientLight :intensity="0.8" />
       <TresDirectionalLight :position="[5, 8, 5]" :intensity="1.4" :color="'#ffffff'" />
