@@ -12,6 +12,7 @@ import PropertiesGrid from "@/components/detail/PropertiesGrid.vue"
 import ElectronConfigVisualizer from "@/components/detail/ElectronConfigVisualizer.vue"
 import SpectralLines from "@/components/detail/SpectralLines.vue"
 import ElementFunFacts from "@/components/detail/ElementFunFacts.vue"
+import AbundanceSection from "@/components/detail/AbundanceSection.vue"
 import { Z } from "@/constants/zIndex"
 
 const AtomModel3D = defineAsyncComponent(
@@ -41,7 +42,7 @@ function openPanel() {
   gsap.killTweensOf([backdropEl.value!, panelEl.value!])
 
   const dur = getMotionDuration(0.22)
-  gsap.fromTo(backdropEl.value!, { opacity: 0 }, { opacity: 1, duration: dur, ease: "power2.out" })
+  gsap.fromTo(backdropEl.value!, { opacity: 0 }, { opacity: 0.6, duration: dur, ease: "power2.out" })
   gsap.fromTo(
     panelEl.value!,
     { opacity: 0, scale: 0.97, y: 8 },
@@ -89,6 +90,9 @@ const currentIndex = computed(() => {
 
 const hasPrev = computed(() => currentIndex.value > 0)
 const hasNext = computed(() => currentIndex.value < elements.value.length - 1)
+
+const prevElement = computed(() => hasPrev.value ? elements.value[currentIndex.value - 1] : null)
+const nextElement = computed(() => hasNext.value ? elements.value[currentIndex.value + 1] : null)
 
 function navigateElement(delta: 1 | -1) {
   const idx = currentIndex.value
@@ -141,18 +145,20 @@ onUnmounted(() => {
               <button
                 class="detail-nav-btn"
                 :disabled="!hasPrev"
-                aria-label="Previous element"
+                :aria-label="prevElement ? `Previous: ${prevElement.name}` : 'Previous element'"
                 @click="navigateElement(-1)"
               >
                 <ChevronLeft :size="15" />
               </button>
+              <span v-if="prevElement" class="detail-nav-name prev-name">{{ prevElement.name }}</span>
               <span class="detail-nav-label">
                 {{ currentIndex + 1 }}<span class="nav-sep">/</span>{{ elements.length }}
               </span>
+              <span v-if="nextElement" class="detail-nav-name next-name">{{ nextElement.name }}</span>
               <button
                 class="detail-nav-btn"
                 :disabled="!hasNext"
-                aria-label="Next element"
+                :aria-label="nextElement ? `Next: ${nextElement.name}` : 'Next element'"
                 @click="navigateElement(1)"
               >
                 <ChevronRight :size="15" />
@@ -194,6 +200,7 @@ onUnmounted(() => {
                 </Suspense>
               </div>
 
+              <AbundanceSection :abundance="selectedElement.abundance" />
               <ElementFunFacts :element="selectedElement" />
             </div>
           </div>
@@ -219,7 +226,7 @@ onUnmounted(() => {
 .detail-backdrop {
   position: fixed;
   inset: 0;
-  background-color: color-mix(in srgb, var(--bg-base) 75%, black 25%);
+  background-color: color-mix(in srgb, var(--bg-base) 85%, transparent);
   pointer-events: auto;
   opacity: 0;
 }
@@ -285,6 +292,20 @@ onUnmounted(() => {
   margin: 0 2px;
   opacity: 0.4;
 }
+
+.detail-nav-name {
+  font-family: var(--font-mono);
+  font-size: var(--text-2xs);
+  color: var(--text-muted);
+  max-width: 5rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  transition: color 150ms ease;
+}
+
+.prev-name { text-align: right; }
+.next-name { text-align: left; }
 
 .detail-nav-btn {
   display: flex;
