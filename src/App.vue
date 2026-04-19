@@ -33,6 +33,7 @@ const NAV_ITEMS = [
   { to: "/compare", abbr: "Cm", label: "Compare" },
   { to: "/trends", abbr: "Ts", label: "Trends" },
   { to: "/quiz", abbr: "Md", label: "Quiz" },
+  { to: "/tools", abbr: "W", label: "Tools" },
 ] as const
 </script>
 
