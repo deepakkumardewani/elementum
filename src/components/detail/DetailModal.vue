@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, watch, computed, defineAsyncComponent, onUnmounted, onErrorCaptured } from "vue"
+import { ref, watch, computed, defineAsyncComponent, onUnmounted, onErrorCaptured, useId } from "vue"
 import { storeToRefs } from "pinia"
 import { gsap } from "gsap"
 import { useFocusTrap } from "@vueuse/integrations/useFocusTrap"
@@ -14,7 +14,14 @@ import ElectronConfigVisualizer from "@/components/detail/ElectronConfigVisualiz
 import SpectralLines from "@/components/detail/SpectralLines.vue"
 import ElementFunFacts from "@/components/detail/ElementFunFacts.vue"
 import AbundanceSection from "@/components/detail/AbundanceSection.vue"
+import DetailTabs from "@/components/detail/DetailTabs.vue"
+import IsotopeExplorer from "@/components/detail/IsotopeExplorer.vue"
+import EtymologySection from "@/components/detail/EtymologySection.vue"
+import RealWorldSection from "@/components/detail/RealWorldSection.vue"
+import SafetySection from "@/components/detail/SafetySection.vue"
 import { Z } from "@/constants/zIndex"
+import type { DetailTabId } from "@/utils/detailTabVisibility"
+import { visibleDetailTabIds } from "@/utils/detailTabVisibility"
 
 const AtomModel3D = defineAsyncComponent(
   () => import("@/components/detail/AtomModel3D.vue"),
@@ -22,6 +29,43 @@ const AtomModel3D = defineAsyncComponent(
 
 const elementStore = useElementStore()
 const { selectedElement, detailPanelOpen, elements } = storeToRefs(elementStore)
+
+const detailTabScope = useId()
+const TAB_LABELS: Record<DetailTabId, string> = {
+  overview: "Overview",
+  isotopes: "Isotopes",
+  etymology: "Etymology & History",
+  realWorld: "Real World",
+  safety: "Safety",
+}
+
+const activeDetailTab = ref<DetailTabId>("overview")
+
+const detailTabItems = computed(() => {
+  if (!selectedElement.value) return [] as { id: DetailTabId; label: string }[]
+  return visibleDetailTabIds(selectedElement.value).map((id) => ({
+    id,
+    label: TAB_LABELS[id],
+  }))
+})
+
+watch(
+  () => selectedElement.value?.atomicNumber,
+  () => {
+    activeDetailTab.value = "overview"
+  },
+)
+
+watch(
+  detailTabItems,
+  (items) => {
+    const ids = items.map((t) => t.id)
+    if (!ids.includes(activeDetailTab.value)) {
+      activeDetailTab.value = ids[0] ?? "overview"
+    }
+  },
+  { immediate: true },
+)
 
 const backdropEl = ref<HTMLElement | null>(null)
 const panelEl = ref<HTMLElement | null>(null)
@@ -181,35 +225,108 @@ onUnmounted(() => {
             </div>
           </div>
 
-          <!-- Scrollable sections -->
+          <!-- Scrollable sections & tab panels -->
           <div class="detail-content">
-            <div class="detail-sections">
-              <PropertiesGrid :element="selectedElement" />
-              <ElectronConfigVisualizer :element="selectedElement" />
-              <ElementPhoto :element="selectedElement" />
-              <SpectralLines :lines="selectedElement.spectralLines" />
+            <DetailTabs
+              :id-prefix="detailTabScope"
+              :tabs="detailTabItems"
+              v-model="activeDetailTab"
+            />
+            <div class="detail-tab-panels">
+              <div
+                v-show="activeDetailTab === 'overview'"
+                :id="`${detailTabScope}-panel-overview`"
+                class="detail-tab-panel"
+                role="tabpanel"
+                aria-label="Overview"
+                :aria-labelledby="`${detailTabScope}-tab-overview`"
+                tabindex="0"
+              >
+                <div class="detail-sections">
+                  <PropertiesGrid :element="selectedElement" />
+                  <ElectronConfigVisualizer :element="selectedElement" />
+                  <ElementPhoto :element="selectedElement" />
+                  <SpectralLines :lines="selectedElement.spectralLines" />
 
-              <div class="detail-section">
-                <h3 class="section-title">3D Atom Model</h3>
-                <div v-if="atomModelFailed" class="atom-model-loading">
-                  <img
-                    v-if="selectedElement.bohrModelImage"
-                    :src="selectedElement.bohrModelImage"
-                    :alt="`Bohr model of ${selectedElement.name}`"
-                    class="atom-model-fallback-img"
-                  />
-                  <span v-else>3D model unavailable (WebGL not supported).</span>
+                  <div class="detail-section">
+                    <h3 class="section-title">3D Atom Model</h3>
+                    <div v-if="atomModelFailed" class="atom-model-loading">
+                      <img
+                        v-if="selectedElement.bohrModelImage"
+                        :src="selectedElement.bohrModelImage"
+                        :alt="`Bohr model of ${selectedElement.name}`"
+                        class="atom-model-fallback-img"
+                      />
+                      <span v-else>3D model unavailable (WebGL not supported).</span>
+                    </div>
+                    <Suspense v-else>
+                      <AtomModel3D :element="selectedElement" />
+                      <template #fallback>
+                        <div class="atom-model-loading" aria-busy="true">Loading 3D model…</div>
+                      </template>
+                    </Suspense>
+                  </div>
+
+                  <AbundanceSection :abundance="selectedElement.abundance" />
+                  <ElementFunFacts :element="selectedElement" />
                 </div>
-                <Suspense v-else>
-                  <AtomModel3D :element="selectedElement" />
-                  <template #fallback>
-                    <div class="atom-model-loading" aria-busy="true">Loading 3D model…</div>
-                  </template>
-                </Suspense>
               </div>
 
-              <AbundanceSection :abundance="selectedElement.abundance" />
-              <ElementFunFacts :element="selectedElement" />
+              <div
+                v-show="activeDetailTab === 'isotopes'"
+                :id="`${detailTabScope}-panel-isotopes`"
+                class="detail-tab-panel"
+                role="tabpanel"
+                aria-label="Isotopes"
+                :aria-labelledby="`${detailTabScope}-tab-isotopes`"
+                tabindex="0"
+              >
+                <div class="detail-sections detail-sections--compact">
+                  <IsotopeExplorer :element="selectedElement" />
+                </div>
+              </div>
+
+              <div
+                v-show="activeDetailTab === 'etymology'"
+                :id="`${detailTabScope}-panel-etymology`"
+                class="detail-tab-panel"
+                role="tabpanel"
+                aria-label="Etymology and history"
+                :aria-labelledby="`${detailTabScope}-tab-etymology`"
+                tabindex="0"
+              >
+                <div class="detail-sections detail-sections--compact">
+                  <EtymologySection :element="selectedElement" />
+                </div>
+              </div>
+
+              <div
+                v-show="activeDetailTab === 'realWorld'"
+                :id="`${detailTabScope}-panel-realWorld`"
+                class="detail-tab-panel"
+                role="tabpanel"
+                aria-label="Real world"
+                :aria-labelledby="`${detailTabScope}-tab-realWorld`"
+                tabindex="0"
+              >
+                <div class="detail-sections detail-sections--compact">
+                  <RealWorldSection :element="selectedElement" />
+                </div>
+              </div>
+
+              <div
+                v-show="activeDetailTab === 'safety'"
+                :id="`${detailTabScope}-panel-safety`"
+                class="detail-tab-panel"
+                role="tabpanel"
+                aria-label="Safety"
+                :aria-labelledby="`${detailTabScope}-tab-safety`"
+                tabindex="0"
+              >
+                <div class="detail-sections detail-sections--compact">
+                  <SafetySection :element="selectedElement" />
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -383,8 +500,25 @@ onUnmounted(() => {
 /* ── Scrollable content ────────────────────────────────────────── */
 .detail-content {
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.detail-tab-panels {
+  flex: 1;
   overflow-y: auto;
   overscroll-behavior: contain;
+  min-height: 0;
+}
+
+.detail-tab-panel {
+  outline: none;
+}
+
+.detail-tab-panel:focus-visible {
+  outline: 2px solid var(--accent-cyan);
+  outline-offset: -2px;
 }
 
 .detail-sections {
@@ -394,6 +528,9 @@ onUnmounted(() => {
   padding: 1.25rem 1.5rem 2rem;
 }
 
+.detail-sections--compact {
+  padding-top: 1rem;
+}
 
 .section-title {
   font-family: var(--font-mono);

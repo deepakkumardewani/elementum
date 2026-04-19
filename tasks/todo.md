@@ -42,10 +42,10 @@
 
 > **Requires DP-5 for real data**, but B-1 can be built before data is enriched (tabs with null fallbacks).
 
-- **B-1** — Refactor `DetailModal.vue` into tabbed layout using new `DetailTabs.vue`; existing content moves to "Overview" tab; other tabs are empty shells
-- **B-2** — Build `src/components/detail/IsotopeExplorer.vue`; render in "Isotopes" tab
-- **B-3** — Build `src/components/detail/EtymologySection.vue` + `RealWorldSection.vue`; render in respective tabs
-- **B-4** — Build `src/components/detail/SafetySection.vue`; render in "Safety" tab
+- [x] **B-1** — Refactor `DetailModal.vue` into tabbed layout using new `DetailTabs.vue`; existing content moves to "Overview" tab; other tabs are empty shells — Impl / Test
+- [x] **B-2** — Build `src/components/detail/IsotopeExplorer.vue`; render in "Isotopes" tab — Impl / Test
+- [x] **B-3** — Build `src/components/detail/EtymologySection.vue` + `RealWorldSection.vue`; render in respective tabs — Impl / Test
+- [x] **B-4** — Build `src/components/detail/SafetySection.vue`; render in "Safety" tab — Impl / Test
 
 ### ✅ Checkpoint: Epic B
 
