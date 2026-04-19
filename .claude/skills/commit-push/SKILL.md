@@ -1,6 +1,6 @@
 ---
 name: commit-push
-description: Use this skill whenever committing changes to the repository or when the user asks for committing the code.
+description: Use this skill only when the specifically asks to run it using /commit-push
 ---
 
 Create atomic commits and push to remote.
