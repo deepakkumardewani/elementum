@@ -1,15 +1,21 @@
 <script setup lang="ts">
 import { onMounted, ref, computed } from "vue"
 import { useRoute } from "vue-router"
-import { Smartphone, Monitor } from "lucide-vue-next"
+import { Smartphone, Monitor, Bookmark } from "lucide-vue-next"
+import { storeToRefs } from "pinia"
 import { useElementStore } from "@/stores/elementStore"
+import { useBookmarkStore } from "@/stores/bookmarkStore"
 import SearchBar from "@/components/SearchBar.vue"
 import ThemeToggle from "@/components/ThemeToggle.vue"
+import BookmarksPanel from "@/components/BookmarksPanel.vue"
 import { Z } from "@/constants/zIndex"
 
 const elementStore = useElementStore()
+const bookmarkStore = useBookmarkStore()
+const { bookmarkCount } = storeToRefs(bookmarkStore)
 const route = useRoute()
 const scrolled = ref(false)
+const bookmarksOpen = ref(false)
 
 const isTablePage = computed(() => route.path === "/")
 
@@ -26,6 +32,7 @@ const NAV_ITEMS = [
   { to: "/", abbr: "Ta", label: "Table" },
   { to: "/compare", abbr: "Cm", label: "Compare" },
   { to: "/trends", abbr: "Ts", label: "Trends" },
+  { to: "/quiz", abbr: "Md", label: "Quiz" },
 ] as const
 </script>
 
@@ -52,6 +59,16 @@ const NAV_ITEMS = [
             <span class="nav-label">{{ item.label }}</span>
           </RouterLink>
         </nav>
+
+        <button
+          type="button"
+          class="bookmarks-nav-btn"
+          aria-label="Open bookmarks"
+          @click="bookmarksOpen = true"
+        >
+          <Bookmark :size="17" aria-hidden="true" />
+          <span v-if="bookmarkCount > 0" class="bookmarks-badge">{{ bookmarkCount }}</span>
+        </button>
       </div>
 
       <SearchBar v-if="isTablePage" />
@@ -60,6 +77,8 @@ const NAV_ITEMS = [
     <main id="main-content">
       <RouterView />
     </main>
+
+    <BookmarksPanel v-model:open="bookmarksOpen" />
     
     <!-- Mobile warning overlay -->
     <div class="mobile-not-supported">
@@ -210,6 +229,53 @@ const NAV_ITEMS = [
   outline: 2px solid var(--accent-cyan);
   outline-offset: 3px;
   border-radius: 2px;
+}
+
+.bookmarks-nav-btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  margin-left: 0.25rem;
+  border: 1px solid var(--bg-border);
+  border-radius: 2px;
+  background: transparent;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition:
+    border-color 150ms ease,
+    color 150ms ease,
+    background-color 150ms ease;
+}
+
+.bookmarks-nav-btn:hover {
+  border-color: var(--accent-cyan);
+  color: var(--accent-cyan);
+  background: color-mix(in srgb, var(--accent-cyan) 6%, transparent);
+}
+
+.bookmarks-nav-btn:focus-visible {
+  outline: 2px solid var(--accent-cyan);
+  outline-offset: 2px;
+}
+
+.bookmarks-badge {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  min-width: 16px;
+  height: 16px;
+  padding: 0 4px;
+  border-radius: 999px;
+  background: var(--accent-cyan);
+  color: var(--bg-base);
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  font-weight: 700;
+  line-height: 16px;
+  text-align: center;
 }
 
 /* Mobile warning */
