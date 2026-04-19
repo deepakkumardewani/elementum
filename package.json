@@ -10,7 +10,9 @@
     "lint": "biome check",
     "format": "biome format --write",
     "typecheck": "vue-tsc",
-    "verify": "bun run format && bun run typecheck"
+    "verify": "bun run format && bun run typecheck",
+    "test": "vitest run",
+    "test:watch": "vitest"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.2.2",
@@ -30,9 +32,13 @@
   },
   "devDependencies": {
     "@biomejs/biome": "^2.4.10",
+    "@pinia/testing": "^1.0.3",
     "@vitejs/plugin-vue": "^4.5.0",
+    "@vue/test-utils": "^2.4.6",
+    "happy-dom": "^20.9.0",
     "typescript": "^5.2.2",
     "vite": "^5.0.0",
+    "vitest": "^4.1.4",
     "vue-tsc": "^3.2.6"
   }
 }
