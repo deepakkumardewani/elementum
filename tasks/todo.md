@@ -6,7 +6,7 @@
 
 ## Data Pipeline (run before / in parallel with Phase 1)
 
-- **DP-0** — Extend `src/types/element.ts` with new fields: `Isotope`, `HazardLevel`, `isotopes[]`, `etymology`, `industrialUses`, `naturalOccurrence`, `hazardLevel`, `discoveryCountry`, `discoveryMethod`, `discoveryStory`, `storyHeadline`, `storyBody`, `discovererPortrait`
+- [x] **DP-0** — Extend `src/types/element.ts` with new fields: `Isotope`, `HazardLevel`, `isotopes[]`, `etymology`, `industrialUses`, `naturalOccurrence`, `hazardLevel`, `discoveryCountry`, `discoveryMethod`, `discoveryStory`, `storyHeadline`, `storyBody`, `discovererPortrait` — Impl / Test
 - **DP-1** — `scripts/fetchers/wikidata.ts` — SPARQL batch query for discovery + etymology + abundance data → `scripts/output/wikidata.json`
 - **DP-2** — `scripts/fetchers/iaea-isotopes.ts` — fetch all nuclides from IAEA LiveChart, keep top 5 per element → `scripts/output/isotopes.json`
 - **DP-3** — `scripts/fetchers/pubchem.ts` — GHS hazard classification per element → `scripts/output/hazards.json`

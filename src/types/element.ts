@@ -33,13 +33,35 @@ export interface ElementImage {
   attribution: string
 }
 
+/**
+ * Relative abundance values (often ppm). Field names align with ingestion pipelines:
+ * external `universeAbundance` → `universe`; `bodyAbundance` → `humanBody`;
+ * `crustAbundance` → `earthCrust`; `seaAbundance` → `oceans`.
+ */
 export interface Abundance {
   universe: number | null
   sun: number | null
+  /** Seawater / hydrosphere — maps from pipeline `seaAbundance` */
   oceans: number | null
+  /** Human body — maps from pipeline `bodyAbundance` */
   humanBody: number | null
+  /** Earth's crust — maps from pipeline `crustAbundance` */
   earthCrust: number | null
   meteorites: number | null
+}
+
+/** GHS-style hazard bucket for UI (maps from PubChem / manual defaults). */
+export type HazardLevel = "safe" | "flammable" | "toxic" | "radioactive" | "corrosive"
+
+/** One nuclide row (IAEA / merged data); optional fields stay null when unknown. */
+export interface Isotope {
+  massNumber: number
+  symbol: string
+  /** Natural abundance (percent), or null if not meaningful for synthetic/rare */
+  abundance: number | null
+  /** `"stable"` or a formatted half-life string (e.g. `1.6×10³ y`) */
+  halfLife: string
+  decayMode: string | null
 }
 
 export interface Element {
@@ -106,4 +128,19 @@ export interface Element {
   mohsHardness?: number | null
   thermalConductivity?: number | null
   abundance?: Abundance | null
+  /** Top natural isotopes (e.g. from IAEA LiveChart merge) */
+  isotopes?: Isotope[] | null
+  /** Plain-language origin of the element name */
+  etymology?: string | null
+  industrialUses?: string[] | null
+  naturalOccurrence?: string | null
+  hazardLevel?: HazardLevel | null
+  discoveryCountry?: string | null
+  discoveryMethod?: string | null
+  /** Longer discovery narrative (Wikidata / editorial) */
+  discoveryStory?: string | null
+  storyHeadline?: string | null
+  storyBody?: string | null
+  /** URL to discoverer portrait image when available */
+  discovererPortrait?: string | null
 }
