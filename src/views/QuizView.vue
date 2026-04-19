@@ -6,8 +6,8 @@ import { useQuizStore } from "@/stores/quizStore"
 import { useQuizLogic } from "@/composables/useQuizLogic"
 import type { Element } from "@/types/element"
 import type { McqQuestion } from "@/types/quiz"
-import { categoryColor, CATEGORY_LABELS } from "@/utils/elementUtils"
 import QuizModeSelector from "@/components/quiz/QuizModeSelector.vue"
+import FlashCard from "@/components/quiz/FlashCard.vue"
 
 const elementStore = useElementStore()
 const quizStore = useQuizStore()
@@ -30,11 +30,9 @@ const {
   playAgain,
 } = useQuizLogic()
 
-const flipped = ref(false)
 const mcqPicked = ref<number | null>(null)
 
 watch(currentQuestion, () => {
-  flipped.value = false
   mcqPicked.value = null
 })
 
@@ -46,24 +44,9 @@ const flashElement = computed((): Element | null =>
   currentQuestion.value?.kind === "flashcard" ? currentQuestion.value.element : null,
 )
 
-const flashCategoryCss = computed(() =>
-  flashElement.value ? categoryColor(flashElement.value.category) : "var(--text-muted)",
-)
-
 const mcqQuestion = computed((): McqQuestion | null =>
   currentQuestion.value?.kind === "mcq" ? currentQuestion.value : null,
 )
-
-function funFactLine(el: Element): string {
-  const fact = el.funFacts[0]
-  if (fact) return fact
-  if (el.summary.length <= 140) return el.summary
-  return `${el.summary.slice(0, 137)}…`
-}
-
-function toggleFlip() {
-  flipped.value = !flipped.value
-}
 
 function onMcqPick(idx: number) {
   const q = mcqQuestion.value
@@ -103,38 +86,14 @@ const mcqShowNext = computed(
         <button type="button" class="ghost-btn" @click="backToMenu()">Exit</button>
       </div>
 
-      <div v-if="flashElement" class="flash-stack">
-        <div
-          class="flash-scene"
-          :class="{ 'is-flipped': flipped }"
-          role="button"
-          tabindex="0"
-          :aria-label="flipped ? 'Show symbol side' : 'Show answer side'"
-          @click="toggleFlip"
-          @keydown.enter.prevent="toggleFlip"
-          @keydown.space.prevent="toggleFlip"
-        >
-          <div class="flash-face flash-front">
-            <span class="flash-z">{{ flashElement.atomicNumber }}</span>
-            <span class="flash-sym">{{ flashElement.symbol }}</span>
-            <span class="flash-hint">Click to flip</span>
-          </div>
-          <div class="flash-face flash-back">
-            <span class="flash-name">{{ flashElement.name }}</span>
-            <span class="flash-cat">{{ CATEGORY_LABELS[flashElement.category] }}</span>
-            <p class="flash-fact">{{ funFactLine(flashElement) }}</p>
-          </div>
-        </div>
-        <div v-if="flipped" class="flash-actions">
-          <button type="button" class="good-btn" @click.stop="recordFlashcardAnswer(true)">
-            Correct
-          </button>
-          <button type="button" class="bad-btn" @click.stop="recordFlashcardAnswer(false)">
-            Incorrect
-          </button>
-          <button type="button" class="ghost-btn" @click.stop="skipFlashcard()">Skip</button>
-        </div>
-      </div>
+      <FlashCard
+        v-if="flashElement"
+        :key="flashElement.atomicNumber"
+        :element="flashElement"
+        @correct="recordFlashcardAnswer(true)"
+        @incorrect="recordFlashcardAnswer(false)"
+        @skip="skipFlashcard()"
+      />
 
       <div v-else-if="mcqQuestion" class="mcq-stack">
         <p class="mcq-prompt">{{ mcqQuestion.prompt }}</p>
@@ -261,112 +220,6 @@ const mcqShowNext = computed(
   color: var(--accent-cyan);
 }
 
-.flash-stack {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
-}
-
-.flash-scene {
-  position: relative;
-  width: min(100%, 320px);
-  aspect-ratio: 1;
-  perspective: 900px;
-  cursor: pointer;
-  border: none;
-  padding: 0;
-  background: transparent;
-}
-
-.flash-scene:focus-visible {
-  outline: 2px solid var(--accent-cyan);
-  outline-offset: 4px;
-  border-radius: 4px;
-}
-
-.flash-face {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 0.35rem;
-  padding: 1.25rem;
-  border-radius: 4px;
-  border: 1px solid var(--bg-border);
-  backface-visibility: hidden;
-  transition: transform 300ms ease;
-}
-
-.flash-front {
-  background: color-mix(in srgb, v-bind(flashCategoryCss) 18%, var(--bg-surface));
-  transform: rotateY(0deg);
-}
-
-.flash-back {
-  background: var(--bg-elevated);
-  transform: rotateY(180deg);
-}
-
-.flash-scene.is-flipped .flash-front {
-  transform: rotateY(180deg);
-}
-
-.flash-scene.is-flipped .flash-back {
-  transform: rotateY(360deg);
-}
-
-.flash-z {
-  font-family: var(--font-mono);
-  font-size: var(--text-sm);
-  color: var(--text-muted);
-}
-
-.flash-sym {
-  font-family: var(--font-mono);
-  font-size: 2.25rem;
-  font-weight: 700;
-  color: var(--text-primary);
-}
-
-.flash-hint {
-  font-size: var(--text-xs);
-  color: var(--text-muted);
-  margin-top: 0.5rem;
-}
-
-.flash-name {
-  font-size: var(--text-xl);
-  font-weight: 700;
-  color: var(--text-primary);
-}
-
-.flash-cat {
-  font-size: var(--text-xs);
-  color: var(--accent-cyan);
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-}
-
-.flash-fact {
-  font-size: var(--text-sm);
-  color: var(--text-secondary);
-  text-align: center;
-  line-height: 1.5;
-  margin: 0.5rem 0 0;
-}
-
-.flash-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  justify-content: center;
-}
-
-.good-btn,
-.bad-btn,
 .primary-btn {
   font-size: var(--text-sm);
   font-weight: 600;
@@ -374,21 +227,6 @@ const mcqShowNext = computed(
   border-radius: 2px;
   cursor: pointer;
   border: 1px solid transparent;
-}
-
-.good-btn {
-  background: color-mix(in srgb, var(--color-positive) 22%, var(--bg-surface));
-  border-color: var(--color-positive);
-  color: var(--text-primary);
-}
-
-.bad-btn {
-  background: color-mix(in srgb, var(--color-negative) 18%, var(--bg-surface));
-  border-color: var(--color-negative);
-  color: var(--text-primary);
-}
-
-.primary-btn {
   background: color-mix(in srgb, var(--accent-cyan) 16%, var(--bg-surface));
   border-color: var(--accent-cyan);
   color: var(--text-primary);
