@@ -6,6 +6,7 @@ import { useFocusTrap } from "@vueuse/integrations/useFocusTrap"
 import { useEventListener } from "@vueuse/core"
 import { X, ChevronLeft, ChevronRight } from "lucide-vue-next"
 import { useElementStore } from "@/stores/elementStore"
+import BookmarkButton from "@/components/BookmarkButton.vue"
 import ElementHeader from "@/components/detail/ElementHeader.vue"
 import ElementPhoto from "@/components/detail/ElementPhoto.vue"
 import PropertiesGrid from "@/components/detail/PropertiesGrid.vue"
@@ -164,13 +165,20 @@ onUnmounted(() => {
                 <ChevronRight :size="15" />
               </button>
             </div>
-            <button
-              class="detail-close-btn"
-              aria-label="Close element detail"
-              @click="closePanel"
-            >
-              <X :size="15" />
-            </button>
+            <div class="detail-toolbar-actions">
+              <BookmarkButton
+                v-if="selectedElement"
+                class="detail-bookmark"
+                :atomic-number="selectedElement.atomicNumber"
+              />
+              <button
+                class="detail-close-btn"
+                aria-label="Close element detail"
+                @click="closePanel"
+              >
+                <X :size="15" />
+              </button>
+            </div>
           </div>
 
           <!-- Scrollable sections -->
@@ -269,8 +277,20 @@ onUnmounted(() => {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 0.5rem;
   padding: 0.625rem 1rem;
   border-bottom: 1px solid var(--bg-border);
+  flex-shrink: 0;
+}
+
+.detail-toolbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+  flex-shrink: 0;
+}
+
+.detail-bookmark {
   flex-shrink: 0;
 }
 
@@ -374,9 +394,6 @@ onUnmounted(() => {
   padding: 1.25rem 1.5rem 2rem;
 }
 
-.detail-section {
-  /* intentionally minimal */
-}
 
 .section-title {
   font-family: var(--font-mono);

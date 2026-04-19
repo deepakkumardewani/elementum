@@ -5,6 +5,8 @@ import { storeToRefs } from "pinia";
 import { useElementStore } from "@/stores/elementStore";
 import PeriodicGrid from "@/components/PeriodicGrid.vue";
 import FilterBar from "@/components/FilterBar.vue";
+import ColorModeSelector from "@/components/table/ColorModeSelector.vue";
+import ColorLegend from "@/components/table/ColorLegend.vue";
 import DetailModal from "@/components/detail/DetailModal.vue";
 import { useElementFilter } from "@/composables/useElementFilter"
 import ElementHoverCard from "@/components/ElementHoverCard.vue";
@@ -34,18 +36,30 @@ const stopWatch = watch(
     // clearProps:"opacity,y" lets CSS classes (.is-dimmed) take back control
     // after the animation — without it, inline opacity:1 blocks filter dimming.
     await nextTick();
-    const tiles = rootEl.value!.querySelectorAll<HTMLElement>(".element-tile");
-    // Respect prefers-reduced-motion — CSS handles transitions but GSAP runs in JS.
-    // When reduced motion is preferred, skip the stagger entirely so tiles are
-    // immediately visible without any animation delay.
     const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     if (prefersReducedMotion) return;
+    // Sort by visual top→bottom, left→right so the stagger follows the eye's
+    // natural reading path instead of DOM/atomic-number order. Without this,
+    // f-block tiles (appended last in the DOM) don't animate until after ALL
+    // main-table tiles finish, producing a visible lag before the bottom rows appear.
+    const tiles = Array.from(
+      rootEl.value!.querySelectorAll<HTMLElement>(".element-tile")
+    ).sort((a, b) => {
+      const ra = a.getBoundingClientRect();
+      const rb = b.getBoundingClientRect();
+      return ra.top !== rb.top ? ra.top - rb.top : ra.left - rb.left;
+    });
+    // gsap.set runs synchronously here — we're still in the microtask queue
+    // after nextTick, so the browser hasn't painted yet. This hides all tiles
+    // before the first paint, preventing the flash of visible content that
+    // gsap.from() causes (it sets initial props one rAF too late).
+    gsap.set(tiles, { opacity: 0, y: 10 });
     ctx = gsap.context(() => {
-      gsap.from(tiles, {
-        opacity: 0,
-        y: 10,
-        stagger: 0.008,
-        duration: 0.5,
+      gsap.to(tiles, {
+        opacity: 1,
+        y: 0,
+        stagger: 0.006,
+        duration: 0.45,
         ease: "power2.out",
         clearProps: "opacity,y",
       });
@@ -68,8 +82,12 @@ onUnmounted(() => {
     aria-label="Periodic table, scrollable"
   >
     <div class="table-view-inner">
+      <div class="table-controls">
+        <ColorModeSelector />
+      </div>
       <FilterBar />
       <PeriodicGrid />
+      <ColorLegend />
     </div>
     <!-- v-show preserves GSAP state; placed at view root to avoid CLS -->
     <DetailModal />
@@ -92,5 +110,12 @@ onUnmounted(() => {
   flex-direction: column;
   gap: 12px;
   min-width: 820px;
+}
+
+.table-controls {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 </style>

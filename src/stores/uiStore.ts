@@ -1,6 +1,6 @@
 import { defineStore } from "pinia"
 import { ref } from "vue"
-import type { TrendProperty } from "@/types/element"
+import type { TableColorMode, TrendProperty } from "@/types/element"
 
 /** Reads the saved theme from localStorage, defaulting to dark */
 function getStoredTheme(): boolean {
@@ -24,6 +24,8 @@ function applyTheme(dark: boolean) {
 
 export const useUiStore = defineStore("ui", () => {
   const activeTrendProperty = ref<TrendProperty>("atomicRadius")
+  /** Periodic table tile fill: category colors vs property gradient */
+  const colorMode = ref<TableColorMode>("category")
   const sidebarOpen = ref(false)
 
   // Theme — true = dark (default), false = light
@@ -33,6 +35,10 @@ export const useUiStore = defineStore("ui", () => {
 
   function setTrendProperty(prop: TrendProperty) {
     activeTrendProperty.value = prop
+  }
+
+  function setColorMode(mode: TableColorMode) {
+    colorMode.value = mode
   }
 
   function toggleSidebar() {
@@ -46,9 +52,11 @@ export const useUiStore = defineStore("ui", () => {
 
   return {
     activeTrendProperty,
+    colorMode,
     sidebarOpen,
     isDark,
     setTrendProperty,
+    setColorMode,
     toggleSidebar,
     toggleTheme,
   }

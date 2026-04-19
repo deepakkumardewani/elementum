@@ -2,16 +2,34 @@
 import { computed, ref } from "vue"
 import { storeToRefs } from "pinia"
 import { useElementStore } from "@/stores/elementStore"
+import { useUiStore } from "@/stores/uiStore"
 import type { Element } from "@/types/element"
 import { categoryColor } from "@/utils/elementUtils"
+import { getPropertyColor } from "@/composables/usePropertyColor"
 import { useTooltip } from "@/composables/useTooltip"
 import { Z } from "@/constants/zIndex"
 
-const props = defineProps<{ element: Element }>()
-const emit = defineEmits<{ click: [element: Element] }>()
+const props = withDefaults(
+  defineProps<{
+    element: Element
+    /** Roving tabindex for keyboard grid navigation */
+    tileTabindex?: number
+  }>(),
+  {
+    tileTabindex: 0,
+  },
+)
+
+const emit = defineEmits<{
+  click: [element: Element]
+  /** Roving focus sync when tile receives focus (click or programatic) */
+  focusTile: []
+}>()
 
 const elementStore = useElementStore()
+const uiStore = useUiStore()
 const { hasActiveFilter, highlightedElements, selectedElement } = storeToRefs(elementStore)
+const { colorMode } = storeToRefs(uiStore)
 
 // Derived highlight/dim state — used in v-memo key to control re-render
 const isHighlighted = computed(
@@ -25,7 +43,19 @@ const isSelected = computed(
   () => selectedElement.value?.atomicNumber === props.element.atomicNumber,
 )
 
-const color = computed(() => categoryColor(props.element.category))
+const isCategoryMode = computed(() => colorMode.value === "category")
+
+const accentColor = computed(() =>
+  isCategoryMode.value
+    ? categoryColor(props.element.category)
+    : getPropertyColor(props.element, colorMode.value),
+)
+
+const tileBackground = computed(() => {
+  if (isCategoryMode.value) return undefined
+  const hex = accentColor.value
+  return `color-mix(in srgb, ${hex} 38%, var(--bg-surface))`
+})
 
 const { showTooltip, hideTooltip } = useTooltip()
 const tileEl = ref<HTMLElement | null>(null)
@@ -33,6 +63,10 @@ const tileEl = ref<HTMLElement | null>(null)
 function handleClick() {
   elementStore.selectElement(props.element)
   emit("click", props.element)
+}
+
+function onTileFocus() {
+  emit("focusTile")
 }
 
 function handleMouseenter() {
@@ -46,15 +80,32 @@ function handleMouseleave() {
 </script>
 
 <template>
-  <button
+   <button
     ref="tileEl"
-    v-memo="[element.atomicNumber, isHighlighted, isDimmed, isSelected]"
+    v-memo="[
+      element.atomicNumber,
+      isHighlighted,
+      isDimmed,
+      isSelected,
+      colorMode,
+      isCategoryMode ? element.category : accentColor,
+      tileTabindex,
+    ]"
     class="element-tile"
-    :class="{ 'is-dimmed': isDimmed, 'is-selected': isSelected }"
-    :style="{ '--category-color': color }"
+    :class="{
+      'is-dimmed': isDimmed,
+      'is-selected': isSelected,
+      'is-trend-mode': !isCategoryMode,
+    }"
+    :style="{
+      '--category-color': accentColor,
+      ...(tileBackground ? { backgroundColor: tileBackground } : {}),
+    }"
     :data-atomic-number="element.atomicNumber"
+    :tabindex="tileTabindex"
     :aria-label="`${element.name}, atomic number ${element.atomicNumber}, ${element.category}`"
     @click="handleClick"
+    @focus="onTileFocus"
     @mouseenter="handleMouseenter"
     @mouseleave="handleMouseleave"
   >
@@ -93,7 +144,8 @@ function handleMouseleave() {
     transform 150ms cubic-bezier(0.25, 1, 0.5, 1),
     box-shadow 150ms cubic-bezier(0.25, 1, 0.5, 1),
     opacity 200ms ease,
-    border-color 150ms ease;
+    border-color 150ms ease,
+    background-color 280ms ease;
 }
 
 .element-tile:hover {
@@ -104,9 +156,14 @@ function handleMouseleave() {
   background-color: var(--bg-elevated);
 }
 
+/* Keyboard / focus-visible only — mouse clicks do not match :focus-visible, so no stuck ring after modal */
 .element-tile:focus-visible {
   outline: 2px solid var(--accent-cyan);
   outline-offset: 2px;
+  box-shadow:
+    0 0 0 2px var(--accent-cyan),
+    0 0 14px 2px color-mix(in srgb, var(--accent-cyan) 35%, transparent);
+  border-color: var(--accent-cyan);
   z-index: v-bind("Z.elevated");
 }
 
@@ -120,6 +177,10 @@ function handleMouseleave() {
   animation: pulseGlow 2s ease-in-out infinite;
   border-color: var(--category-color);
   z-index: v-bind("Z.elevated");
+}
+
+.element-tile.is-trend-mode:hover {
+  background-color: color-mix(in srgb, var(--category-color) 48%, var(--bg-surface)) !important;
 }
 
 /* ── Inner layout ───────────────────────────────────────────── */

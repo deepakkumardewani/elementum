@@ -24,6 +24,9 @@ export type TrendProperty =
   | "meltingPoint"
   | "boilingPoint"
 
+/** Main-table tile coloring: category palette or a numeric trend gradient */
+export type TableColorMode = TrendProperty | "category"
+
 export interface ElementImage {
   title: string
   url: string

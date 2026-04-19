@@ -1,11 +1,24 @@
 <script setup lang="ts">
-import { computed } from "vue"
+import { computed, ref } from "vue"
 import { storeToRefs } from "pinia"
 import { useElementStore } from "@/stores/elementStore"
 import ElementTile from "@/components/ElementTile.vue"
+import BookmarkButton from "@/components/BookmarkButton.vue"
+import { useKeyboardNav } from "@/composables/useKeyboardNav"
+import { Z } from "@/constants/zIndex"
+
+/** Above `.element-tile` hover/selected z-index (`Z.elevated`) so the star stays clickable */
+const bookmarkOverlayZ = Z.elevated + 1
 
 const elementStore = useElementStore()
 const { elements } = storeToRefs(elementStore)
+
+const gridRoot = ref<HTMLElement | null>(null)
+const { focusedAtomicNumber } = useKeyboardNav(gridRoot)
+
+function syncFocus(atomicNumber: number) {
+  focusedAtomicNumber.value = atomicNumber
+}
 
 // Main-table elements: rows 1–7 only
 const mainElements = computed(() => elements.value.filter((el) => el.ypos <= 7))
@@ -30,16 +43,28 @@ function fBlockStyle(xpos: number, ypos: number) {
 </script>
 
 <template>
-  <div id="periodic-grid" class="periodic-grid-wrapper" role="region" aria-label="Periodic table of elements">
+  <div
+    id="periodic-grid"
+    ref="gridRoot"
+    class="periodic-grid-wrapper"
+    role="region"
+    aria-label="Periodic table of elements"
+  >
     <!-- ── Main table (periods 1–7) ──────────────────────────────── -->
     <div class="main-grid" aria-label="Main periodic table">
-      <!-- Real element tiles -->
-      <ElementTile
+      <div
         v-for="el in mainElements"
         :key="el.atomicNumber"
-        :element="el"
+        class="element-slot"
         :style="gridStyle(el.xpos, el.ypos)"
-      />
+      >
+        <ElementTile
+          :element="el"
+          :tile-tabindex="focusedAtomicNumber === el.atomicNumber ? 0 : -1"
+          @focus-tile="syncFocus(el.atomicNumber)"
+        />
+        <BookmarkButton class="slot-bookmark" compact :atomic-number="el.atomicNumber" />
+      </div>
 
       <!-- Placeholder cells for lanthanide/actinide gap -->
       <div
@@ -63,12 +88,19 @@ function fBlockStyle(xpos: number, ypos: number) {
 
     <!-- ── F-block rows (lanthanides + actinides) ────────────────── -->
     <div class="fblock-grid" aria-label="Lanthanide and actinide elements">
-      <ElementTile
+      <div
         v-for="el in fBlockElements"
         :key="el.atomicNumber"
-        :element="el"
+        class="element-slot"
         :style="fBlockStyle(el.xpos, el.ypos)"
-      />
+      >
+        <ElementTile
+          :element="el"
+          :tile-tabindex="focusedAtomicNumber === el.atomicNumber ? 0 : -1"
+          @focus-tile="syncFocus(el.atomicNumber)"
+        />
+        <BookmarkButton class="slot-bookmark" compact :atomic-number="el.atomicNumber" />
+      </div>
     </div>
   </div>
 </template>
@@ -79,6 +111,29 @@ function fBlockStyle(xpos: number, ypos: number) {
   flex-direction: column;
   gap: 6px;
   width: 100%;
+}
+
+.element-slot {
+  position: relative;
+  min-width: 0;
+}
+
+.slot-bookmark {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  z-index: v-bind("bookmarkOverlayZ");
+  opacity: 0;
+  /* Invisible control must not steal clicks from the tile */
+  pointer-events: none;
+  transition: opacity 150ms ease;
+}
+
+.element-slot:hover .slot-bookmark,
+.element-slot:focus-within .slot-bookmark,
+.element-slot:has(.bookmark-btn.is-filled) .slot-bookmark {
+  opacity: 1;
+  pointer-events: auto;
 }
 
 /* ── Main grid: 18 columns × 7 rows ───────────────────────────── */
