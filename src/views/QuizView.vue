@@ -8,6 +8,9 @@ import type { Element } from "@/types/element"
 import type { McqQuestion } from "@/types/quiz"
 import QuizModeSelector from "@/components/quiz/QuizModeSelector.vue"
 import FlashCard from "@/components/quiz/FlashCard.vue"
+import QuizScoreboard from "@/components/quiz/QuizScoreboard.vue"
+import MultipleChoiceCard from "@/components/quiz/MultipleChoiceCard.vue"
+import QuizResults from "@/components/quiz/QuizResults.vue"
 
 const elementStore = useElementStore()
 const quizStore = useQuizStore()
@@ -55,14 +58,7 @@ function onMcqPick(idx: number) {
   recordMcqAnswer(q, idx)
 }
 
-function onMcqNext() {
-  nextMcqAfterReveal()
-}
-
-const mcqShowNext = computed(
-  () =>
-    mode.value === "multipleChoice" && mcqPicked.value !== null && mcqQuestion.value !== null,
-)
+const resultsBest = computed(() => (mode.value ? bestScores.value[mode.value] : 0))
 </script>
 
 <template>
@@ -78,13 +74,14 @@ const mcqShowNext = computed(
       <QuizModeSelector @select="startQuiz" />
     </section>
 
-    <section v-else-if="phase === 'playing'" class="quiz-panel playing">
-      <div class="session-bar">
-        <span class="session-meta">{{ progressLabel }}</span>
-        <span class="session-score">Score {{ score }}</span>
-        <span v-if="mode !== 'challenge'" class="session-streak">Streak {{ streak }}</span>
-        <button type="button" class="ghost-btn" @click="backToMenu()">Exit</button>
-      </div>
+    <section v-else-if="phase === 'playing' && mode" class="quiz-panel playing">
+      <QuizScoreboard
+        :progress-label="progressLabel"
+        :score="score"
+        :streak="streak"
+        :mode="mode"
+        @exit="backToMenu"
+      />
 
       <FlashCard
         v-if="flashElement"
@@ -95,44 +92,25 @@ const mcqShowNext = computed(
         @skip="skipFlashcard()"
       />
 
-      <div v-else-if="mcqQuestion" class="mcq-stack">
-        <p class="mcq-prompt">{{ mcqQuestion.prompt }}</p>
-        <div class="mcq-options" role="group" :aria-label="mcqQuestion.prompt">
-          <button
-            v-for="(opt, idx) in mcqQuestion.options"
-            :key="opt.atomicNumber"
-            type="button"
-            class="mcq-opt"
-            :class="{
-              'is-picked': mcqPicked === idx,
-              'is-correct': mcqPicked !== null && idx === mcqQuestion.correctIndex,
-              'is-wrong':
-                mcqPicked !== null && idx === mcqPicked && idx !== mcqQuestion.correctIndex,
-            }"
-            :disabled="mcqPicked !== null && mode === 'challenge'"
-            @click="onMcqPick(idx)"
-          >
-            <span class="mcq-opt-symbol">{{ opt.symbol }}</span>
-            <span class="mcq-opt-name">{{ opt.name }}</span>
-          </button>
-        </div>
-        <p v-if="mcqPicked !== null" class="mcq-explain">{{ mcqQuestion.explanation }}</p>
-        <button v-if="mcqShowNext" type="button" class="primary-btn" @click="onMcqNext">
-          Next
-        </button>
-      </div>
+      <MultipleChoiceCard
+        v-else-if="mcqQuestion"
+        :question="mcqQuestion"
+        :picked-index="mcqPicked"
+        :mode="mode"
+        @pick="onMcqPick"
+        @next="nextMcqAfterReveal"
+      />
     </section>
 
-    <section v-else class="quiz-panel results">
-      <h2 class="results-title">Round complete</h2>
-      <p class="results-line">Score: {{ score }}</p>
-      <p class="results-line">Best streak: {{ maxStreak }}</p>
-      <p v-if="mode" class="results-line">Best for this mode: {{ bestScores[mode] }}</p>
-      <div class="results-actions">
-        <button type="button" class="primary-btn" @click="playAgain()">Play again</button>
-        <button type="button" class="ghost-btn" @click="backToMenu()">Change mode</button>
-      </div>
-    </section>
+    <QuizResults
+      v-else
+      :score="score"
+      :max-streak="maxStreak"
+      :mode="mode"
+      :best-for-mode="resultsBest"
+      @play-again="playAgain"
+      @change-mode="backToMenu"
+    />
   </main>
 </template>
 
@@ -180,149 +158,5 @@ const mcqShowNext = computed(
 
 .quiz-panel.playing {
   gap: 1.25rem;
-}
-
-.session-bar {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 0.75rem 1rem;
-  padding: 0.65rem 0.85rem;
-  border: 1px solid var(--bg-border);
-  border-radius: 4px;
-  background: var(--bg-surface);
-  font-family: var(--font-mono);
-  font-size: var(--text-xs);
-  color: var(--text-secondary);
-}
-
-.session-score,
-.session-streak {
-  color: var(--accent-cyan);
-}
-
-.ghost-btn {
-  margin-left: auto;
-  border: 1px solid var(--bg-border);
-  background: transparent;
-  color: var(--text-secondary);
-  font-size: var(--text-xs);
-  padding: 0.35rem 0.65rem;
-  border-radius: 2px;
-  cursor: pointer;
-  transition:
-    border-color 150ms ease,
-    color 150ms ease;
-}
-
-.ghost-btn:hover {
-  border-color: var(--accent-cyan);
-  color: var(--accent-cyan);
-}
-
-.primary-btn {
-  font-size: var(--text-sm);
-  font-weight: 600;
-  padding: 0.5rem 1rem;
-  border-radius: 2px;
-  cursor: pointer;
-  border: 1px solid transparent;
-  background: color-mix(in srgb, var(--accent-cyan) 16%, var(--bg-surface));
-  border-color: var(--accent-cyan);
-  color: var(--text-primary);
-}
-
-.mcq-stack {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  max-width: 560px;
-  margin: 0 auto;
-  width: 100%;
-}
-
-.mcq-prompt {
-  font-size: var(--text-lg);
-  font-weight: 600;
-  color: var(--text-primary);
-  margin: 0;
-  line-height: 1.4;
-}
-
-.mcq-options {
-  display: grid;
-  gap: 0.5rem;
-}
-
-.mcq-opt {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  padding: 0.65rem 0.85rem;
-  border: 1px solid var(--bg-border);
-  border-radius: 4px;
-  background: var(--bg-surface);
-  color: var(--text-primary);
-  cursor: pointer;
-  text-align: left;
-  transition:
-    border-color 120ms ease,
-    background-color 120ms ease;
-}
-
-.mcq-opt:hover:not(:disabled) {
-  border-color: var(--accent-cyan);
-}
-
-.mcq-opt:disabled {
-  cursor: default;
-  opacity: 0.85;
-}
-
-.mcq-opt.is-correct {
-  border-color: var(--color-positive);
-  background: color-mix(in srgb, var(--color-positive) 12%, var(--bg-surface));
-}
-
-.mcq-opt.is-wrong {
-  border-color: var(--color-negative);
-  background: color-mix(in srgb, var(--color-negative) 10%, var(--bg-surface));
-}
-
-.mcq-opt-symbol {
-  font-family: var(--font-mono);
-  font-weight: 700;
-  color: var(--accent-cyan);
-  min-width: 2.5rem;
-}
-
-.mcq-opt-name {
-  font-size: var(--text-sm);
-}
-
-.mcq-explain {
-  font-size: var(--text-sm);
-  color: var(--text-secondary);
-  margin: 0;
-  line-height: 1.5;
-}
-
-.results-title {
-  margin: 0 0 0.5rem;
-  font-size: var(--text-xl);
-  color: var(--text-primary);
-}
-
-.results-line {
-  margin: 0.25rem 0;
-  font-size: var(--text-sm);
-  color: var(--text-secondary);
-}
-
-.results-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-top: 1rem;
 }
 </style>
