@@ -28,15 +28,15 @@ const emit = defineEmits<{
 
 const elementStore = useElementStore()
 const uiStore = useUiStore()
-const { hasActiveFilter, highlightedElements, selectedElement } = storeToRefs(elementStore)
+const { hasActiveFilter, displayHighlightSet, selectedElement } = storeToRefs(elementStore)
 const { colorMode } = storeToRefs(uiStore)
 
 // Derived highlight/dim state — used in v-memo key to control re-render
 const isHighlighted = computed(
-  () => !hasActiveFilter.value || highlightedElements.value.has(props.element.atomicNumber),
+  () => !hasActiveFilter.value || displayHighlightSet.value.has(props.element.atomicNumber),
 )
 const isDimmed = computed(
-  () => hasActiveFilter.value && !highlightedElements.value.has(props.element.atomicNumber),
+  () => hasActiveFilter.value && !displayHighlightSet.value.has(props.element.atomicNumber),
 )
 // Active selected state drives the pulse glow animation
 const isSelected = computed(

@@ -13,6 +13,8 @@ export const useElementStore = defineStore("element", () => {
   const detailPanelOpen = ref(false);
   const searchQuery = ref("");
   const highlightedElements = ref<Set<number>>(new Set());
+  /** When non-empty, periodic table dims all tiles except these (tools / molar mass). */
+  const toolHighlightElements = ref<Set<number>>(new Set());
 
   const compareElements = ref<[Element | null, Element | null]>([null, null]);
 
@@ -24,11 +26,18 @@ export const useElementStore = defineStore("element", () => {
   // ── Derived helpers ────────────────────────────────────────────
   const hasActiveFilter = computed(
     () =>
+      toolHighlightElements.value.size > 0 ||
       searchQuery.value.trim() !== "" ||
       activeCategory.value !== null ||
       activePeriod.value !== null ||
       activeGroup.value !== null ||
       activeBlock.value !== null,
+  );
+
+  const displayHighlightSet = computed(() =>
+    toolHighlightElements.value.size > 0
+      ? toolHighlightElements.value
+      : highlightedElements.value,
   );
 
   // ── Getters ────────────────────────────────────────────────────
@@ -41,12 +50,12 @@ export const useElementStore = defineStore("element", () => {
 
   function isHighlighted(atomicNumber: number): boolean {
     if (!hasActiveFilter.value) return true;
-    return highlightedElements.value.has(atomicNumber);
+    return displayHighlightSet.value.has(atomicNumber);
   }
 
   function isDimmed(atomicNumber: number): boolean {
     if (!hasActiveFilter.value) return false;
-    return !highlightedElements.value.has(atomicNumber);
+    return !displayHighlightSet.value.has(atomicNumber);
   }
 
   // ── Internal: recompute highlighted set from all active filters ─
@@ -141,6 +150,14 @@ export const useElementStore = defineStore("element", () => {
     highlightedElements.value = new Set();
   }
 
+  function setToolHighlight(atomicNumbers: Iterable<number>) {
+    toolHighlightElements.value = new Set(atomicNumbers);
+  }
+
+  function clearToolHighlight() {
+    toolHighlightElements.value = new Set();
+  }
+
   function setCompareElement(slotIndex: 0 | 1, element: Element | null) {
     const next: [Element | null, Element | null] = [
       compareElements.value[0],
@@ -161,6 +178,8 @@ export const useElementStore = defineStore("element", () => {
     detailPanelOpen,
     searchQuery,
     highlightedElements,
+    toolHighlightElements,
+    displayHighlightSet,
     compareElements,
     activeCategory,
     activePeriod,
@@ -181,6 +200,8 @@ export const useElementStore = defineStore("element", () => {
     setActiveGroup,
     setActiveBlock,
     clearAllFilters,
+    setToolHighlight,
+    clearToolHighlight,
     setCompareElement,
     clearCompare,
   };
