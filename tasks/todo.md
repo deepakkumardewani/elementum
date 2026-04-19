@@ -117,9 +117,9 @@
 
 ### Epic D — Chemistry Tools
 
-- **D-1** — Create `src/utils/formulaParser.ts` (parse H2O, Fe2(SO4)3, nested parens); build `src/components/tools/MolarMassCalculator.vue`
-- **D-2** — Create `src/utils/bondCalculator.ts` (EN diff → bond type); build `src/components/tools/BondTypePredictor.vue` + `CompoundPredictor.vue`
-- **D-3** — Build `src/views/ToolsView.vue` (3 tabs); add `/tools` route + nav link
+- [x] **D-1** — Create `src/utils/formulaParser.ts` (parse H2O, Fe2(SO4)3, nested parens); build `src/components/tools/MolarMassCalculator.vue` — Impl / Test
+- [x] **D-2** — Create `src/utils/bondCalculator.ts` (EN diff → bond type); build `src/components/tools/BondTypePredictor.vue` + `CompoundPredictor.vue` — Impl / Test
+- [x] **D-3** — Build `src/views/ToolsView.vue` (3 tabs); add `/tools` route + nav link — Impl / Test
 
 ### ✅ Checkpoint: Epic D
 
