@@ -101,8 +101,8 @@
 
 ### Epic I — Advanced Search
 
-- **I-1** — Extend `src/composables/useElementSearch.ts` to parse structured tokens: `period:N`, `group:N`, `EN > N`, `mp > N`, category shorthands (`metal`, `noble`, `halogen`)
-- **I-2** — Add active filter chips to `src/components/SearchBar.vue`; each chip has × dismiss; add ? syntax help popover
+- [x] **I-1** — Extend `src/composables/useElementSearch.ts` to parse structured tokens: `period:N`, `group:N`, `EN > N`, `mp > N`, category shorthands (`metal`, `noble`, `halogen`) — Impl / Test
+- [x] **I-2** — Add active filter chips to `src/components/SearchBar.vue`; each chip has × dismiss; add ? syntax help popover — Impl / Test
 
 ### ✅ Checkpoint: Phase 2 complete
 
