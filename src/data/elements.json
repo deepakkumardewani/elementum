@@ -80,7 +80,55 @@
     "colour": "colorless",
     "electricalType": "Insulator",
     "valenceElectrons": 1,
-    "crystalStructure": "Hexagonal"
+    "crystalStructure": "Hexagonal",
+    "etymology": "Named after water",
+    "discoveryCountry": "United Kingdom",
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    },
+    "hazardLevel": "flammable",
+    "isotopes": [
+      {
+        "massNumber": 1,
+        "symbol": "1H",
+        "abundance": 99.9855,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 2,
+        "symbol": "2H",
+        "abundance": 0.0145,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 7,
+        "symbol": "7H",
+        "abundance": null,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 6,
+        "symbol": "6H",
+        "abundance": null,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 5,
+        "symbol": "5H",
+        "abundance": null,
+        "halfLife": "5.3 MeV",
+        "decayMode": "2N"
+      }
+    ]
   },
   {
     "name": "Helium",
@@ -115,7 +163,7 @@
     "boilingPoint": 4.222,
     "molarHeat": null,
     "oxidationStates": null,
-    "discoverer": "Pierre Janssen",
+    "discoverer": "William Ramsay",
     "namedBy": null,
     "yearDiscovered": 1868,
     "cpkHex": "d9ffff",
@@ -170,7 +218,55 @@
     "vanDerWaalsRadius": -272.05,
     "electricalType": "Insulator",
     "valenceElectrons": 2,
-    "crystalStructure": "Face-centered cubic"
+    "crystalStructure": "Face-centered cubic",
+    "etymology": "Named after Helios",
+    "discoveryCountry": "United Kingdom of Great Britain and Ireland",
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    },
+    "hazardLevel": "safe",
+    "isotopes": [
+      {
+        "massNumber": 4,
+        "symbol": "4He",
+        "abundance": 99.9998,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 3,
+        "symbol": "3He",
+        "abundance": 0.0002,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 10,
+        "symbol": "10He",
+        "abundance": null,
+        "halfLife": "300 keV",
+        "decayMode": "N"
+      },
+      {
+        "massNumber": 9,
+        "symbol": "9He",
+        "abundance": null,
+        "halfLife": "unknown",
+        "decayMode": "N"
+      },
+      {
+        "massNumber": 8,
+        "symbol": "8He",
+        "abundance": null,
+        "halfLife": "119.1 ms",
+        "decayMode": "B-"
+      }
+    ]
   },
   {
     "name": "Lithium",
@@ -252,7 +348,55 @@
     "electricalType": "Conductor",
     "valenceElectrons": 1,
     "crystalStructure": "Body-centered cubic",
-    "mohsHardness": 0.6
+    "mohsHardness": 0.6,
+    "etymology": "Named after stone",
+    "discoveryCountry": "Sweden",
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    },
+    "hazardLevel": "corrosive",
+    "isotopes": [
+      {
+        "massNumber": 7,
+        "symbol": "7Li",
+        "abundance": 95.15,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 6,
+        "symbol": "6Li",
+        "abundance": 4.85,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 12,
+        "symbol": "12Li",
+        "abundance": null,
+        "halfLife": "unknown",
+        "decayMode": "N"
+      },
+      {
+        "massNumber": 11,
+        "symbol": "11Li",
+        "abundance": null,
+        "halfLife": "8.75 ms",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 10,
+        "symbol": "10Li",
+        "abundance": null,
+        "halfLife": "unknown",
+        "decayMode": "N"
+      }
+    ]
   },
   {
     "name": "Beryllium",
@@ -290,7 +434,7 @@
     "boilingPoint": 2742,
     "molarHeat": 16.443,
     "oxidationStates": "+2",
-    "discoverer": "Louis Nicolas Vauquelin",
+    "discoverer": "Antoine Bussy",
     "namedBy": null,
     "yearDiscovered": 1798,
     "cpkHex": "c2ff00",
@@ -330,7 +474,55 @@
     "electricalType": "Conductor",
     "valenceElectrons": 2,
     "crystalStructure": "Hexagonal close-packed",
-    "mohsHardness": 5.5
+    "mohsHardness": 5.5,
+    "etymology": "Named after beryl",
+    "discoveryCountry": "France",
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    },
+    "hazardLevel": "toxic",
+    "isotopes": [
+      {
+        "massNumber": 9,
+        "symbol": "9Be",
+        "abundance": 100,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 16,
+        "symbol": "16Be",
+        "abundance": null,
+        "halfLife": "0.8 MeV",
+        "decayMode": "N"
+      },
+      {
+        "massNumber": 15,
+        "symbol": "15Be",
+        "abundance": null,
+        "halfLife": "0.58 MeV",
+        "decayMode": "N"
+      },
+      {
+        "massNumber": 14,
+        "symbol": "14Be",
+        "abundance": null,
+        "halfLife": "4.35 ms",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 13,
+        "symbol": "13Be",
+        "abundance": null,
+        "halfLife": "2.7E-21 s",
+        "decayMode": "N"
+      }
+    ]
   },
   {
     "name": "Boron",
@@ -369,7 +561,7 @@
     "boilingPoint": 4200,
     "molarHeat": 11.087,
     "oxidationStates": "+1, +2, +3",
-    "discoverer": "Joseph Louis Gay-Lussac",
+    "discoverer": "Humphry Davy",
     "namedBy": null,
     "yearDiscovered": 1892,
     "cpkHex": "ffb5b5",
@@ -413,7 +605,55 @@
     "electricalType": "Semiconductor",
     "valenceElectrons": 3,
     "crystalStructure": "Rhombohedral",
-    "mohsHardness": 9.5
+    "mohsHardness": 9.5,
+    "etymology": "Named after borax",
+    "discoveryCountry": "United Kingdom of Great Britain and Ireland",
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    },
+    "hazardLevel": "toxic",
+    "isotopes": [
+      {
+        "massNumber": 11,
+        "symbol": "11B",
+        "abundance": 80.35,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 10,
+        "symbol": "10B",
+        "abundance": 19.65,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 21,
+        "symbol": "21B",
+        "abundance": null,
+        "halfLife": "600 keV",
+        "decayMode": "2N"
+      },
+      {
+        "massNumber": 20,
+        "symbol": "20B",
+        "abundance": null,
+        "halfLife": "500 keV",
+        "decayMode": "N"
+      },
+      {
+        "massNumber": 19,
+        "symbol": "19B",
+        "abundance": null,
+        "halfLife": "2.92 ms",
+        "decayMode": "B-"
+      }
+    ]
   },
   {
     "name": "Carbon",
@@ -453,7 +693,7 @@
     "boilingPoint": null,
     "molarHeat": 8.517,
     "oxidationStates": "-4, -3, -2, -1, 0, +1, +2, +3, +4",
-    "discoverer": "Ancient Egypt",
+    "discoverer": "Antoine Lavoisier",
     "namedBy": null,
     "yearDiscovered": 1789,
     "cpkHex": "909090",
@@ -500,7 +740,55 @@
     "crystalStructure": "hexagonal crystal system",
     "electricalType": "Insulator",
     "valenceElectrons": 4,
-    "mohsHardness": 10
+    "mohsHardness": 10,
+    "etymology": "Named after coal",
+    "discoveryCountry": "France",
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    },
+    "hazardLevel": "toxic",
+    "isotopes": [
+      {
+        "massNumber": 12,
+        "symbol": "12C",
+        "abundance": 98.94,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 13,
+        "symbol": "13C",
+        "abundance": 1.06,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 22,
+        "symbol": "22C",
+        "abundance": null,
+        "halfLife": "6.1 ms",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 20,
+        "symbol": "20C",
+        "abundance": null,
+        "halfLife": "16.3 ms",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 19,
+        "symbol": "19C",
+        "abundance": null,
+        "halfLife": "46.3 ms",
+        "decayMode": "B-"
+      }
+    ]
   },
   {
     "name": "Nitrogen",
@@ -591,7 +879,55 @@
     "latinName": "nitrogenium",
     "electricalType": "Insulator",
     "valenceElectrons": 5,
-    "crystalStructure": "Hexagonal"
+    "crystalStructure": "Hexagonal",
+    "etymology": "Named after life",
+    "discoveryCountry": "United Kingdom",
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    },
+    "hazardLevel": "flammable",
+    "isotopes": [
+      {
+        "massNumber": 14,
+        "symbol": "14N",
+        "abundance": 99.6205,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 15,
+        "symbol": "15N",
+        "abundance": 0.3795,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 24,
+        "symbol": "24N",
+        "abundance": null,
+        "halfLife": "52 ns",
+        "decayMode": "N"
+      },
+      {
+        "massNumber": 23,
+        "symbol": "23N",
+        "abundance": null,
+        "halfLife": "14.1 ms",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 22,
+        "symbol": "22N",
+        "abundance": null,
+        "halfLife": "23 ms",
+        "decayMode": "B-"
+      }
+    ]
   },
   {
     "name": "Oxygen",
@@ -683,7 +1019,55 @@
     "latinName": "oxygenium",
     "electricalType": "Insulator",
     "valenceElectrons": 6,
-    "crystalStructure": "Base-centered monoclinic"
+    "crystalStructure": "Base-centered monoclinic",
+    "etymology": "Named after acid",
+    "discoveryCountry": "Sweden",
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    },
+    "hazardLevel": "flammable",
+    "isotopes": [
+      {
+        "massNumber": 16,
+        "symbol": "16O",
+        "abundance": 99.757,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 18,
+        "symbol": "18O",
+        "abundance": 0.2045,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 17,
+        "symbol": "17O",
+        "abundance": 0.03835,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 26,
+        "symbol": "26O",
+        "abundance": null,
+        "halfLife": "4.5 ps",
+        "decayMode": "2N"
+      },
+      {
+        "massNumber": 25,
+        "symbol": "25O",
+        "abundance": null,
+        "halfLife": "unknown",
+        "decayMode": "N"
+      }
+    ]
   },
   {
     "name": "Fluorine",
@@ -726,7 +1110,7 @@
     "boilingPoint": 85.03,
     "molarHeat": null,
     "oxidationStates": "-1",
-    "discoverer": "André-Marie Ampère",
+    "discoverer": "Henri Moissan",
     "namedBy": "Humphry Davy",
     "yearDiscovered": 1810,
     "cpkHex": "90e050",
@@ -777,7 +1161,55 @@
     "vanDerWaalsRadius": -363,
     "electricalType": "Insulator",
     "valenceElectrons": 7,
-    "crystalStructure": "Base-centered monoclinic"
+    "crystalStructure": "Base-centered monoclinic",
+    "etymology": "Named after hydrofluoric acid",
+    "discoveryCountry": "France",
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    },
+    "hazardLevel": "corrosive",
+    "isotopes": [
+      {
+        "massNumber": 19,
+        "symbol": "19F",
+        "abundance": 100,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 31,
+        "symbol": "31F",
+        "abundance": null,
+        "halfLife": "unknown",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 30,
+        "symbol": "30F",
+        "abundance": null,
+        "halfLife": "unknown",
+        "decayMode": "N"
+      },
+      {
+        "massNumber": 29,
+        "symbol": "29F",
+        "abundance": null,
+        "halfLife": "2.5 ms",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 28,
+        "symbol": "28F",
+        "abundance": null,
+        "halfLife": "0.046 as",
+        "decayMode": "N"
+      }
+    ]
   },
   {
     "name": "Neon",
@@ -821,7 +1253,7 @@
     "boilingPoint": 27.104,
     "molarHeat": null,
     "oxidationStates": null,
-    "discoverer": "Morris Travers",
+    "discoverer": "William Ramsay",
     "namedBy": null,
     "yearDiscovered": 1898,
     "cpkHex": "b3e3f5",
@@ -916,7 +1348,55 @@
     "vanDerWaalsRadius": -248.6,
     "electricalType": "Insulator",
     "valenceElectrons": 8,
-    "crystalStructure": "Face-centered cubic"
+    "crystalStructure": "Face-centered cubic",
+    "etymology": "Named after novelty",
+    "discoveryCountry": "United Kingdom",
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    },
+    "hazardLevel": "safe",
+    "isotopes": [
+      {
+        "massNumber": 20,
+        "symbol": "20Ne",
+        "abundance": 90.48,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 22,
+        "symbol": "22Ne",
+        "abundance": 9.25,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 21,
+        "symbol": "21Ne",
+        "abundance": 0.27,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 34,
+        "symbol": "34Ne",
+        "abundance": null,
+        "halfLife": "60 ns",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 33,
+        "symbol": "33Ne",
+        "abundance": null,
+        "halfLife": "180 ns",
+        "decayMode": "N"
+      }
+    ]
   },
   {
     "name": "Sodium",
@@ -1018,7 +1498,55 @@
     "electricalType": "Conductor",
     "valenceElectrons": 1,
     "crystalStructure": "Body-centered cubic",
-    "mohsHardness": 0.5
+    "mohsHardness": 0.5,
+    "etymology": "Named after headache",
+    "discoveryCountry": "United Kingdom",
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    },
+    "hazardLevel": "corrosive",
+    "isotopes": [
+      {
+        "massNumber": 23,
+        "symbol": "23Na",
+        "abundance": 100,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 37,
+        "symbol": "37Na",
+        "abundance": null,
+        "halfLife": "60 ns",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 36,
+        "symbol": "36Na",
+        "abundance": null,
+        "halfLife": "180 ns",
+        "decayMode": "N"
+      },
+      {
+        "massNumber": 35,
+        "symbol": "35Na",
+        "abundance": null,
+        "halfLife": "1.8 ms",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 34,
+        "symbol": "34Na",
+        "abundance": null,
+        "halfLife": "5.5 ms",
+        "decayMode": "B-"
+      }
+    ]
   },
   {
     "name": "Magnesium",
@@ -1117,7 +1645,55 @@
     "electricalType": "Conductor",
     "valenceElectrons": 2,
     "crystalStructure": "Hexagonal close-packed",
-    "mohsHardness": 2.5
+    "mohsHardness": 2.5,
+    "etymology": "Named after magnesium oxide",
+    "discoveryCountry": "United Kingdom",
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    },
+    "hazardLevel": "flammable",
+    "isotopes": [
+      {
+        "massNumber": 24,
+        "symbol": "24Mg",
+        "abundance": 78.965,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 26,
+        "symbol": "26Mg",
+        "abundance": 11.025,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 25,
+        "symbol": "25Mg",
+        "abundance": 10.011,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 40,
+        "symbol": "40Mg",
+        "abundance": null,
+        "halfLife": "unknown",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 39,
+        "symbol": "39Mg",
+        "abundance": null,
+        "halfLife": "180 ns",
+        "decayMode": "N"
+      }
+    ]
   },
   {
     "name": "Aluminium",
@@ -1165,7 +1741,7 @@
     "boilingPoint": 2743,
     "molarHeat": 24.2,
     "oxidationStates": "+1, +2, +3",
-    "discoverer": null,
+    "discoverer": "Humphry Davy",
     "namedBy": "Humphry Davy",
     "yearDiscovered": 1825,
     "cpkHex": "bfa6a6",
@@ -1206,7 +1782,55 @@
     "electricalType": "Conductor",
     "valenceElectrons": 3,
     "crystalStructure": "Face-centered cubic",
-    "mohsHardness": 2.75
+    "mohsHardness": 2.75,
+    "etymology": "Named after alum",
+    "discoveryCountry": "Kingdom of Denmark",
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    },
+    "hazardLevel": "flammable",
+    "isotopes": [
+      {
+        "massNumber": 27,
+        "symbol": "27Al",
+        "abundance": 100,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 43,
+        "symbol": "43Al",
+        "abundance": null,
+        "halfLife": "170 ns",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 42,
+        "symbol": "42Al",
+        "abundance": null,
+        "halfLife": "170 ns",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 41,
+        "symbol": "41Al",
+        "abundance": null,
+        "halfLife": "unknown",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 40,
+        "symbol": "40Al",
+        "abundance": null,
+        "halfLife": "260 ns",
+        "decayMode": "B-"
+      }
+    ]
   },
   {
     "name": "Silicon",
@@ -1299,7 +1923,55 @@
     "electricalType": "Semiconductor",
     "valenceElectrons": 4,
     "crystalStructure": "Diamond cubic",
-    "mohsHardness": 6.5
+    "mohsHardness": 6.5,
+    "etymology": "Named after flint",
+    "discoveryCountry": "Sweden",
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    },
+    "hazardLevel": "flammable",
+    "isotopes": [
+      {
+        "massNumber": 28,
+        "symbol": "28Si",
+        "abundance": 92.2545,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 29,
+        "symbol": "29Si",
+        "abundance": 4.672,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 30,
+        "symbol": "30Si",
+        "abundance": 3.0735,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 44,
+        "symbol": "44Si",
+        "abundance": null,
+        "halfLife": "360 ns",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 43,
+        "symbol": "43Si",
+        "abundance": null,
+        "halfLife": "60 ns",
+        "decayMode": "B-"
+      }
+    ]
   },
   {
     "name": "Phosphorus",
@@ -1392,7 +2064,54 @@
     "electricalType": "Insulator",
     "valenceElectrons": 5,
     "crystalStructure": "Simple orthorhombic",
-    "mohsHardness": 1
+    "mohsHardness": 1,
+    "etymology": "Named after Phosphorus",
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    },
+    "hazardLevel": "corrosive",
+    "isotopes": [
+      {
+        "massNumber": 31,
+        "symbol": "31P",
+        "abundance": 100,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 46,
+        "symbol": "46P",
+        "abundance": null,
+        "halfLife": "unknown",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 45,
+        "symbol": "45P",
+        "abundance": null,
+        "halfLife": "200 ns",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 44,
+        "symbol": "44P",
+        "abundance": null,
+        "halfLife": "18.5 ms",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 43,
+        "symbol": "43P",
+        "abundance": null,
+        "halfLife": "36.5 ms",
+        "decayMode": "B-"
+      }
+    ]
   },
   {
     "name": "Sulfur",
@@ -1443,7 +2162,7 @@
     "boilingPoint": 717.8,
     "molarHeat": 22.75,
     "oxidationStates": "-2, -1, +1, +2, +3, +4, +5, +6",
-    "discoverer": "Ancient china",
+    "discoverer": "Antoine Lavoisier",
     "namedBy": null,
     "yearDiscovered": 1777,
     "cpkHex": "ffff30",
@@ -1490,7 +2209,54 @@
     "electricalType": "Insulator",
     "valenceElectrons": 6,
     "crystalStructure": "Face-centered orthorhombic",
-    "mohsHardness": 2
+    "mohsHardness": 2,
+    "discoveryCountry": "France",
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    },
+    "hazardLevel": "flammable",
+    "isotopes": [
+      {
+        "massNumber": 32,
+        "symbol": "32S",
+        "abundance": 94.85,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 34,
+        "symbol": "34S",
+        "abundance": 4.365,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 33,
+        "symbol": "33S",
+        "abundance": 0.763,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 36,
+        "symbol": "36S",
+        "abundance": 0.0158,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 48,
+        "symbol": "48S",
+        "abundance": null,
+        "halfLife": "unknown",
+        "decayMode": "B-"
+      }
+    ]
   },
   {
     "name": "Chlorine",
@@ -1591,7 +2357,55 @@
     "latinName": "chlorum",
     "electricalType": "Insulator",
     "valenceElectrons": 7,
-    "crystalStructure": "Base-centered orthorhombic"
+    "crystalStructure": "Base-centered orthorhombic",
+    "etymology": "Named after green",
+    "discoveryCountry": "Sweden",
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    },
+    "hazardLevel": "corrosive",
+    "isotopes": [
+      {
+        "massNumber": 35,
+        "symbol": "35Cl",
+        "abundance": 75.8,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 37,
+        "symbol": "37Cl",
+        "abundance": 24.2,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 52,
+        "symbol": "52Cl",
+        "abundance": null,
+        "halfLife": "unknown",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 51,
+        "symbol": "51Cl",
+        "abundance": null,
+        "halfLife": "unknown",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 50,
+        "symbol": "50Cl",
+        "abundance": null,
+        "halfLife": "unknown",
+        "decayMode": "B-"
+      }
+    ]
   },
   {
     "name": "Argon",
@@ -1644,7 +2458,7 @@
     "boilingPoint": 87.302,
     "molarHeat": null,
     "oxidationStates": null,
-    "discoverer": "Lord Rayleigh",
+    "discoverer": "William Ramsay",
     "namedBy": null,
     "yearDiscovered": 1894,
     "cpkHex": "80d1e3",
@@ -1727,7 +2541,55 @@
     "vanDerWaalsRadius": -189.34,
     "electricalType": "Insulator",
     "valenceElectrons": 8,
-    "crystalStructure": "Face-centered cubic"
+    "crystalStructure": "Face-centered cubic",
+    "etymology": "Named after laziness",
+    "discoveryCountry": "United Kingdom of Great Britain and Ireland",
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    },
+    "hazardLevel": "safe",
+    "isotopes": [
+      {
+        "massNumber": 40,
+        "symbol": "40Ar",
+        "abundance": 99.6035,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 36,
+        "symbol": "36Ar",
+        "abundance": 0.3336,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 38,
+        "symbol": "38Ar",
+        "abundance": 0.0629,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 53,
+        "symbol": "53Ar",
+        "abundance": null,
+        "halfLife": "620 ns",
+        "decayMode": "B-2N"
+      },
+      {
+        "massNumber": 52,
+        "symbol": "52Ar",
+        "abundance": null,
+        "halfLife": "unknown",
+        "decayMode": "B-"
+      }
+    ]
   },
   {
     "name": "Potassium",
@@ -1838,7 +2700,55 @@
     "electricalType": "Conductor",
     "valenceElectrons": 1,
     "crystalStructure": "Body-centered cubic",
-    "mohsHardness": 0.4
+    "mohsHardness": 0.4,
+    "etymology": "Named after potash",
+    "discoveryCountry": "United Kingdom of Great Britain and Ireland",
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    },
+    "hazardLevel": "corrosive",
+    "isotopes": [
+      {
+        "massNumber": 39,
+        "symbol": "39K",
+        "abundance": 93.2581,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 41,
+        "symbol": "41K",
+        "abundance": 6.7302,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 40,
+        "symbol": "40K",
+        "abundance": 0.0117,
+        "halfLife": "1.248E+9 Y",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 56,
+        "symbol": "56K",
+        "abundance": null,
+        "halfLife": "unknown",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 55,
+        "symbol": "55K",
+        "abundance": null,
+        "halfLife": "unknown",
+        "decayMode": "B-"
+      }
+    ]
   },
   {
     "name": "Calcium",
@@ -1958,7 +2868,55 @@
     "electricalType": "Conductor",
     "valenceElectrons": 2,
     "crystalStructure": "Face-centered cubic",
-    "mohsHardness": 1.75
+    "mohsHardness": 1.75,
+    "etymology": "Named after lime",
+    "discoveryCountry": "United Kingdom of Great Britain and Ireland",
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    },
+    "hazardLevel": "corrosive",
+    "isotopes": [
+      {
+        "massNumber": 40,
+        "symbol": "40Ca",
+        "abundance": 96.941,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 44,
+        "symbol": "44Ca",
+        "abundance": 2.086,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 42,
+        "symbol": "42Ca",
+        "abundance": 0.647,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 48,
+        "symbol": "48Ca",
+        "abundance": 0.187,
+        "halfLife": "2.9E19 Y",
+        "decayMode": "2B-"
+      },
+      {
+        "massNumber": 43,
+        "symbol": "43Ca",
+        "abundance": 0.135,
+        "halfLife": "stable",
+        "decayMode": null
+      }
+    ]
   },
   {
     "name": "Scandium",
@@ -2059,7 +3017,55 @@
     "electricalType": "Conductor",
     "valenceElectrons": 2,
     "crystalStructure": "Hexagonal close-packed",
-    "mohsHardness": 5.5
+    "mohsHardness": 5.5,
+    "etymology": "Named after Scandinavia",
+    "discoveryCountry": "Sweden",
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    },
+    "hazardLevel": "flammable",
+    "isotopes": [
+      {
+        "massNumber": 45,
+        "symbol": "45Sc",
+        "abundance": 100,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 61,
+        "symbol": "61Sc",
+        "abundance": null,
+        "halfLife": "unknown",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 59,
+        "symbol": "59Sc",
+        "abundance": null,
+        "halfLife": "unknown",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 58,
+        "symbol": "58Sc",
+        "abundance": null,
+        "halfLife": "12 ms",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 57,
+        "symbol": "57Sc",
+        "abundance": null,
+        "halfLife": "13 ms",
+        "decayMode": "B-"
+      }
+    ]
   },
   {
     "name": "Titanium",
@@ -2117,7 +3123,7 @@
     "boilingPoint": 3560,
     "molarHeat": 25.06,
     "oxidationStates": "-1, +1, +2, +3, +4",
-    "discoverer": "William Gregor",
+    "discoverer": "Friedrich Wöhler",
     "namedBy": "Martin Heinrich Klaproth",
     "yearDiscovered": 1791,
     "cpkHex": "bfc2c7",
@@ -2166,7 +3172,55 @@
     "vanDerWaalsRadius": null,
     "electricalType": "Conductor",
     "valenceElectrons": 2,
-    "mohsHardness": 6
+    "mohsHardness": 6,
+    "etymology": "Named after titan",
+    "discoveryCountry": "Electorate of Hesse",
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    },
+    "hazardLevel": "flammable",
+    "isotopes": [
+      {
+        "massNumber": 48,
+        "symbol": "48Ti",
+        "abundance": 73.72,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 46,
+        "symbol": "46Ti",
+        "abundance": 8.25,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 47,
+        "symbol": "47Ti",
+        "abundance": 7.44,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 49,
+        "symbol": "49Ti",
+        "abundance": 5.41,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 50,
+        "symbol": "50Ti",
+        "abundance": 5.18,
+        "halfLife": "stable",
+        "decayMode": null
+      }
+    ]
   },
   {
     "name": "Vanadium",
@@ -2265,7 +3319,55 @@
     "electricalType": "Conductor",
     "valenceElectrons": 2,
     "crystalStructure": "Body-centered cubic",
-    "mohsHardness": 7
+    "mohsHardness": 7,
+    "etymology": "Named after Freyja",
+    "discoveryCountry": "Mexico",
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    },
+    "hazardLevel": "safe",
+    "isotopes": [
+      {
+        "massNumber": 51,
+        "symbol": "51V",
+        "abundance": 99.75,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 50,
+        "symbol": "50V",
+        "abundance": 0.25,
+        "halfLife": "2.65E+17 Y",
+        "decayMode": "EC+B+"
+      },
+      {
+        "massNumber": 67,
+        "symbol": "67V",
+        "abundance": null,
+        "halfLife": "620 ns",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 66,
+        "symbol": "66V",
+        "abundance": null,
+        "halfLife": "360 ns",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 65,
+        "symbol": "65V",
+        "abundance": null,
+        "halfLife": "360 ns",
+        "decayMode": "B-"
+      }
+    ]
   },
   {
     "name": "Chromium",
@@ -2377,7 +3479,55 @@
     "electricalType": "Conductor",
     "valenceElectrons": 1,
     "crystalStructure": "Body-centered cubic",
-    "mohsHardness": 8.5
+    "mohsHardness": 8.5,
+    "etymology": "Named after color field",
+    "discoveryCountry": "France",
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    },
+    "hazardLevel": "toxic",
+    "isotopes": [
+      {
+        "massNumber": 52,
+        "symbol": "52Cr",
+        "abundance": 83.789,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 53,
+        "symbol": "53Cr",
+        "abundance": 9.501,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 50,
+        "symbol": "50Cr",
+        "abundance": 4.345,
+        "halfLife": "1.3E+18 Y",
+        "decayMode": "2EC"
+      },
+      {
+        "massNumber": 54,
+        "symbol": "54Cr",
+        "abundance": 2.365,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 70,
+        "symbol": "70Cr",
+        "abundance": null,
+        "halfLife": "620 ns",
+        "decayMode": "B-"
+      }
+    ]
   },
   {
     "name": "Manganese",
@@ -2438,7 +3588,7 @@
     "boilingPoint": 2334,
     "molarHeat": 26.32,
     "oxidationStates": "+2",
-    "discoverer": "Torbern Olof Bergman",
+    "discoverer": "Johan Gottlieb Gahn",
     "namedBy": null,
     "yearDiscovered": 1774,
     "cpkHex": "9c7ac7",
@@ -2486,7 +3636,55 @@
     "electricalType": "Conductor",
     "valenceElectrons": 2,
     "crystalStructure": "Body-centered cubic",
-    "mohsHardness": 6
+    "mohsHardness": 6,
+    "etymology": "Named after Magnesia Prefecture",
+    "discoveryCountry": "Sweden",
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    },
+    "hazardLevel": "flammable",
+    "isotopes": [
+      {
+        "massNumber": 55,
+        "symbol": "55Mn",
+        "abundance": 100,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 73,
+        "symbol": "73Mn",
+        "abundance": null,
+        "halfLife": "unknown",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 72,
+        "symbol": "72Mn",
+        "abundance": null,
+        "halfLife": "620 ns",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 70,
+        "symbol": "70Mn",
+        "abundance": null,
+        "halfLife": "19.9 ms",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 69,
+        "symbol": "69Mn",
+        "abundance": null,
+        "halfLife": "16 ms",
+        "decayMode": "B-"
+      }
+    ]
   },
   {
     "name": "Iron",
@@ -2594,7 +3792,53 @@
     "valenceElectrons": 2,
     "magneticType": "ferromagnetism",
     "crystalStructure": "Body-centered cubic",
-    "mohsHardness": 4
+    "mohsHardness": 4,
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    },
+    "hazardLevel": "flammable",
+    "isotopes": [
+      {
+        "massNumber": 56,
+        "symbol": "56Fe",
+        "abundance": 91.754,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 54,
+        "symbol": "54Fe",
+        "abundance": 5.845,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 57,
+        "symbol": "57Fe",
+        "abundance": 2.119,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 58,
+        "symbol": "58Fe",
+        "abundance": 0.282,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 76,
+        "symbol": "76Fe",
+        "abundance": null,
+        "halfLife": "unknown",
+        "decayMode": "B-"
+      }
+    ]
   },
   {
     "name": "Cobalt",
@@ -2693,7 +3937,55 @@
     "electricalType": "Conductor",
     "valenceElectrons": 2,
     "crystalStructure": "Hexagonal close-packed",
-    "mohsHardness": 5
+    "mohsHardness": 5,
+    "etymology": "Named after kobold",
+    "discoveryCountry": "Sweden",
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    },
+    "hazardLevel": "flammable",
+    "isotopes": [
+      {
+        "massNumber": 59,
+        "symbol": "59Co",
+        "abundance": 100,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 78,
+        "symbol": "78Co",
+        "abundance": null,
+        "halfLife": "unknown",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 77,
+        "symbol": "77Co",
+        "abundance": null,
+        "halfLife": "13.0 ms",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 76,
+        "symbol": "76Co",
+        "abundance": null,
+        "halfLife": "21.7 ms",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 75,
+        "symbol": "75Co",
+        "abundance": null,
+        "halfLife": "30 ms",
+        "decayMode": "B-"
+      }
+    ]
   },
   {
     "name": "Nickel",
@@ -2788,7 +4080,55 @@
     "electricalType": "Conductor",
     "valenceElectrons": 2,
     "crystalStructure": "Face-centered cubic",
-    "mohsHardness": 4
+    "mohsHardness": 4,
+    "etymology": "Named after nickeline",
+    "discoveryCountry": "Sweden",
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    },
+    "hazardLevel": "flammable",
+    "isotopes": [
+      {
+        "massNumber": 58,
+        "symbol": "58Ni",
+        "abundance": 68.0769,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 60,
+        "symbol": "60Ni",
+        "abundance": 26.2231,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 62,
+        "symbol": "62Ni",
+        "abundance": 3.6345,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 61,
+        "symbol": "61Ni",
+        "abundance": 1.1399,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 64,
+        "symbol": "64Ni",
+        "abundance": 0.9256,
+        "halfLife": "stable",
+        "decayMode": null
+      }
+    ]
   },
   {
     "name": "Copper",
@@ -2907,7 +4247,54 @@
     "electricalType": "Conductor",
     "valenceElectrons": 1,
     "crystalStructure": "Face-centered cubic",
-    "mohsHardness": 3
+    "mohsHardness": 3,
+    "etymology": "Named after Cyprus",
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    },
+    "hazardLevel": "toxic",
+    "isotopes": [
+      {
+        "massNumber": 63,
+        "symbol": "63Cu",
+        "abundance": 69.15,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 65,
+        "symbol": "65Cu",
+        "abundance": 30.85,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 83,
+        "symbol": "83Cu",
+        "abundance": null,
+        "halfLife": "unknown",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 82,
+        "symbol": "82Cu",
+        "abundance": null,
+        "halfLife": "33 ms",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 81,
+        "symbol": "81Cu",
+        "abundance": null,
+        "halfLife": "73.2 ms",
+        "decayMode": "B-"
+      }
+    ]
   },
   {
     "name": "Zinc",
@@ -3008,7 +4395,54 @@
     "electricalType": "Conductor",
     "valenceElectrons": 2,
     "crystalStructure": "Hexagonal close-packed",
-    "mohsHardness": 2.5
+    "mohsHardness": 2.5,
+    "etymology": "Named after tine",
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    },
+    "hazardLevel": "flammable",
+    "isotopes": [
+      {
+        "massNumber": 64,
+        "symbol": "64Zn",
+        "abundance": 49.17,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 66,
+        "symbol": "66Zn",
+        "abundance": 27.73,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 68,
+        "symbol": "68Zn",
+        "abundance": 18.45,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 67,
+        "symbol": "67Zn",
+        "abundance": 4.04,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 70,
+        "symbol": "70Zn",
+        "abundance": 0.61,
+        "halfLife": "3.8E18 Y",
+        "decayMode": "2B-"
+      }
+    ]
   },
   {
     "name": "Gallium",
@@ -3048,7 +4482,7 @@
     "boilingPoint": 2673,
     "molarHeat": 25.86,
     "oxidationStates": "+1, +2, +3",
-    "discoverer": "Lecoq de Boisbaudran",
+    "discoverer": "Paul-Émile Lecoq de Boisbaudran",
     "namedBy": null,
     "yearDiscovered": 1875,
     "cpkHex": "c28f8f",
@@ -3087,7 +4521,55 @@
     "electricalType": "Conductor",
     "valenceElectrons": 3,
     "crystalStructure": "Simple orthorhombic",
-    "mohsHardness": 1.5
+    "mohsHardness": 1.5,
+    "etymology": "Named after Gaul",
+    "discoveryCountry": "France",
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    },
+    "hazardLevel": "corrosive",
+    "isotopes": [
+      {
+        "massNumber": 69,
+        "symbol": "69Ga",
+        "abundance": 60.108,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 71,
+        "symbol": "71Ga",
+        "abundance": 39.892,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 87,
+        "symbol": "87Ga",
+        "abundance": null,
+        "halfLife": "634 ns",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 86,
+        "symbol": "86Ga",
+        "abundance": null,
+        "halfLife": "43 ms",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 85,
+        "symbol": "85Ga",
+        "abundance": null,
+        "halfLife": "92 ms",
+        "decayMode": "B-"
+      }
+    ]
   },
   {
     "name": "Germanium",
@@ -3167,7 +4649,55 @@
     "electricalType": "Semiconductor",
     "valenceElectrons": 4,
     "crystalStructure": "Diamond cubic",
-    "mohsHardness": 6
+    "mohsHardness": 6,
+    "etymology": "Named after Germany",
+    "discoveryCountry": "Germany",
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    },
+    "hazardLevel": "flammable",
+    "isotopes": [
+      {
+        "massNumber": 74,
+        "symbol": "74Ge",
+        "abundance": 36.52,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 72,
+        "symbol": "72Ge",
+        "abundance": 27.45,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 70,
+        "symbol": "70Ge",
+        "abundance": 20.52,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 73,
+        "symbol": "73Ge",
+        "abundance": 7.76,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 76,
+        "symbol": "76Ge",
+        "abundance": 7.75,
+        "halfLife": "stable",
+        "decayMode": null
+      }
+    ]
   },
   {
     "name": "Arsenic",
@@ -3209,7 +4739,7 @@
     "boilingPoint": null,
     "molarHeat": 24.64,
     "oxidationStates": "-3, +1, +2, +3, +4",
-    "discoverer": "Bronze Age",
+    "discoverer": "Albertus Magnus",
     "namedBy": null,
     "yearDiscovered": 1300,
     "cpkHex": "bd80e3",
@@ -3240,7 +4770,55 @@
     "vanDerWaalsRadius": null,
     "electricalType": "Semiconductor",
     "valenceElectrons": 5,
-    "mohsHardness": 3.5
+    "mohsHardness": 3.5,
+    "etymology": "Named after orpiment",
+    "discoveryCountry": "Holy Roman Empire",
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    },
+    "hazardLevel": "corrosive",
+    "isotopes": [
+      {
+        "massNumber": 75,
+        "symbol": "75As",
+        "abundance": 100,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 92,
+        "symbol": "92As",
+        "abundance": null,
+        "halfLife": "unknown",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 91,
+        "symbol": "91As",
+        "abundance": null,
+        "halfLife": "unknown",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 90,
+        "symbol": "90As",
+        "abundance": null,
+        "halfLife": "unknown",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 89,
+        "symbol": "89As",
+        "abundance": null,
+        "halfLife": "unknown",
+        "decayMode": "B-"
+      }
+    ]
   },
   {
     "name": "Selenium",
@@ -3283,7 +4861,7 @@
     "boilingPoint": 958,
     "molarHeat": 25.363,
     "oxidationStates": "-2, +2, +4, +6",
-    "discoverer": "Jöns Jakob Berzelius",
+    "discoverer": "Johan Gottlieb Gahn",
     "namedBy": null,
     "yearDiscovered": 1817,
     "cpkHex": "ffa100",
@@ -3323,7 +4901,55 @@
     "electricalType": "Insulator",
     "valenceElectrons": 6,
     "crystalStructure": "Trigonal",
-    "mohsHardness": 2
+    "mohsHardness": 2,
+    "etymology": "Named after Moon",
+    "discoveryCountry": "Sweden",
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    },
+    "hazardLevel": "toxic",
+    "isotopes": [
+      {
+        "massNumber": 80,
+        "symbol": "80Se",
+        "abundance": 49.8,
+        "halfLife": "stable",
+        "decayMode": "2B-"
+      },
+      {
+        "massNumber": 78,
+        "symbol": "78Se",
+        "abundance": 23.69,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 76,
+        "symbol": "76Se",
+        "abundance": 9.23,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 82,
+        "symbol": "82Se",
+        "abundance": 8.82,
+        "halfLife": "9.6E+19 Y",
+        "decayMode": "2B-"
+      },
+      {
+        "massNumber": 77,
+        "symbol": "77Se",
+        "abundance": 7.6,
+        "halfLife": "stable",
+        "decayMode": null
+      }
+    ]
   },
   {
     "name": "Bromine",
@@ -3408,7 +5034,55 @@
     "latinName": "bromum",
     "electricalType": "Insulator",
     "valenceElectrons": 7,
-    "crystalStructure": "Orthorhombic"
+    "crystalStructure": "Orthorhombic",
+    "etymology": "Named after stink",
+    "discoveryCountry": "France",
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    },
+    "hazardLevel": "corrosive",
+    "isotopes": [
+      {
+        "massNumber": 79,
+        "symbol": "79Br",
+        "abundance": 50.65,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 81,
+        "symbol": "81Br",
+        "abundance": 49.35,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 101,
+        "symbol": "101Br",
+        "abundance": null,
+        "halfLife": "unknown",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 98,
+        "symbol": "98Br",
+        "abundance": null,
+        "halfLife": "unknown",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 97,
+        "symbol": "97Br",
+        "abundance": null,
+        "halfLife": "unknown",
+        "decayMode": "B-"
+      }
+    ]
   },
   {
     "name": "Krypton",
@@ -3530,7 +5204,55 @@
     "latinName": "krypton",
     "electricalType": "Insulator",
     "valenceElectrons": 8,
-    "crystalStructure": "Face-centered cubic"
+    "crystalStructure": "Face-centered cubic",
+    "etymology": "Named after hiding",
+    "discoveryCountry": "United Kingdom",
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    },
+    "hazardLevel": "safe",
+    "isotopes": [
+      {
+        "massNumber": 84,
+        "symbol": "84Kr",
+        "abundance": 56.987,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 86,
+        "symbol": "86Kr",
+        "abundance": 17.279,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 82,
+        "symbol": "82Kr",
+        "abundance": 11.593,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 83,
+        "symbol": "83Kr",
+        "abundance": 11.5,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 80,
+        "symbol": "80Kr",
+        "abundance": 2.286,
+        "halfLife": "stable",
+        "decayMode": null
+      }
+    ]
   },
   {
     "name": "Rubidium",
@@ -3620,7 +5342,55 @@
     "electricalType": "Conductor",
     "valenceElectrons": 1,
     "crystalStructure": "Body-centered cubic",
-    "mohsHardness": 0.3
+    "mohsHardness": 0.3,
+    "etymology": "Named after red",
+    "discoveryCountry": "Germany",
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    },
+    "hazardLevel": "corrosive",
+    "isotopes": [
+      {
+        "massNumber": 85,
+        "symbol": "85Rb",
+        "abundance": 72.17,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 87,
+        "symbol": "87Rb",
+        "abundance": 27.83,
+        "halfLife": "4.97E+10 Y",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 106,
+        "symbol": "106Rb",
+        "abundance": null,
+        "halfLife": "unknown",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 105,
+        "symbol": "105Rb",
+        "abundance": null,
+        "halfLife": "unknown",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 104,
+        "symbol": "104Rb",
+        "abundance": null,
+        "halfLife": "unknown",
+        "decayMode": "B-"
+      }
+    ]
   },
   {
     "name": "Strontium",
@@ -3668,7 +5438,7 @@
     "boilingPoint": 1650,
     "molarHeat": 26.4,
     "oxidationStates": "+2",
-    "discoverer": "William Cruickshank (chemist)",
+    "discoverer": "William Cruickshank",
     "namedBy": null,
     "yearDiscovered": 1787,
     "cpkHex": "00ff00",
@@ -3711,7 +5481,55 @@
     "electricalType": "Conductor",
     "valenceElectrons": 2,
     "crystalStructure": "Face-centered cubic",
-    "mohsHardness": 1.5
+    "mohsHardness": 1.5,
+    "etymology": "Named after Strontian",
+    "discoveryCountry": "United Kingdom",
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    },
+    "hazardLevel": "corrosive",
+    "isotopes": [
+      {
+        "massNumber": 88,
+        "symbol": "88Sr",
+        "abundance": 82.58,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 86,
+        "symbol": "86Sr",
+        "abundance": 9.86,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 87,
+        "symbol": "87Sr",
+        "abundance": 7,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 84,
+        "symbol": "84Sr",
+        "abundance": 0.56,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 108,
+        "symbol": "108Sr",
+        "abundance": null,
+        "halfLife": "unknown",
+        "decayMode": "B-"
+      }
+    ]
   },
   {
     "name": "Yttrium",
@@ -3791,7 +5609,55 @@
     "electricalType": "Conductor",
     "valenceElectrons": 2,
     "crystalStructure": "Hexagonal close-packed",
-    "mohsHardness": 5
+    "mohsHardness": 5,
+    "etymology": "Named after Ytterby mine",
+    "discoveryCountry": "Electorate of Hesse",
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    },
+    "hazardLevel": "flammable",
+    "isotopes": [
+      {
+        "massNumber": 89,
+        "symbol": "89Y",
+        "abundance": 100,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 111,
+        "symbol": "111Y",
+        "abundance": null,
+        "halfLife": "unknown",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 110,
+        "symbol": "110Y",
+        "abundance": null,
+        "halfLife": "unknown",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 109,
+        "symbol": "109Y",
+        "abundance": null,
+        "halfLife": "25 ms",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 108,
+        "symbol": "108Y",
+        "abundance": null,
+        "halfLife": "30 ms",
+        "decayMode": "B-"
+      }
+    ]
   },
   {
     "name": "Zirconium",
@@ -3834,7 +5700,7 @@
     "boilingPoint": 4650,
     "molarHeat": 25.36,
     "oxidationStates": "+4",
-    "discoverer": "Martin Heinrich Klaproth",
+    "discoverer": "Anton Eduard van Arkel",
     "namedBy": null,
     "yearDiscovered": 1789,
     "cpkHex": "94e0e0",
@@ -3870,7 +5736,55 @@
     "electricalType": "Conductor",
     "valenceElectrons": 2,
     "crystalStructure": "Hexagonal close-packed",
-    "mohsHardness": 5
+    "mohsHardness": 5,
+    "etymology": "Named after zircon",
+    "discoveryCountry": "Germany",
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    },
+    "hazardLevel": "flammable",
+    "isotopes": [
+      {
+        "massNumber": 90,
+        "symbol": "90Zr",
+        "abundance": 51.45,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 94,
+        "symbol": "94Zr",
+        "abundance": 17.38,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 92,
+        "symbol": "92Zr",
+        "abundance": 17.15,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 91,
+        "symbol": "91Zr",
+        "abundance": 11.22,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 96,
+        "symbol": "96Zr",
+        "abundance": 2.8,
+        "halfLife": "stable",
+        "decayMode": null
+      }
+    ]
   },
   {
     "name": "Niobium",
@@ -3957,7 +5871,55 @@
     "electricalType": "Conductor",
     "valenceElectrons": 1,
     "crystalStructure": "Body-centered cubic",
-    "mohsHardness": 6
+    "mohsHardness": 6,
+    "etymology": "Named after Niobe",
+    "discoveryCountry": "United Kingdom",
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    },
+    "hazardLevel": "flammable",
+    "isotopes": [
+      {
+        "massNumber": 93,
+        "symbol": "93Nb",
+        "abundance": 100,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 117,
+        "symbol": "117Nb",
+        "abundance": null,
+        "halfLife": "unknown",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 116,
+        "symbol": "116Nb",
+        "abundance": null,
+        "halfLife": "unknown",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 115,
+        "symbol": "115Nb",
+        "abundance": null,
+        "halfLife": "23 ms",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 114,
+        "symbol": "114Nb",
+        "abundance": null,
+        "halfLife": "17 ms",
+        "decayMode": "B-"
+      }
+    ]
   },
   {
     "name": "Molybdenum",
@@ -4064,7 +6026,55 @@
     "electricalType": "Conductor",
     "valenceElectrons": 1,
     "crystalStructure": "Body-centered cubic",
-    "mohsHardness": 5.5
+    "mohsHardness": 5.5,
+    "etymology": "Named after lead",
+    "discoveryCountry": "Sweden",
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    },
+    "hazardLevel": "flammable",
+    "isotopes": [
+      {
+        "massNumber": 98,
+        "symbol": "98Mo",
+        "abundance": 24.292,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 96,
+        "symbol": "96Mo",
+        "abundance": 16.673,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 95,
+        "symbol": "95Mo",
+        "abundance": 15.873,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 92,
+        "symbol": "92Mo",
+        "abundance": 14.649,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 100,
+        "symbol": "100Mo",
+        "abundance": 9.744,
+        "halfLife": "7.01E+18 Y",
+        "decayMode": "2B-"
+      }
+    ]
   },
   {
     "name": "Technetium",
@@ -4104,7 +6114,7 @@
     "boilingPoint": 4538,
     "molarHeat": 24.27,
     "oxidationStates": "+4, +6, +7",
-    "discoverer": "Emilio Segrè",
+    "discoverer": "Carlo Perrier",
     "namedBy": null,
     "yearDiscovered": 1937,
     "cpkHex": "3b9e9e",
@@ -4142,7 +6152,55 @@
     "vanDerWaalsRadius": null,
     "electricalType": "Conductor",
     "valenceElectrons": 2,
-    "crystalStructure": "Hexagonal close-packed"
+    "crystalStructure": "Hexagonal close-packed",
+    "etymology": "Named after technique",
+    "discoveryCountry": "Italy",
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    },
+    "hazardLevel": "radioactive",
+    "isotopes": [
+      {
+        "massNumber": 122,
+        "symbol": "122Tc",
+        "abundance": null,
+        "halfLife": "unknown",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 121,
+        "symbol": "121Tc",
+        "abundance": null,
+        "halfLife": "22 ms",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 120,
+        "symbol": "120Tc",
+        "abundance": null,
+        "halfLife": "21 ms",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 119,
+        "symbol": "119Tc",
+        "abundance": null,
+        "halfLife": "22 ms",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 118,
+        "symbol": "118Tc",
+        "abundance": null,
+        "halfLife": "30 ms",
+        "decayMode": "B-"
+      }
+    ]
   },
   {
     "name": "Ruthenium",
@@ -4212,7 +6270,55 @@
     "electricalType": "Conductor",
     "valenceElectrons": 1,
     "crystalStructure": "Hexagonal close-packed",
-    "mohsHardness": 6.5
+    "mohsHardness": 6.5,
+    "etymology": "Named after Ruthenia",
+    "discoveryCountry": "Russia",
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    },
+    "hazardLevel": "flammable",
+    "isotopes": [
+      {
+        "massNumber": 102,
+        "symbol": "102Ru",
+        "abundance": 31.55,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 104,
+        "symbol": "104Ru",
+        "abundance": 18.62,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 101,
+        "symbol": "101Ru",
+        "abundance": 17.06,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 99,
+        "symbol": "99Ru",
+        "abundance": 12.76,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 100,
+        "symbol": "100Ru",
+        "abundance": 12.6,
+        "halfLife": "stable",
+        "decayMode": null
+      }
+    ]
   },
   {
     "name": "Rhodium",
@@ -4283,7 +6389,55 @@
     "electricalType": "Conductor",
     "valenceElectrons": 1,
     "crystalStructure": "Face-centered cubic",
-    "mohsHardness": 6
+    "mohsHardness": 6,
+    "etymology": "Named after rose",
+    "discoveryCountry": "United Kingdom of Great Britain and Ireland",
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    },
+    "hazardLevel": "flammable",
+    "isotopes": [
+      {
+        "massNumber": 103,
+        "symbol": "103Rh",
+        "abundance": 100,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 128,
+        "symbol": "128Rh",
+        "abundance": null,
+        "halfLife": "unknown",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 127,
+        "symbol": "127Rh",
+        "abundance": null,
+        "halfLife": "20 ms",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 126,
+        "symbol": "126Rh",
+        "abundance": null,
+        "halfLife": "19 ms",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 125,
+        "symbol": "125Rh",
+        "abundance": null,
+        "halfLife": "26.5 ms",
+        "decayMode": "B-"
+      }
+    ]
   },
   {
     "name": "Palladium",
@@ -4352,7 +6506,55 @@
     "electricalType": "Conductor",
     "valenceElectrons": 18,
     "crystalStructure": "Face-centered cubic",
-    "mohsHardness": 4.75
+    "mohsHardness": 4.75,
+    "etymology": "Named after 2 Pallas",
+    "discoveryCountry": "United Kingdom of Great Britain and Ireland",
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    },
+    "hazardLevel": "flammable",
+    "isotopes": [
+      {
+        "massNumber": 106,
+        "symbol": "106Pd",
+        "abundance": 27.33,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 108,
+        "symbol": "108Pd",
+        "abundance": 26.46,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 105,
+        "symbol": "105Pd",
+        "abundance": 22.33,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 110,
+        "symbol": "110Pd",
+        "abundance": 11.72,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 104,
+        "symbol": "104Pd",
+        "abundance": 11.14,
+        "halfLife": "stable",
+        "decayMode": null
+      }
+    ]
   },
   {
     "name": "Silver",
@@ -4433,7 +6635,54 @@
     "electricalType": "Conductor",
     "valenceElectrons": 1,
     "crystalStructure": "Face-centered cubic",
-    "mohsHardness": 2.5
+    "mohsHardness": 2.5,
+    "etymology": "Named after white",
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    },
+    "hazardLevel": "toxic",
+    "isotopes": [
+      {
+        "massNumber": 107,
+        "symbol": "107Ag",
+        "abundance": 51.839,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 109,
+        "symbol": "109Ag",
+        "abundance": 48.161,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 132,
+        "symbol": "132Ag",
+        "abundance": null,
+        "halfLife": "28 ms",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 131,
+        "symbol": "131Ag",
+        "abundance": null,
+        "halfLife": "35 ms",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 130,
+        "symbol": "130Ag",
+        "abundance": null,
+        "halfLife": "42 ms",
+        "decayMode": "B-"
+      }
+    ]
   },
   {
     "name": "Cadmium",
@@ -4520,7 +6769,55 @@
     "electricalType": "Conductor",
     "valenceElectrons": 2,
     "crystalStructure": "Hexagonal close-packed",
-    "mohsHardness": 2
+    "mohsHardness": 2,
+    "etymology": "Named after Cadmus",
+    "discoveryCountry": "Anhalt-Bernburg",
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    },
+    "hazardLevel": "flammable",
+    "isotopes": [
+      {
+        "massNumber": 114,
+        "symbol": "114Cd",
+        "abundance": 28.754,
+        "halfLife": "stable",
+        "decayMode": "2B-"
+      },
+      {
+        "massNumber": 112,
+        "symbol": "112Cd",
+        "abundance": 24.109,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 111,
+        "symbol": "111Cd",
+        "abundance": 12.795,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 110,
+        "symbol": "110Cd",
+        "abundance": 12.47,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 113,
+        "symbol": "113Cd",
+        "abundance": 12.227,
+        "halfLife": "8.04E15 Y",
+        "decayMode": "B-"
+      }
+    ]
   },
   {
     "name": "Indium",
@@ -4561,7 +6858,7 @@
     "boilingPoint": 2345,
     "molarHeat": 26.74,
     "oxidationStates": null,
-    "discoverer": "Ferdinand Reich",
+    "discoverer": "Hieronymous Theodor Richter",
     "namedBy": null,
     "yearDiscovered": 1863,
     "cpkHex": "a67573",
@@ -4601,7 +6898,55 @@
     "electricalType": "Conductor",
     "valenceElectrons": 3,
     "crystalStructure": "Face-centered tetragonal",
-    "mohsHardness": 1.2
+    "mohsHardness": 1.2,
+    "etymology": "Named after indigo",
+    "discoveryCountry": "Duchy of Anhalt",
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    },
+    "hazardLevel": "toxic",
+    "isotopes": [
+      {
+        "massNumber": 115,
+        "symbol": "115In",
+        "abundance": 95.719,
+        "halfLife": "4.41E+14 Y",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 113,
+        "symbol": "113In",
+        "abundance": 4.281,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 137,
+        "symbol": "137In",
+        "abundance": null,
+        "halfLife": "65 ms",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 136,
+        "symbol": "136In",
+        "abundance": null,
+        "halfLife": "85 ms",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 135,
+        "symbol": "135In",
+        "abundance": null,
+        "halfLife": "101 ms",
+        "decayMode": "B-"
+      }
+    ]
   },
   {
     "name": "Tin",
@@ -4684,7 +7029,53 @@
     "electricalType": "Conductor",
     "valenceElectrons": 4,
     "crystalStructure": "Body-centered tetragonal",
-    "mohsHardness": 1.5
+    "mohsHardness": 1.5,
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    },
+    "hazardLevel": "toxic",
+    "isotopes": [
+      {
+        "massNumber": 120,
+        "symbol": "120Sn",
+        "abundance": 32.58,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 118,
+        "symbol": "118Sn",
+        "abundance": 24.22,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 116,
+        "symbol": "116Sn",
+        "abundance": 14.54,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 119,
+        "symbol": "119Sn",
+        "abundance": 8.59,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 117,
+        "symbol": "117Sn",
+        "abundance": 7.68,
+        "halfLife": "stable",
+        "decayMode": null
+      }
+    ]
   },
   {
     "name": "Antimony",
@@ -4758,7 +7149,53 @@
     "vanDerWaalsRadius": null,
     "electricalType": "Semiconductor",
     "valenceElectrons": 5,
-    "mohsHardness": 3
+    "mohsHardness": 3,
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    },
+    "hazardLevel": "toxic",
+    "isotopes": [
+      {
+        "massNumber": 121,
+        "symbol": "121Sb",
+        "abundance": 57.21,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 123,
+        "symbol": "123Sb",
+        "abundance": 42.79,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 142,
+        "symbol": "142Sb",
+        "abundance": null,
+        "halfLife": "53 ms",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 141,
+        "symbol": "141Sb",
+        "abundance": null,
+        "halfLife": "103 ms",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 140,
+        "symbol": "140Sb",
+        "abundance": null,
+        "halfLife": "173 ms",
+        "decayMode": "B-"
+      }
+    ]
   },
   {
     "name": "Tellurium",
@@ -4842,7 +7279,55 @@
     "electricalType": "Semiconductor",
     "valenceElectrons": 6,
     "crystalStructure": "Trigonal",
-    "mohsHardness": 2.25
+    "mohsHardness": 2.25,
+    "etymology": "Named after Terra",
+    "discoveryCountry": "Romania",
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    },
+    "hazardLevel": "toxic",
+    "isotopes": [
+      {
+        "massNumber": 130,
+        "symbol": "130Te",
+        "abundance": 34.08,
+        "halfLife": "0.79E+21 Y",
+        "decayMode": "2B-"
+      },
+      {
+        "massNumber": 128,
+        "symbol": "128Te",
+        "abundance": 31.74,
+        "halfLife": "stable",
+        "decayMode": "2B-"
+      },
+      {
+        "massNumber": 126,
+        "symbol": "126Te",
+        "abundance": 18.84,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 125,
+        "symbol": "125Te",
+        "abundance": 7.07,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 124,
+        "symbol": "124Te",
+        "abundance": 4.74,
+        "halfLife": "stable",
+        "decayMode": null
+      }
+    ]
   },
   {
     "name": "Iodine",
@@ -4925,7 +7410,55 @@
     "vanDerWaalsRadius": 113.7,
     "electricalType": "Insulator",
     "valenceElectrons": 7,
-    "crystalStructure": "Base-centered orthorhombic"
+    "crystalStructure": "Base-centered orthorhombic",
+    "etymology": "Named after violet",
+    "discoveryCountry": "France",
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    },
+    "hazardLevel": "toxic",
+    "isotopes": [
+      {
+        "massNumber": 127,
+        "symbol": "127I",
+        "abundance": 100,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 147,
+        "symbol": "147I",
+        "abundance": null,
+        "halfLife": "unknown",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 146,
+        "symbol": "146I",
+        "abundance": null,
+        "halfLife": "94 ms",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 145,
+        "symbol": "145I",
+        "abundance": null,
+        "halfLife": "407 ns",
+        "decayMode": "B-N"
+      },
+      {
+        "massNumber": 144,
+        "symbol": "144I",
+        "abundance": null,
+        "halfLife": "stable",
+        "decayMode": null
+      }
+    ]
   },
   {
     "name": "Xenon",
@@ -5023,7 +7556,55 @@
     "latinName": "xenon",
     "electricalType": "Insulator",
     "valenceElectrons": 8,
-    "crystalStructure": "Face-centered cubic"
+    "crystalStructure": "Face-centered cubic",
+    "etymology": "Named after stranger",
+    "discoveryCountry": "United Kingdom",
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    },
+    "hazardLevel": "safe",
+    "isotopes": [
+      {
+        "massNumber": 132,
+        "symbol": "132Xe",
+        "abundance": 26.909,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 129,
+        "symbol": "129Xe",
+        "abundance": 26.401,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 131,
+        "symbol": "131Xe",
+        "abundance": 21.232,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 134,
+        "symbol": "134Xe",
+        "abundance": 10.436,
+        "halfLife": "stable",
+        "decayMode": "2B-"
+      },
+      {
+        "massNumber": 136,
+        "symbol": "136Xe",
+        "abundance": 8.857,
+        "halfLife": "2.165E21 Y",
+        "decayMode": "2B-"
+      }
+    ]
   },
   {
     "name": "Cesium",
@@ -5064,7 +7645,7 @@
     "boilingPoint": 944,
     "molarHeat": 32.21,
     "oxidationStates": "+1",
-    "discoverer": "Robert Bunsen",
+    "discoverer": "Gustav Kirchhoff",
     "namedBy": null,
     "yearDiscovered": 1860,
     "cpkHex": "57178f",
@@ -5103,7 +7684,55 @@
     "electricalType": "Conductor",
     "valenceElectrons": 1,
     "crystalStructure": "Body-centered cubic",
-    "mohsHardness": 0.2
+    "mohsHardness": 0.2,
+    "etymology": "Named after sky blue",
+    "discoveryCountry": "Germany",
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    },
+    "hazardLevel": "corrosive",
+    "isotopes": [
+      {
+        "massNumber": 133,
+        "symbol": "133Cs",
+        "abundance": 100,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 152,
+        "symbol": "152Cs",
+        "abundance": null,
+        "halfLife": "50 ms",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 151,
+        "symbol": "151Cs",
+        "abundance": null,
+        "halfLife": "69 ms",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 150,
+        "symbol": "150Cs",
+        "abundance": null,
+        "halfLife": "84 ms",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 149,
+        "symbol": "149Cs",
+        "abundance": null,
+        "halfLife": "107 ms",
+        "decayMode": "B-"
+      }
+    ]
   },
   {
     "name": "Barium",
@@ -5144,7 +7773,7 @@
     "boilingPoint": 2118,
     "molarHeat": 28.07,
     "oxidationStates": "+2",
-    "discoverer": "Carl Wilhelm Scheele",
+    "discoverer": "Humphry Davy",
     "namedBy": null,
     "yearDiscovered": 1808,
     "cpkHex": "00c900",
@@ -5192,7 +7821,55 @@
     "electricalType": "Conductor",
     "valenceElectrons": 2,
     "crystalStructure": "Body-centered cubic",
-    "mohsHardness": 1.25
+    "mohsHardness": 1.25,
+    "etymology": "Named after weight",
+    "discoveryCountry": "United Kingdom",
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    },
+    "hazardLevel": "corrosive",
+    "isotopes": [
+      {
+        "massNumber": 138,
+        "symbol": "138Ba",
+        "abundance": 71.7,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 137,
+        "symbol": "137Ba",
+        "abundance": 11.23,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 136,
+        "symbol": "136Ba",
+        "abundance": 7.85,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 135,
+        "symbol": "135Ba",
+        "abundance": 6.59,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 134,
+        "symbol": "134Ba",
+        "abundance": 2.42,
+        "halfLife": "stable",
+        "decayMode": null
+      }
+    ]
   },
   {
     "name": "Lanthanum",
@@ -5274,7 +7951,55 @@
     "electricalType": "Conductor",
     "valenceElectrons": 2,
     "crystalStructure": "Double hexagonal close-packed",
-    "mohsHardness": 2.5
+    "mohsHardness": 2.5,
+    "etymology": "Named after hiding",
+    "discoveryCountry": "Sweden",
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    },
+    "hazardLevel": "flammable",
+    "isotopes": [
+      {
+        "massNumber": 139,
+        "symbol": "139La",
+        "abundance": 99.91119,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 138,
+        "symbol": "138La",
+        "abundance": 0.08881,
+        "halfLife": "1.03E+11 Y",
+        "decayMode": "EC+B+"
+      },
+      {
+        "massNumber": 157,
+        "symbol": "157La",
+        "abundance": null,
+        "halfLife": "unknown",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 156,
+        "symbol": "156La",
+        "abundance": null,
+        "halfLife": "84 ms",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 155,
+        "symbol": "155La",
+        "abundance": null,
+        "halfLife": "101 ms",
+        "decayMode": "B-"
+      }
+    ]
   },
   {
     "name": "Cerium",
@@ -5318,7 +8043,7 @@
     "boilingPoint": 3716,
     "molarHeat": 26.94,
     "oxidationStates": null,
-    "discoverer": "Martin Heinrich Klaproth",
+    "discoverer": "Jöns Jacob Berzelius",
     "namedBy": null,
     "yearDiscovered": 1804,
     "cpkHex": "ffffc7",
@@ -5357,7 +8082,55 @@
     "electricalType": "Conductor",
     "valenceElectrons": 2,
     "crystalStructure": "Face-centered cubic",
-    "mohsHardness": 2.5
+    "mohsHardness": 2.5,
+    "etymology": "Named after Ceres",
+    "discoveryCountry": "Kingdom of Prussia",
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    },
+    "hazardLevel": "flammable",
+    "isotopes": [
+      {
+        "massNumber": 140,
+        "symbol": "140Ce",
+        "abundance": 88.449,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 142,
+        "symbol": "142Ce",
+        "abundance": 11.114,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 138,
+        "symbol": "138Ce",
+        "abundance": 0.251,
+        "halfLife": "4.4E+16 Y",
+        "decayMode": "2EC"
+      },
+      {
+        "massNumber": 136,
+        "symbol": "136Ce",
+        "abundance": 0.186,
+        "halfLife": "stable",
+        "decayMode": "2EC"
+      },
+      {
+        "massNumber": 158,
+        "symbol": "158Ce",
+        "abundance": null,
+        "halfLife": "99 ms",
+        "decayMode": "B-"
+      }
+    ]
   },
   {
     "name": "Praseodymium",
@@ -5400,7 +8173,7 @@
     "boilingPoint": 3403,
     "molarHeat": 27.2,
     "oxidationStates": null,
-    "discoverer": "Carl Auer von Welsbach",
+    "discoverer": "Carl Gustaf Mosander",
     "namedBy": null,
     "yearDiscovered": 1841,
     "cpkHex": "d9ffc7",
@@ -5439,7 +8212,55 @@
     "vanDerWaalsRadius": null,
     "electricalType": "Conductor",
     "valenceElectrons": 2,
-    "crystalStructure": "Double hexagonal close-packed"
+    "crystalStructure": "Double hexagonal close-packed",
+    "etymology": "Named after green",
+    "discoveryCountry": "Sweden",
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    },
+    "hazardLevel": "flammable",
+    "isotopes": [
+      {
+        "massNumber": 141,
+        "symbol": "141Pr",
+        "abundance": 100,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 161,
+        "symbol": "161Pr",
+        "abundance": null,
+        "halfLife": "unknown",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 160,
+        "symbol": "160Pr",
+        "abundance": null,
+        "halfLife": "0.17 s",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 159,
+        "symbol": "159Pr",
+        "abundance": null,
+        "halfLife": "0.13 s",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 158,
+        "symbol": "158Pr",
+        "abundance": null,
+        "halfLife": "0.181 s",
+        "decayMode": "B-"
+      }
+    ]
   },
   {
     "name": "Neodymium",
@@ -5519,7 +8340,55 @@
     "latinName": "neodymium",
     "electricalType": "Conductor",
     "valenceElectrons": 2,
-    "crystalStructure": "Double hexagonal close-packed"
+    "crystalStructure": "Double hexagonal close-packed",
+    "etymology": "Named after novelty",
+    "discoveryCountry": "Austria",
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    },
+    "hazardLevel": "flammable",
+    "isotopes": [
+      {
+        "massNumber": 142,
+        "symbol": "142Nd",
+        "abundance": 27.153,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 144,
+        "symbol": "144Nd",
+        "abundance": 23.798,
+        "halfLife": "2.29E+15 Y",
+        "decayMode": "A"
+      },
+      {
+        "massNumber": 146,
+        "symbol": "146Nd",
+        "abundance": 17.189,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 143,
+        "symbol": "143Nd",
+        "abundance": 12.173,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 145,
+        "symbol": "145Nd",
+        "abundance": 8.293,
+        "halfLife": "stable",
+        "decayMode": null
+      }
+    ]
   },
   {
     "name": "Promethium",
@@ -5561,7 +8430,7 @@
     "boilingPoint": 3273,
     "molarHeat": null,
     "oxidationStates": "+2, +3",
-    "discoverer": "Chien Shiung Wu",
+    "discoverer": "Lawrence E. Glendenin",
     "namedBy": "Isotopes of promethium",
     "yearDiscovered": 1945,
     "cpkHex": "a3ffc7",
@@ -5597,7 +8466,55 @@
     "casNumber": "7440-12-2",
     "latinName": "promethium",
     "electricalType": "Conductor",
-    "valenceElectrons": 2
+    "valenceElectrons": 2,
+    "etymology": "Named after Prometheus",
+    "discoveryCountry": "United States",
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    },
+    "hazardLevel": "radioactive",
+    "isotopes": [
+      {
+        "massNumber": 165,
+        "symbol": "165Pm",
+        "abundance": null,
+        "halfLife": "unknown",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 164,
+        "symbol": "164Pm",
+        "abundance": null,
+        "halfLife": "unknown",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 163,
+        "symbol": "163Pm",
+        "abundance": null,
+        "halfLife": "0.43 s",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 162,
+        "symbol": "162Pm",
+        "abundance": null,
+        "halfLife": "0.63 s",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 161,
+        "symbol": "161Pm",
+        "abundance": null,
+        "halfLife": "1.05 s",
+        "decayMode": "B-"
+      }
+    ]
   },
   {
     "name": "Samarium",
@@ -5639,7 +8556,7 @@
     "boilingPoint": 2173,
     "molarHeat": 29.54,
     "oxidationStates": null,
-    "discoverer": "Lecoq de Boisbaudran",
+    "discoverer": "Paul-Émile Lecoq de Boisbaudran",
     "namedBy": null,
     "yearDiscovered": 1879,
     "cpkHex": "8fffc7",
@@ -5677,7 +8594,55 @@
     "latinName": "samarium",
     "electricalType": "Conductor",
     "valenceElectrons": 2,
-    "crystalStructure": "Rhombohedral"
+    "crystalStructure": "Rhombohedral",
+    "etymology": "Named after samarskite-(Y)",
+    "discoveryCountry": "France",
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    },
+    "hazardLevel": "flammable",
+    "isotopes": [
+      {
+        "massNumber": 152,
+        "symbol": "152Sm",
+        "abundance": 26.74,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 154,
+        "symbol": "154Sm",
+        "abundance": 22.74,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 147,
+        "symbol": "147Sm",
+        "abundance": 15,
+        "halfLife": "1.073E11 Y",
+        "decayMode": "A"
+      },
+      {
+        "massNumber": 149,
+        "symbol": "149Sm",
+        "abundance": 13.82,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 148,
+        "symbol": "148Sm",
+        "abundance": 11.25,
+        "halfLife": "7E+15 Y",
+        "decayMode": "A"
+      }
+    ]
   },
   {
     "name": "Europium",
@@ -5757,7 +8722,55 @@
     "latinName": "europium",
     "electricalType": "Conductor",
     "valenceElectrons": 2,
-    "crystalStructure": "Body-centered cubic"
+    "crystalStructure": "Body-centered cubic",
+    "etymology": "Named after Europe",
+    "discoveryCountry": "France",
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    },
+    "hazardLevel": "flammable",
+    "isotopes": [
+      {
+        "massNumber": 153,
+        "symbol": "153Eu",
+        "abundance": 52.19,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 151,
+        "symbol": "151Eu",
+        "abundance": 47.81,
+        "halfLife": "1.7E+18 Y",
+        "decayMode": "A"
+      },
+      {
+        "massNumber": 169,
+        "symbol": "169Eu",
+        "abundance": null,
+        "halfLife": "unknown",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 168,
+        "symbol": "168Eu",
+        "abundance": null,
+        "halfLife": "0.20 s",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 167,
+        "symbol": "167Eu",
+        "abundance": null,
+        "halfLife": "1.3 s",
+        "decayMode": "B-"
+      }
+    ]
   },
   {
     "name": "Gadolinium",
@@ -5838,7 +8851,55 @@
     "electricalType": "Conductor",
     "valenceElectrons": 2,
     "crystalStructure": "Hexagonal close-packed",
-    "mohsHardness": 5
+    "mohsHardness": 5,
+    "etymology": "Named after Johan Gadolin",
+    "discoveryCountry": "Switzerland",
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    },
+    "hazardLevel": "flammable",
+    "isotopes": [
+      {
+        "massNumber": 158,
+        "symbol": "158Gd",
+        "abundance": 24.84,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 160,
+        "symbol": "160Gd",
+        "abundance": 21.86,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 156,
+        "symbol": "156Gd",
+        "abundance": 20.47,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 157,
+        "symbol": "157Gd",
+        "abundance": 15.65,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 155,
+        "symbol": "155Gd",
+        "abundance": 14.8,
+        "halfLife": "stable",
+        "decayMode": null
+      }
+    ]
   },
   {
     "name": "Terbium",
@@ -5918,7 +8979,55 @@
     "latinName": "terbium",
     "electricalType": "Conductor",
     "valenceElectrons": 2,
-    "crystalStructure": "Hexagonal close-packed"
+    "crystalStructure": "Hexagonal close-packed",
+    "etymology": "Named after Ytterby mine",
+    "discoveryCountry": "Sweden",
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    },
+    "hazardLevel": "flammable",
+    "isotopes": [
+      {
+        "massNumber": 159,
+        "symbol": "159Tb",
+        "abundance": 100,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 174,
+        "symbol": "174Tb",
+        "abundance": null,
+        "halfLife": "unknown",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 173,
+        "symbol": "173Tb",
+        "abundance": null,
+        "halfLife": "unknown",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 172,
+        "symbol": "172Tb",
+        "abundance": null,
+        "halfLife": "0.76 s",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 171,
+        "symbol": "171Tb",
+        "abundance": null,
+        "halfLife": "1.24 s",
+        "decayMode": "B-"
+      }
+    ]
   },
   {
     "name": "Dysprosium",
@@ -5960,7 +9069,7 @@
     "boilingPoint": 2840,
     "molarHeat": 27.7,
     "oxidationStates": "+2, +3, +4",
-    "discoverer": "Lecoq de Boisbaudran",
+    "discoverer": "Paul-Émile Lecoq de Boisbaudran",
     "namedBy": null,
     "yearDiscovered": 1886,
     "cpkHex": "1fffc7",
@@ -5998,7 +9107,55 @@
     "latinName": "dysprosium",
     "electricalType": "Conductor",
     "valenceElectrons": 2,
-    "crystalStructure": "Hexagonal close-packed"
+    "crystalStructure": "Hexagonal close-packed",
+    "etymology": "Named after getting",
+    "discoveryCountry": "France",
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    },
+    "hazardLevel": "flammable",
+    "isotopes": [
+      {
+        "massNumber": 164,
+        "symbol": "164Dy",
+        "abundance": 28.26,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 162,
+        "symbol": "162Dy",
+        "abundance": 25.475,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 163,
+        "symbol": "163Dy",
+        "abundance": 24.896,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 161,
+        "symbol": "161Dy",
+        "abundance": 18.889,
+        "halfLife": "stable",
+        "decayMode": "A"
+      },
+      {
+        "massNumber": 160,
+        "symbol": "160Dy",
+        "abundance": 2.329,
+        "halfLife": "stable",
+        "decayMode": null
+      }
+    ]
   },
   {
     "name": "Holmium",
@@ -6079,7 +9236,55 @@
     "vanDerWaalsRadius": null,
     "electricalType": "Conductor",
     "valenceElectrons": 2,
-    "crystalStructure": "Hexagonal close-packed"
+    "crystalStructure": "Hexagonal close-packed",
+    "etymology": "Named after Stockholm",
+    "discoveryCountry": "Sweden",
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    },
+    "hazardLevel": "flammable",
+    "isotopes": [
+      {
+        "massNumber": 165,
+        "symbol": "165Ho",
+        "abundance": 100,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 178,
+        "symbol": "178Ho",
+        "abundance": null,
+        "halfLife": "unknown",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 177,
+        "symbol": "177Ho",
+        "abundance": null,
+        "halfLife": "unknown",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 176,
+        "symbol": "176Ho",
+        "abundance": null,
+        "halfLife": "160 ns",
+        "decayMode": "B-N"
+      },
+      {
+        "massNumber": 175,
+        "symbol": "175Ho",
+        "abundance": null,
+        "halfLife": "1.9 s",
+        "decayMode": "B-"
+      }
+    ]
   },
   {
     "name": "Erbium",
@@ -6159,7 +9364,55 @@
     "latinName": "erbium",
     "electricalType": "Conductor",
     "valenceElectrons": 2,
-    "crystalStructure": "Hexagonal close-packed"
+    "crystalStructure": "Hexagonal close-packed",
+    "etymology": "Named after Ytterby mine",
+    "discoveryCountry": "Sweden",
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    },
+    "hazardLevel": "flammable",
+    "isotopes": [
+      {
+        "massNumber": 166,
+        "symbol": "166Er",
+        "abundance": 33.503,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 168,
+        "symbol": "168Er",
+        "abundance": 26.978,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 167,
+        "symbol": "167Er",
+        "abundance": 22.869,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 170,
+        "symbol": "170Er",
+        "abundance": 14.91,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 164,
+        "symbol": "164Er",
+        "abundance": 1.601,
+        "halfLife": "stable",
+        "decayMode": null
+      }
+    ]
   },
   {
     "name": "Thulium",
@@ -6239,7 +9492,55 @@
     "latinName": "thulium",
     "electricalType": "Conductor",
     "valenceElectrons": 2,
-    "crystalStructure": "Hexagonal close-packed"
+    "crystalStructure": "Hexagonal close-packed",
+    "etymology": "Named after Scandinavia",
+    "discoveryCountry": "Sweden",
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    },
+    "hazardLevel": "flammable",
+    "isotopes": [
+      {
+        "massNumber": 169,
+        "symbol": "169Tm",
+        "abundance": 100,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 181,
+        "symbol": "181Tm",
+        "abundance": null,
+        "halfLife": "160 ns",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 180,
+        "symbol": "180Tm",
+        "abundance": null,
+        "halfLife": "300 ns",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 179,
+        "symbol": "179Tm",
+        "abundance": null,
+        "halfLife": "160 ns",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 178,
+        "symbol": "178Tm",
+        "abundance": null,
+        "halfLife": "300 ns",
+        "decayMode": "B-"
+      }
+    ]
   },
   {
     "name": "Ytterbium",
@@ -6319,7 +9620,55 @@
     "latinName": "ytterbium",
     "electricalType": "Conductor",
     "valenceElectrons": 2,
-    "crystalStructure": "Face-centered cubic"
+    "crystalStructure": "Face-centered cubic",
+    "etymology": "Named after Ytterby mine",
+    "discoveryCountry": "Switzerland",
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    },
+    "hazardLevel": "flammable",
+    "isotopes": [
+      {
+        "massNumber": 174,
+        "symbol": "174Yb",
+        "abundance": 32.025,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 172,
+        "symbol": "172Yb",
+        "abundance": 21.686,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 173,
+        "symbol": "173Yb",
+        "abundance": 16.103,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 171,
+        "symbol": "171Yb",
+        "abundance": 14.086,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 176,
+        "symbol": "176Yb",
+        "abundance": 12.995,
+        "halfLife": "stable",
+        "decayMode": null
+      }
+    ]
   },
   {
     "name": "Lutetium",
@@ -6397,7 +9746,55 @@
     "electricalType": "Conductor",
     "valenceElectrons": 2,
     "crystalStructure": "Hexagonal close-packed",
-    "mohsHardness": 2.6
+    "mohsHardness": 2.6,
+    "etymology": "Named after Lutetia",
+    "discoveryCountry": "France",
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    },
+    "hazardLevel": "flammable",
+    "isotopes": [
+      {
+        "massNumber": 175,
+        "symbol": "175Lu",
+        "abundance": 97.401,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 176,
+        "symbol": "176Lu",
+        "abundance": 2.599,
+        "halfLife": "3.76E+10 Y",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 188,
+        "symbol": "188Lu",
+        "abundance": null,
+        "halfLife": "unknown",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 187,
+        "symbol": "187Lu",
+        "abundance": null,
+        "halfLife": "unknown",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 186,
+        "symbol": "186Lu",
+        "abundance": null,
+        "halfLife": "unknown",
+        "decayMode": "B-"
+      }
+    ]
   },
   {
     "name": "Hafnium",
@@ -6470,7 +9867,55 @@
     "electricalType": "Conductor",
     "valenceElectrons": 2,
     "crystalStructure": "Hexagonal close-packed",
-    "mohsHardness": 5.5
+    "mohsHardness": 5.5,
+    "etymology": "Named after Copenhagen",
+    "discoveryCountry": "Kingdom of Denmark",
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    },
+    "hazardLevel": "flammable",
+    "isotopes": [
+      {
+        "massNumber": 180,
+        "symbol": "180Hf",
+        "abundance": 35.08,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 178,
+        "symbol": "178Hf",
+        "abundance": 27.28,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 177,
+        "symbol": "177Hf",
+        "abundance": 18.6,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 179,
+        "symbol": "179Hf",
+        "abundance": 13.62,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 176,
+        "symbol": "176Hf",
+        "abundance": 5.26,
+        "halfLife": "stable",
+        "decayMode": null
+      }
+    ]
   },
   {
     "name": "Tantalum",
@@ -6542,7 +9987,55 @@
     "electricalType": "Conductor",
     "valenceElectrons": 2,
     "crystalStructure": "Body-centered cubic",
-    "mohsHardness": 6.5
+    "mohsHardness": 6.5,
+    "etymology": "Named after Tantalus",
+    "discoveryCountry": "Sweden",
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    },
+    "hazardLevel": "flammable",
+    "isotopes": [
+      {
+        "massNumber": 181,
+        "symbol": "181Ta",
+        "abundance": 99.98799,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 194,
+        "symbol": "194Ta",
+        "abundance": null,
+        "halfLife": "unknown",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 193,
+        "symbol": "193Ta",
+        "abundance": null,
+        "halfLife": "unknown",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 192,
+        "symbol": "192Ta",
+        "abundance": null,
+        "halfLife": "2.2 s",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 191,
+        "symbol": "191Ta",
+        "abundance": null,
+        "halfLife": "300 ns",
+        "decayMode": "B-"
+      }
+    ]
   },
   {
     "name": "Tungsten",
@@ -6582,7 +10075,7 @@
     "boilingPoint": 6203,
     "molarHeat": 24.27,
     "oxidationStates": "+2, +3, +4, +5, +6",
-    "discoverer": "Carl Wilhelm Scheele",
+    "discoverer": "Juan José Elhuyar",
     "namedBy": null,
     "yearDiscovered": 1783,
     "cpkHex": "2194d6",
@@ -6627,7 +10120,55 @@
     "electricalType": "Conductor",
     "valenceElectrons": 2,
     "crystalStructure": "Body-centered cubic",
-    "mohsHardness": 7.5
+    "mohsHardness": 7.5,
+    "etymology": "Named after Canis lupus",
+    "discoveryCountry": "Spain",
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    },
+    "hazardLevel": "flammable",
+    "isotopes": [
+      {
+        "massNumber": 184,
+        "symbol": "184W",
+        "abundance": 30.64,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 186,
+        "symbol": "186W",
+        "abundance": 28.43,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 182,
+        "symbol": "182W",
+        "abundance": 26.5,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 183,
+        "symbol": "183W",
+        "abundance": 14.31,
+        "halfLife": "6.7E+20 Y",
+        "decayMode": "A"
+      },
+      {
+        "massNumber": 180,
+        "symbol": "180W",
+        "abundance": 0.12,
+        "halfLife": "1.8E18 Y",
+        "decayMode": "A"
+      }
+    ]
   },
   {
     "name": "Rhenium",
@@ -6669,7 +10210,7 @@
     "boilingPoint": 5869,
     "molarHeat": 25.48,
     "oxidationStates": "+3, +5, +7",
-    "discoverer": "Masataka Ogawa",
+    "discoverer": "Walter Noddack",
     "namedBy": "Walter Noddack",
     "yearDiscovered": 1925,
     "cpkHex": "267dab",
@@ -6704,7 +10245,55 @@
     "electricalType": "Conductor",
     "valenceElectrons": 2,
     "crystalStructure": "Hexagonal close-packed",
-    "mohsHardness": 7
+    "mohsHardness": 7,
+    "etymology": "Named after Rhine",
+    "discoveryCountry": "German Reich",
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    },
+    "hazardLevel": "flammable",
+    "isotopes": [
+      {
+        "massNumber": 187,
+        "symbol": "187Re",
+        "abundance": 62.6,
+        "halfLife": "4.33E+10 Y",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 185,
+        "symbol": "185Re",
+        "abundance": 37.4,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 199,
+        "symbol": "199Re",
+        "abundance": null,
+        "halfLife": "160 ns",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 198,
+        "symbol": "198Re",
+        "abundance": null,
+        "halfLife": "160 ns",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 197,
+        "symbol": "197Re",
+        "abundance": null,
+        "halfLife": "160 ns",
+        "decayMode": "B-"
+      }
+    ]
   },
   {
     "name": "Osmium",
@@ -6779,7 +10368,55 @@
     "electricalType": "Conductor",
     "valenceElectrons": 2,
     "crystalStructure": "Hexagonal close-packed",
-    "mohsHardness": 7
+    "mohsHardness": 7,
+    "etymology": "Named after odor",
+    "discoveryCountry": "United Kingdom of Great Britain and Ireland",
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    },
+    "hazardLevel": "corrosive",
+    "isotopes": [
+      {
+        "massNumber": 192,
+        "symbol": "192Os",
+        "abundance": 40.78,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 190,
+        "symbol": "190Os",
+        "abundance": 26.26,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 189,
+        "symbol": "189Os",
+        "abundance": 16.15,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 188,
+        "symbol": "188Os",
+        "abundance": 13.24,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 187,
+        "symbol": "187Os",
+        "abundance": 1.96,
+        "halfLife": "stable",
+        "decayMode": null
+      }
+    ]
   },
   {
     "name": "Iridium",
@@ -6849,7 +10486,55 @@
     "electricalType": "Conductor",
     "valenceElectrons": 2,
     "crystalStructure": "Face-centered cubic",
-    "mohsHardness": 6.5
+    "mohsHardness": 6.5,
+    "etymology": "Named after Iris",
+    "discoveryCountry": "United Kingdom",
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    },
+    "hazardLevel": "flammable",
+    "isotopes": [
+      {
+        "massNumber": 193,
+        "symbol": "193Ir",
+        "abundance": 62.7,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 191,
+        "symbol": "191Ir",
+        "abundance": 37.3,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 205,
+        "symbol": "205Ir",
+        "abundance": null,
+        "halfLife": "unknown",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 204,
+        "symbol": "204Ir",
+        "abundance": null,
+        "halfLife": "160 ns",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 203,
+        "symbol": "203Ir",
+        "abundance": null,
+        "halfLife": "unknown",
+        "decayMode": "B-"
+      }
+    ]
   },
   {
     "name": "Platinum",
@@ -6889,7 +10574,7 @@
     "boilingPoint": 4098,
     "molarHeat": 25.86,
     "oxidationStates": null,
-    "discoverer": "Antonio de Ulloa",
+    "discoverer": "Julius Caesar Scaliger",
     "namedBy": null,
     "yearDiscovered": 1557,
     "cpkHex": "d0d0e0",
@@ -6919,7 +10604,55 @@
     "electricalType": "Conductor",
     "valenceElectrons": 1,
     "crystalStructure": "Face-centered cubic",
-    "mohsHardness": 3.5
+    "mohsHardness": 3.5,
+    "etymology": "Named after silver",
+    "discoveryCountry": "Kingdom of Spain",
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    },
+    "hazardLevel": "flammable",
+    "isotopes": [
+      {
+        "massNumber": 195,
+        "symbol": "195Pt",
+        "abundance": 33.775,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 194,
+        "symbol": "194Pt",
+        "abundance": 32.864,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 196,
+        "symbol": "196Pt",
+        "abundance": 25.211,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 198,
+        "symbol": "198Pt",
+        "abundance": 7.356,
+        "halfLife": "stable",
+        "decayMode": "2B-"
+      },
+      {
+        "massNumber": 192,
+        "symbol": "192Pt",
+        "abundance": 0.782,
+        "halfLife": "stable",
+        "decayMode": null
+      }
+    ]
   },
   {
     "name": "Gold",
@@ -6992,7 +10725,53 @@
     "colour": "gold",
     "electricalType": "Conductor",
     "valenceElectrons": 1,
-    "mohsHardness": 2.5
+    "mohsHardness": 2.5,
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    },
+    "hazardLevel": "safe",
+    "isotopes": [
+      {
+        "massNumber": 197,
+        "symbol": "197Au",
+        "abundance": 100,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 210,
+        "symbol": "210Au",
+        "abundance": null,
+        "halfLife": "300 ns",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 209,
+        "symbol": "209Au",
+        "abundance": null,
+        "halfLife": "300 ns",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 208,
+        "symbol": "208Au",
+        "abundance": null,
+        "halfLife": "unknown",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 207,
+        "symbol": "207Au",
+        "abundance": null,
+        "halfLife": "300 ns",
+        "decayMode": "B-"
+      }
+    ]
   },
   {
     "name": "Mercury",
@@ -7086,7 +10865,54 @@
     "vanDerWaalsRadius": -37.89,
     "electricalType": "Conductor",
     "valenceElectrons": 2,
-    "magneticType": "diamagnetism"
+    "magneticType": "diamagnetism",
+    "etymology": "Named after Mercury",
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    },
+    "hazardLevel": "corrosive",
+    "isotopes": [
+      {
+        "massNumber": 202,
+        "symbol": "202Hg",
+        "abundance": 29.74,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 200,
+        "symbol": "200Hg",
+        "abundance": 23.14,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 199,
+        "symbol": "199Hg",
+        "abundance": 16.94,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 201,
+        "symbol": "201Hg",
+        "abundance": 13.17,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 198,
+        "symbol": "198Hg",
+        "abundance": 10.04,
+        "halfLife": "stable",
+        "decayMode": null
+      }
+    ]
   },
   {
     "name": "Thallium",
@@ -7162,7 +10988,55 @@
     "electricalType": "Conductor",
     "valenceElectrons": 3,
     "crystalStructure": "Hexagonal close-packed",
-    "mohsHardness": 1.2
+    "mohsHardness": 1.2,
+    "etymology": "Named after thallus",
+    "discoveryCountry": "United Kingdom of Great Britain and Ireland",
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    },
+    "hazardLevel": "corrosive",
+    "isotopes": [
+      {
+        "massNumber": 205,
+        "symbol": "205Tl",
+        "abundance": 70.485,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 203,
+        "symbol": "203Tl",
+        "abundance": 29.515,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 217,
+        "symbol": "217Tl",
+        "abundance": null,
+        "halfLife": "unknown",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 216,
+        "symbol": "216Tl",
+        "abundance": null,
+        "halfLife": "300 ns",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 215,
+        "symbol": "215Tl",
+        "abundance": null,
+        "halfLife": "9.7 s",
+        "decayMode": "B-"
+      }
+    ]
   },
   {
     "name": "Lead",
@@ -7242,7 +11116,53 @@
     "electricalType": "Conductor",
     "valenceElectrons": 4,
     "crystalStructure": "Face-centered cubic",
-    "mohsHardness": 1.5
+    "mohsHardness": 1.5,
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    },
+    "hazardLevel": "toxic",
+    "isotopes": [
+      {
+        "massNumber": 208,
+        "symbol": "208Pb",
+        "abundance": 52.4,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 206,
+        "symbol": "206Pb",
+        "abundance": 24.1,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 207,
+        "symbol": "207Pb",
+        "abundance": 22.1,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 204,
+        "symbol": "204Pb",
+        "abundance": 1.4,
+        "halfLife": "1.4E+17 Y",
+        "decayMode": "A"
+      },
+      {
+        "massNumber": 220,
+        "symbol": "220Pb",
+        "abundance": null,
+        "halfLife": "300 ns",
+        "decayMode": "B-"
+      }
+    ]
   },
   {
     "name": "Bismuth",
@@ -7321,7 +11241,53 @@
     "crystalStructure": "trigonal crystal system",
     "electricalType": "Conductor",
     "valenceElectrons": 5,
-    "mohsHardness": 2.25
+    "mohsHardness": 2.25,
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    },
+    "hazardLevel": "toxic",
+    "isotopes": [
+      {
+        "massNumber": 209,
+        "symbol": "209Bi",
+        "abundance": 100,
+        "halfLife": "2.01E19 Y",
+        "decayMode": "A"
+      },
+      {
+        "massNumber": 224,
+        "symbol": "224Bi",
+        "abundance": null,
+        "halfLife": "unknown",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 223,
+        "symbol": "223Bi",
+        "abundance": null,
+        "halfLife": "300 ns",
+        "decayMode": "B-N"
+      },
+      {
+        "massNumber": 222,
+        "symbol": "222Bi",
+        "abundance": null,
+        "halfLife": "300 ns",
+        "decayMode": "B-N"
+      },
+      {
+        "massNumber": 221,
+        "symbol": "221Bi",
+        "abundance": null,
+        "halfLife": "300 ns",
+        "decayMode": "B-N"
+      }
+    ]
   },
   {
     "name": "Polonium",
@@ -7394,7 +11360,55 @@
     "latinName": "polonium",
     "electricalType": "Conductor",
     "valenceElectrons": 6,
-    "crystalStructure": "Simple cubic"
+    "crystalStructure": "Simple cubic",
+    "etymology": "Named after Poland",
+    "discoveryCountry": "Second Polish Republic",
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    },
+    "hazardLevel": "radioactive",
+    "isotopes": [
+      {
+        "massNumber": 227,
+        "symbol": "227Po",
+        "abundance": null,
+        "halfLife": "300 ns",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 226,
+        "symbol": "226Po",
+        "abundance": null,
+        "halfLife": "300 ns",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 225,
+        "symbol": "225Po",
+        "abundance": null,
+        "halfLife": "300 ns",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 224,
+        "symbol": "224Po",
+        "abundance": null,
+        "halfLife": "unknown",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 223,
+        "symbol": "223Po",
+        "abundance": null,
+        "halfLife": "300 ns",
+        "decayMode": "B-"
+      }
+    ]
   },
   {
     "name": "Astatine",
@@ -7433,7 +11447,7 @@
     "boilingPoint": 610,
     "molarHeat": null,
     "oxidationStates": null,
-    "discoverer": "Dale R. Corson",
+    "discoverer": "Emilio G. Segrè",
     "namedBy": null,
     "yearDiscovered": 1940,
     "cpkHex": "754f45",
@@ -7461,7 +11475,55 @@
     "casNumber": "7440-68-8",
     "latinName": "astatum",
     "electricalType": "Semiconductor",
-    "valenceElectrons": 7
+    "valenceElectrons": 7,
+    "etymology": "Named after instability",
+    "discoveryCountry": "United States",
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    },
+    "hazardLevel": "radioactive",
+    "isotopes": [
+      {
+        "massNumber": 229,
+        "symbol": "229At",
+        "abundance": null,
+        "halfLife": "300 ns",
+        "decayMode": "B-N"
+      },
+      {
+        "massNumber": 228,
+        "symbol": "228At",
+        "abundance": null,
+        "halfLife": "300 ns",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 227,
+        "symbol": "227At",
+        "abundance": null,
+        "halfLife": "300 ns",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 226,
+        "symbol": "226At",
+        "abundance": null,
+        "halfLife": "300 ns",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 225,
+        "symbol": "225At",
+        "abundance": null,
+        "halfLife": "300 ns",
+        "decayMode": "B-"
+      }
+    ]
   },
   {
     "name": "Radon",
@@ -7500,7 +11562,7 @@
     "boilingPoint": 211.5,
     "molarHeat": null,
     "oxidationStates": null,
-    "discoverer": "Friedrich Ernst Dorn",
+    "discoverer": "Robert Bowie Owens",
     "namedBy": null,
     "yearDiscovered": 1899,
     "cpkHex": "428296",
@@ -7527,7 +11589,55 @@
     "latinName": "radon",
     "electricalType": "Insulator",
     "valenceElectrons": 8,
-    "crystalStructure": "Face-centered cubic"
+    "crystalStructure": "Face-centered cubic",
+    "etymology": "Named after radium",
+    "discoveryCountry": "Kingdom of Prussia",
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    },
+    "hazardLevel": "radioactive",
+    "isotopes": [
+      {
+        "massNumber": 231,
+        "symbol": "231Rn",
+        "abundance": null,
+        "halfLife": "unknown",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 230,
+        "symbol": "230Rn",
+        "abundance": null,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 229,
+        "symbol": "229Rn",
+        "abundance": null,
+        "halfLife": "12.0 s",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 228,
+        "symbol": "228Rn",
+        "abundance": null,
+        "halfLife": "65 s",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 227,
+        "symbol": "227Rn",
+        "abundance": null,
+        "halfLife": "20.2 s",
+        "decayMode": "B-"
+      }
+    ]
   },
   {
     "name": "Francium",
@@ -7594,7 +11704,55 @@
     "casNumber": "7440-73-5",
     "latinName": "francium",
     "electricalType": "Conductor",
-    "valenceElectrons": 1
+    "valenceElectrons": 1,
+    "etymology": "Named after France",
+    "discoveryCountry": "France",
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    },
+    "hazardLevel": "radioactive",
+    "isotopes": [
+      {
+        "massNumber": 233,
+        "symbol": "233Fr",
+        "abundance": null,
+        "halfLife": "0.9 s",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 232,
+        "symbol": "232Fr",
+        "abundance": null,
+        "halfLife": "5.5 s",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 231,
+        "symbol": "231Fr",
+        "abundance": null,
+        "halfLife": "17.6 s",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 230,
+        "symbol": "230Fr",
+        "abundance": null,
+        "halfLife": "19.1 s",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 229,
+        "symbol": "229Fr",
+        "abundance": null,
+        "halfLife": "50.2 s",
+        "decayMode": "B-"
+      }
+    ]
   },
   {
     "name": "Radium",
@@ -7673,7 +11831,55 @@
     "latinName": "radium",
     "electricalType": "Conductor",
     "valenceElectrons": 2,
-    "crystalStructure": "Body-centered cubic"
+    "crystalStructure": "Body-centered cubic",
+    "etymology": "Named after radioactivity",
+    "discoveryCountry": "Second Polish Republic",
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    },
+    "hazardLevel": "radioactive",
+    "isotopes": [
+      {
+        "massNumber": 234,
+        "symbol": "234Ra",
+        "abundance": null,
+        "halfLife": "30 s",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 233,
+        "symbol": "233Ra",
+        "abundance": null,
+        "halfLife": "30 s",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 232,
+        "symbol": "232Ra",
+        "abundance": null,
+        "halfLife": "4.2 m",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 231,
+        "symbol": "231Ra",
+        "abundance": null,
+        "halfLife": "103.9 s",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 230,
+        "symbol": "230Ra",
+        "abundance": null,
+        "halfLife": "93 m",
+        "decayMode": "B-"
+      }
+    ]
   },
   {
     "name": "Actinium",
@@ -7714,7 +11920,7 @@
     "boilingPoint": 3500,
     "molarHeat": 27.2,
     "oxidationStates": "+3",
-    "discoverer": "Friedrich Oskar Giesel",
+    "discoverer": "André-Louis Debierne",
     "namedBy": null,
     "yearDiscovered": 1899,
     "cpkHex": "70abfa",
@@ -7747,7 +11953,55 @@
     "latinName": "actinium",
     "electricalType": "Conductor",
     "valenceElectrons": 2,
-    "crystalStructure": "Face-centered cubic"
+    "crystalStructure": "Face-centered cubic",
+    "etymology": "Named after light beam",
+    "discoveryCountry": "France",
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    },
+    "hazardLevel": "radioactive",
+    "isotopes": [
+      {
+        "massNumber": 236,
+        "symbol": "236Ac",
+        "abundance": null,
+        "halfLife": "1.2 m",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 235,
+        "symbol": "235Ac",
+        "abundance": null,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 234,
+        "symbol": "234Ac",
+        "abundance": null,
+        "halfLife": "44 s",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 233,
+        "symbol": "233Ac",
+        "abundance": null,
+        "halfLife": "143 s",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 232,
+        "symbol": "232Ac",
+        "abundance": null,
+        "halfLife": "119 s",
+        "decayMode": "B-"
+      }
+    ]
   },
   {
     "name": "Thorium",
@@ -7790,7 +12044,7 @@
     "boilingPoint": 5061,
     "molarHeat": 26.23,
     "oxidationStates": "+1, +2, +3, +4",
-    "discoverer": "Jöns Jakob Berzelius",
+    "discoverer": "Jöns Jacob Berzelius",
     "namedBy": null,
     "yearDiscovered": 1828,
     "cpkHex": "00baff",
@@ -7825,7 +12079,55 @@
     "electricalType": "Conductor",
     "valenceElectrons": 2,
     "crystalStructure": "Face-centered cubic",
-    "mohsHardness": 3
+    "mohsHardness": 3,
+    "etymology": "Named after Thor",
+    "discoveryCountry": "Sweden",
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    },
+    "hazardLevel": "radioactive",
+    "isotopes": [
+      {
+        "massNumber": 232,
+        "symbol": "232Th",
+        "abundance": 99.98,
+        "halfLife": "1.40E10 Y",
+        "decayMode": "A"
+      },
+      {
+        "massNumber": 230,
+        "symbol": "230Th",
+        "abundance": 0.02,
+        "halfLife": "7.54E+4 Y",
+        "decayMode": "A"
+      },
+      {
+        "massNumber": 238,
+        "symbol": "238Th",
+        "abundance": null,
+        "halfLife": "9.4 m",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 237,
+        "symbol": "237Th",
+        "abundance": null,
+        "halfLife": "4.8 m",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 236,
+        "symbol": "236Th",
+        "abundance": null,
+        "halfLife": "37.5 m",
+        "decayMode": "B-"
+      }
+    ]
   },
   {
     "name": "Protactinium",
@@ -7865,7 +12167,7 @@
     "boilingPoint": 4300,
     "molarHeat": null,
     "oxidationStates": null,
-    "discoverer": "William Crookes",
+    "discoverer": "Kazimierz Fajans",
     "namedBy": "Otto Hahn",
     "yearDiscovered": 1917,
     "cpkHex": "00a1ff",
@@ -7898,7 +12200,55 @@
     "latinName": "protactinium",
     "electricalType": "Conductor",
     "valenceElectrons": 2,
-    "crystalStructure": "Body-centered tetragonal"
+    "crystalStructure": "Body-centered tetragonal",
+    "etymology": "Named after actinium",
+    "discoveryCountry": "West Germany",
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    },
+    "hazardLevel": "radioactive",
+    "isotopes": [
+      {
+        "massNumber": 231,
+        "symbol": "231Pa",
+        "abundance": 100,
+        "halfLife": "32570 Y",
+        "decayMode": "A"
+      },
+      {
+        "massNumber": 239,
+        "symbol": "239Pa",
+        "abundance": null,
+        "halfLife": "1.8 h",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 238,
+        "symbol": "238Pa",
+        "abundance": null,
+        "halfLife": "2.28 m",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 237,
+        "symbol": "237Pa",
+        "abundance": null,
+        "halfLife": "8.7 m",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 236,
+        "symbol": "236Pa",
+        "abundance": null,
+        "halfLife": "9.1 m",
+        "decayMode": "B-"
+      }
+    ]
   },
   {
     "name": "Uranium",
@@ -7978,7 +12328,55 @@
     "electricalType": "Conductor",
     "valenceElectrons": 2,
     "crystalStructure": "Orthorhombic",
-    "mohsHardness": 6
+    "mohsHardness": 6,
+    "etymology": "Named after Uranus",
+    "discoveryCountry": "France",
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    },
+    "hazardLevel": "radioactive",
+    "isotopes": [
+      {
+        "massNumber": 238,
+        "symbol": "238U",
+        "abundance": 99.2742,
+        "halfLife": "4.468E9 Y",
+        "decayMode": "A"
+      },
+      {
+        "massNumber": 235,
+        "symbol": "235U",
+        "abundance": 0.7204,
+        "halfLife": "7.04E+8 Y",
+        "decayMode": "A"
+      },
+      {
+        "massNumber": 234,
+        "symbol": "234U",
+        "abundance": 0.0054,
+        "halfLife": "2.455E+5 Y",
+        "decayMode": "A"
+      },
+      {
+        "massNumber": 255,
+        "symbol": "255U",
+        "abundance": null,
+        "halfLife": "unknown",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 254,
+        "symbol": "254U",
+        "abundance": null,
+        "halfLife": "unknown",
+        "decayMode": "B-"
+      }
+    ]
   },
   {
     "name": "Neptunium",
@@ -8018,7 +12416,7 @@
     "boilingPoint": 4447,
     "molarHeat": 29.46,
     "oxidationStates": null,
-    "discoverer": "Edwin McMillan",
+    "discoverer": "Philip Abelson",
     "namedBy": null,
     "yearDiscovered": 1940,
     "cpkHex": "0080ff",
@@ -8050,7 +12448,55 @@
     "casNumber": "7439-99-8",
     "latinName": "neptunium",
     "electricalType": "Conductor",
-    "valenceElectrons": 2
+    "valenceElectrons": 2,
+    "etymology": "Named after Neptune",
+    "discoveryCountry": "United States",
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    },
+    "hazardLevel": "radioactive",
+    "isotopes": [
+      {
+        "massNumber": 244,
+        "symbol": "244Np",
+        "abundance": null,
+        "halfLife": "2.29 m",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 243,
+        "symbol": "243Np",
+        "abundance": null,
+        "halfLife": "1.85 m",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 242,
+        "symbol": "242Np",
+        "abundance": null,
+        "halfLife": "2.2 m",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 241,
+        "symbol": "241Np",
+        "abundance": null,
+        "halfLife": "13.9 m",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 240,
+        "symbol": "240Np",
+        "abundance": null,
+        "halfLife": "61.9 m",
+        "decayMode": "B-"
+      }
+    ]
   },
   {
     "name": "Plutonium",
@@ -8090,7 +12536,7 @@
     "boilingPoint": 3505,
     "molarHeat": 35.5,
     "oxidationStates": null,
-    "discoverer": "Glenn T. Seaborg",
+    "discoverer": "Joseph W. Kennedy",
     "namedBy": null,
     "yearDiscovered": 1941,
     "cpkHex": "006bff",
@@ -8123,7 +12569,55 @@
     "casNumber": "7440-07-5",
     "latinName": "plutonium",
     "electricalType": "Conductor",
-    "valenceElectrons": 2
+    "valenceElectrons": 2,
+    "etymology": "Named after Pluto",
+    "discoveryCountry": "United States",
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    },
+    "hazardLevel": "radioactive",
+    "isotopes": [
+      {
+        "massNumber": 247,
+        "symbol": "247Pu",
+        "abundance": null,
+        "halfLife": "2.27 d",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 246,
+        "symbol": "246Pu",
+        "abundance": null,
+        "halfLife": "10.84 d",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 245,
+        "symbol": "245Pu",
+        "abundance": null,
+        "halfLife": "10.5 h",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 244,
+        "symbol": "244Pu",
+        "abundance": null,
+        "halfLife": "8.13E+7 Y",
+        "decayMode": "A"
+      },
+      {
+        "massNumber": 243,
+        "symbol": "243Pu",
+        "abundance": null,
+        "halfLife": "4.956 h",
+        "decayMode": "B-"
+      }
+    ]
   },
   {
     "name": "Americium",
@@ -8195,7 +12689,55 @@
     "casNumber": "7440-35-9",
     "latinName": "americium",
     "electricalType": "Conductor",
-    "valenceElectrons": 2
+    "valenceElectrons": 2,
+    "etymology": "Named after Americas",
+    "discoveryCountry": "United States",
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    },
+    "hazardLevel": "radioactive",
+    "isotopes": [
+      {
+        "massNumber": 248,
+        "symbol": "248Am",
+        "abundance": null,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 247,
+        "symbol": "247Am",
+        "abundance": null,
+        "halfLife": "23.0 m",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 246,
+        "symbol": "246Am",
+        "abundance": null,
+        "halfLife": "39 m",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 245,
+        "symbol": "245Am",
+        "abundance": null,
+        "halfLife": "2.05 h",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 244,
+        "symbol": "244Am",
+        "abundance": null,
+        "halfLife": "10.1 h",
+        "decayMode": "B-"
+      }
+    ]
   },
   {
     "name": "Curium",
@@ -8262,7 +12804,55 @@
     "casNumber": "7440-51-9",
     "latinName": "curium",
     "electricalType": "Conductor",
-    "valenceElectrons": 2
+    "valenceElectrons": 2,
+    "etymology": "Named after Pierre Curie",
+    "discoveryCountry": "United States",
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    },
+    "hazardLevel": "radioactive",
+    "isotopes": [
+      {
+        "massNumber": 251,
+        "symbol": "251Cm",
+        "abundance": null,
+        "halfLife": "16.8 m",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 250,
+        "symbol": "250Cm",
+        "abundance": null,
+        "halfLife": "8.3E+3 Y",
+        "decayMode": "SF"
+      },
+      {
+        "massNumber": 249,
+        "symbol": "249Cm",
+        "abundance": null,
+        "halfLife": "64.15 m",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 248,
+        "symbol": "248Cm",
+        "abundance": null,
+        "halfLife": "3.48E+5 Y",
+        "decayMode": "A"
+      },
+      {
+        "massNumber": 247,
+        "symbol": "247Cm",
+        "abundance": null,
+        "halfLife": "1.56E+7 Y",
+        "decayMode": "A"
+      }
+    ]
   },
   {
     "name": "Berkelium",
@@ -8302,7 +12892,7 @@
     "boilingPoint": 2900,
     "molarHeat": null,
     "oxidationStates": null,
-    "discoverer": "Lawrence Berkeley National Laboratory",
+    "discoverer": "Stanley Gerald Thompson",
     "namedBy": null,
     "yearDiscovered": 1949,
     "cpkHex": "8a4fe3",
@@ -8329,7 +12919,55 @@
     "casNumber": "7440-40-6",
     "latinName": "berkelium",
     "electricalType": "Conductor",
-    "valenceElectrons": 2
+    "valenceElectrons": 2,
+    "etymology": "Named after Berkeley",
+    "discoveryCountry": "United States",
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    },
+    "hazardLevel": "radioactive",
+    "isotopes": [
+      {
+        "massNumber": 253,
+        "symbol": "253Bk",
+        "abundance": null,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 251,
+        "symbol": "251Bk",
+        "abundance": null,
+        "halfLife": "55.6 m",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 250,
+        "symbol": "250Bk",
+        "abundance": null,
+        "halfLife": "3.212 h",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 249,
+        "symbol": "249Bk",
+        "abundance": null,
+        "halfLife": "330 d",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 248,
+        "symbol": "248Bk",
+        "abundance": null,
+        "halfLife": "stable",
+        "decayMode": null
+      }
+    ]
   },
   {
     "name": "Californium",
@@ -8369,7 +13007,7 @@
     "boilingPoint": 1743,
     "molarHeat": null,
     "oxidationStates": null,
-    "discoverer": "Lawrence Berkeley National Laboratory",
+    "discoverer": "Stanley Gerald Thompson",
     "namedBy": null,
     "yearDiscovered": 1950,
     "cpkHex": "a136d4",
@@ -8397,7 +13035,55 @@
     "latinName": "californium",
     "vanDerWaalsRadius": null,
     "electricalType": "Conductor",
-    "valenceElectrons": 2
+    "valenceElectrons": 2,
+    "etymology": "Named after California",
+    "discoveryCountry": "United States",
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    },
+    "hazardLevel": "radioactive",
+    "isotopes": [
+      {
+        "massNumber": 256,
+        "symbol": "256Cf",
+        "abundance": null,
+        "halfLife": "12.3 m",
+        "decayMode": "SF"
+      },
+      {
+        "massNumber": 255,
+        "symbol": "255Cf",
+        "abundance": null,
+        "halfLife": "85 m",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 254,
+        "symbol": "254Cf",
+        "abundance": null,
+        "halfLife": "60.5 d",
+        "decayMode": "SF"
+      },
+      {
+        "massNumber": 253,
+        "symbol": "253Cf",
+        "abundance": null,
+        "halfLife": "17.81 d",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 252,
+        "symbol": "252Cf",
+        "abundance": null,
+        "halfLife": "2.647 Y",
+        "decayMode": "A"
+      }
+    ]
   },
   {
     "name": "Einsteinium",
@@ -8437,7 +13123,7 @@
     "boilingPoint": 1269,
     "molarHeat": null,
     "oxidationStates": null,
-    "discoverer": "Lawrence Berkeley National Laboratory",
+    "discoverer": "Albert Ghiorso",
     "namedBy": null,
     "yearDiscovered": 1952,
     "cpkHex": "b31fd4",
@@ -8463,7 +13149,55 @@
     "casNumber": "7429-92-7",
     "latinName": "einsteinium",
     "electricalType": "Conductor",
-    "valenceElectrons": 2
+    "valenceElectrons": 2,
+    "etymology": "Named after Albert Einstein",
+    "discoveryCountry": "United States",
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    },
+    "hazardLevel": "radioactive",
+    "isotopes": [
+      {
+        "massNumber": 257,
+        "symbol": "257Es",
+        "abundance": null,
+        "halfLife": "7.7 d",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 256,
+        "symbol": "256Es",
+        "abundance": null,
+        "halfLife": "25.4 m",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 255,
+        "symbol": "255Es",
+        "abundance": null,
+        "halfLife": "39.8 d",
+        "decayMode": "B-"
+      },
+      {
+        "massNumber": 254,
+        "symbol": "254Es",
+        "abundance": null,
+        "halfLife": "275.7 d",
+        "decayMode": "A"
+      },
+      {
+        "massNumber": 253,
+        "symbol": "253Es",
+        "abundance": null,
+        "halfLife": "20.47 d",
+        "decayMode": "A"
+      }
+    ]
   },
   {
     "name": "Fermium",
@@ -8503,7 +13237,7 @@
     "boilingPoint": null,
     "molarHeat": null,
     "oxidationStates": null,
-    "discoverer": "Lawrence Berkeley National Laboratory",
+    "discoverer": "Glenn T. Seaborg",
     "namedBy": null,
     "yearDiscovered": 1952,
     "cpkHex": "b31fba",
@@ -8527,7 +13261,55 @@
     "casNumber": "7440-72-4",
     "latinName": "fermium",
     "electricalType": "Conductor",
-    "valenceElectrons": 2
+    "valenceElectrons": 2,
+    "etymology": "Named after Enrico Fermi",
+    "discoveryCountry": "United States",
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    },
+    "hazardLevel": "radioactive",
+    "isotopes": [
+      {
+        "massNumber": 259,
+        "symbol": "259Fm",
+        "abundance": null,
+        "halfLife": "1.5 s",
+        "decayMode": "SF"
+      },
+      {
+        "massNumber": 258,
+        "symbol": "258Fm",
+        "abundance": null,
+        "halfLife": "370 us",
+        "decayMode": "SF"
+      },
+      {
+        "massNumber": 257,
+        "symbol": "257Fm",
+        "abundance": null,
+        "halfLife": "100.5 d",
+        "decayMode": "A"
+      },
+      {
+        "massNumber": 256,
+        "symbol": "256Fm",
+        "abundance": null,
+        "halfLife": "157.1 m",
+        "decayMode": "SF"
+      },
+      {
+        "massNumber": 255,
+        "symbol": "255Fm",
+        "abundance": null,
+        "halfLife": "20.07 h",
+        "decayMode": "A"
+      }
+    ]
   },
   {
     "name": "Mendelevium",
@@ -8567,7 +13349,7 @@
     "boilingPoint": null,
     "molarHeat": null,
     "oxidationStates": null,
-    "discoverer": "Lawrence Berkeley National Laboratory",
+    "discoverer": "Glenn T. Seaborg",
     "namedBy": null,
     "yearDiscovered": 1955,
     "cpkHex": "b30da6",
@@ -8591,7 +13373,55 @@
     "casNumber": "7440-11-1",
     "latinName": "mendelevium",
     "electricalType": "Conductor",
-    "valenceElectrons": 2
+    "valenceElectrons": 2,
+    "etymology": "Named after Dmitri Mendeleev",
+    "discoveryCountry": "United States",
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    },
+    "hazardLevel": "radioactive",
+    "isotopes": [
+      {
+        "massNumber": 260,
+        "symbol": "260Md",
+        "abundance": null,
+        "halfLife": "31.8 d",
+        "decayMode": "SF"
+      },
+      {
+        "massNumber": 259,
+        "symbol": "259Md",
+        "abundance": null,
+        "halfLife": "1.60 h",
+        "decayMode": "SF"
+      },
+      {
+        "massNumber": 258,
+        "symbol": "258Md",
+        "abundance": null,
+        "halfLife": "51.50 d",
+        "decayMode": "A"
+      },
+      {
+        "massNumber": 257,
+        "symbol": "257Md",
+        "abundance": null,
+        "halfLife": "5.52 h",
+        "decayMode": "EC"
+      },
+      {
+        "massNumber": 256,
+        "symbol": "256Md",
+        "abundance": null,
+        "halfLife": "77.7 m",
+        "decayMode": "EC"
+      }
+    ]
   },
   {
     "name": "Nobelium",
@@ -8631,7 +13461,7 @@
     "boilingPoint": null,
     "molarHeat": null,
     "oxidationStates": null,
-    "discoverer": "Joint Institute for Nuclear Research",
+    "discoverer": "Glenn T. Seaborg",
     "namedBy": null,
     "yearDiscovered": 1958,
     "cpkHex": "bd0d87",
@@ -8655,7 +13485,55 @@
     "casNumber": "10028-14-5",
     "latinName": "nobelium",
     "electricalType": "Conductor",
-    "valenceElectrons": 2
+    "valenceElectrons": 2,
+    "etymology": "Named after Alfred Nobel",
+    "discoveryCountry": "United States",
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    },
+    "hazardLevel": "radioactive",
+    "isotopes": [
+      {
+        "massNumber": 262,
+        "symbol": "262No",
+        "abundance": null,
+        "halfLife": "5 ms",
+        "decayMode": "SF"
+      },
+      {
+        "massNumber": 260,
+        "symbol": "260No",
+        "abundance": null,
+        "halfLife": "106 ms",
+        "decayMode": "SF"
+      },
+      {
+        "massNumber": 259,
+        "symbol": "259No",
+        "abundance": null,
+        "halfLife": "58 m",
+        "decayMode": "A"
+      },
+      {
+        "massNumber": 258,
+        "symbol": "258No",
+        "abundance": null,
+        "halfLife": "1.2 ms",
+        "decayMode": "SF"
+      },
+      {
+        "massNumber": 257,
+        "symbol": "257No",
+        "abundance": null,
+        "halfLife": "24.5 s",
+        "decayMode": "A"
+      }
+    ]
   },
   {
     "name": "Lawrencium",
@@ -8695,7 +13573,7 @@
     "boilingPoint": null,
     "molarHeat": null,
     "oxidationStates": null,
-    "discoverer": "Lawrence Berkeley National Laboratory",
+    "discoverer": "Albert Ghiorso",
     "namedBy": null,
     "yearDiscovered": 1961,
     "cpkHex": "c70066",
@@ -8719,7 +13597,55 @@
     "casNumber": "22537-19-5",
     "latinName": "lawrencium",
     "electricalType": "Conductor",
-    "valenceElectrons": 3
+    "valenceElectrons": 3,
+    "etymology": "Named after Ernest Lawrence",
+    "discoveryCountry": "United States",
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    },
+    "hazardLevel": "radioactive",
+    "isotopes": [
+      {
+        "massNumber": 266,
+        "symbol": "266Lr",
+        "abundance": null,
+        "halfLife": "11 h",
+        "decayMode": "SF"
+      },
+      {
+        "massNumber": 264,
+        "symbol": "264Lr",
+        "abundance": null,
+        "halfLife": "4.9 h",
+        "decayMode": "SF"
+      },
+      {
+        "massNumber": 262,
+        "symbol": "262Lr",
+        "abundance": null,
+        "halfLife": "4 h",
+        "decayMode": "SF"
+      },
+      {
+        "massNumber": 261,
+        "symbol": "261Lr",
+        "abundance": null,
+        "halfLife": "39 m",
+        "decayMode": "SF"
+      },
+      {
+        "massNumber": 260,
+        "symbol": "260Lr",
+        "abundance": null,
+        "halfLife": "180 s",
+        "decayMode": "A"
+      }
+    ]
   },
   {
     "name": "Rutherfordium",
@@ -8759,7 +13685,7 @@
     "boilingPoint": 5800,
     "molarHeat": null,
     "oxidationStates": null,
-    "discoverer": "Joint Institute for Nuclear Research",
+    "discoverer": "Albert Ghiorso",
     "namedBy": null,
     "yearDiscovered": 1964,
     "cpkHex": "cc0059",
@@ -8785,7 +13711,55 @@
     "casNumber": "53850-36-5",
     "latinName": "rutherfordium",
     "electricalType": "Conductor",
-    "valenceElectrons": 2
+    "valenceElectrons": 2,
+    "etymology": "Named after Ernest Rutherford",
+    "discoveryCountry": "Russia",
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    },
+    "hazardLevel": "radioactive",
+    "isotopes": [
+      {
+        "massNumber": 267,
+        "symbol": "267Rf",
+        "abundance": null,
+        "halfLife": "1.3 h",
+        "decayMode": "SF"
+      },
+      {
+        "massNumber": 265,
+        "symbol": "265Rf",
+        "abundance": null,
+        "halfLife": "1.0 m",
+        "decayMode": "SF"
+      },
+      {
+        "massNumber": 263,
+        "symbol": "263Rf",
+        "abundance": null,
+        "halfLife": "10 m",
+        "decayMode": "A"
+      },
+      {
+        "massNumber": 262,
+        "symbol": "262Rf",
+        "abundance": null,
+        "halfLife": "2.3 s",
+        "decayMode": "SF"
+      },
+      {
+        "massNumber": 261,
+        "symbol": "261Rf",
+        "abundance": null,
+        "halfLife": "68 s",
+        "decayMode": "A"
+      }
+    ]
   },
   {
     "name": "Dubnium",
@@ -8823,7 +13797,7 @@
     "boilingPoint": null,
     "molarHeat": null,
     "oxidationStates": null,
-    "discoverer": "Joint Institute for Nuclear Research",
+    "discoverer": "Lawrence Berkeley National Laboratory",
     "namedBy": null,
     "yearDiscovered": 1970,
     "cpkHex": "d1004f",
@@ -8847,7 +13821,54 @@
     "casNumber": "53850-35-4",
     "latinName": "dubnium",
     "electricalType": "Conductor",
-    "valenceElectrons": 2
+    "valenceElectrons": 2,
+    "etymology": "Named after Dubna",
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    },
+    "hazardLevel": "radioactive",
+    "isotopes": [
+      {
+        "massNumber": 270,
+        "symbol": "270Db",
+        "abundance": null,
+        "halfLife": "15 h",
+        "decayMode": "SF"
+      },
+      {
+        "massNumber": 268,
+        "symbol": "268Db",
+        "abundance": null,
+        "halfLife": "28 h",
+        "decayMode": "SF"
+      },
+      {
+        "massNumber": 267,
+        "symbol": "267Db",
+        "abundance": null,
+        "halfLife": "79 m",
+        "decayMode": "SF"
+      },
+      {
+        "massNumber": 266,
+        "symbol": "266Db",
+        "abundance": null,
+        "halfLife": "0.4 h",
+        "decayMode": "SF"
+      },
+      {
+        "massNumber": 263,
+        "symbol": "263Db",
+        "abundance": null,
+        "halfLife": "27 s",
+        "decayMode": "SF"
+      }
+    ]
   },
   {
     "name": "Seaborgium",
@@ -8885,7 +13906,7 @@
     "boilingPoint": null,
     "molarHeat": null,
     "oxidationStates": null,
-    "discoverer": "Lawrence Berkeley National Laboratory",
+    "discoverer": "Yuri Oganessian",
     "namedBy": null,
     "yearDiscovered": 1974,
     "cpkHex": "d90045",
@@ -8909,7 +13930,55 @@
     "casNumber": "54038-81-2",
     "latinName": "seaborgium",
     "electricalType": "Conductor",
-    "valenceElectrons": 2
+    "valenceElectrons": 2,
+    "etymology": "Named after Glenn T. Seaborg",
+    "discoveryCountry": "Russia",
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    },
+    "hazardLevel": "radioactive",
+    "isotopes": [
+      {
+        "massNumber": 271,
+        "symbol": "271Sg",
+        "abundance": null,
+        "halfLife": "96 s",
+        "decayMode": "A"
+      },
+      {
+        "massNumber": 269,
+        "symbol": "269Sg",
+        "abundance": null,
+        "halfLife": "1.3E2 s",
+        "decayMode": "A"
+      },
+      {
+        "massNumber": 267,
+        "symbol": "267Sg",
+        "abundance": null,
+        "halfLife": "84 s",
+        "decayMode": "SF"
+      },
+      {
+        "massNumber": 266,
+        "symbol": "266Sg",
+        "abundance": null,
+        "halfLife": "0.34 s",
+        "decayMode": "SF"
+      },
+      {
+        "massNumber": 265,
+        "symbol": "265Sg",
+        "abundance": null,
+        "halfLife": "14.4 s",
+        "decayMode": "SF"
+      }
+    ]
   },
   {
     "name": "Bohrium",
@@ -8947,7 +14016,7 @@
     "boilingPoint": null,
     "molarHeat": null,
     "oxidationStates": null,
-    "discoverer": "Gesellschaft für Schwerionenforschung",
+    "discoverer": "Yuri Oganessian",
     "namedBy": null,
     "yearDiscovered": 1976,
     "cpkHex": "e00038",
@@ -8971,7 +14040,54 @@
     "casNumber": "54037-14-8",
     "latinName": "bohrium",
     "electricalType": "Conductor",
-    "valenceElectrons": 2
+    "valenceElectrons": 2,
+    "discoveryCountry": "Russia",
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    },
+    "hazardLevel": "radioactive",
+    "isotopes": [
+      {
+        "massNumber": 278,
+        "symbol": "278Bh",
+        "abundance": null,
+        "halfLife": "19 m",
+        "decayMode": "SF"
+      },
+      {
+        "massNumber": 274,
+        "symbol": "274Bh",
+        "abundance": null,
+        "halfLife": "44 s",
+        "decayMode": "A"
+      },
+      {
+        "massNumber": 272,
+        "symbol": "272Bh",
+        "abundance": null,
+        "halfLife": "10.5 s",
+        "decayMode": "A"
+      },
+      {
+        "massNumber": 271,
+        "symbol": "271Bh",
+        "abundance": null,
+        "halfLife": "1.5 s",
+        "decayMode": "A"
+      },
+      {
+        "massNumber": 270,
+        "symbol": "270Bh",
+        "abundance": null,
+        "halfLife": "1.0 m",
+        "decayMode": "A"
+      }
+    ]
   },
   {
     "name": "Hassium",
@@ -9009,7 +14125,7 @@
     "boilingPoint": null,
     "molarHeat": null,
     "oxidationStates": null,
-    "discoverer": "Gesellschaft für Schwerionenforschung",
+    "discoverer": "GSI Helmholtz Centre for Heavy Ion Research",
     "namedBy": null,
     "yearDiscovered": 1984,
     "cpkHex": "e6002e",
@@ -9035,7 +14151,54 @@
     "casNumber": "54037-57-9",
     "latinName": "hassium",
     "electricalType": "Conductor",
-    "valenceElectrons": 2
+    "valenceElectrons": 2,
+    "etymology": "Named after Hesse",
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    },
+    "hazardLevel": "radioactive",
+    "isotopes": [
+      {
+        "massNumber": 278,
+        "symbol": "278Hs",
+        "abundance": null,
+        "halfLife": "19 m",
+        "decayMode": "SF"
+      },
+      {
+        "massNumber": 277,
+        "symbol": "277Hs",
+        "abundance": null,
+        "halfLife": "3 ms",
+        "decayMode": "SF"
+      },
+      {
+        "massNumber": 275,
+        "symbol": "275Hs",
+        "abundance": null,
+        "halfLife": "0.20 s",
+        "decayMode": "A"
+      },
+      {
+        "massNumber": 273,
+        "symbol": "273Hs",
+        "abundance": null,
+        "halfLife": "0.51 s",
+        "decayMode": "A"
+      },
+      {
+        "massNumber": 271,
+        "symbol": "271Hs",
+        "abundance": null,
+        "halfLife": "unknown",
+        "decayMode": "A"
+      }
+    ]
   },
   {
     "name": "Meitnerium",
@@ -9073,7 +14236,7 @@
     "boilingPoint": null,
     "molarHeat": null,
     "oxidationStates": null,
-    "discoverer": "Gesellschaft für Schwerionenforschung",
+    "discoverer": "GSI Helmholtz Centre for Heavy Ion Research",
     "namedBy": null,
     "yearDiscovered": 1982,
     "cpkHex": "eb0026",
@@ -9096,7 +14259,55 @@
     "summary": "Meitnerium is a chemical element with symbol Mt and atomic number 109. It is an extremely radioactive synthetic element (an element not found in nature that can be created in a laboratory). The most stable known isotope, meitnerium-278, has a half-life of 7.6 seconds.",
     "casNumber": "54038-01-6",
     "latinName": "meitnerium",
-    "valenceElectrons": 2
+    "valenceElectrons": 2,
+    "etymology": "Named after Lise Meitner",
+    "discoveryCountry": "Germany",
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    },
+    "hazardLevel": "radioactive",
+    "isotopes": [
+      {
+        "massNumber": 282,
+        "symbol": "282Mt",
+        "abundance": null,
+        "halfLife": "1.1 m",
+        "decayMode": "A"
+      },
+      {
+        "massNumber": 278,
+        "symbol": "278Mt",
+        "abundance": null,
+        "halfLife": "4.5 s",
+        "decayMode": "A"
+      },
+      {
+        "massNumber": 277,
+        "symbol": "277Mt",
+        "abundance": null,
+        "halfLife": "4 ms",
+        "decayMode": "SF"
+      },
+      {
+        "massNumber": 276,
+        "symbol": "276Mt",
+        "abundance": null,
+        "halfLife": "0.69 s",
+        "decayMode": "A"
+      },
+      {
+        "massNumber": 275,
+        "symbol": "275Mt",
+        "abundance": null,
+        "halfLife": "20 ms",
+        "decayMode": "A"
+      }
+    ]
   },
   {
     "name": "Darmstadtium",
@@ -9134,7 +14345,7 @@
     "boilingPoint": null,
     "molarHeat": null,
     "oxidationStates": null,
-    "discoverer": "Gesellschaft für Schwerionenforschung",
+    "discoverer": "GSI Helmholtz Centre for Heavy Ion Research",
     "namedBy": null,
     "yearDiscovered": 1994,
     "cpkHex": null,
@@ -9157,7 +14368,55 @@
     "summary": "Darmstadtium is a chemical element with symbol Ds and atomic number 110. It is an extremely radioactive synthetic element. The most stable known isotope, darmstadtium-281, has a half-life of approximately 10 seconds.",
     "casNumber": "54083-77-1",
     "latinName": "darmstadtium",
-    "valenceElectrons": 2
+    "valenceElectrons": 2,
+    "etymology": "Named after Darmstadt",
+    "discoveryCountry": "Germany",
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    },
+    "hazardLevel": "radioactive",
+    "isotopes": [
+      {
+        "massNumber": 282,
+        "symbol": "282Ds",
+        "abundance": null,
+        "halfLife": "1.1 m",
+        "decayMode": "A"
+      },
+      {
+        "massNumber": 281,
+        "symbol": "281Ds",
+        "abundance": null,
+        "halfLife": "12 s",
+        "decayMode": "SF"
+      },
+      {
+        "massNumber": 280,
+        "symbol": "280Ds",
+        "abundance": null,
+        "halfLife": "7 ms",
+        "decayMode": "SF"
+      },
+      {
+        "massNumber": 279,
+        "symbol": "279Ds",
+        "abundance": null,
+        "halfLife": "0.216 s",
+        "decayMode": "SF"
+      },
+      {
+        "massNumber": 277,
+        "symbol": "277Ds",
+        "abundance": null,
+        "halfLife": "3.5 ms",
+        "decayMode": "A"
+      }
+    ]
   },
   {
     "name": "Roentgenium",
@@ -9195,7 +14454,7 @@
     "boilingPoint": null,
     "molarHeat": null,
     "oxidationStates": null,
-    "discoverer": "Gesellschaft für Schwerionenforschung",
+    "discoverer": "GSI Helmholtz Centre for Heavy Ion Research",
     "namedBy": null,
     "yearDiscovered": 1994,
     "cpkHex": null,
@@ -9218,7 +14477,55 @@
     "summary": "Roentgenium is a chemical element with symbol Rg and atomic number 111. It is an extremely radioactive synthetic element (an element that can be created in a laboratory but is not found in nature); the most stable known isotope, roentgenium-282, has a half-life of 2.1 minutes. Roentgenium was first created in 1994 by the GSI Helmholtz Centre for Heavy Ion Research near Darmstadt, Germany.",
     "casNumber": "54386-24-2",
     "latinName": "roentgenium",
-    "valenceElectrons": 2
+    "valenceElectrons": 2,
+    "etymology": "Named after Wilhelm Röntgen",
+    "discoveryCountry": "Germany",
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    },
+    "hazardLevel": "radioactive",
+    "isotopes": [
+      {
+        "massNumber": 286,
+        "symbol": "286Rg",
+        "abundance": null,
+        "halfLife": "11 m",
+        "decayMode": "A"
+      },
+      {
+        "massNumber": 282,
+        "symbol": "282Rg",
+        "abundance": null,
+        "halfLife": "100 s",
+        "decayMode": "A"
+      },
+      {
+        "massNumber": 281,
+        "symbol": "281Rg",
+        "abundance": null,
+        "halfLife": "15 s",
+        "decayMode": "SF"
+      },
+      {
+        "massNumber": 280,
+        "symbol": "280Rg",
+        "abundance": null,
+        "halfLife": "4.4 s",
+        "decayMode": "A"
+      },
+      {
+        "massNumber": 279,
+        "symbol": "279Rg",
+        "abundance": null,
+        "halfLife": "0.09 s",
+        "decayMode": "A"
+      }
+    ]
   },
   {
     "name": "Copernicium",
@@ -9256,7 +14563,7 @@
     "boilingPoint": 3570,
     "molarHeat": null,
     "oxidationStates": null,
-    "discoverer": "Gesellschaft für Schwerionenforschung",
+    "discoverer": "GSI Helmholtz Centre for Heavy Ion Research",
     "namedBy": null,
     "yearDiscovered": 1996,
     "cpkHex": null,
@@ -9280,7 +14587,54 @@
     "casNumber": "54084-26-3",
     "latinName": "copernicium",
     "electricalType": "Conductor",
-    "valenceElectrons": 2
+    "valenceElectrons": 2,
+    "etymology": "Named after Nicolaus Copernicus",
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    },
+    "hazardLevel": "radioactive",
+    "isotopes": [
+      {
+        "massNumber": 286,
+        "symbol": "286Cn",
+        "abundance": null,
+        "halfLife": "11 m",
+        "decayMode": "A"
+      },
+      {
+        "massNumber": 285,
+        "symbol": "285Cn",
+        "abundance": null,
+        "halfLife": "33 s",
+        "decayMode": "A"
+      },
+      {
+        "massNumber": 284,
+        "symbol": "284Cn",
+        "abundance": null,
+        "halfLife": "108 ms",
+        "decayMode": "SF"
+      },
+      {
+        "massNumber": 283,
+        "symbol": "283Cn",
+        "abundance": null,
+        "halfLife": "4.6 s",
+        "decayMode": "A"
+      },
+      {
+        "massNumber": 282,
+        "symbol": "282Cn",
+        "abundance": null,
+        "halfLife": "0.96 ms",
+        "decayMode": "SF"
+      }
+    ]
   },
   {
     "name": "Nihonium",
@@ -9318,7 +14672,7 @@
     "boilingPoint": 1430,
     "molarHeat": null,
     "oxidationStates": null,
-    "discoverer": "RIKEN",
+    "discoverer": "Joint Institute for Nuclear Research",
     "namedBy": null,
     "yearDiscovered": 2006,
     "cpkHex": null,
@@ -9341,7 +14695,54 @@
     "summary": "Nihonium is a chemical element with atomic number 113. It has a symbol Nh. It is a synthetic element (an element that can be created in a laboratory but is not found in nature) and is extremely radioactive; its most stable known isotope, nihonium-286, has a half-life of 20 seconds.",
     "casNumber": "54084-70-7",
     "latinName": "nihonium",
-    "valenceElectrons": 3
+    "valenceElectrons": 3,
+    "etymology": "Named after Japan",
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    },
+    "hazardLevel": "radioactive",
+    "isotopes": [
+      {
+        "massNumber": 290,
+        "symbol": "290Nh",
+        "abundance": null,
+        "halfLife": "2 s",
+        "decayMode": "A"
+      },
+      {
+        "massNumber": 286,
+        "symbol": "286Nh",
+        "abundance": null,
+        "halfLife": "9.5 s",
+        "decayMode": "A"
+      },
+      {
+        "massNumber": 285,
+        "symbol": "285Nh",
+        "abundance": null,
+        "halfLife": "0.93 s",
+        "decayMode": "A"
+      },
+      {
+        "massNumber": 284,
+        "symbol": "284Nh",
+        "abundance": null,
+        "halfLife": "0.97 s",
+        "decayMode": "A"
+      },
+      {
+        "massNumber": 283,
+        "symbol": "283Nh",
+        "abundance": null,
+        "halfLife": "0.07 s",
+        "decayMode": "A"
+      }
+    ]
   },
   {
     "name": "Flerovium",
@@ -9403,7 +14804,55 @@
     "casNumber": "54085-16-4",
     "latinName": "flerovium",
     "electricalType": "Conductor",
-    "valenceElectrons": 4
+    "valenceElectrons": 4,
+    "etymology": "Named after Flerov Laboratory of Nuclear Reactions",
+    "discoveryCountry": "Russia",
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    },
+    "hazardLevel": "radioactive",
+    "isotopes": [
+      {
+        "massNumber": 290,
+        "symbol": "290Fl",
+        "abundance": null,
+        "halfLife": "19 s",
+        "decayMode": "EC+B+"
+      },
+      {
+        "massNumber": 289,
+        "symbol": "289Fl",
+        "abundance": null,
+        "halfLife": "2.4 s",
+        "decayMode": "A"
+      },
+      {
+        "massNumber": 288,
+        "symbol": "288Fl",
+        "abundance": null,
+        "halfLife": "0.64 s",
+        "decayMode": "A"
+      },
+      {
+        "massNumber": 287,
+        "symbol": "287Fl",
+        "abundance": null,
+        "halfLife": "0.40 s",
+        "decayMode": "A"
+      },
+      {
+        "massNumber": 286,
+        "symbol": "286Fl",
+        "abundance": null,
+        "halfLife": "166 ms",
+        "decayMode": "A"
+      }
+    ]
   },
   {
     "name": "Moscovium",
@@ -9464,7 +14913,48 @@
     "summary": "Moscovium is the name of a synthetic superheavy element in the periodic table that has the symbol Mc and has the atomic number 115. It is an extremely radioactive element; its most stable known isotope, moscovium-289, has a half-life of only 220 milliseconds. It is also known as eka-bismuth or simply element 115.",
     "casNumber": "54085-64-2",
     "latinName": "moscovium",
-    "valenceElectrons": 5
+    "valenceElectrons": 5,
+    "etymology": "Named after Moscow Oblast",
+    "discoveryCountry": "Russia",
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    },
+    "hazardLevel": "radioactive",
+    "isotopes": [
+      {
+        "massNumber": 290,
+        "symbol": "290Mc",
+        "abundance": null,
+        "halfLife": "0.65 s",
+        "decayMode": "A"
+      },
+      {
+        "massNumber": 289,
+        "symbol": "289Mc",
+        "abundance": null,
+        "halfLife": "296 ms",
+        "decayMode": "A"
+      },
+      {
+        "massNumber": 288,
+        "symbol": "288Mc",
+        "abundance": null,
+        "halfLife": "0.17 s",
+        "decayMode": "A"
+      },
+      {
+        "massNumber": 287,
+        "symbol": "287Mc",
+        "abundance": null,
+        "halfLife": "37 ms",
+        "decayMode": "A"
+      }
+    ]
   },
   {
     "name": "Livermorium",
@@ -9525,7 +15015,54 @@
     "summary": "Livermorium is a synthetic superheavy element with symbol Lv and atomic number 116. It is an extremely radioactive element that has only been created in the laboratory and has not been observed in nature. The element is named after the Lawrence Livermore National Laboratory in the United States, which collaborated with the Joint Institute for Nuclear Research in Dubna, Russia to discover livermorium in 2000.",
     "casNumber": "54100-71-9",
     "latinName": "livermorium",
-    "valenceElectrons": 6
+    "valenceElectrons": 6,
+    "etymology": "Named after Lawrence Livermore National Laboratory",
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    },
+    "hazardLevel": "radioactive",
+    "isotopes": [
+      {
+        "massNumber": 294,
+        "symbol": "294Lv",
+        "abundance": null,
+        "halfLife": "stable",
+        "decayMode": null
+      },
+      {
+        "massNumber": 293,
+        "symbol": "293Lv",
+        "abundance": null,
+        "halfLife": "95 ms",
+        "decayMode": "A"
+      },
+      {
+        "massNumber": 292,
+        "symbol": "292Lv",
+        "abundance": null,
+        "halfLife": "12.8 ms",
+        "decayMode": "A"
+      },
+      {
+        "massNumber": 291,
+        "symbol": "291Lv",
+        "abundance": null,
+        "halfLife": "19 ms",
+        "decayMode": "A"
+      },
+      {
+        "massNumber": 290,
+        "symbol": "290Lv",
+        "abundance": null,
+        "halfLife": "8.3 ms",
+        "decayMode": "A"
+      }
+    ]
   },
   {
     "name": "Tennessine",
@@ -9563,9 +15100,9 @@
     "boilingPoint": 883,
     "molarHeat": null,
     "oxidationStates": null,
-    "discoverer": "Joint Institute for Nuclear Research",
+    "discoverer": "Yuri Oganessian",
     "namedBy": null,
-    "yearDiscovered": 2009,
+    "yearDiscovered": 2010,
     "cpkHex": null,
     "source": "https://en.wikipedia.org/wiki/Tennessine",
     "spectralImg": null,
@@ -9586,7 +15123,34 @@
     "summary": "Tennessine is a superheavy artificial chemical element with an atomic number of 117 and a symbol of Ts. Also known as eka-astatine or element 117, it is the second-heaviest known element and penultimate element of the 7th period of the periodic table. As of 2016, fifteen tennessine atoms have been observed: six when it was first synthesized in 2010, seven in 2012, and two in 2014.",
     "casNumber": "54101-14-3",
     "latinName": "tennessum",
-    "valenceElectrons": 7
+    "valenceElectrons": 7,
+    "etymology": "Named after Tennessee",
+    "discoveryCountry": "Russia",
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    },
+    "hazardLevel": "radioactive",
+    "isotopes": [
+      {
+        "massNumber": 294,
+        "symbol": "294Ts",
+        "abundance": null,
+        "halfLife": "51 ms",
+        "decayMode": "A"
+      },
+      {
+        "massNumber": 293,
+        "symbol": "293Ts",
+        "abundance": null,
+        "halfLife": "21 ms",
+        "decayMode": "A"
+      }
+    ]
   },
   {
     "name": "Oganesson",
@@ -9647,6 +15211,25 @@
     "summary": "Oganesson is IUPAC's name for the transactinide element with the atomic number 118 and element symbol Og. It is also known as eka-radon or element 118, and on the periodic table of the elements it is a p-block element and the last one of the 7th period. Oganesson is currently the only synthetic member of group 18.",
     "casNumber": "54144-19-3",
     "latinName": "oganesson",
-    "valenceElectrons": 8
+    "valenceElectrons": 8,
+    "etymology": "Named after Yuri Oganessian",
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    },
+    "hazardLevel": "radioactive",
+    "isotopes": [
+      {
+        "massNumber": 294,
+        "symbol": "294Og",
+        "abundance": null,
+        "halfLife": "0.58 ms",
+        "decayMode": "A"
+      }
+    ]
   }
 ]

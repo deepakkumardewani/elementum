@@ -12,7 +12,11 @@
     "typecheck": "vue-tsc",
     "verify": "bun run format && bun run typecheck",
     "test": "vitest run",
-    "test:watch": "vitest"
+    "test:watch": "vitest",
+    "pipeline:collect": "bun run scripts/collect-data.ts",
+    "pipeline:merge": "bun run scripts/merge.ts",
+    "pipeline": "bun run pipeline:collect && bun run pipeline:merge",
+    "pipeline:validate": "bun run scripts/validate-enrichment.ts"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.2.2",

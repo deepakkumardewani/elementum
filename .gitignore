@@ -23,3 +23,6 @@ dist-ssr
 *.sln
 *.sw?
 tsconfig.tsbuildinfo
+
+# Large IAEA raw download (re-fetch via scripts/fetchers/iaea-isotopes.ts)
+scripts/cache/iaea-ground-states.csv

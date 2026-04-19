@@ -1,0 +1,1132 @@
+{
+  "1": {
+    "atomicNumber": 1,
+    "hazardLevel": "flammable",
+    "ghsCodes": [
+      "H220",
+      "H280",
+      "H281"
+    ]
+  },
+  "2": {
+    "atomicNumber": 2,
+    "hazardLevel": "safe",
+    "ghsCodes": [
+      "H280",
+      "H281"
+    ]
+  },
+  "3": {
+    "atomicNumber": 3,
+    "hazardLevel": "corrosive",
+    "ghsCodes": [
+      "H260",
+      "H314",
+      "H318",
+      "H371"
+    ]
+  },
+  "4": {
+    "atomicNumber": 4,
+    "hazardLevel": "toxic",
+    "ghsCodes": [
+      "H301",
+      "H315",
+      "H317",
+      "H319",
+      "H330",
+      "H335",
+      "H350I",
+      "H372",
+      "H350",
+      "H334",
+      "H370"
+    ]
+  },
+  "5": {
+    "atomicNumber": 5,
+    "hazardLevel": "toxic",
+    "ghsCodes": [
+      "H302",
+      "H319",
+      "H332",
+      "H335",
+      "H412",
+      "H371"
+    ]
+  },
+  "6": {
+    "atomicNumber": 6,
+    "hazardLevel": "toxic",
+    "ghsCodes": [
+      "H319",
+      "H335"
+    ]
+  },
+  "7": {
+    "atomicNumber": 7,
+    "hazardLevel": "flammable",
+    "ghsCodes": [
+      "H280",
+      "H281",
+      "H304",
+      "H401"
+    ]
+  },
+  "8": {
+    "atomicNumber": 8,
+    "hazardLevel": "flammable",
+    "ghsCodes": [
+      "H270",
+      "H280",
+      "H281",
+      "H335",
+      "H361"
+    ]
+  },
+  "9": {
+    "atomicNumber": 9,
+    "hazardLevel": "corrosive",
+    "ghsCodes": [
+      "H270",
+      "H314",
+      "H330",
+      "H280",
+      "H310",
+      "H318",
+      "H315",
+      "H319",
+      "H370",
+      "H372",
+      "H361"
+    ]
+  },
+  "10": {
+    "atomicNumber": 10,
+    "hazardLevel": "safe",
+    "ghsCodes": [
+      "H280",
+      "H281"
+    ]
+  },
+  "11": {
+    "atomicNumber": 11,
+    "hazardLevel": "corrosive",
+    "ghsCodes": [
+      "H260",
+      "H314",
+      "H318"
+    ]
+  },
+  "12": {
+    "atomicNumber": 12,
+    "hazardLevel": "flammable",
+    "ghsCodes": [
+      "H250",
+      "H260",
+      "H228",
+      "H252",
+      "H261",
+      "H315",
+      "H319",
+      "H335"
+    ]
+  },
+  "13": {
+    "atomicNumber": 13,
+    "hazardLevel": "flammable",
+    "ghsCodes": [
+      "H250",
+      "H261",
+      "H228",
+      "H370",
+      "H372"
+    ]
+  },
+  "14": {
+    "atomicNumber": 14,
+    "hazardLevel": "flammable",
+    "ghsCodes": [
+      "H228",
+      "H320"
+    ]
+  },
+  "15": {
+    "atomicNumber": 15,
+    "hazardLevel": "corrosive",
+    "ghsCodes": [
+      "H228",
+      "H412",
+      "H250",
+      "H300",
+      "H314",
+      "H330",
+      "H400"
+    ]
+  },
+  "16": {
+    "atomicNumber": 16,
+    "hazardLevel": "flammable",
+    "ghsCodes": [
+      "H315",
+      "H228",
+      "H370",
+      "H373"
+    ]
+  },
+  "17": {
+    "atomicNumber": 17,
+    "hazardLevel": "corrosive",
+    "ghsCodes": [
+      "H270",
+      "H315",
+      "H319",
+      "H331",
+      "H335",
+      "H400",
+      "H280",
+      "H330",
+      "H410",
+      "H314",
+      "H318",
+      "H370",
+      "H372",
+      "H373"
+    ]
+  },
+  "18": {
+    "atomicNumber": 18,
+    "hazardLevel": "safe",
+    "ghsCodes": [
+      "H280",
+      "H281"
+    ]
+  },
+  "19": {
+    "atomicNumber": 19,
+    "hazardLevel": "corrosive",
+    "ghsCodes": [
+      "H260",
+      "H314",
+      "H318"
+    ]
+  },
+  "20": {
+    "atomicNumber": 20,
+    "hazardLevel": "corrosive",
+    "ghsCodes": [
+      "H261",
+      "H250",
+      "H314",
+      "H318"
+    ]
+  },
+  "21": {
+    "atomicNumber": 21,
+    "hazardLevel": "flammable",
+    "ghsCodes": [
+      "H228"
+    ]
+  },
+  "22": {
+    "atomicNumber": 22,
+    "hazardLevel": "flammable",
+    "ghsCodes": [
+      "H228",
+      "H250",
+      "H251"
+    ]
+  },
+  "23": {
+    "atomicNumber": 23,
+    "hazardLevel": "safe",
+    "ghsCodes": []
+  },
+  "24": {
+    "atomicNumber": 24,
+    "hazardLevel": "toxic",
+    "ghsCodes": [
+      "H317",
+      "H319",
+      "H334",
+      "H335",
+      "H320",
+      "H341",
+      "H371",
+      "H400",
+      "H410"
+    ]
+  },
+  "25": {
+    "atomicNumber": 25,
+    "hazardLevel": "flammable",
+    "ghsCodes": [
+      "H228",
+      "H319",
+      "H411",
+      "H412",
+      "H360",
+      "H372",
+      "H401",
+      "H316",
+      "H320",
+      "H370"
+    ]
+  },
+  "26": {
+    "atomicNumber": 26,
+    "hazardLevel": "flammable",
+    "ghsCodes": [
+      "H228",
+      "H251",
+      "H319",
+      "H335"
+    ]
+  },
+  "27": {
+    "atomicNumber": 27,
+    "hazardLevel": "flammable",
+    "ghsCodes": [
+      "H317",
+      "H334",
+      "H341",
+      "H350",
+      "H360F",
+      "H413",
+      "H302",
+      "H319",
+      "H330",
+      "H400",
+      "H410",
+      "H411",
+      "H320",
+      "H351",
+      "H360",
+      "H370",
+      "H372",
+      "H335",
+      "H361",
+      "H350I",
+      "H373",
+      "H228"
+    ]
+  },
+  "28": {
+    "atomicNumber": 28,
+    "hazardLevel": "flammable",
+    "ghsCodes": [
+      "H317",
+      "H351",
+      "H372",
+      "H412",
+      "H334",
+      "H341",
+      "H350",
+      "H360F",
+      "H250",
+      "H411",
+      "H370",
+      "H360"
+    ]
+  },
+  "29": {
+    "atomicNumber": 29,
+    "hazardLevel": "toxic",
+    "ghsCodes": [
+      "H400",
+      "H410",
+      "H302",
+      "H411",
+      "H317",
+      "H335",
+      "H370",
+      "H372"
+    ]
+  },
+  "30": {
+    "atomicNumber": 30,
+    "hazardLevel": "flammable",
+    "ghsCodes": [
+      "H250",
+      "H260",
+      "H400",
+      "H410",
+      "H320"
+    ]
+  },
+  "31": {
+    "atomicNumber": 31,
+    "hazardLevel": "corrosive",
+    "ghsCodes": [
+      "H290",
+      "H302",
+      "H314",
+      "H412"
+    ]
+  },
+  "32": {
+    "atomicNumber": 32,
+    "hazardLevel": "flammable",
+    "ghsCodes": [
+      "H228",
+      "H361",
+      "H373",
+      "H412"
+    ]
+  },
+  "33": {
+    "atomicNumber": 33,
+    "hazardLevel": "corrosive",
+    "ghsCodes": [
+      "H301",
+      "H331",
+      "H400",
+      "H410",
+      "H315",
+      "H318",
+      "H350",
+      "H228",
+      "H251",
+      "H341",
+      "H360",
+      "H370",
+      "H372",
+      "H302",
+      "H319",
+      "H361",
+      "H373"
+    ]
+  },
+  "34": {
+    "atomicNumber": 34,
+    "hazardLevel": "toxic",
+    "ghsCodes": [
+      "H301",
+      "H331",
+      "H373",
+      "H413",
+      "H370",
+      "H372",
+      "H361"
+    ]
+  },
+  "35": {
+    "atomicNumber": 35,
+    "hazardLevel": "corrosive",
+    "ghsCodes": [
+      "H314",
+      "H330",
+      "H400",
+      "H318",
+      "H290",
+      "H370",
+      "H372",
+      "H301"
+    ]
+  },
+  "36": {
+    "atomicNumber": 36,
+    "hazardLevel": "safe",
+    "ghsCodes": [
+      "H280",
+      "H281"
+    ]
+  },
+  "37": {
+    "atomicNumber": 37,
+    "hazardLevel": "corrosive",
+    "ghsCodes": [
+      "H260",
+      "H314"
+    ]
+  },
+  "38": {
+    "atomicNumber": 38,
+    "hazardLevel": "corrosive",
+    "ghsCodes": [
+      "H260",
+      "H314",
+      "H315",
+      "H318",
+      "H360D",
+      "H250"
+    ]
+  },
+  "39": {
+    "atomicNumber": 39,
+    "hazardLevel": "flammable",
+    "ghsCodes": [
+      "H228",
+      "H250",
+      "H302",
+      "H312",
+      "H332",
+      "H413",
+      "H371"
+    ]
+  },
+  "40": {
+    "atomicNumber": 40,
+    "hazardLevel": "flammable",
+    "ghsCodes": [
+      "H250",
+      "H260",
+      "H251",
+      "H228",
+      "H335",
+      "H317"
+    ]
+  },
+  "41": {
+    "atomicNumber": 41,
+    "hazardLevel": "flammable",
+    "ghsCodes": [
+      "H228"
+    ]
+  },
+  "42": {
+    "atomicNumber": 42,
+    "hazardLevel": "flammable",
+    "ghsCodes": [
+      "H225",
+      "H228",
+      "H361",
+      "H315",
+      "H319",
+      "H335"
+    ]
+  },
+  "43": {
+    "atomicNumber": 43,
+    "hazardLevel": "radioactive",
+    "ghsCodes": []
+  },
+  "44": {
+    "atomicNumber": 44,
+    "hazardLevel": "flammable",
+    "ghsCodes": [
+      "H228",
+      "H413"
+    ]
+  },
+  "45": {
+    "atomicNumber": 45,
+    "hazardLevel": "flammable",
+    "ghsCodes": [
+      "H228",
+      "H334"
+    ]
+  },
+  "46": {
+    "atomicNumber": 46,
+    "hazardLevel": "flammable",
+    "ghsCodes": [
+      "H228",
+      "H315",
+      "H319",
+      "H335",
+      "H413"
+    ]
+  },
+  "47": {
+    "atomicNumber": 47,
+    "hazardLevel": "toxic",
+    "ghsCodes": [
+      "H361F",
+      "H373",
+      "H400",
+      "H410",
+      "H360",
+      "H317",
+      "H320",
+      "H370",
+      "H372"
+    ]
+  },
+  "48": {
+    "atomicNumber": 48,
+    "hazardLevel": "flammable",
+    "ghsCodes": [
+      "H250",
+      "H330",
+      "H341",
+      "H350",
+      "H372",
+      "H400",
+      "H410",
+      "H302",
+      "H335",
+      "H361",
+      "H370"
+    ]
+  },
+  "49": {
+    "atomicNumber": 49,
+    "hazardLevel": "toxic",
+    "ghsCodes": [
+      "H302",
+      "H312",
+      "H315",
+      "H319",
+      "H332",
+      "H335",
+      "H372",
+      "H303"
+    ]
+  },
+  "50": {
+    "atomicNumber": 50,
+    "hazardLevel": "toxic",
+    "ghsCodes": [
+      "H319",
+      "H335",
+      "H372"
+    ]
+  },
+  "51": {
+    "atomicNumber": 51,
+    "hazardLevel": "toxic",
+    "ghsCodes": [
+      "H301",
+      "H302",
+      "H332",
+      "H351",
+      "H373",
+      "H411",
+      "H315",
+      "H319",
+      "H335",
+      "H370",
+      "H372",
+      "H401"
+    ]
+  },
+  "52": {
+    "atomicNumber": 52,
+    "hazardLevel": "toxic",
+    "ghsCodes": [
+      "H362",
+      "H301",
+      "H317",
+      "H319",
+      "H332",
+      "H335",
+      "H360",
+      "H413",
+      "H336",
+      "H315",
+      "H361",
+      "H371"
+    ]
+  },
+  "53": {
+    "atomicNumber": 53,
+    "hazardLevel": "toxic",
+    "ghsCodes": [
+      "H312",
+      "H332",
+      "H400",
+      "H302",
+      "H315",
+      "H319",
+      "H335",
+      "H372",
+      "H410",
+      "H317",
+      "H330"
+    ]
+  },
+  "54": {
+    "atomicNumber": 54,
+    "hazardLevel": "safe",
+    "ghsCodes": [
+      "H280",
+      "H281"
+    ]
+  },
+  "55": {
+    "atomicNumber": 55,
+    "hazardLevel": "corrosive",
+    "ghsCodes": [
+      "H260",
+      "H314",
+      "H318"
+    ]
+  },
+  "56": {
+    "atomicNumber": 56,
+    "hazardLevel": "corrosive",
+    "ghsCodes": [
+      "H228",
+      "H260",
+      "H261",
+      "H301",
+      "H314",
+      "H315",
+      "H318",
+      "H319",
+      "H335",
+      "H370",
+      "H372"
+    ]
+  },
+  "57": {
+    "atomicNumber": 57,
+    "hazardLevel": "flammable",
+    "ghsCodes": [
+      "H228",
+      "H260"
+    ]
+  },
+  "58": {
+    "atomicNumber": 58,
+    "hazardLevel": "flammable",
+    "ghsCodes": [
+      "H228",
+      "H261",
+      "H370"
+    ]
+  },
+  "59": {
+    "atomicNumber": 59,
+    "hazardLevel": "flammable",
+    "ghsCodes": [
+      "H228",
+      "H250",
+      "H251",
+      "H315",
+      "H319",
+      "H413"
+    ]
+  },
+  "60": {
+    "atomicNumber": 60,
+    "hazardLevel": "flammable",
+    "ghsCodes": [
+      "H228",
+      "H251",
+      "H315",
+      "H319",
+      "H413"
+    ]
+  },
+  "61": {
+    "atomicNumber": 61,
+    "hazardLevel": "radioactive",
+    "ghsCodes": []
+  },
+  "62": {
+    "atomicNumber": 62,
+    "hazardLevel": "flammable",
+    "ghsCodes": [
+      "H228",
+      "H261"
+    ]
+  },
+  "63": {
+    "atomicNumber": 63,
+    "hazardLevel": "flammable",
+    "ghsCodes": [
+      "H228",
+      "H250",
+      "H260"
+    ]
+  },
+  "64": {
+    "atomicNumber": 64,
+    "hazardLevel": "flammable",
+    "ghsCodes": [
+      "H228",
+      "H261"
+    ]
+  },
+  "65": {
+    "atomicNumber": 65,
+    "hazardLevel": "flammable",
+    "ghsCodes": [
+      "H228"
+    ]
+  },
+  "66": {
+    "atomicNumber": 66,
+    "hazardLevel": "flammable",
+    "ghsCodes": [
+      "H228",
+      "H250",
+      "H251",
+      "H252",
+      "H260",
+      "H315",
+      "H319",
+      "H413"
+    ]
+  },
+  "67": {
+    "atomicNumber": 67,
+    "hazardLevel": "flammable",
+    "ghsCodes": [
+      "H228"
+    ]
+  },
+  "68": {
+    "atomicNumber": 68,
+    "hazardLevel": "flammable",
+    "ghsCodes": [
+      "H228"
+    ]
+  },
+  "69": {
+    "atomicNumber": 69,
+    "hazardLevel": "flammable",
+    "ghsCodes": [
+      "H228",
+      "H319",
+      "H335"
+    ]
+  },
+  "70": {
+    "atomicNumber": 70,
+    "hazardLevel": "flammable",
+    "ghsCodes": [
+      "H228",
+      "H250",
+      "H252",
+      "H302",
+      "H312",
+      "H315",
+      "H319",
+      "H332",
+      "H335"
+    ]
+  },
+  "71": {
+    "atomicNumber": 71,
+    "hazardLevel": "flammable",
+    "ghsCodes": [
+      "H228"
+    ]
+  },
+  "72": {
+    "atomicNumber": 72,
+    "hazardLevel": "flammable",
+    "ghsCodes": [
+      "H250"
+    ]
+  },
+  "73": {
+    "atomicNumber": 73,
+    "hazardLevel": "flammable",
+    "ghsCodes": [
+      "H228",
+      "H252",
+      "H335",
+      "H302",
+      "H320"
+    ]
+  },
+  "74": {
+    "atomicNumber": 74,
+    "hazardLevel": "flammable",
+    "ghsCodes": [
+      "H228",
+      "H252",
+      "H320",
+      "H335"
+    ]
+  },
+  "75": {
+    "atomicNumber": 75,
+    "hazardLevel": "flammable",
+    "ghsCodes": [
+      "H228"
+    ]
+  },
+  "76": {
+    "atomicNumber": 76,
+    "hazardLevel": "corrosive",
+    "ghsCodes": [
+      "H228",
+      "H315",
+      "H318",
+      "H335",
+      "H413"
+    ]
+  },
+  "77": {
+    "atomicNumber": 77,
+    "hazardLevel": "flammable",
+    "ghsCodes": [
+      "H228",
+      "H319",
+      "H413"
+    ]
+  },
+  "78": {
+    "atomicNumber": 78,
+    "hazardLevel": "flammable",
+    "ghsCodes": [
+      "H228",
+      "H315",
+      "H319",
+      "H334",
+      "H335"
+    ]
+  },
+  "79": {
+    "atomicNumber": 79,
+    "hazardLevel": "safe",
+    "ghsCodes": []
+  },
+  "80": {
+    "atomicNumber": 80,
+    "hazardLevel": "corrosive",
+    "ghsCodes": [
+      "H330",
+      "H360D",
+      "H372",
+      "H400",
+      "H410",
+      "H290",
+      "H300",
+      "H360",
+      "H317",
+      "H319",
+      "H370",
+      "H341"
+    ]
+  },
+  "81": {
+    "atomicNumber": 81,
+    "hazardLevel": "corrosive",
+    "ghsCodes": [
+      "H300",
+      "H330",
+      "H373",
+      "H413",
+      "H310",
+      "H314",
+      "H319",
+      "H360",
+      "H370",
+      "H372",
+      "H340",
+      "H362"
+    ]
+  },
+  "82": {
+    "atomicNumber": 82,
+    "hazardLevel": "toxic",
+    "ghsCodes": [
+      "H362",
+      "H400",
+      "H410",
+      "H302",
+      "H332",
+      "H360",
+      "H372",
+      "H373",
+      "H341",
+      "H351"
+    ]
+  },
+  "83": {
+    "atomicNumber": 83,
+    "hazardLevel": "toxic",
+    "ghsCodes": [
+      "H370",
+      "H372"
+    ]
+  },
+  "84": {
+    "atomicNumber": 84,
+    "hazardLevel": "radioactive",
+    "ghsCodes": []
+  },
+  "85": {
+    "atomicNumber": 85,
+    "hazardLevel": "radioactive",
+    "ghsCodes": []
+  },
+  "86": {
+    "atomicNumber": 86,
+    "hazardLevel": "radioactive",
+    "ghsCodes": []
+  },
+  "87": {
+    "atomicNumber": 87,
+    "hazardLevel": "radioactive",
+    "ghsCodes": []
+  },
+  "88": {
+    "atomicNumber": 88,
+    "hazardLevel": "radioactive",
+    "ghsCodes": []
+  },
+  "89": {
+    "atomicNumber": 89,
+    "hazardLevel": "radioactive",
+    "ghsCodes": []
+  },
+  "90": {
+    "atomicNumber": 90,
+    "hazardLevel": "radioactive",
+    "ghsCodes": [
+      "H272",
+      "H302",
+      "H315",
+      "H319",
+      "H335",
+      "H373"
+    ]
+  },
+  "91": {
+    "atomicNumber": 91,
+    "hazardLevel": "radioactive",
+    "ghsCodes": []
+  },
+  "92": {
+    "atomicNumber": 92,
+    "hazardLevel": "radioactive",
+    "ghsCodes": [
+      "H300",
+      "H330",
+      "H373",
+      "H413",
+      "H411",
+      "H250",
+      "H350",
+      "H370",
+      "H372"
+    ]
+  },
+  "93": {
+    "atomicNumber": 93,
+    "hazardLevel": "radioactive",
+    "ghsCodes": []
+  },
+  "94": {
+    "atomicNumber": 94,
+    "hazardLevel": "radioactive",
+    "ghsCodes": []
+  },
+  "95": {
+    "atomicNumber": 95,
+    "hazardLevel": "radioactive",
+    "ghsCodes": []
+  },
+  "96": {
+    "atomicNumber": 96,
+    "hazardLevel": "radioactive",
+    "ghsCodes": []
+  },
+  "97": {
+    "atomicNumber": 97,
+    "hazardLevel": "radioactive",
+    "ghsCodes": []
+  },
+  "98": {
+    "atomicNumber": 98,
+    "hazardLevel": "radioactive",
+    "ghsCodes": []
+  },
+  "99": {
+    "atomicNumber": 99,
+    "hazardLevel": "radioactive",
+    "ghsCodes": []
+  },
+  "100": {
+    "atomicNumber": 100,
+    "hazardLevel": "radioactive",
+    "ghsCodes": []
+  },
+  "101": {
+    "atomicNumber": 101,
+    "hazardLevel": "radioactive",
+    "ghsCodes": []
+  },
+  "102": {
+    "atomicNumber": 102,
+    "hazardLevel": "radioactive",
+    "ghsCodes": []
+  },
+  "103": {
+    "atomicNumber": 103,
+    "hazardLevel": "radioactive",
+    "ghsCodes": []
+  },
+  "104": {
+    "atomicNumber": 104,
+    "hazardLevel": "radioactive",
+    "ghsCodes": []
+  },
+  "105": {
+    "atomicNumber": 105,
+    "hazardLevel": "radioactive",
+    "ghsCodes": []
+  },
+  "106": {
+    "atomicNumber": 106,
+    "hazardLevel": "radioactive",
+    "ghsCodes": []
+  },
+  "107": {
+    "atomicNumber": 107,
+    "hazardLevel": "radioactive",
+    "ghsCodes": []
+  },
+  "108": {
+    "atomicNumber": 108,
+    "hazardLevel": "radioactive",
+    "ghsCodes": []
+  },
+  "109": {
+    "atomicNumber": 109,
+    "hazardLevel": "radioactive",
+    "ghsCodes": []
+  },
+  "110": {
+    "atomicNumber": 110,
+    "hazardLevel": "radioactive",
+    "ghsCodes": []
+  },
+  "111": {
+    "atomicNumber": 111,
+    "hazardLevel": "radioactive",
+    "ghsCodes": []
+  },
+  "112": {
+    "atomicNumber": 112,
+    "hazardLevel": "radioactive",
+    "ghsCodes": []
+  },
+  "113": {
+    "atomicNumber": 113,
+    "hazardLevel": "radioactive",
+    "ghsCodes": []
+  },
+  "114": {
+    "atomicNumber": 114,
+    "hazardLevel": "radioactive",
+    "ghsCodes": []
+  },
+  "115": {
+    "atomicNumber": 115,
+    "hazardLevel": "radioactive",
+    "ghsCodes": []
+  },
+  "116": {
+    "atomicNumber": 116,
+    "hazardLevel": "radioactive",
+    "ghsCodes": []
+  },
+  "117": {
+    "atomicNumber": 117,
+    "hazardLevel": "radioactive",
+    "ghsCodes": []
+  },
+  "118": {
+    "atomicNumber": 118,
+    "hazardLevel": "radioactive",
+    "ghsCodes": []
+  }
+}

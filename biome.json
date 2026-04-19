@@ -23,6 +23,14 @@
     }
   },
   "files": {
-    "includes": ["src/**", "*.ts", "*.json", "!src/data/elements.json", "!src/**/*.vue"]
+    "includes": [
+      "src/**",
+      "scripts/**/*.ts",
+      "*.ts",
+      "*.json",
+      "!src/data/elements.json",
+      "!scripts/output",
+      "!src/**/*.vue"
+    ]
   }
 }

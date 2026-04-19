@@ -1,0 +1,2008 @@
+{
+  "1": {
+    "atomicNumber": 1,
+    "discoverer": "Henry Cavendish",
+    "discoveryYear": 1766,
+    "discoveryCountry": "United Kingdom",
+    "discoveryMethod": null,
+    "etymology": "Named after water",
+    "discoveryStory": null,
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    }
+  },
+  "2": {
+    "atomicNumber": 2,
+    "discoverer": "William Ramsay",
+    "discoveryYear": 1868,
+    "discoveryCountry": "United Kingdom of Great Britain and Ireland",
+    "discoveryMethod": null,
+    "etymology": "Named after Helios",
+    "discoveryStory": null,
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    }
+  },
+  "3": {
+    "atomicNumber": 3,
+    "discoverer": "Johan August Arfwedson",
+    "discoveryYear": 1817,
+    "discoveryCountry": "Sweden",
+    "discoveryMethod": null,
+    "etymology": "Named after stone",
+    "discoveryStory": null,
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    }
+  },
+  "4": {
+    "atomicNumber": 4,
+    "discoverer": "Antoine Bussy",
+    "discoveryYear": 1798,
+    "discoveryCountry": "France",
+    "discoveryMethod": null,
+    "etymology": "Named after beryl",
+    "discoveryStory": null,
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    }
+  },
+  "5": {
+    "atomicNumber": 5,
+    "discoverer": "Humphry Davy",
+    "discoveryYear": 1892,
+    "discoveryCountry": "United Kingdom of Great Britain and Ireland",
+    "discoveryMethod": null,
+    "etymology": "Named after borax",
+    "discoveryStory": null,
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    }
+  },
+  "6": {
+    "atomicNumber": 6,
+    "discoverer": "Antoine Lavoisier",
+    "discoveryYear": 1789,
+    "discoveryCountry": "France",
+    "discoveryMethod": null,
+    "etymology": "Named after coal",
+    "discoveryStory": null,
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    }
+  },
+  "7": {
+    "atomicNumber": 7,
+    "discoverer": "Daniel Rutherford",
+    "discoveryYear": 1772,
+    "discoveryCountry": "United Kingdom",
+    "discoveryMethod": null,
+    "etymology": "Named after life",
+    "discoveryStory": null,
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    }
+  },
+  "8": {
+    "atomicNumber": 8,
+    "discoverer": "Carl Wilhelm Scheele",
+    "discoveryYear": 1774,
+    "discoveryCountry": "Sweden",
+    "discoveryMethod": null,
+    "etymology": "Named after acid",
+    "discoveryStory": null,
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    }
+  },
+  "9": {
+    "atomicNumber": 9,
+    "discoverer": "Henri Moissan",
+    "discoveryYear": 1810,
+    "discoveryCountry": "France",
+    "discoveryMethod": null,
+    "etymology": "Named after hydrofluoric acid",
+    "discoveryStory": null,
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    }
+  },
+  "10": {
+    "atomicNumber": 10,
+    "discoverer": "William Ramsay",
+    "discoveryYear": 1898,
+    "discoveryCountry": "United Kingdom",
+    "discoveryMethod": null,
+    "etymology": "Named after novelty",
+    "discoveryStory": null,
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    }
+  },
+  "11": {
+    "atomicNumber": 11,
+    "discoverer": "Humphry Davy",
+    "discoveryYear": 1807,
+    "discoveryCountry": "United Kingdom",
+    "discoveryMethod": null,
+    "etymology": "Named after headache",
+    "discoveryStory": null,
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    }
+  },
+  "12": {
+    "atomicNumber": 12,
+    "discoverer": "Joseph Black",
+    "discoveryYear": 1755,
+    "discoveryCountry": "United Kingdom",
+    "discoveryMethod": null,
+    "etymology": "Named after magnesium oxide",
+    "discoveryStory": null,
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    }
+  },
+  "13": {
+    "atomicNumber": 13,
+    "discoverer": "Humphry Davy",
+    "discoveryYear": 1825,
+    "discoveryCountry": "Kingdom of Denmark",
+    "discoveryMethod": null,
+    "etymology": "Named after alum",
+    "discoveryStory": null,
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    }
+  },
+  "14": {
+    "atomicNumber": 14,
+    "discoverer": "Jöns Jacob Berzelius",
+    "discoveryYear": 1823,
+    "discoveryCountry": "Sweden",
+    "discoveryMethod": null,
+    "etymology": "Named after flint",
+    "discoveryStory": null,
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    }
+  },
+  "15": {
+    "atomicNumber": 15,
+    "discoverer": "Hennig Brand",
+    "discoveryYear": 1669,
+    "discoveryCountry": null,
+    "discoveryMethod": null,
+    "etymology": "Named after Phosphorus",
+    "discoveryStory": null,
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    }
+  },
+  "16": {
+    "atomicNumber": 16,
+    "discoverer": "Antoine Lavoisier",
+    "discoveryYear": 1777,
+    "discoveryCountry": "France",
+    "discoveryMethod": null,
+    "etymology": null,
+    "discoveryStory": null,
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    }
+  },
+  "17": {
+    "atomicNumber": 17,
+    "discoverer": "Carl Wilhelm Scheele",
+    "discoveryYear": 1774,
+    "discoveryCountry": "Sweden",
+    "discoveryMethod": null,
+    "etymology": "Named after green",
+    "discoveryStory": null,
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    }
+  },
+  "18": {
+    "atomicNumber": 18,
+    "discoverer": "William Ramsay",
+    "discoveryYear": 1894,
+    "discoveryCountry": "United Kingdom of Great Britain and Ireland",
+    "discoveryMethod": null,
+    "etymology": "Named after laziness",
+    "discoveryStory": null,
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    }
+  },
+  "19": {
+    "atomicNumber": 19,
+    "discoverer": "Humphry Davy",
+    "discoveryYear": 1807,
+    "discoveryCountry": "United Kingdom of Great Britain and Ireland",
+    "discoveryMethod": null,
+    "etymology": "Named after potash",
+    "discoveryStory": null,
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    }
+  },
+  "20": {
+    "atomicNumber": 20,
+    "discoverer": "Humphry Davy",
+    "discoveryYear": 1808,
+    "discoveryCountry": "United Kingdom of Great Britain and Ireland",
+    "discoveryMethod": null,
+    "etymology": "Named after lime",
+    "discoveryStory": null,
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    }
+  },
+  "21": {
+    "atomicNumber": 21,
+    "discoverer": "Lars Fredrik Nilson",
+    "discoveryYear": 1879,
+    "discoveryCountry": "Sweden",
+    "discoveryMethod": null,
+    "etymology": "Named after Scandinavia",
+    "discoveryStory": null,
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    }
+  },
+  "22": {
+    "atomicNumber": 22,
+    "discoverer": "Friedrich Wöhler",
+    "discoveryYear": 1791,
+    "discoveryCountry": "Electorate of Hesse",
+    "discoveryMethod": null,
+    "etymology": "Named after titan",
+    "discoveryStory": null,
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    }
+  },
+  "23": {
+    "atomicNumber": 23,
+    "discoverer": "Andrés Manuel del Río",
+    "discoveryYear": 1801,
+    "discoveryCountry": "Mexico",
+    "discoveryMethod": null,
+    "etymology": "Named after Freyja",
+    "discoveryStory": null,
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    }
+  },
+  "24": {
+    "atomicNumber": 24,
+    "discoverer": "Louis Nicolas Vauquelin",
+    "discoveryYear": 1797,
+    "discoveryCountry": "France",
+    "discoveryMethod": null,
+    "etymology": "Named after color field",
+    "discoveryStory": null,
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    }
+  },
+  "25": {
+    "atomicNumber": 25,
+    "discoverer": "Johan Gottlieb Gahn",
+    "discoveryYear": 1774,
+    "discoveryCountry": "Sweden",
+    "discoveryMethod": null,
+    "etymology": "Named after Magnesia Prefecture",
+    "discoveryStory": null,
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    }
+  },
+  "26": {
+    "atomicNumber": 26,
+    "discoverer": null,
+    "discoveryYear": -5000,
+    "discoveryCountry": null,
+    "discoveryMethod": null,
+    "etymology": null,
+    "discoveryStory": null,
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    }
+  },
+  "27": {
+    "atomicNumber": 27,
+    "discoverer": "Georg Brandt",
+    "discoveryYear": 1735,
+    "discoveryCountry": "Sweden",
+    "discoveryMethod": null,
+    "etymology": "Named after kobold",
+    "discoveryStory": null,
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    }
+  },
+  "28": {
+    "atomicNumber": 28,
+    "discoverer": "Axel Fredrik Cronstedt",
+    "discoveryYear": 1751,
+    "discoveryCountry": "Sweden",
+    "discoveryMethod": null,
+    "etymology": "Named after nickeline",
+    "discoveryStory": null,
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    }
+  },
+  "29": {
+    "atomicNumber": 29,
+    "discoverer": null,
+    "discoveryYear": -7000,
+    "discoveryCountry": null,
+    "discoveryMethod": null,
+    "etymology": "Named after Cyprus",
+    "discoveryStory": null,
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    }
+  },
+  "30": {
+    "atomicNumber": 30,
+    "discoverer": null,
+    "discoveryYear": null,
+    "discoveryCountry": null,
+    "discoveryMethod": null,
+    "etymology": "Named after tine",
+    "discoveryStory": null,
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    }
+  },
+  "31": {
+    "atomicNumber": 31,
+    "discoverer": "Paul-Émile Lecoq de Boisbaudran",
+    "discoveryYear": 1875,
+    "discoveryCountry": "France",
+    "discoveryMethod": null,
+    "etymology": "Named after Gaul",
+    "discoveryStory": null,
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    }
+  },
+  "32": {
+    "atomicNumber": 32,
+    "discoverer": "Clemens Winkler",
+    "discoveryYear": 1886,
+    "discoveryCountry": "Germany",
+    "discoveryMethod": null,
+    "etymology": "Named after Germany",
+    "discoveryStory": null,
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    }
+  },
+  "33": {
+    "atomicNumber": 33,
+    "discoverer": "Albertus Magnus",
+    "discoveryYear": 1300,
+    "discoveryCountry": "Holy Roman Empire",
+    "discoveryMethod": null,
+    "etymology": "Named after orpiment",
+    "discoveryStory": null,
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    }
+  },
+  "34": {
+    "atomicNumber": 34,
+    "discoverer": "Johan Gottlieb Gahn",
+    "discoveryYear": 1817,
+    "discoveryCountry": "Sweden",
+    "discoveryMethod": null,
+    "etymology": "Named after Moon",
+    "discoveryStory": null,
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    }
+  },
+  "35": {
+    "atomicNumber": 35,
+    "discoverer": "Antoine Jérôme Balard",
+    "discoveryYear": 1825,
+    "discoveryCountry": "France",
+    "discoveryMethod": null,
+    "etymology": "Named after stink",
+    "discoveryStory": null,
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    }
+  },
+  "36": {
+    "atomicNumber": 36,
+    "discoverer": "William Ramsay",
+    "discoveryYear": 1898,
+    "discoveryCountry": "United Kingdom",
+    "discoveryMethod": null,
+    "etymology": "Named after hiding",
+    "discoveryStory": null,
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    }
+  },
+  "37": {
+    "atomicNumber": 37,
+    "discoverer": "Robert Bunsen",
+    "discoveryYear": 1861,
+    "discoveryCountry": "Germany",
+    "discoveryMethod": null,
+    "etymology": "Named after red",
+    "discoveryStory": null,
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    }
+  },
+  "38": {
+    "atomicNumber": 38,
+    "discoverer": "William Cruickshank",
+    "discoveryYear": 1787,
+    "discoveryCountry": "United Kingdom",
+    "discoveryMethod": null,
+    "etymology": "Named after Strontian",
+    "discoveryStory": null,
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    }
+  },
+  "39": {
+    "atomicNumber": 39,
+    "discoverer": "Johan Gadolin",
+    "discoveryYear": 1787,
+    "discoveryCountry": "Electorate of Hesse",
+    "discoveryMethod": null,
+    "etymology": "Named after Ytterby mine",
+    "discoveryStory": null,
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    }
+  },
+  "40": {
+    "atomicNumber": 40,
+    "discoverer": "Anton Eduard van Arkel",
+    "discoveryYear": 1789,
+    "discoveryCountry": "Germany",
+    "discoveryMethod": null,
+    "etymology": "Named after zircon",
+    "discoveryStory": null,
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    }
+  },
+  "41": {
+    "atomicNumber": 41,
+    "discoverer": "Charles Hatchett",
+    "discoveryYear": 1801,
+    "discoveryCountry": "United Kingdom",
+    "discoveryMethod": null,
+    "etymology": "Named after Niobe",
+    "discoveryStory": null,
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    }
+  },
+  "42": {
+    "atomicNumber": 42,
+    "discoverer": "Carl Wilhelm Scheele",
+    "discoveryYear": 1778,
+    "discoveryCountry": "Sweden",
+    "discoveryMethod": null,
+    "etymology": "Named after lead",
+    "discoveryStory": null,
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    }
+  },
+  "43": {
+    "atomicNumber": 43,
+    "discoverer": "Carlo Perrier",
+    "discoveryYear": 1937,
+    "discoveryCountry": "Italy",
+    "discoveryMethod": null,
+    "etymology": "Named after technique",
+    "discoveryStory": null,
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    }
+  },
+  "44": {
+    "atomicNumber": 44,
+    "discoverer": "Karl Ernst Claus",
+    "discoveryYear": 1844,
+    "discoveryCountry": "Russia",
+    "discoveryMethod": null,
+    "etymology": "Named after Ruthenia",
+    "discoveryStory": null,
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    }
+  },
+  "45": {
+    "atomicNumber": 45,
+    "discoverer": "William Hyde Wollaston",
+    "discoveryYear": 1803,
+    "discoveryCountry": "United Kingdom of Great Britain and Ireland",
+    "discoveryMethod": null,
+    "etymology": "Named after rose",
+    "discoveryStory": null,
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    }
+  },
+  "46": {
+    "atomicNumber": 46,
+    "discoverer": "William Hyde Wollaston",
+    "discoveryYear": 1803,
+    "discoveryCountry": "United Kingdom of Great Britain and Ireland",
+    "discoveryMethod": null,
+    "etymology": "Named after 2 Pallas",
+    "discoveryStory": null,
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    }
+  },
+  "47": {
+    "atomicNumber": 47,
+    "discoverer": null,
+    "discoveryYear": -5000,
+    "discoveryCountry": null,
+    "discoveryMethod": null,
+    "etymology": "Named after white",
+    "discoveryStory": null,
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    }
+  },
+  "48": {
+    "atomicNumber": 48,
+    "discoverer": "Karl Samuel Leberecht Hermann",
+    "discoveryYear": 1817,
+    "discoveryCountry": "Anhalt-Bernburg",
+    "discoveryMethod": null,
+    "etymology": "Named after Cadmus",
+    "discoveryStory": null,
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    }
+  },
+  "49": {
+    "atomicNumber": 49,
+    "discoverer": "Hieronymous Theodor Richter",
+    "discoveryYear": 1863,
+    "discoveryCountry": "Duchy of Anhalt",
+    "discoveryMethod": null,
+    "etymology": "Named after indigo",
+    "discoveryStory": null,
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    }
+  },
+  "50": {
+    "atomicNumber": 50,
+    "discoverer": null,
+    "discoveryYear": null,
+    "discoveryCountry": null,
+    "discoveryMethod": null,
+    "etymology": null,
+    "discoveryStory": null,
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    }
+  },
+  "51": {
+    "atomicNumber": 51,
+    "discoverer": null,
+    "discoveryYear": null,
+    "discoveryCountry": null,
+    "discoveryMethod": null,
+    "etymology": null,
+    "discoveryStory": null,
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    }
+  },
+  "52": {
+    "atomicNumber": 52,
+    "discoverer": "Franz-Joseph Müller von Reichenstein",
+    "discoveryYear": 1783,
+    "discoveryCountry": "Romania",
+    "discoveryMethod": null,
+    "etymology": "Named after Terra",
+    "discoveryStory": null,
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    }
+  },
+  "53": {
+    "atomicNumber": 53,
+    "discoverer": "Bernard Courtois",
+    "discoveryYear": 1811,
+    "discoveryCountry": "France",
+    "discoveryMethod": null,
+    "etymology": "Named after violet",
+    "discoveryStory": null,
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    }
+  },
+  "54": {
+    "atomicNumber": 54,
+    "discoverer": "William Ramsay",
+    "discoveryYear": 1898,
+    "discoveryCountry": "United Kingdom",
+    "discoveryMethod": null,
+    "etymology": "Named after stranger",
+    "discoveryStory": null,
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    }
+  },
+  "55": {
+    "atomicNumber": 55,
+    "discoverer": "Gustav Kirchhoff",
+    "discoveryYear": 1860,
+    "discoveryCountry": "Germany",
+    "discoveryMethod": null,
+    "etymology": "Named after sky blue",
+    "discoveryStory": null,
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    }
+  },
+  "56": {
+    "atomicNumber": 56,
+    "discoverer": "Humphry Davy",
+    "discoveryYear": 1808,
+    "discoveryCountry": "United Kingdom",
+    "discoveryMethod": null,
+    "etymology": "Named after weight",
+    "discoveryStory": null,
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    }
+  },
+  "57": {
+    "atomicNumber": 57,
+    "discoverer": "Carl Gustaf Mosander",
+    "discoveryYear": 1839,
+    "discoveryCountry": "Sweden",
+    "discoveryMethod": null,
+    "etymology": "Named after hiding",
+    "discoveryStory": null,
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    }
+  },
+  "58": {
+    "atomicNumber": 58,
+    "discoverer": "Jöns Jacob Berzelius",
+    "discoveryYear": 1804,
+    "discoveryCountry": "Kingdom of Prussia",
+    "discoveryMethod": null,
+    "etymology": "Named after Ceres",
+    "discoveryStory": null,
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    }
+  },
+  "59": {
+    "atomicNumber": 59,
+    "discoverer": "Carl Gustaf Mosander",
+    "discoveryYear": 1841,
+    "discoveryCountry": "Sweden",
+    "discoveryMethod": null,
+    "etymology": "Named after green",
+    "discoveryStory": null,
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    }
+  },
+  "60": {
+    "atomicNumber": 60,
+    "discoverer": "Carl Auer von Welsbach",
+    "discoveryYear": 1885,
+    "discoveryCountry": "Austria",
+    "discoveryMethod": null,
+    "etymology": "Named after novelty",
+    "discoveryStory": null,
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    }
+  },
+  "61": {
+    "atomicNumber": 61,
+    "discoverer": "Lawrence E. Glendenin",
+    "discoveryYear": 1945,
+    "discoveryCountry": "United States",
+    "discoveryMethod": null,
+    "etymology": "Named after Prometheus",
+    "discoveryStory": null,
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    }
+  },
+  "62": {
+    "atomicNumber": 62,
+    "discoverer": "Paul-Émile Lecoq de Boisbaudran",
+    "discoveryYear": 1879,
+    "discoveryCountry": "France",
+    "discoveryMethod": null,
+    "etymology": "Named after samarskite-(Y)",
+    "discoveryStory": null,
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    }
+  },
+  "63": {
+    "atomicNumber": 63,
+    "discoverer": "Eugène-Anatole Demarçay",
+    "discoveryYear": 1901,
+    "discoveryCountry": "France",
+    "discoveryMethod": null,
+    "etymology": "Named after Europe",
+    "discoveryStory": null,
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    }
+  },
+  "64": {
+    "atomicNumber": 64,
+    "discoverer": "Jean Charles Galissard de Marignac",
+    "discoveryYear": 1880,
+    "discoveryCountry": "Switzerland",
+    "discoveryMethod": null,
+    "etymology": "Named after Johan Gadolin",
+    "discoveryStory": null,
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    }
+  },
+  "65": {
+    "atomicNumber": 65,
+    "discoverer": "Carl Gustaf Mosander",
+    "discoveryYear": 1843,
+    "discoveryCountry": "Sweden",
+    "discoveryMethod": null,
+    "etymology": "Named after Ytterby mine",
+    "discoveryStory": null,
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    }
+  },
+  "66": {
+    "atomicNumber": 66,
+    "discoverer": "Paul-Émile Lecoq de Boisbaudran",
+    "discoveryYear": 1886,
+    "discoveryCountry": "France",
+    "discoveryMethod": null,
+    "etymology": "Named after getting",
+    "discoveryStory": null,
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    }
+  },
+  "67": {
+    "atomicNumber": 67,
+    "discoverer": "Marc Delafontaine",
+    "discoveryYear": 1878,
+    "discoveryCountry": "Sweden",
+    "discoveryMethod": null,
+    "etymology": "Named after Stockholm",
+    "discoveryStory": null,
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    }
+  },
+  "68": {
+    "atomicNumber": 68,
+    "discoverer": "Carl Gustaf Mosander",
+    "discoveryYear": 1843,
+    "discoveryCountry": "Sweden",
+    "discoveryMethod": null,
+    "etymology": "Named after Ytterby mine",
+    "discoveryStory": null,
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    }
+  },
+  "69": {
+    "atomicNumber": 69,
+    "discoverer": "Per Teodor Cleve",
+    "discoveryYear": 1879,
+    "discoveryCountry": "Sweden",
+    "discoveryMethod": null,
+    "etymology": "Named after Scandinavia",
+    "discoveryStory": null,
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    }
+  },
+  "70": {
+    "atomicNumber": 70,
+    "discoverer": "Jean Charles Galissard de Marignac",
+    "discoveryYear": 1878,
+    "discoveryCountry": "Switzerland",
+    "discoveryMethod": null,
+    "etymology": "Named after Ytterby mine",
+    "discoveryStory": null,
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    }
+  },
+  "71": {
+    "atomicNumber": 71,
+    "discoverer": "Georges Urbain",
+    "discoveryYear": 1906,
+    "discoveryCountry": "France",
+    "discoveryMethod": null,
+    "etymology": "Named after Lutetia",
+    "discoveryStory": null,
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    }
+  },
+  "72": {
+    "atomicNumber": 72,
+    "discoverer": "Dirk Coster",
+    "discoveryYear": 1922,
+    "discoveryCountry": "Kingdom of Denmark",
+    "discoveryMethod": null,
+    "etymology": "Named after Copenhagen",
+    "discoveryStory": null,
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    }
+  },
+  "73": {
+    "atomicNumber": 73,
+    "discoverer": "Anders Gustaf Ekeberg",
+    "discoveryYear": 1802,
+    "discoveryCountry": "Sweden",
+    "discoveryMethod": null,
+    "etymology": "Named after Tantalus",
+    "discoveryStory": null,
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    }
+  },
+  "74": {
+    "atomicNumber": 74,
+    "discoverer": "Juan José Elhuyar",
+    "discoveryYear": 1783,
+    "discoveryCountry": "Spain",
+    "discoveryMethod": null,
+    "etymology": "Named after Canis lupus",
+    "discoveryStory": null,
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    }
+  },
+  "75": {
+    "atomicNumber": 75,
+    "discoverer": "Walter Noddack",
+    "discoveryYear": 1925,
+    "discoveryCountry": "German Reich",
+    "discoveryMethod": null,
+    "etymology": "Named after Rhine",
+    "discoveryStory": null,
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    }
+  },
+  "76": {
+    "atomicNumber": 76,
+    "discoverer": "Smithson Tennant",
+    "discoveryYear": 1804,
+    "discoveryCountry": "United Kingdom of Great Britain and Ireland",
+    "discoveryMethod": null,
+    "etymology": "Named after odor",
+    "discoveryStory": null,
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    }
+  },
+  "77": {
+    "atomicNumber": 77,
+    "discoverer": "Smithson Tennant",
+    "discoveryYear": 1803,
+    "discoveryCountry": "United Kingdom",
+    "discoveryMethod": null,
+    "etymology": "Named after Iris",
+    "discoveryStory": null,
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    }
+  },
+  "78": {
+    "atomicNumber": 78,
+    "discoverer": "Julius Caesar Scaliger",
+    "discoveryYear": 1557,
+    "discoveryCountry": "Kingdom of Spain",
+    "discoveryMethod": null,
+    "etymology": "Named after silver",
+    "discoveryStory": null,
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    }
+  },
+  "79": {
+    "atomicNumber": 79,
+    "discoverer": null,
+    "discoveryYear": -6000,
+    "discoveryCountry": null,
+    "discoveryMethod": null,
+    "etymology": null,
+    "discoveryStory": null,
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    }
+  },
+  "80": {
+    "atomicNumber": 80,
+    "discoverer": null,
+    "discoveryYear": null,
+    "discoveryCountry": null,
+    "discoveryMethod": null,
+    "etymology": "Named after Mercury",
+    "discoveryStory": null,
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    }
+  },
+  "81": {
+    "atomicNumber": 81,
+    "discoverer": "William Crookes",
+    "discoveryYear": 1861,
+    "discoveryCountry": "United Kingdom of Great Britain and Ireland",
+    "discoveryMethod": null,
+    "etymology": "Named after thallus",
+    "discoveryStory": null,
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    }
+  },
+  "82": {
+    "atomicNumber": 82,
+    "discoverer": null,
+    "discoveryYear": null,
+    "discoveryCountry": null,
+    "discoveryMethod": null,
+    "etymology": null,
+    "discoveryStory": null,
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    }
+  },
+  "83": {
+    "atomicNumber": 83,
+    "discoverer": null,
+    "discoveryYear": null,
+    "discoveryCountry": null,
+    "discoveryMethod": null,
+    "etymology": null,
+    "discoveryStory": null,
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    }
+  },
+  "84": {
+    "atomicNumber": 84,
+    "discoverer": "Pierre Curie",
+    "discoveryYear": 1898,
+    "discoveryCountry": "Second Polish Republic",
+    "discoveryMethod": null,
+    "etymology": "Named after Poland",
+    "discoveryStory": null,
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    }
+  },
+  "85": {
+    "atomicNumber": 85,
+    "discoverer": "Emilio G. Segrè",
+    "discoveryYear": 1940,
+    "discoveryCountry": "United States",
+    "discoveryMethod": null,
+    "etymology": "Named after instability",
+    "discoveryStory": null,
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    }
+  },
+  "86": {
+    "atomicNumber": 86,
+    "discoverer": "Robert Bowie Owens",
+    "discoveryYear": 1899,
+    "discoveryCountry": "Kingdom of Prussia",
+    "discoveryMethod": null,
+    "etymology": "Named after radium",
+    "discoveryStory": null,
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    }
+  },
+  "87": {
+    "atomicNumber": 87,
+    "discoverer": "Marguerite Perey",
+    "discoveryYear": 1939,
+    "discoveryCountry": "France",
+    "discoveryMethod": null,
+    "etymology": "Named after France",
+    "discoveryStory": null,
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    }
+  },
+  "88": {
+    "atomicNumber": 88,
+    "discoverer": "Pierre Curie",
+    "discoveryYear": 1898,
+    "discoveryCountry": "Second Polish Republic",
+    "discoveryMethod": null,
+    "etymology": "Named after radioactivity",
+    "discoveryStory": null,
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    }
+  },
+  "89": {
+    "atomicNumber": 89,
+    "discoverer": "André-Louis Debierne",
+    "discoveryYear": 1899,
+    "discoveryCountry": "France",
+    "discoveryMethod": null,
+    "etymology": "Named after light beam",
+    "discoveryStory": null,
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    }
+  },
+  "90": {
+    "atomicNumber": 90,
+    "discoverer": "Jöns Jacob Berzelius",
+    "discoveryYear": 1828,
+    "discoveryCountry": "Sweden",
+    "discoveryMethod": null,
+    "etymology": "Named after Thor",
+    "discoveryStory": null,
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    }
+  },
+  "91": {
+    "atomicNumber": 91,
+    "discoverer": "Kazimierz Fajans",
+    "discoveryYear": 1917,
+    "discoveryCountry": "West Germany",
+    "discoveryMethod": null,
+    "etymology": "Named after actinium",
+    "discoveryStory": null,
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    }
+  },
+  "92": {
+    "atomicNumber": 92,
+    "discoverer": null,
+    "discoveryYear": 1789,
+    "discoveryCountry": "France",
+    "discoveryMethod": null,
+    "etymology": "Named after Uranus",
+    "discoveryStory": null,
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    }
+  },
+  "93": {
+    "atomicNumber": 93,
+    "discoverer": "Philip Abelson",
+    "discoveryYear": 1940,
+    "discoveryCountry": "United States",
+    "discoveryMethod": null,
+    "etymology": "Named after Neptune",
+    "discoveryStory": null,
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    }
+  },
+  "94": {
+    "atomicNumber": 94,
+    "discoverer": "Joseph W. Kennedy",
+    "discoveryYear": 1941,
+    "discoveryCountry": "United States",
+    "discoveryMethod": null,
+    "etymology": "Named after Pluto",
+    "discoveryStory": null,
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    }
+  },
+  "95": {
+    "atomicNumber": 95,
+    "discoverer": "Glenn T. Seaborg",
+    "discoveryYear": 1944,
+    "discoveryCountry": "United States",
+    "discoveryMethod": null,
+    "etymology": "Named after Americas",
+    "discoveryStory": null,
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    }
+  },
+  "96": {
+    "atomicNumber": 96,
+    "discoverer": "Glenn T. Seaborg",
+    "discoveryYear": 1944,
+    "discoveryCountry": "United States",
+    "discoveryMethod": null,
+    "etymology": "Named after Pierre Curie",
+    "discoveryStory": null,
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    }
+  },
+  "97": {
+    "atomicNumber": 97,
+    "discoverer": "Stanley Gerald Thompson",
+    "discoveryYear": 1949,
+    "discoveryCountry": "United States",
+    "discoveryMethod": null,
+    "etymology": "Named after Berkeley",
+    "discoveryStory": null,
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    }
+  },
+  "98": {
+    "atomicNumber": 98,
+    "discoverer": "Stanley Gerald Thompson",
+    "discoveryYear": 1950,
+    "discoveryCountry": "United States",
+    "discoveryMethod": null,
+    "etymology": "Named after California",
+    "discoveryStory": null,
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    }
+  },
+  "99": {
+    "atomicNumber": 99,
+    "discoverer": "Albert Ghiorso",
+    "discoveryYear": 1952,
+    "discoveryCountry": "United States",
+    "discoveryMethod": null,
+    "etymology": "Named after Albert Einstein",
+    "discoveryStory": null,
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    }
+  },
+  "100": {
+    "atomicNumber": 100,
+    "discoverer": "Glenn T. Seaborg",
+    "discoveryYear": 1952,
+    "discoveryCountry": "United States",
+    "discoveryMethod": null,
+    "etymology": "Named after Enrico Fermi",
+    "discoveryStory": null,
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    }
+  },
+  "101": {
+    "atomicNumber": 101,
+    "discoverer": "Glenn T. Seaborg",
+    "discoveryYear": 1955,
+    "discoveryCountry": "United States",
+    "discoveryMethod": null,
+    "etymology": "Named after Dmitri Mendeleev",
+    "discoveryStory": null,
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    }
+  },
+  "102": {
+    "atomicNumber": 102,
+    "discoverer": "Glenn T. Seaborg",
+    "discoveryYear": 1958,
+    "discoveryCountry": "United States",
+    "discoveryMethod": null,
+    "etymology": "Named after Alfred Nobel",
+    "discoveryStory": null,
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    }
+  },
+  "103": {
+    "atomicNumber": 103,
+    "discoverer": "Albert Ghiorso",
+    "discoveryYear": 1961,
+    "discoveryCountry": "United States",
+    "discoveryMethod": null,
+    "etymology": "Named after Ernest Lawrence",
+    "discoveryStory": null,
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    }
+  },
+  "104": {
+    "atomicNumber": 104,
+    "discoverer": "Albert Ghiorso",
+    "discoveryYear": 1964,
+    "discoveryCountry": "Russia",
+    "discoveryMethod": null,
+    "etymology": "Named after Ernest Rutherford",
+    "discoveryStory": null,
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    }
+  },
+  "105": {
+    "atomicNumber": 105,
+    "discoverer": "Lawrence Berkeley National Laboratory",
+    "discoveryYear": 1970,
+    "discoveryCountry": null,
+    "discoveryMethod": null,
+    "etymology": "Named after Dubna",
+    "discoveryStory": null,
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    }
+  },
+  "106": {
+    "atomicNumber": 106,
+    "discoverer": "Yuri Oganessian",
+    "discoveryYear": 1974,
+    "discoveryCountry": "Russia",
+    "discoveryMethod": null,
+    "etymology": "Named after Glenn T. Seaborg",
+    "discoveryStory": null,
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    }
+  },
+  "107": {
+    "atomicNumber": 107,
+    "discoverer": "Yuri Oganessian",
+    "discoveryYear": 1976,
+    "discoveryCountry": "Russia",
+    "discoveryMethod": null,
+    "etymology": null,
+    "discoveryStory": null,
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    }
+  },
+  "108": {
+    "atomicNumber": 108,
+    "discoverer": "GSI Helmholtz Centre for Heavy Ion Research",
+    "discoveryYear": 1984,
+    "discoveryCountry": null,
+    "discoveryMethod": null,
+    "etymology": "Named after Hesse",
+    "discoveryStory": null,
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    }
+  },
+  "109": {
+    "atomicNumber": 109,
+    "discoverer": "GSI Helmholtz Centre for Heavy Ion Research",
+    "discoveryYear": 1982,
+    "discoveryCountry": "Germany",
+    "discoveryMethod": null,
+    "etymology": "Named after Lise Meitner",
+    "discoveryStory": null,
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    }
+  },
+  "110": {
+    "atomicNumber": 110,
+    "discoverer": "GSI Helmholtz Centre for Heavy Ion Research",
+    "discoveryYear": 1994,
+    "discoveryCountry": "Germany",
+    "discoveryMethod": null,
+    "etymology": "Named after Darmstadt",
+    "discoveryStory": null,
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    }
+  },
+  "111": {
+    "atomicNumber": 111,
+    "discoverer": "GSI Helmholtz Centre for Heavy Ion Research",
+    "discoveryYear": 1994,
+    "discoveryCountry": "Germany",
+    "discoveryMethod": null,
+    "etymology": "Named after Wilhelm Röntgen",
+    "discoveryStory": null,
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    }
+  },
+  "112": {
+    "atomicNumber": 112,
+    "discoverer": "GSI Helmholtz Centre for Heavy Ion Research",
+    "discoveryYear": 1996,
+    "discoveryCountry": null,
+    "discoveryMethod": null,
+    "etymology": "Named after Nicolaus Copernicus",
+    "discoveryStory": null,
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    }
+  },
+  "113": {
+    "atomicNumber": 113,
+    "discoverer": "Joint Institute for Nuclear Research",
+    "discoveryYear": 2006,
+    "discoveryCountry": null,
+    "discoveryMethod": null,
+    "etymology": "Named after Japan",
+    "discoveryStory": null,
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    }
+  },
+  "114": {
+    "atomicNumber": 114,
+    "discoverer": "Joint Institute for Nuclear Research",
+    "discoveryYear": 1999,
+    "discoveryCountry": "Russia",
+    "discoveryMethod": null,
+    "etymology": "Named after Flerov Laboratory of Nuclear Reactions",
+    "discoveryStory": null,
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    }
+  },
+  "115": {
+    "atomicNumber": 115,
+    "discoverer": "Joint Institute for Nuclear Research",
+    "discoveryYear": 2003,
+    "discoveryCountry": "Russia",
+    "discoveryMethod": null,
+    "etymology": "Named after Moscow Oblast",
+    "discoveryStory": null,
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    }
+  },
+  "116": {
+    "atomicNumber": 116,
+    "discoverer": "Joint Institute for Nuclear Research",
+    "discoveryYear": 2000,
+    "discoveryCountry": null,
+    "discoveryMethod": null,
+    "etymology": "Named after Lawrence Livermore National Laboratory",
+    "discoveryStory": null,
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    }
+  },
+  "117": {
+    "atomicNumber": 117,
+    "discoverer": "Yuri Oganessian",
+    "discoveryYear": 2010,
+    "discoveryCountry": "Russia",
+    "discoveryMethod": null,
+    "etymology": "Named after Tennessee",
+    "discoveryStory": null,
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    }
+  },
+  "118": {
+    "atomicNumber": 118,
+    "discoverer": "Joint Institute for Nuclear Research",
+    "discoveryYear": 2002,
+    "discoveryCountry": null,
+    "discoveryMethod": null,
+    "etymology": "Named after Yuri Oganessian",
+    "discoveryStory": null,
+    "abundance": {
+      "universe": null,
+      "sun": null,
+      "oceans": null,
+      "humanBody": null,
+      "earthCrust": null,
+      "meteorites": null
+    }
+  }
+}

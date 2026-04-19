@@ -7,12 +7,12 @@
 ## Data Pipeline (run before / in parallel with Phase 1)
 
 - [x] **DP-0** — Extend `src/types/element.ts` with new fields: `Isotope`, `HazardLevel`, `isotopes[]`, `etymology`, `industrialUses`, `naturalOccurrence`, `hazardLevel`, `discoveryCountry`, `discoveryMethod`, `discoveryStory`, `storyHeadline`, `storyBody`, `discovererPortrait` — Impl / Test
-- **DP-1** — `scripts/fetchers/wikidata.ts` — SPARQL batch query for discovery + etymology + abundance data → `scripts/output/wikidata.json`
-- **DP-2** — `scripts/fetchers/iaea-isotopes.ts` — fetch all nuclides from IAEA LiveChart, keep top 5 per element → `scripts/output/isotopes.json`
-- **DP-3** — `scripts/fetchers/pubchem.ts` — GHS hazard classification per element → `scripts/output/hazards.json`
-- **DP-4** — `scripts/fetchers/generate-stories.ts` — Claude API story generation (storyHeadline + storyBody) with prompt caching → `scripts/output/stories.json`
-- **DP-5** — `scripts/collect-data.ts` (parallel orchestrator) + `scripts/merge.ts` (merge all outputs into `src/data/elements.json`)
-- **DP-6** — Run full pipeline; validate output; confirm `bun run build` passes
+- [x] **DP-1** — `scripts/fetchers/wikidata.ts` — SPARQL batch query for discovery + etymology + abundance data → `scripts/output/wikidata.json` — Impl / Test
+- [x] **DP-2** — `scripts/fetchers/iaea-isotopes.ts` — fetch all nuclides from IAEA LiveChart, keep top 5 per element → `scripts/output/isotopes.json` — Impl / Test
+- [x] **DP-3** — `scripts/fetchers/pubchem.ts` — GHS hazard classification per element → `scripts/output/hazards.json` — Impl / Test
+- [x] **DP-4** — `scripts/fetchers/generate-stories.ts` — Claude API story generation (storyHeadline + storyBody) with prompt caching → `scripts/output/stories.json` — Impl / Test
+- [x] **DP-5** — `scripts/collect-data.ts` (parallel orchestrator) + `scripts/merge.ts` (merge all outputs into `src/data/elements.json`) — Impl / Test
+- [x] **DP-6** — Run full pipeline; validate output; confirm `bun run build` passes — Impl / Test
 
 ### ✅ Checkpoint: Data Pipeline
 
