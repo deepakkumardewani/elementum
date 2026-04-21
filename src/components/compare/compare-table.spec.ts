@@ -1,7 +1,7 @@
-import { shallowMount } from "@vue/test-utils";
-import { describe, expect, it } from "vitest";
-import type { Element } from "@/types/element";
-import CompareTable from "./CompareTable.vue";
+import { shallowMount } from "@vue/test-utils"
+import { describe, expect, it } from "vitest"
+import type { Element } from "@/types/element"
+import CompareTable from "./CompareTable.vue"
 
 function baseElement(overrides: Partial<Element>): Element {
   return {
@@ -34,7 +34,7 @@ function baseElement(overrides: Partial<Element>): Element {
     discoverer: null,
     yearDiscovered: null,
     ...overrides,
-  };
+  }
 }
 
 describe("CompareTable", () => {
@@ -46,7 +46,7 @@ describe("CompareTable", () => {
       thermalConductivity: 80.2,
       mohsHardness: 4,
       crystalStructure: "body-centered cubic",
-    });
+    })
     const elementB = baseElement({
       name: "Copper",
       symbol: "Cu",
@@ -56,16 +56,16 @@ describe("CompareTable", () => {
       thermalConductivity: 401,
       mohsHardness: 3,
       crystalStructure: "face-centered cubic",
-    });
+    })
 
     const w = shallowMount(CompareTable, {
       props: { elementA, elementB },
-    });
+    })
 
-    const text = w.text();
-    expect(text).toContain("Van der Waals Radius");
-    expect(text).toContain("Thermal Conductivity");
-    expect(text).toContain("Mohs Hardness");
-    expect(text).toContain("Crystal Structure");
-  });
-});
+    const text = w.text()
+    expect(text).toContain("Van der Waals Radius")
+    expect(text).toContain("Thermal Conductivity")
+    expect(text).toContain("Mohs Hardness")
+    expect(text).toContain("Crystal Structure")
+  })
+})

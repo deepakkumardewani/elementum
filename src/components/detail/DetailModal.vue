@@ -360,6 +360,8 @@ onUnmounted(() => {
 .detail-panel {
   position: relative;
   width: min(920px, 100%);
+  /* Fixed viewport-capped height so switching tabs does not resize the shell */
+  height: min(88vh, 760px);
   max-height: min(88vh, 760px);
   background-color: var(--bg-surface);
   border: 1px solid var(--bg-border);
@@ -377,8 +379,10 @@ onUnmounted(() => {
 .dossier-layout {
   display: grid;
   grid-template-columns: 180px 1fr;
-  height: 100%;
+  grid-template-rows: minmax(0, 1fr);
+  flex: 1;
   min-height: 0;
+  height: 100%;
 }
 
 /* ── Right data column ─────────────────────────────────────────── */
@@ -386,6 +390,7 @@ onUnmounted(() => {
   display: flex;
   flex-direction: column;
   min-height: 0;
+  height: 100%;
   border-left: 1px solid var(--bg-border);
 }
 
@@ -570,13 +575,14 @@ onUnmounted(() => {
 
   .detail-panel {
     width: 100%;
+    height: 92vh;
     max-height: 92vh;
     border-radius: 4px 4px 0 0;
   }
 
   .dossier-layout {
     grid-template-columns: 1fr;
-    grid-template-rows: auto 1fr;
+    grid-template-rows: auto minmax(0, 1fr);
   }
 
   .data-col {

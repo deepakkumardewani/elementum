@@ -1,7 +1,8 @@
 <script setup lang="ts">
+import { computed } from "vue"
 import type { Abundance } from "@/types/element"
 
-defineProps<{ abundance?: Abundance | null }>()
+const props = defineProps<{ abundance?: Abundance | null }>()
 
 const ROWS: { label: string; key: keyof Abundance }[] = [
   { label: "Universe", key: "universe" },
@@ -11,6 +12,12 @@ const ROWS: { label: string; key: keyof Abundance }[] = [
   { label: "Human Body", key: "humanBody" },
   { label: "Meteorites", key: "meteorites" },
 ]
+
+const showSection = computed(() => {
+  const a = props.abundance
+  if (!a) return false
+  return ROWS.some(({ key }) => a[key] != null)
+})
 
 function formatAbundance(v: number | null | undefined): string {
   if (v == null) return "—"
@@ -24,7 +31,7 @@ function formatAbundance(v: number | null | undefined): string {
 </script>
 
 <template>
-  <section v-if="abundance" class="abundance-section" aria-label="Element abundance">
+  <section v-if="showSection" class="abundance-section" aria-label="Element abundance">
     <h3 class="section-title">Prevalence</h3>
     <dl class="datasheet">
       <div
@@ -34,7 +41,7 @@ function formatAbundance(v: number | null | undefined): string {
       >
         <dt class="row-label">{{ row.label }}</dt>
         <dd class="row-value">
-          <span class="value-num">{{ formatAbundance(abundance[row.key]) }}</span>
+          <span class="value-num">{{ formatAbundance(props.abundance?.[row.key]) }}</span>
         </dd>
       </div>
     </dl>

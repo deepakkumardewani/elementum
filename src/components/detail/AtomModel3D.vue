@@ -72,17 +72,19 @@ const shells = computed(() =>
         :atomic-mass="element.atomicMass"
       />
     </TresCanvas>
-    <p class="atom-hint">Drag to rotate · Scroll to zoom</p>
-    <p class="model-disclaimer">
-      Simplified shell model — actual electron positions are described by quantum probability distributions
-    </p>
+    <div class="atom-canvas-caption">
+      <p class="atom-hint">Drag to rotate · Scroll to zoom</p>
+      <p class="model-disclaimer">
+        Simplified shell model — actual electron positions are described by quantum probability distributions
+      </p>
+    </div>
   </div>
 </template>
 
 <style scoped>
 .atom-canvas-wrap {
   width: 100%;
-  height: 280px;
+  height: 360px;
   border-radius: 8px;
   overflow: hidden;
   background-color: var(--bg-elevated);
@@ -101,31 +103,41 @@ const shells = computed(() =>
   height: 100% !important;
 }
 
-.atom-hint {
+.atom-canvas-caption {
   position: absolute;
-  bottom: 1.35rem;
-  left: 50%;
-  transform: translateX(-50%);
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.5rem 0.75rem 0.65rem;
+  pointer-events: none;
+  background: linear-gradient(
+    to top,
+    color-mix(in srgb, var(--bg-elevated) 92%, transparent) 0%,
+    color-mix(in srgb, var(--bg-elevated) 45%, transparent) 55%,
+    transparent 100%
+  );
+}
+
+.atom-hint {
+  margin: 0;
   font-size: 0.625rem;
   color: var(--text-muted);
-  pointer-events: none;
   white-space: nowrap;
   letter-spacing: 0.04em;
-  margin: 0;
+  text-align: center;
 }
 
 .model-disclaimer {
-  position: absolute;
-  bottom: 0.35rem;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 95%;
+  width: 100%;
   max-width: 22rem;
   margin: 0;
   font-size: 0.6rem;
-  line-height: 1.25;
+  line-height: 1.35;
   color: var(--text-muted);
   text-align: center;
-  pointer-events: none;
 }
 </style>

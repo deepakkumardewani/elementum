@@ -54,7 +54,6 @@ const { isDark } = storeToRefs(uiStore)
       <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
     </svg>
 
-    <span class="theme-label">{{ isDark ? 'Light' : 'Dark' }}</span>
   </button>
 </template>
 
@@ -62,17 +61,15 @@ const { isDark } = storeToRefs(uiStore)
 .theme-toggle {
   display: flex;
   align-items: center;
-  gap: 0.375rem;
-  padding: 0.3rem 0.625rem;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  padding: 0;
   background: none;
   border: 1px solid var(--bg-border);
   border-radius: 2px;
   cursor: pointer;
   color: var(--text-secondary);
-  font-family: var(--font-mono);
-  font-size: var(--text-xs);
-  font-weight: 500;
-  white-space: nowrap;
   transition:
     color 150ms ease,
     border-color 150ms ease,
@@ -92,17 +89,13 @@ const { isDark } = storeToRefs(uiStore)
 }
 
 .theme-icon {
-  width: 14px;
-  height: 14px;
+  width: 17px;
+  height: 17px;
   flex-shrink: 0;
   transition: transform 200ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .theme-toggle:hover .theme-icon {
   transform: rotate(15deg) scale(1.1);
-}
-
-.theme-label {
-  line-height: 1;
 }
 </style>
