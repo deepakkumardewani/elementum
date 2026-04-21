@@ -32,7 +32,7 @@
 
 ### Group C — Additive Feature Rows
 
-- **S-4** — Add 4 missing property rows to `src/components/compare/CompareTable.vue`. Append to `ROW_DEFS` after the `"Atomic Radius"` entry:
+- **S-4** — ✅ Add 4 missing property rows to `src/components/compare/CompareTable.vue`. Append to `ROW_DEFS` after the `"Atomic Radius"` entry:
   1. `{ label: "Van der Waals Radius", unit: "pm", isNumeric: true, getValue: (el) => el.vanDerWaalsRadius }`
   2. `{ label: "Thermal Conductivity", unit: "W/(m·K)", isNumeric: true, getValue: (el) => el.thermalConductivity }`
   3. `{ label: "Mohs Hardness", unit: "Mohs", isNumeric: true, getValue: (el) => el.mohsHardness }`
