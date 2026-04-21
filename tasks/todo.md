@@ -44,7 +44,7 @@
 
 ### Group D — New Utility + Refactor
 
-- **S-5** — Create `src/utils/wavelength.ts` with a pure `wavelengthToRgb(wavelength: number): string` function using Bruton's algorithm:
+- **S-5** — ✅ Create `src/utils/wavelength.ts` with a pure `wavelengthToRgb(wavelength: number): string` function using Bruton's algorithm:
   - Input range: 380–780 nm → returns hex color string (e.g. `"#ff0000"`)
   - Inputs outside 380–780 → return `"transparent"`
   - Apply intensity falloff for 380–420 nm and 700–780 nm (fade edges to dim)
