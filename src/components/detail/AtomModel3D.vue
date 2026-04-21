@@ -68,6 +68,9 @@ const shells = computed(() =>
       <AtomScene :shells="shells" :is-interacting="isInteracting" />
     </TresCanvas>
     <p class="atom-hint">Drag to rotate · Scroll to zoom</p>
+    <p class="model-disclaimer">
+      Simplified shell model — actual electron positions are described by quantum probability distributions
+    </p>
   </div>
 </template>
 
@@ -95,7 +98,7 @@ const shells = computed(() =>
 
 .atom-hint {
   position: absolute;
-  bottom: 0.5rem;
+  bottom: 1.35rem;
   left: 50%;
   transform: translateX(-50%);
   font-size: 0.625rem;
@@ -104,5 +107,20 @@ const shells = computed(() =>
   white-space: nowrap;
   letter-spacing: 0.04em;
   margin: 0;
+}
+
+.model-disclaimer {
+  position: absolute;
+  bottom: 0.35rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 95%;
+  max-width: 22rem;
+  margin: 0;
+  font-size: 0.6rem;
+  line-height: 1.25;
+  color: var(--text-muted);
+  text-align: center;
+  pointer-events: none;
 }
 </style>
