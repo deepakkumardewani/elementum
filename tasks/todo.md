@@ -60,7 +60,7 @@
 
 ### Group E — Layout Addition
 
-- **S-7** — Add Group 1–18 column headers and Period 1–7 row labels to `src/components/PeriodicGrid.vue`.
+- **S-7** — ✅ Add Group 1–18 column headers and Period 1–7 row labels to `src/components/PeriodicGrid.vue`.
   **Group headers (above main grid):**
   - Add `<div class="grid-group-headers">` immediately before `.main-grid` inside the template
   - Render 18 `<div>` children labeled "1" through "18" using `v-for`

@@ -50,32 +50,57 @@ function fBlockStyle(xpos: number, ypos: number) {
     role="region"
     aria-label="Periodic table of elements"
   >
-    <!-- ── Main table (periods 1–7) ──────────────────────────────── -->
-    <div class="main-grid" aria-label="Main periodic table">
-      <div
-        v-for="el in mainElements"
-        :key="el.atomicNumber"
-        class="element-slot"
-        :style="gridStyle(el.xpos, el.ypos)"
-      >
-        <ElementTile
-          :element="el"
-          :tile-tabindex="focusedAtomicNumber === el.atomicNumber ? 0 : -1"
-          @focus-tile="syncFocus(el.atomicNumber)"
-        />
-        <BookmarkButton class="slot-bookmark" compact :atomic-number="el.atomicNumber" />
+    <!-- ── Main table (periods 1–7) + group / period labels ───────── -->
+    <div class="main-table-block">
+      <div class="grid-corner" aria-hidden="true" />
+      <div class="grid-group-headers">
+        <div
+          v-for="g in 18"
+          :key="`group-${g}`"
+          role="columnheader"
+          :aria-label="`Group ${g}`"
+        >
+          {{ g }}
+        </div>
       </div>
+      <div class="main-grid-wrapper">
+        <div class="period-labels">
+          <div
+            v-for="p in 7"
+            :key="`period-${p}`"
+            role="rowheader"
+            :aria-label="`Period ${p}`"
+          >
+            {{ p }}
+          </div>
+        </div>
+        <div class="main-grid" aria-label="Main periodic table">
+          <div
+            v-for="el in mainElements"
+            :key="el.atomicNumber"
+            class="element-slot"
+            :style="gridStyle(el.xpos, el.ypos)"
+          >
+            <ElementTile
+              :element="el"
+              :tile-tabindex="focusedAtomicNumber === el.atomicNumber ? 0 : -1"
+              @focus-tile="syncFocus(el.atomicNumber)"
+            />
+            <BookmarkButton class="slot-bookmark" compact :atomic-number="el.atomicNumber" />
+          </div>
 
-      <!-- Placeholder cells for lanthanide/actinide gap -->
-      <div
-        v-for="ph in PLACEHOLDERS"
-        :key="ph.label"
-        class="placeholder-tile"
-        :style="gridStyle(ph.xpos, ph.ypos)"
-        aria-hidden="true"
-      >
-        <span class="ph-label">{{ ph.label }}</span>
-        <span class="ph-sublabel">{{ ph.sublabel }}</span>
+          <!-- Placeholder cells for lanthanide/actinide gap -->
+          <div
+            v-for="ph in PLACEHOLDERS"
+            :key="ph.label"
+            class="placeholder-tile"
+            :style="gridStyle(ph.xpos, ph.ypos)"
+            aria-hidden="true"
+          >
+            <span class="ph-label">{{ ph.label }}</span>
+            <span class="ph-sublabel">{{ ph.sublabel }}</span>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -136,8 +161,67 @@ function fBlockStyle(xpos: number, ypos: number) {
   pointer-events: auto;
 }
 
+/* ── Main table: group headers + period labels + grid ─────────── */
+.main-table-block {
+  display: grid;
+  grid-template-columns: minmax(0.85rem, max-content) minmax(0, 1fr);
+  grid-template-rows: auto 1fr;
+  gap: 3px;
+  width: 100%;
+}
+
+.grid-corner {
+  grid-column: 1;
+  grid-row: 1;
+  min-width: 0.85rem;
+}
+
+.grid-group-headers {
+  grid-column: 2;
+  grid-row: 1;
+  display: grid;
+  grid-template-columns: repeat(18, 1fr);
+  gap: 3px;
+  font-size: 0.5rem;
+  color: var(--text-muted);
+  text-align: center;
+  opacity: 0.6;
+}
+
+.main-grid-wrapper {
+  grid-column: 1 / -1;
+  grid-row: 2;
+  display: flex;
+  gap: 3px;
+  align-items: stretch;
+  min-width: 0;
+  min-height: 0;
+}
+
+.period-labels {
+  display: grid;
+  grid-template-rows: repeat(7, 1fr);
+  gap: 3px;
+  flex: 0 0 auto;
+  align-self: stretch;
+  font-size: 0.5rem;
+  color: var(--text-muted);
+  text-align: center;
+  opacity: 0.6;
+}
+
+.period-labels > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0.85rem;
+  min-height: 0;
+}
+
 /* ── Main grid: 18 columns × 7 rows ───────────────────────────── */
 .main-grid {
+  flex: 1;
+  min-width: 0;
   display: grid;
   grid-template-columns: repeat(18, 1fr);
   grid-template-rows: repeat(7, 1fr);
