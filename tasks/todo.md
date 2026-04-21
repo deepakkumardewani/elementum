@@ -79,10 +79,10 @@
 
 ### Group F — 3D Model Scientific Fixes (most complex)
 
-- **S-8** — Remove the 8-electron-per-shell cap in `src/components/detail/AtomScene.vue`. In `electronPositions()`, remove the `const cap = Math.min(count, 8)` line and use `count` directly. For shells with `count > 16`, split electrons across two concentric tori at the same shell radius: inner ring (10 electrons at `radius`) and outer ring (remaining electrons at `radius + 0.08`). Cap total rendered electrons per shell at 32 (the true quantum maximum for any shell).
+- **S-8** — ✅ Remove the 8-electron-per-shell cap in `src/components/detail/AtomScene.vue`. In `electronPositions()`, remove the `const cap = Math.min(count, 8)` line and use `count` directly. For shells with `count > 16`, split electrons across two concentric tori at the same shell radius: inner ring (10 electrons at `radius`) and outer ring (remaining electrons at `radius + 0.08`). Cap total rendered electrons per shell at 32 (the true quantum maximum for any shell).
   - **Files:** `src/components/detail/AtomScene.vue`
   - **Verify:** Gold (Z=79) shell 4 shows more than 8 electrons. Hydrogen shell 1 still shows 1. Carbon shells show [2, 4]. No visible frame rate drop.
-- **S-9** — Replace the hardcoded `NUCLEUS_PARTICLES` array in `src/components/detail/AtomScene.vue` with a dynamic `buildNucleus(atomicNumber, atomicMass)` function. Approach:
+- **S-9** — ✅ Replace the hardcoded `NUCLEUS_PARTICLES` array in `src/components/detail/AtomScene.vue` with a dynamic `buildNucleus(atomicNumber, atomicMass)` function. Approach:
   - Constants: `MAX_NUCLEUS_PARTICLES = 24`
   - Compute `protons = atomicNumber`, `neutrons = Math.round(atomicMass) - atomicNumber`
   - If `protons + neutrons <= MAX_NUCLEUS_PARTICLES`: place exact particles

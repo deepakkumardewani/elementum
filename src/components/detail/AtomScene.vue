@@ -12,6 +12,7 @@ import { ref, computed, onUnmounted } from "vue"
 import { useLoop } from "@tresjs/core"
 import { storeToRefs } from "pinia"
 import { useUiStore } from "@/stores/uiStore"
+import { buildNucleus, electronPositions } from "@/utils/atomScene"
 import * as THREE from "three"
 
 interface Shell {
@@ -25,12 +26,16 @@ interface Shell {
 const props = defineProps<{
   shells: Shell[]
   isInteracting?: boolean
+  atomicNumber: number
+  atomicMass: number
 }>()
 
 const uiStore = useUiStore()
 const { isDark } = storeToRefs(uiStore)
 
 const ringsColor = computed(() => (isDark.value ? "#ffffff" : "#0891b2"))
+
+const nucleusParticles = computed(() => buildNucleus(props.atomicNumber, props.atomicMass))
 
 // Seconds to stay flat before tilting
 const FLAT_DURATION = 3
@@ -39,27 +44,6 @@ const TILT_DURATION = 1.8
 
 const shellGroupRefs = ref<(THREE.Group | null)[]>([])
 const elapsedTime = ref(0)
-
-// Deterministic nucleus cluster: alternating red (proton) / blue (neutron) spheres
-const NUCLEUS_PARTICLES: Array<{ pos: [number, number, number]; color: string }> = [
-  { pos: [-0.09, 0.09,  0.05], color: "#ef4444" },
-  { pos: [ 0.11,-0.04,  0.07], color: "#3b82f6" },
-  { pos: [-0.07,-0.11, -0.05], color: "#ef4444" },
-  { pos: [ 0.04, 0.11, -0.09], color: "#3b82f6" },
-  { pos: [ 0.13, 0.05, -0.04], color: "#ef4444" },
-  { pos: [-0.11, 0.01,  0.11], color: "#3b82f6" },
-  { pos: [ 0.01,-0.13,  0.09], color: "#ef4444" },
-  { pos: [-0.05, 0.07, -0.13], color: "#3b82f6" },
-]
-
-// Place electrons evenly around the ring in the XZ plane (matching torus orientation)
-function electronPositions(radius: number, count: number): Array<[number, number, number]> {
-  const cap = Math.min(count, 8)
-  return Array.from({ length: cap }, (_, i) => {
-    const angle = (2 * Math.PI * i) / cap
-    return [radius * Math.cos(angle), 0, radius * Math.sin(angle)] as [number, number, number]
-  })
-}
 
 // Smoothstep easing for the tilt transition
 function smoothstep(t: number): number {
@@ -103,7 +87,7 @@ onUnmounted(() => stop())
 <template>
   <!-- Nucleus: cluster of red (proton) and blue (neutron) spheres -->
   <TresMesh
-    v-for="(n, i) in NUCLEUS_PARTICLES"
+    v-for="(n, i) in nucleusParticles"
     :key="`nucleus-${i}`"
     :position="n.pos"
   >

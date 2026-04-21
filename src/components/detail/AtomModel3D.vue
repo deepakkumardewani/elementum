@@ -65,7 +65,12 @@ const shells = computed(() =>
         @start="isInteracting = true"
         @end="isInteracting = false"
       />
-      <AtomScene :shells="shells" :is-interacting="isInteracting" />
+      <AtomScene
+        :shells="shells"
+        :is-interacting="isInteracting"
+        :atomic-number="element.atomicNumber"
+        :atomic-mass="element.atomicMass"
+      />
     </TresCanvas>
     <p class="atom-hint">Drag to rotate · Scroll to zoom</p>
     <p class="model-disclaimer">
