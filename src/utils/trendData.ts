@@ -33,7 +33,7 @@ export const TREND_PROPERTY_META: Record<TrendProperty, TrendPropertyMeta> = {
   },
   electronegativity: {
     label: "Electronegativity",
-    unit: "",
+    unit: "Pauling",
     description:
       "Electronegativity (Pauling scale) increases across a period and decreases down a group. Fluorine is the most electronegative element at 3.98.",
   },
