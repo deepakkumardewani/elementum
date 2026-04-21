@@ -51,7 +51,7 @@
   - Export as named constant: `VISIBLE_MIN = 380`, `VISIBLE_MAX = 780`
   - **Files:** `src/utils/wavelength.ts` (new file)
   - **Verify:** `wavelengthToRgb(656.3)` ≈ `#ff0000`; `wavelengthToRgb(486.1)` ≈ blue-cyan; `wavelengthToRgb(200)` = `"transparent"`
-- **S-6** — Refactor `src/components/detail/SpectralLines.vue` to use `wavelengthToRgb` from S-5. Remove `line.color` usage from the `:style` binding; replace with `wavelengthToRgb(line.wavelength)` for both `backgroundColor` and `boxShadow`. Update the prop type: `lines: { wavelength: number; color?: string }[]` (make `color` optional).
+- **S-6** — ✅ Refactor `src/components/detail/SpectralLines.vue` to use `wavelengthToRgb` from S-5. Remove `line.color` usage from the `:style` binding; replace with `wavelengthToRgb(line.wavelength)` for both `backgroundColor` and `boxShadow`. Update the prop type: `lines: { wavelength: number; color?: string }[]` (make `color` optional).
   - **Files:** `src/components/detail/SpectralLines.vue`
   - **Depends on:** S-5
   - **Verify:** Open Hydrogen → spectral lines show: 656.3 nm = red, 486.1 nm = cyan-blue, 434 nm = violet, 410.2 nm = deep violet. Open Sodium → D-doublet (589.0, 589.6 nm) shows yellow-orange.

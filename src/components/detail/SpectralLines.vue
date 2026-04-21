@@ -1,8 +1,18 @@
 <script setup lang="ts">
 import { ref, watch, onMounted } from "vue"
 import { gsap } from "gsap"
+import { wavelengthToRgb } from "@/utils/wavelength"
 
-const props = defineProps<{ lines: { wavelength: number; color: string }[] }>()
+const props = defineProps<{ lines: { wavelength: number; color?: string }[] }>()
+
+function spectralLineStyle(line: { wavelength: number }) {
+  const color = wavelengthToRgb(line.wavelength)
+  return {
+    backgroundColor: color,
+    boxShadow: `0 0 6px 3px ${color}`,
+    left: `${((line.wavelength - 380) / 400) * 100}%`,
+  }
+}
 
 const barRef = ref<HTMLElement | null>(null)
 
@@ -37,11 +47,7 @@ watch(() => props.lines, animateLines, { deep: true })
         v-for="(line, i) in lines"
         :key="i"
         class="spectral-line"
-        :style="{
-          backgroundColor: line.color,
-          boxShadow: `0 0 6px 3px ${line.color}`,
-          left: `${((line.wavelength - 380) / 400) * 100}%`,
-        }"
+        :style="spectralLineStyle(line)"
         :title="`${line.wavelength} nm`"
       />
     </div>
