@@ -8,8 +8,8 @@
  * Derives locally: electricalType (from category), valenceElectrons (from shells)
  */
 
-import { readFileSync, writeFileSync } from "fs"
-import { join } from "path"
+import { readFileSync, writeFileSync } from "node:fs"
+import { join } from "node:path"
 
 const ELEMENTS_PATH = join(import.meta.dir, "../src/data/elements.json")
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
@@ -121,7 +121,7 @@ function extractYear(dateStr: string | undefined): number | null {
   // Handles negative years (BC): "-5000-01-01T00:00:00Z" → -5000
   const match = dateStr.match(/^(-?\d+)-\d{2}-\d{2}/)
   if (!match) return null
-  return parseInt(match[1])
+  return parseInt(match[1], 10)
 }
 
 /** Format Wikidata oxidation state numbers as "+2, +3, -1" etc. */
@@ -129,7 +129,7 @@ function formatOxidationStates(raw: string | undefined): string | null {
   if (!raw?.trim()) return null
   const nums = raw
     .split(",")
-    .map((s) => parseInt(s.trim()))
+    .map((s) => parseInt(s.trim(), 10))
     .filter((n) => !Number.isNaN(n))
   if (nums.length === 0) return null
   nums.sort((a, b) => a - b)
@@ -168,7 +168,7 @@ async function fetchWikidata(): Promise<Map<number, SparqlBinding>> {
 
   const map = new Map<number, SparqlBinding>()
   for (const b of data.results.bindings) {
-    const n = parseInt(b.atomicNumber?.value ?? "0")
+    const n = parseInt(b.atomicNumber?.value ?? "0", 10)
     if (n >= 1 && n <= 118) map.set(n, b)
   }
 
