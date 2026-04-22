@@ -1,48 +1,58 @@
 <script setup lang="ts">
-import { computed } from "vue";
-import { storeToRefs } from "pinia";
-import { useUiStore } from "@/stores/uiStore";
+import { computed } from "vue"
+import { storeToRefs } from "pinia"
+import { useUiStore } from "@/stores/uiStore"
 import {
   formatTrendLegendValue,
   getTrendRange,
   gradientEndpoints,
   TREND_PROPERTY_LABELS,
-} from "@/composables/usePropertyColor";
-import type { TrendProperty } from "@/types/element";
+} from "@/composables/usePropertyColor"
+import type { TrendProperty } from "@/types/element"
 
-const uiStore = useUiStore();
-const { colorMode } = storeToRefs(uiStore);
+const uiStore = useUiStore()
+const { colorMode } = storeToRefs(uiStore)
 
-const trendMode = computed(() => (colorMode.value === "category" ? null : (colorMode.value as TrendProperty)));
+type TrendLegendView = {
+  propertyLabel: string
+  minLabel: string
+  maxLabel: string
+  ariaLabel: string
+  trackStyle: { background: string }
+}
 
-const label = computed(() => (trendMode.value ? TREND_PROPERTY_LABELS[trendMode.value] : ""));
-
-const minMax = computed(() => {
-  if (!trendMode.value) return null;
-  return getTrendRange(trendMode.value);
-});
-
-const minLabel = computed(() =>
-  minMax.value ? formatTrendLegendValue(trendMode.value as TrendProperty, minMax.value.min) : "",
-);
-
-const maxLabel = computed(() =>
-  minMax.value ? formatTrendLegendValue(trendMode.value as TrendProperty, minMax.value.max) : "",
-);
-
-const gradientStyle = computed(() => {
-  const [a, b] = gradientEndpoints();
-  return { background: `linear-gradient(90deg, ${a}, ${b})` };
-});
+const trendLegend = computed((): TrendLegendView | null => {
+  if (colorMode.value === "category") {
+    return null
+  }
+  const mode = colorMode.value as TrendProperty
+  const { min, max } = getTrendRange(mode)
+  const minLabel = formatTrendLegendValue(mode, min)
+  const maxLabel = formatTrendLegendValue(mode, max)
+  const propertyLabel = TREND_PROPERTY_LABELS[mode]
+  const [a, b] = gradientEndpoints()
+  return {
+    propertyLabel,
+    minLabel,
+    maxLabel,
+    ariaLabel: `${propertyLabel} scale from ${minLabel} to ${maxLabel}`,
+    trackStyle: { background: `linear-gradient(90deg, ${a}, ${b})` },
+  }
+})
 </script>
 
 <template>
-  <div v-if="trendMode" class="color-legend" role="img" :aria-label="`${label} scale from ${minLabel} to ${maxLabel}`">
-    <span class="legend-title">{{ label }}</span>
+  <div
+    v-if="trendLegend"
+    class="color-legend"
+    role="img"
+    :aria-label="trendLegend.ariaLabel"
+  >
+    <span class="legend-title">{{ trendLegend.propertyLabel }}</span>
     <div class="legend-track-wrap">
-      <span class="legend-end legend-end--min">{{ minLabel }}</span>
-      <div class="legend-track" :style="gradientStyle" />
-      <span class="legend-end legend-end--max">{{ maxLabel }}</span>
+      <span class="legend-end legend-end--min">{{ trendLegend.minLabel }}</span>
+      <div class="legend-track" :style="trendLegend.trackStyle" />
+      <span class="legend-end legend-end--max">{{ trendLegend.maxLabel }}</span>
     </div>
   </div>
 </template>

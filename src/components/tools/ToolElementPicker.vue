@@ -41,15 +41,15 @@ const matchedNumbers = computed<Set<number> | null>(() => {
 
 function handleSelect(el: Element) {
   if (props.modelValue?.atomicNumber === el.atomicNumber) {
-    emit("update:modelValue", null)
+    selected.value = null
   } else {
-    emit("update:modelValue", el)
+    selected.value = el
     searchQuery.value = ""
   }
 }
 
 function clearSelection() {
-  emit("update:modelValue", null)
+  selected.value = null
 }
 </script>
 

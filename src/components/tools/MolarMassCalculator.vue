@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, onUnmounted, ref, watch } from "vue"
+import { computed, onUnmounted, ref, watch, watchEffect } from "vue"
 import { storeToRefs } from "pinia"
 import { useElementStore } from "@/stores/elementStore"
 import {
@@ -73,6 +73,10 @@ const rows = computed(() => {
   }
   out.sort((a, b) => a.symbol.localeCompare(b.symbol))
   return out
+})
+
+watchEffect(() => {
+  void rows.value.length
 })
 
 watch(

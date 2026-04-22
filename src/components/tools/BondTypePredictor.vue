@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, onUnmounted, ref, watch } from "vue"
+import { computed, onUnmounted, ref, watch, watchEffect } from "vue"
 import { storeToRefs } from "pinia"
 import { useElementStore } from "@/stores/elementStore"
 import { analyzeBond } from "@/utils/bondCalculator"
@@ -34,6 +34,11 @@ const badgeClass = computed(() => {
   if (k === "nonpolar-covalent") return "badge--nonpolar"
   if (k === "polar-covalent") return "badge--polar"
   return "badge--ionic"
+})
+
+watchEffect(() => {
+  void markerPercent.value
+  void badgeClass.value
 })
 
 watch(
@@ -75,7 +80,11 @@ onUnmounted(() => {
       />
     </div>
 
-    <div v-if="a && b" class="result-panel">
+    <div
+      v-if="a && b"
+      class="result-panel"
+      :data-en-marker-percent="markerPercent"
+    >
       <template v-if="bond.ok">
         <div class="en-line">
           <span class="en-label">|ΔEN|</span>

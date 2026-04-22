@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, onUnmounted, ref, watch } from "vue"
+import { computed, onUnmounted, ref, watch, watchEffect } from "vue"
 import { storeToRefs } from "pinia"
 import { useElementStore } from "@/stores/elementStore"
 import { findLikelySharedCompound } from "@/utils/bondCalculator"
@@ -16,6 +16,10 @@ const b = ref<Element | null>(null)
 const compoundLine = computed(() => {
   if (!a.value || !b.value) return null
   return findLikelySharedCompound(a.value, b.value)
+})
+
+watchEffect(() => {
+  void compoundLine.value
 })
 
 watch(
