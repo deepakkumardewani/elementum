@@ -76,6 +76,8 @@ watch(() => props.element, animateFacts, { deep: true })
   display: flex;
   flex-direction: column;
   gap: 0;
+  /* Space below compound chips so the section doesn’t end flush with the scroller. */
+  padding-bottom: 0.75rem;
 }
 
 .facts-card {

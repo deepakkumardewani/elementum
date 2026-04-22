@@ -22,6 +22,7 @@ import SafetySection from "@/components/detail/SafetySection.vue"
 import { Z } from "@/constants/zIndex"
 import type { DetailTabId } from "@/utils/detailTabVisibility"
 import { visibleDetailTabIds } from "@/utils/detailTabVisibility"
+import { lockBodyScroll, unlockBodyScroll } from "@/utils/bodyScrollLock"
 
 const AtomModel3D = defineAsyncComponent(
   () => import("@/components/detail/AtomModel3D.vue"),
@@ -117,9 +118,17 @@ function closePanel() {
   })
 }
 
-watch(detailPanelOpen, (isOpen) => {
-  if (isOpen) openPanel()
-})
+watch(
+  detailPanelOpen,
+  (isOpen) => {
+    if (isOpen) {
+      lockBodyScroll()
+      openPanel()
+    } else {
+      unlockBodyScroll()
+    }
+  },
+)
 
 useEventListener(document, "keydown", (e: KeyboardEvent) => {
   if (!detailPanelOpen.value) return
@@ -156,6 +165,9 @@ onErrorCaptured((err) => {
 
 onUnmounted(() => {
   gsap.killTweensOf([backdropEl.value, panelEl.value])
+  if (detailPanelOpen.value) {
+    unlockBodyScroll()
+  }
 })
 </script>
 
@@ -173,19 +185,22 @@ onUnmounted(() => {
       class="detail-backdrop"
       aria-hidden="true"
       @click="closePanel"
+      @wheel.stop.prevent
     />
 
     <!-- Centered dossier panel -->
     <div ref="panelEl" class="detail-panel">
       <div v-if="selectedElement" class="dossier-layout">
 
-        <!-- LEFT: Specimen identity column -->
-        <ElementHeader :element="selectedElement" />
+        <!-- LEFT: Specimen identity column (non-scrollable; stop wheel from reaching the page). -->
+        <div class="specimen-column" @wheel.stop.prevent>
+          <ElementHeader :element="selectedElement" />
+        </div>
 
         <!-- RIGHT: Data column -->
         <div class="data-col">
           <!-- Toolbar: nav + close -->
-          <div class="detail-toolbar">
+          <div class="detail-toolbar" @wheel.stop.prevent>
             <div class="detail-nav">
               <button
                 class="detail-nav-btn"
@@ -227,11 +242,13 @@ onUnmounted(() => {
 
           <!-- Scrollable sections & tab panels -->
           <div class="detail-content">
-            <DetailTabs
-              :id-prefix="detailTabScope"
-              :tabs="detailTabItems"
-              v-model="activeDetailTab"
-            />
+            <div class="detail-tabs-wrap" @wheel.stop.prevent>
+              <DetailTabs
+                :id-prefix="detailTabScope"
+                :tabs="detailTabItems"
+                v-model="activeDetailTab"
+              />
+            </div>
             <div class="detail-tab-panels">
               <div
                 v-show="activeDetailTab === 'overview'"
@@ -346,6 +363,8 @@ onUnmounted(() => {
   justify-content: center;
   padding: 1.5rem;
   pointer-events: none;
+  /* Prevent scroll chaining to the page when the overlay is the target. */
+  overscroll-behavior: none;
 }
 
 .detail-backdrop {
@@ -359,10 +378,12 @@ onUnmounted(() => {
 /* ── Panel: centered dossier card ─────────────────────────────── */
 .detail-panel {
   position: relative;
+  /* Allow shrinking in flex layout; % width respects narrow viewports. */
+  min-width: 0;
   width: min(920px, 100%);
-  /* Fixed viewport-capped height so switching tabs does not resize the shell */
-  height: min(88vh, 760px);
-  max-height: min(88vh, 760px);
+  /* dvh: stable height when the browser UI resizes; fixed cap so tab switches don't resize the shell. */
+  height: min(88dvh, 760px);
+  max-height: min(88dvh, 760px);
   background-color: var(--bg-surface);
   border: 1px solid var(--bg-border);
   border-radius: 4px;
@@ -375,22 +396,37 @@ onUnmounted(() => {
   overflow: hidden;
 }
 
+/* First grid area: identity column; wrapper is the grid child for wheel handling. */
+.specimen-column {
+  min-width: 0;
+  min-height: 0;
+}
+
+.detail-tabs-wrap {
+  flex-shrink: 0;
+}
+
 /* ── Two-column dossier layout ────────────────────────────────── */
 .dossier-layout {
   display: grid;
-  grid-template-columns: 180px 1fr;
+  /* minmax(0, 1fr) lets the data column shrink below min-content (fixes narrow-width grid blowout). */
+  grid-template-columns: 180px minmax(0, 1fr);
   grid-template-rows: minmax(0, 1fr);
-  flex: 1;
+  flex: 1 1 0;
+  min-width: 0;
   min-height: 0;
-  height: 100%;
+  overflow: hidden;
 }
 
 /* ── Right data column ─────────────────────────────────────────── */
 .data-col {
   display: flex;
   flex-direction: column;
+  /* Critical on narrow viewports: default min-width:auto blocks shrink and breaks the scroll height chain. */
+  min-width: 0;
   min-height: 0;
-  height: 100%;
+  /* Contain the column so the inner scroll area gets a real max height (flex min-size:auto otherwise grows with content). */
+  overflow: hidden;
   border-left: 1px solid var(--bg-border);
 }
 
@@ -400,6 +436,7 @@ onUnmounted(() => {
   align-items: center;
   justify-content: space-between;
   gap: 0.5rem;
+  min-width: 0;
   padding: 0.625rem 1rem;
   border-bottom: 1px solid var(--bg-border);
   flex-shrink: 0;
@@ -504,17 +541,26 @@ onUnmounted(() => {
 
 /* ── Scrollable content ────────────────────────────────────────── */
 .detail-content {
-  flex: 1;
+  flex: 1 1 0;
   display: flex;
   flex-direction: column;
+  min-width: 0;
   min-height: 0;
+  overflow: hidden;
 }
 
 .detail-tab-panels {
-  flex: 1;
-  overflow-y: auto;
-  overscroll-behavior: contain;
+  flex: 1 1 0;
+  min-width: 0;
   min-height: 0;
+  box-sizing: border-box;
+  /* Extra room at end of scroll so the last block (e.g. Common Compounds) is not flush against the modal edge. */
+  padding-bottom: max(3.5rem, calc(env(safe-area-inset-bottom, 0px) + 1.5rem));
+  overflow-y: auto;
+  overflow-x: hidden;
+  overscroll-behavior: contain;
+  touch-action: pan-y;
+  -webkit-overflow-scrolling: touch;
 }
 
 .detail-tab-panel {
@@ -530,7 +576,8 @@ onUnmounted(() => {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  padding: 1.25rem 1.5rem 2rem;
+  min-width: 0;
+  padding: 1.25rem 1.5rem max(2.5rem, calc(env(safe-area-inset-bottom, 0px) + 0.5rem));
 }
 
 .detail-sections--compact {
@@ -575,17 +622,18 @@ onUnmounted(() => {
 
   .detail-panel {
     width: 100%;
-    height: 92vh;
-    max-height: 92vh;
+    height: min(92dvh, 100dvh);
+    max-height: min(92dvh, 100dvh);
     border-radius: 4px 4px 0 0;
   }
 
   .dossier-layout {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     grid-template-rows: auto minmax(0, 1fr);
   }
 
   .data-col {
+    min-height: 0;
     border-left: none;
     border-top: 1px solid var(--bg-border);
   }

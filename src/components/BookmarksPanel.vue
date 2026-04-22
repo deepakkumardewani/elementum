@@ -5,6 +5,7 @@ import { useEventListener } from "@vueuse/core";
 import { X } from "lucide-vue-next";
 import { useElementStore } from "@/stores/elementStore";
 import { useBookmarkStore } from "@/stores/bookmarkStore";
+import { lockBodyScroll, unlockBodyScroll } from "@/utils/bodyScrollLock";
 import { categoryColor } from "@/utils/elementUtils";
 import { Z } from "@/constants/zIndex";
 
@@ -35,8 +36,8 @@ function openDetail(el: (typeof elements.value)[0]) {
 watch(
   () => props.open,
   (isOpen) => {
-    if (typeof document === "undefined") return;
-    document.body.style.overflow = isOpen ? "hidden" : "";
+    if (isOpen) lockBodyScroll();
+    else unlockBodyScroll();
   },
 );
 
