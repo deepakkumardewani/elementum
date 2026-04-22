@@ -2,7 +2,12 @@
 
 <p align="center">
   <strong>A production-grade, highly performant scientific data visualization platform.</strong><br />
-  Engineered to deliver comprehensive chemical datasets with zero latency and high-fidelity rendering.
+  Engineered to deliver comprehensive chemical datasets with a responsive UI and high-fidelity rendering.
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Vitest-293%20tests%20passing-success?style=for-the-badge" alt="Vitest: 293 tests passing" />
+  <img src="https://img.shields.io/badge/coverage-%7E94%25%20statements%20%28scoped%29-success?style=for-the-badge" alt="About 94% statement coverage for configured paths" />
 </p>
 
 <p align="center">
@@ -10,26 +15,21 @@
   <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
   <img src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white" alt="Vite" />
   <img src="https://img.shields.io/badge/Three.js-000000?style=for-the-badge&logo=three.js&logoColor=white" alt="Three.js" />
-</p>
-
-<p align="center">
-  <img src="https://img.shields.io/badge/Performance-100-success?style=flat-square&logo=lighthouse&logoColor=white" alt="Performance" />
-  <img src="https://img.shields.io/badge/Accessibility-100-success?style=flat-square&logo=accessibility&logoColor=white" alt="Accessibility" />
-  <img src="https://img.shields.io/badge/Best_Practices-100-success?style=flat-square&logo=lighthouse&logoColor=white" alt="Best Practices" />
-  <img src="https://img.shields.io/badge/SEO-100-success?style=flat-square&logo=google-search-console&logoColor=white" alt="SEO" />
+  <img src="https://img.shields.io/badge/ApexCharts-008FFB?style=for-the-badge&logoColor=white" alt="ApexCharts" />
+  <img src="https://img.shields.io/badge/GSAP-88CE02?style=for-the-badge&logo=greensock&logoColor=black" alt="GSAP" />
 </p>
 
 ---
 
 ## 🏗️ Architecture & Overview
 
-**Elementum** represents a strict, architecture-first approach to chemical data visualization. Built to transcend standard periodic tables, this project exhibits production-ready software engineering practices—featuring automated data aggregation pipelines, robust static typing, hardware-accelerated 3D graphics, and complex state management. It provides scientists, engineers, and students immediate access to exhaustively enriched elemental properties without compromising UI responsiveness or rendering performance.
+**Elementum** represents a strict, architecture-first approach to chemical data visualization. Built to transcend standard periodic tables, this project exhibits production-ready software engineering practices—featuring automated data aggregation pipelines, robust static typing, 3D graphics, and complex state management. It provides scientists, engineers, and students immediate access to exhaustively enriched elemental properties without compromising UI responsiveness or rendering performance.
 
 ## 🚀 Core Engineering Features
 
 ### 1. Automated Data Aggregation Pipeline
-Instead of relying on stagnant static JSON files, Elementum utilizes a robust build-time data enrichment pipeline.
-- Custom Node.js scripts aggregate live data from authoritative sources (**PubChem**, **Wikidata**, and **IAEA**).
+Elementum augments element data through a **build-time enrichment pipeline** (TypeScript scripts, typically run with **Bun**), producing merged JSON consumed by the app.
+- Fetchers pull from **PubChem**, **Wikidata**, and **IAEA** LiveChart (see `scripts/fetchers/` and `scripts/collect-data.ts`).
 - Automates the resolution, merging, and type-checking of thousands of properties including isotope distributions, historical etymology, and rigorous GHS safety/hazard classifications.
 
 ### 2. High-Performance Spatial Search
@@ -40,7 +40,7 @@ A sophisticated query engine that updates the periodic grid in real-time.
 ### 3. Hardware-Accelerated Visualizations
 Leveraging WebGL and Three.js to provide precise, high-performance structural representations.
 - **3D Bohr Atom Models:** Real-time electron shell orbital rendering featuring accurate and dynamically scaling nucleus compositions.
-- **Emission Spectral Lines:** Scientifically accurate spectral rendering, utilizing the Bruton wavelength-to-RGB conversion algorithm with engineered edge falloff calculations for photorealistic lines.
+- **Emission Spectral Lines:** Wavelength-to-sRGB mapping via **Bruton’s** spectrum algorithm (see `src/utils/wavelength.ts`), including edge falloff in the near-UV and deep-red ranges.
 
 ### 4. Comprehensive Chemistry Tooling Studio
 An extensible suite of programmatic chemistry utilities designed to algorithmically process molecular data.
@@ -57,10 +57,10 @@ An extensible suite of programmatic chemistry utilities designed to algorithmica
 
 ## ⚡ Performance First
 
-Elementum is meticulously engineered for execution speed and rigid accessibility over superficial "vibe coding."
-- **Sub-200ms LCP:** Optimized asset delivery and intentional bundle splitting ensure unhindered initial load metrics.
-- **Strict Accessibility (WCAG):** Comprehensive ARIA labeling role definitions, full keyboard navigability, and semantic HTML structure enforce mature usability logic.
-- **Theme Resilience:** Cohesive, CSS variable-driven token architecture ensures seamless, performant repaints across precision Light-mode and Deep Space Dark-mode transitions.
+Elementum is engineered for solid runtime behavior and accessibility rather than superficial polish alone.
+- **Core Web Vitals mindset:** Internal targets treat the periodic grid as the main LCP candidate (good LCP is on the order of **seconds**, not milliseconds), keep CLS low, and aim for **snappy filter/search interactions** (INP on the order of **~200ms**). Run `bun run build && bun run preview` and measure with Lighthouse or Chrome DevTools when you need hard numbers.
+- **Accessibility:** ARIA roles/labels, keyboard navigation, and semantic HTML are used throughout; contrast and motion preferences are respected (e.g. GSAP paths honor reduced motion).
+- **Theming:** CSS custom properties drive light and dark themes with consistent tokens.
 
 ---
 
@@ -70,35 +70,6 @@ Elementum is meticulously engineered for execution speed and rigid accessibility
 - **State Management Architecture**: [Pinia](https://pinia.vuejs.org/)
 - **Build Toolchain**: [Vite](https://vitejs.dev/)
 - **3D Graphics Engine**: [Three.js](https://threejs.org/)
-- **Data Visualization**: [ApexCharts](https://apexcharts.com/)
-- **Data Engineering**: Custom TypeScript abstract syntax trees (AST parsers) and fetch mechanisms.
-
----
-
-## 📦 Getting Started
-
-### Prerequisites
-- [Node.js](https://nodejs.org/) (v16+)
-- [Bun](https://bun.sh/) or NPM
-
-### Installation
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/deepakkumardewani/elementum.git
-   ```
-2. Install dependencies:
-   ```bash
-   bun install
-   ```
-3. Run the development server:
-   ```bash
-   bun run dev
-   ```
-
----
-
-## 🌐 Deployment
-
-Elementum is engineered to be production-ready and optimized for [Vercel](https://vercel.com/) edge deployments.
-- **Routing**: Client-side logic inherently balanced via `vercel.json` for seamless SPA rendering.
-- **SEO Optimization**: Fully bootstrapped with programmatic `sitemap.xml`, deterministic `robots.txt`, and rich OpenGraph metadata for targeted search engine discovery.
+- **Charts & analytics**: [ApexCharts](https://apexcharts.com/) with [vue3-apexcharts](https://github.com/apexcharts/vue3-apexcharts) for trend plots and data visualization
+- **Motion**: [GSAP](https://gsap.com/) for timeline-driven UI animation where needed
+- **Data & tooling**: Chemical formula parsing with grouping and subscripts (`src/utils/formulaParser.ts`) plus HTTP-based enrichment fetchers in `scripts/`.
